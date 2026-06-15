@@ -1,4 +1,4 @@
-import { SolutionData } from '@/types/solutions';
+import { SolutionData } from '../solutionTypes';
 
 export const analyticsReporting: SolutionData = {
   title: 'Healthcare Analytics & Reporting',
