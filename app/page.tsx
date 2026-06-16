@@ -7,7 +7,7 @@ export default function Home() {
     <main>
       {/* HERO */}
        <div className="ticker-line top">
-          <span className="ticker-track">RCM · AR RECOVERY · CREDENTIALING · PRIOR AUTHORIZATION · ELIGIBILITY · DENIAL MANAGEMENT · VIRTUAL ASSISTANTS · FRONT DESK · SCHEDULING</span>
+          <span className="ticker-track">RCM · AR RECOVERY · CREDENTIALING · PRIOR AUTHORIZATION · ELIGIBILITY · DENIAL MANAGEMENT · VIRTUAL ASSISTANTS · FRONT DESK · SCHEDULING · RCM · AR RECOVERY · CREDENTIALING · PRIOR AUTHORIZATION · ELIGIBILITY · DENIAL MANAGEMENT · VIRTUAL ASSISTANTS · FRONT DESK · SCHEDULING</span>
         </div>
       <section className="hero">
         
@@ -34,12 +34,12 @@ export default function Home() {
               Hired Billing Support is the remote team behind growing practices — RCM specialists, billers, AR experts, and virtual medical assistants embedded into your workflow. So you can stop firefighting and start practicing.
             </p>
             <div className="hero-actions reveal reveal-4">
-              <a href="#cta" className="btn btn-primary">
+              <Link href="/contact" className="btn btn-primary">
                 Book a discovery call
                 <svg className="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <path d="M5 12h14M13 5l7 7-7 7" />
                 </svg>
-              </a>
+              </Link>
              <Link href="/CostROIcalculator" className="btn btn-text">
   See what we do →
 </Link>
@@ -106,7 +106,7 @@ export default function Home() {
           </div>
         </div>
         <div className="ticker-line bot">
-          <span className="ticker-track">HIPAA COMPLIANT · SOC 2 ALIGNED · US TIME-ZONE COVERAGE · EHR-AGNOSTIC · ATHENA · ECW · KAREO</span>
+          <span className="ticker-track">HIPAA COMPLIANT · SOC 2 ALIGNED · US TIME-ZONE COVERAGE · EHR-AGNOSTIC · ATHENA · ECW · KAREO · HIPAA COMPLIANT · SOC 2 ALIGNED · US TIME-ZONE COVERAGE · EHR-AGNOSTIC · ATHENA · ECW · KAREO</span>
         </div>
       </section>
 

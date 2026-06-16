@@ -227,15 +227,14 @@ export default function SolutionLayout({ solution, slug }: SolutionLayoutProps) 
               Talk to our denial team
             </a>
           </div>
+           {/* <div className="cta-inner">
+          <div className="trust-line">HIPAA · BAA on every engagement · No long-term contract required</div>
+        </div> */}
         </div>
       </section>
 
       {/* FOOTER NOTE */}
-      <section className="final-cta" style={{ background: "var(--ink)", paddingBottom: "60px" }}>
-        <div className="cta-inner">
-          <div className="trust-line">HIPAA · BAA on every engagement · No long-term contract required</div>
-        </div>
-      </section>
+   
     </>
   );
 }

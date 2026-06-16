@@ -57,8 +57,8 @@ export default function HeroOrthopedic({ solution }: HeroProps) {
         {solution.hero && (
           <div className="reveal reveal-4" style={{ animationDelay: "0.55s" }}>
             <div style={{
-              background: "var(--white)",
-              border: "1px solid var(--paper-line)",
+              background: "var(--ink)",
+              border: "1px solid rgba(255, 255, 255, 0.08)",
               borderRadius: "var(--radius-lg)",
               overflow: "hidden",
               boxShadow: "0 4px 32px rgba(10,22,40,.10), 0 1px 4px rgba(10,22,40,.05)",
@@ -69,7 +69,7 @@ export default function HeroOrthopedic({ solution }: HeroProps) {
                 fontSize: "10px",
                 textTransform: "uppercase",
                 letterSpacing: ".16em",
-                color: "var(--ink-mute)",
+                color: "rgba(250, 247, 242, 0.5)",
                 marginBottom: "16px",
                 fontWeight: "600",
               }}>
@@ -87,7 +87,7 @@ export default function HeroOrthopedic({ solution }: HeroProps) {
                   }}>
                     <span style={{
                       fontSize: "12px",
-                      color: "var(--ink-soft)",
+                      color: "var(--paper)",
                       fontWeight: "500",
                     }}>
                       {kpi.label}
@@ -101,7 +101,7 @@ export default function HeroOrthopedic({ solution }: HeroProps) {
                     </span>
                   </div>
                   <div style={{
-                    background: "var(--paper-line)",
+                    background: "rgba(255, 255, 255, 0.08)",
                     height: "6px",
                     borderRadius: "2px",
                     overflow: "hidden",
@@ -118,7 +118,7 @@ export default function HeroOrthopedic({ solution }: HeroProps) {
 
               {/* Divider */}
               <div style={{
-                borderTop: "1px solid var(--paper-line)",
+                borderTop: "1px solid rgba(255, 255, 255, 0.08)",
                 margin: "12px 0",
               }} />
 
@@ -150,7 +150,7 @@ export default function HeroOrthopedic({ solution }: HeroProps) {
                       fontSize: "9px",
                       textTransform: "uppercase",
                       letterSpacing: ".08em",
-                      color: "var(--ink-mute)",
+                      color: "var(--paper)",
                     }}>
                       {stat.label}
                     </div>
@@ -177,7 +177,7 @@ export default function HeroOrthopedic({ solution }: HeroProps) {
                 </div>
                 <div style={{
                   fontSize: "12px",
-                  color: "var(--ink-soft)",
+                  color: "var(--paper)",
                   lineHeight: "1.4",
                 }}>
                   3 surgical auths expiring this week — renewals initiated.

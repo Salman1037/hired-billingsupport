@@ -57,8 +57,8 @@ export default function HeroObgyn({ solution }: HeroProps) {
         {solution.hero && (
           <div className="reveal reveal-4" style={{ animationDelay: "0.55s" }}>
             <div style={{
-              background: "var(--white)",
-              border: "1px solid var(--paper-line)",
+              background: "var(--ink)",
+              border: "1px solid rgba(255, 255, 255, 0.08)",
               borderRadius: "var(--radius-lg)",
               overflow: "hidden",
               boxShadow: "0 4px 32px rgba(10,22,40,.10), 0 1px 4px rgba(10,22,40,.05)",
@@ -69,7 +69,7 @@ export default function HeroObgyn({ solution }: HeroProps) {
                 fontSize: "10px",
                 textTransform: "uppercase",
                 letterSpacing: ".16em",
-                color: "var(--ink-mute)",
+                color: "var(--paper)",
                 marginBottom: "16px",
                 fontWeight: "600",
               }}>
@@ -96,7 +96,7 @@ export default function HeroObgyn({ solution }: HeroProps) {
                       }} />
                       <span style={{
                         fontSize: "13px",
-                        color: "var(--ink-soft)",
+                        color: "var(--paper)",
                         flex: 1,
                       }}>
                         {item.label}
@@ -127,7 +127,7 @@ export default function HeroObgyn({ solution }: HeroProps) {
                     {idx < queueItems.length - 1 && (
                       <div style={{
                         height: "1px",
-                        background: "var(--paper-line)",
+                        background: "rgba(255, 255, 255, 0.08)",
                       }} />
                     )}
                   </div>
@@ -136,7 +136,7 @@ export default function HeroObgyn({ solution }: HeroProps) {
 
               {/* Divider */}
               <div style={{
-                borderTop: "1px solid var(--paper-line)",
+                borderTop: "1px solid rgba(255, 255, 255, 0.08)",
                 margin: "12px 0",
               }} />
 
@@ -168,7 +168,7 @@ export default function HeroObgyn({ solution }: HeroProps) {
                       fontSize: "9px",
                       textTransform: "uppercase",
                       letterSpacing: ".08em",
-                      color: "var(--ink-mute)",
+                      color: "rgba(250, 247, 242, 0.5)",
                     }}>
                       {stat.label}
                     </div>
@@ -195,7 +195,7 @@ export default function HeroObgyn({ solution }: HeroProps) {
                 </div>
                 <div style={{
                   fontSize: "12px",
-                  color: "var(--ink-soft)",
+                  color: "var(--paper)",
                   lineHeight: "1.4",
                 }}>
                   Patient B insurance change may affect global package — review before next prenatal visit.

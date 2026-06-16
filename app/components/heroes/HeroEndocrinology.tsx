@@ -249,8 +249,8 @@ export default function HeroEndocrinology({ solution }: HeroProps) {
           <div className="reveal reveal-4" style={{ animationDelay: "0.55s" }}>
             <div
               style={{
-                background: "var(--white)",
-                border: "1px solid var(--paper-line)",
+                background: "var(--ink)",
+                border: "1px solid rgba(255, 255, 255, 0.08)",
                 borderRadius: "var(--radius-lg)",
                 overflow: "hidden",
                 boxShadow: "0 4px 32px rgba(10,22,40,.10), 0 1px 4px rgba(10,22,40,.05)",
@@ -263,7 +263,7 @@ export default function HeroEndocrinology({ solution }: HeroProps) {
                   fontSize: "10px",
                   textTransform: "uppercase",
                   letterSpacing: ".16em",
-                  color: "var(--ink-mute)",
+                  color: "var(--paper)",
                   marginBottom: "16px",
                   fontWeight: "600",
                 }}
@@ -306,10 +306,10 @@ export default function HeroEndocrinology({ solution }: HeroProps) {
                     justifyContent: "space-between",
                     alignItems: "center",
                     padding: "10px 0",
-                    borderBottom: idx < 4 ? "1px solid var(--paper-line)" : "none",
+                    borderBottom: idx < 4 ? "1px solid rgba(255, 255, 255, 0.08)" : "none",
                   }}
                 >
-                  <span style={{ fontSize: "13px", color: "var(--ink-soft)", flex: 1 }}>
+                  <span style={{ fontSize: "13px", color: "var(--paper)", flex: 1 }}>
                     {row.label}
                   </span>
 
@@ -341,7 +341,7 @@ export default function HeroEndocrinology({ solution }: HeroProps) {
               ))}
 
               {/* Divider */}
-              <div style={{ borderTop: "1px solid var(--paper-line)", margin: "12px 0" }} />
+              <div style={{ borderTop: "1px solid rgba(255, 255, 255, 0.08)", margin: "12px 0" }} />
 
               {/* Stats */}
               <div
@@ -376,7 +376,7 @@ export default function HeroEndocrinology({ solution }: HeroProps) {
                         fontSize: "9px",
                         textTransform: "uppercase",
                         letterSpacing: ".08em",
-                        color: "var(--ink-mute)",
+                        color: "rgba(250, 247, 242, 0.5)",
                       }}
                     >
                       {stat.label}
@@ -407,7 +407,7 @@ export default function HeroEndocrinology({ solution }: HeroProps) {
                   — Care continuity alert
                 </div>
 
-                <div style={{ fontSize: "12px", color: "var(--ink-soft)", lineHeight: "1.4" }}>
+                <div style={{ fontSize: "12px", color: "var(--paper)", lineHeight: "1.4" }}>
                   Insulin pump authorization expires in 12 days — renewal request submitted for payer review.
                 </div>
               </div>
