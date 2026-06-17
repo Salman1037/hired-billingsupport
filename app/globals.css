@@ -139,7 +139,7 @@ nav.top.scrolled {
 .nav-inner {
     max-width: var(--max);
     margin: 0 auto;
-    padding: 18px var(--gutter);
+    padding: 8px var(--gutter);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -4576,6 +4576,11 @@ footer {
 .specialty-section--ink-soft .eyebrow::before{background:rgba(250,247,242,.4)}
 .specialty-section--ink p,
 .specialty-section--ink-soft p{color:rgba(250,247,242,.65)}
+
+
+
+
+
 
 
 

@@ -18,7 +18,7 @@ export default function HeroMemberCentricCare({ solution }: HeroProps) {
   const styles = `
     .who-hero {
       background: var(--paper);
-      padding: 140px 0 100px;
+      padding: 40px 0 100px;
       position: relative;
       overflow: hidden;
     }
@@ -364,7 +364,7 @@ export default function HeroMemberCentricCare({ solution }: HeroProps) {
 
         <div className="who-hero-inner">
           <div>
-            <div className="who-hero-badge reveal reveal-1">Who We Serve · Member-Centric Care Organizations</div>
+            <div className="eyebrow reveal reveal-1">Who We Serve · Member-Centric Care Organizations</div>
             <h1 className="who-hero-title reveal reveal-2">
               Member experience is built in the front office.<br />
               <em>It is sustained or broken in the backend.</em>

@@ -14,7 +14,7 @@ export default function HeroPayers({ solution }: HeroProps) {
   const styles = `
     .who-hero {
       background: #FAF7F2;
-      padding: 140px 0 100px;
+      padding: 40px 0 100px;
       position: relative;
       overflow: hidden;
     }
@@ -473,7 +473,7 @@ export default function HeroPayers({ solution }: HeroProps) {
 
         <div className="who-hero-inner">
           <div className="who-hero-content">
-            <div className="who-hero-badge reveal reveal-1">Who We Serve · Other Organizations · Healthcare Payers</div>
+            <div className="eyebrow reveal reveal-1">Who We Serve · Other Organizations · Healthcare Payers</div>
             
             <h1 className="who-hero-title reveal reveal-2">
               Payer operations break down when the processing queue<br />

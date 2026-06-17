@@ -18,7 +18,7 @@ export default function HeroMediumLargeMedicalPractices({ solution }: HeroProps)
   const styles = `
     .who-hero {
       background: var(--paper);
-      padding: 140px 0 100px;
+      padding: 40px 0 100px;
       position: relative;
       overflow: hidden;
     }
@@ -368,7 +368,7 @@ export default function HeroMediumLargeMedicalPractices({ solution }: HeroProps)
 
         <div className="who-hero-inner">
           <div>
-            <div className="who-hero-badge reveal reveal-1">Who We Serve · Medical Groups</div>
+            <div className="eyebrow reveal reveal-1">Who We Serve · Medical Groups</div>
             <h1 className="who-hero-title reveal reveal-2">
               Growth multiplied your clinical capacity. <br />
               <em>It also multiplied every workflow inconsistency you had before.</em>

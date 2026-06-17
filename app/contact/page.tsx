@@ -31,447 +31,425 @@ export default function ContactPage() {
 
   return (
     <>
-      <style>{`
-        /* ── Design Tokens (light mode, matching your site's ink/paper system) ── */
-        .contact-page {
-          --ink:         #0A1628;
-          --ink-mid:     #1e3a5f;
-          --ink-soft:    #344a6e;
-          --ink-mute:    #6b7fa3;
-          --paper:       #FAF9F7;
-          --paper-2:     #F2F0ED;
-          --paper-3:     #E8E5E0;
-          --signal:      #0a7c52;
-          --signal-light:#e6f4ee;
-          --signal-border:#b6deca;
-          --amber:       #b45309;
-          --amber-light: #fef3c7;
-          --danger:      #c0392b;
-          --accent:      #0A1628;
-          --border:      #dde1ea;
-          --border-soft: #eceef4;
-          --radius:      8px;
-          --radius-lg:   14px;
-          --mono:        'JetBrains Mono', 'Fira Mono', 'Courier New', monospace;
-          --serif:       'Georgia', 'Times New Roman', serif;
-          --shadow-sm:   0 1px 3px rgba(10,22,40,.07), 0 1px 2px rgba(10,22,40,.05);
-          --shadow-md:   0 4px 16px rgba(10,22,40,.08), 0 1px 4px rgba(10,22,40,.05);
-          --shadow-lg:   0 8px 32px rgba(10,22,40,.10), 0 2px 8px rgba(10,22,40,.06);
+      <style jsx>{`
+        /* =========================================
+           DESIGN TOKENS (EXACT MATCH TO YOUR SYSTEM)
+           ========================================= */
+        :root {
+          --ink: #0A1628;
+          --ink-soft: #1B2942;
+          --ink-mute: #475569;
+          --paper: #FAF7F2;
+          --paper-warm: #F2EDE3;
+          --paper-line: #E8E2D5;
+          --white: #FFFFFF;
+          --signal: #00C896;
+          --signal-deep: #00876B;
+          --accent: #D4A574;
+          --danger: #D64545;
+          --radius: 4px;
+          --radius-lg: 12px;
+          --max: 1280px;
+          --gutter: clamp(20px, 4vw, 48px);
+          --font-fraunces: 'Fraunces', 'Times New Roman', serif;
+          --font-inter-tight: 'Inter Tight', -apple-system, sans-serif;
+          --font-jetbrains-mono: 'JetBrains Mono', monospace;
+          --serif: var(--font-fraunces);
+          --sans: var(--font-inter-tight);
+          --mono: var(--font-jetbrains-mono);
+          --ease: cubic-bezier(0.22, 1, 0.36, 1);
+        }
 
-          font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+        /* =========================================
+           RESET + BASE
+           ========================================= */
+        .contact-page {
+          font-family: var(--sans);
           background: var(--paper);
           color: var(--ink);
           min-height: 100vh;
         }
 
-        /* ── Reveal animations ── */
-        @keyframes revealUp {
-          from { opacity: 0; transform: translateY(16px); }
-          to   { opacity: 1; transform: translateY(0); }
+        /* =========================================
+           ANIMATIONS (MATCH YOUR SCROLL REVEALS)
+           ========================================= */
+        @keyframes reveal {
+          to { opacity: 1; transform: translateY(0); }
         }
-        .contact-page .reveal { opacity: 0; animation: revealUp 0.52s cubic-bezier(.22,1,.36,1) forwards; }
-        .contact-page .reveal-1 { animation-delay: 0.05s; }
-        .contact-page .reveal-2 { animation-delay: 0.14s; }
-        .contact-page .reveal-3 { animation-delay: 0.24s; }
-        .contact-page .reveal-4 { animation-delay: 0.36s; }
-        .contact-page .reveal-5 { animation-delay: 0.48s; }
+        .reveal { opacity: 0; transform: translateY(20px); }
+        .reveal-1 { animation: reveal 0.9s var(--ease) 0.05s forwards; }
+        .reveal-2 { animation: reveal 0.9s var(--ease) 0.15s forwards; }
+        .reveal-3 { animation: reveal 0.9s var(--ease) 0.3s forwards; }
+        .reveal-4 { animation: reveal 0.9s var(--ease) 0.45s forwards; }
+        .reveal-5 { animation: reveal 0.9s var(--ease) 0.6s forwards; }
 
-        /* ── Hero ── */
+        /* =========================================
+           HERO (MATCH YOUR DARK HERO STYLE)
+           ========================================= */
         .contact-hero {
           position: relative;
           overflow: hidden;
           background: var(--ink);
-          padding: 96px 24px 84px;
+          color: var(--paper);
+          padding: 100px var(--gutter) 80px;
           text-align: center;
         }
-
         .contact-hero-bg {
           position: absolute;
           inset: 0;
           pointer-events: none;
           z-index: 0;
         }
-
         .contact-hero-bg svg {
           position: absolute;
           inset: 0;
           width: 100%;
           height: 100%;
         }
-
         .contact-hero-grain {
           position: absolute;
           inset: 0;
-          background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
-          opacity: 0.5;
+          background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.06 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+          mix-blend-mode: multiply;
+          opacity: 0.35;
         }
-
         .contact-hero-inner {
           position: relative;
-          z-index: 1;
-          max-width: 640px;
+          z-index: 2;
+          max-width: var(--max);
           margin: 0 auto;
         }
 
-        /* Eyebrow — mono uppercase like your site */
-        .contact-page .eyebrow {
+        /* Eyebrow (MATCH YOUR .eyebrow CLASS) */
+        .eyebrow {
           font-family: var(--mono);
           font-size: 11px;
-          font-weight: 600;
           text-transform: uppercase;
-          letter-spacing: 0.16em;
-          display: block;
-          margin-bottom: 18px;
+          letter-spacing: 0.18em;
+          color: var(--ink-mute);
+          display: inline-flex;
+          align-items: center;
+          gap: 10px;
         }
+        .eyebrow::before {
+          content: '';
+          width: 24px;
+          height: 1px;
+          background: currentColor;
+        }
+        .eyebrow-light { color: rgba(250, 247, 242, 0.55); }
 
-        .eyebrow-light { color: #5ec49a; }  /* on dark hero */
-        .eyebrow-dark  { color: var(--signal); } /* on light bg */
-
-        /* Display heading */
-        .contact-page .display {
+        /* Display Heading (MATCH YOUR .display CLASS) */
+        .display {
           font-family: var(--serif);
-          font-size: clamp(34px, 5vw, 58px);
-          font-weight: 700;
-          line-height: 1.1;
-          letter-spacing: -0.02em;
-          margin: 0 0 20px;
+          font-weight: 400;
+          letter-spacing: -0.025em;
+          line-height: 0.98;
+          font-variation-settings: "opsz" 144;
+          font-size: clamp(48px, 7.5vw, 96px);
+        }
+        .display-light { color: var(--paper); }
+        .display-light em { color: var(--signal); }
+        .display em {
+          font-style: italic;
+          font-weight: 300;
         }
 
-        .display-light { color: #FAF9F7; }
-        .display-dark  { color: var(--ink); }
-        .display-light span { color: #5ec49a; }
-        .display-dark  span { color: var(--signal); }
-
-        .contact-page .sub {
-          font-size: 17px;
-          line-height: 1.65;
-          max-width: 500px;
-          margin: 0 auto;
+        /* Subtext */
+        .sub {
+          font-size: clamp(17px, 1.5vw, 20px);
+          line-height: 1.55;
+          color: var(--ink-soft);
+          max-width: 540px;
+          margin: 28px auto 40px;
         }
+        .sub-light { color: rgba(250, 247, 242, 0.75); }
 
-        .sub-light { color: rgba(250,249,247,0.62); }
-        .sub-dark  { color: var(--ink-mute); }
-
-        /* Hero CTA row */
+        /* Hero Actions */
         .hero-actions {
           display: flex;
-          gap: 12px;
+          gap: 16px;
           justify-content: center;
-          margin-top: 32px;
           flex-wrap: wrap;
         }
 
-        /* Buttons — matching your .btn system */
-        .contact-page .btn {
+        /* =========================================
+           BUTTONS (EXACT MATCH TO YOUR .btn SYSTEM)
+           ========================================= */
+        .btn {
           display: inline-flex;
           align-items: center;
           gap: 8px;
-          font-family: inherit;
-          font-size: 14px;
-          font-weight: 600;
+          padding: 12px 22px;
           border-radius: var(--radius);
-          padding: 11px 22px;
+          font-family: var(--sans);
+          font-size: 14px;
+          font-weight: 500;
           text-decoration: none;
           cursor: pointer;
           border: none;
-          transition: opacity 0.18s, transform 0.14s, box-shadow 0.18s;
-          letter-spacing: 0.01em;
+          transition: all 0.25s var(--ease);
           white-space: nowrap;
         }
-
-        .contact-page .btn-lg { font-size: 15px; padding: 13px 26px; }
-
-        .contact-page .btn-primary {
+        .btn-primary {
           background: var(--ink);
-          color: #FAF9F7;
-          box-shadow: 0 2px 8px rgba(10,22,40,.18);
+          color: var(--paper);
         }
-        .contact-page .btn-primary:hover { opacity: 0.88; transform: translateY(-1px); }
+        .btn-primary:hover {
+          background: var(--ink-soft);
+          transform: translateY(-1px);
+          box-shadow: 0 12px 28px -12px rgba(10, 22, 40, 0.4);
+        }
+        .btn-primary .arrow { transition: transform 0.25s var(--ease); }
+        .btn-primary:hover .arrow { transform: translateX(3px); }
 
-        .contact-page .btn-ghost {
+        .btn-ghost {
           background: transparent;
-          color: #FAF9F7;
-          border: 1px solid rgba(255,255,255,0.18);
+          color: var(--paper);
+          border: 1px solid var(--paper);
         }
-        .contact-page .btn-ghost:hover {
-          border-color: rgba(255,255,255,0.35);
-          background: rgba(255,255,255,0.06);
+        .btn-ghost:hover {
+          background: var(--paper);
+          color: var(--ink);
         }
 
-        /* Primary on light bg */
-        .contact-page .btn-primary-light {
-          background: var(--ink);
-          color: #FAF9F7;
-          box-shadow: var(--shadow-md);
-        }
-        .contact-page .btn-primary-light:hover { opacity: 0.88; transform: translateY(-1px); }
-
-        .contact-page .btn:disabled {
-          opacity: 0.4;
+        .btn:disabled {
+          opacity: 0.5;
           cursor: not-allowed;
-          transform: none;
         }
+        .btn-lg { font-size: 15px; padding: 14px 26px; }
 
-        /* ── Body layout ── */
+        /* =========================================
+           BODY LAYOUT
+           ========================================= */
         .contact-body {
-          max-width: 1160px;
+          max-width: var(--max);
           margin: 0 auto;
-          padding: 64px 24px 96px;
+          padding: 80px var(--gutter);
           display: grid;
           grid-template-columns: 1fr 360px;
           gap: 40px;
           align-items: start;
         }
-
-        @media (max-width: 880px) {
+        @media (max-width: 900px) {
           .contact-body {
             grid-template-columns: 1fr;
-            padding: 40px 20px 72px;
+            gap: 32px;
           }
         }
 
-        /* ── Light card ── */
+        /* =========================================
+           LIGHT CARD (MATCH YOUR .service-cell STYLE)
+           ========================================= */
         .light-card {
-          background: #ffffff;
-          border: 1px solid var(--border);
+          background: var(--white);
+          border: 1px solid var(--paper-line);
           border-radius: var(--radius-lg);
-          padding: 36px 36px;
-          box-shadow: var(--shadow-md);
+          padding: 36px;
+          box-shadow: 0 4px 20px rgba(10, 22, 40, 0.05);
+        }
+        @media (max-width: 600px) {
+          .light-card { padding: 24px; }
         }
 
-        @media (max-width: 560px) {
-          .light-card { padding: 24px 20px; }
-        }
-
-        /* Card mono label */
+        /* Card Labels */
         .card-mono-label {
           font-family: var(--mono);
           font-size: 10px;
           text-transform: uppercase;
-          letter-spacing: 0.16em;
+          letter-spacing: 0.15em;
           color: var(--ink-mute);
-          font-weight: 600;
-          margin-bottom: 6px;
+          margin-bottom: 16px;
         }
-
         .card-title {
           font-family: var(--serif);
-          font-size: 22px;
-          font-weight: 700;
+          font-size: 28px;
+          font-weight: 400;
+          letter-spacing: -0.02em;
           color: var(--ink);
-          margin-bottom: 6px;
-          letter-spacing: -0.01em;
+          margin-bottom: 8px;
         }
-
         .card-sub {
-          font-size: 13px;
+          font-size: 15px;
+          line-height: 1.55;
           color: var(--ink-mute);
           margin-bottom: 28px;
-          line-height: 1.6;
         }
 
-        /* ── Form fields ── */
+        /* =========================================
+           FORM STYLES
+           ========================================= */
         .form-grid-2 {
           display: grid;
           grid-template-columns: 1fr 1fr;
-          gap: 16px;
+          gap: 20px;
         }
-
-        @media (max-width: 540px) {
+        @media (max-width: 600px) {
           .form-grid-2 { grid-template-columns: 1fr; }
         }
-
         .form-group {
-          display: flex;
-          flex-direction: column;
-          margin-bottom: 18px;
+          margin-bottom: 20px;
         }
-
         .form-group label {
           font-family: var(--mono);
           font-size: 10px;
-          font-weight: 600;
           text-transform: uppercase;
           letter-spacing: 0.12em;
           color: var(--ink-soft);
-          margin-bottom: 7px;
+          margin-bottom: 8px;
+          display: block;
         }
-
         .form-group label em {
           color: var(--danger);
           font-style: normal;
-          margin-left: 2px;
         }
-
         .form-group input,
         .form-group textarea {
-          font-family: inherit;
+          font-family: var(--sans);
           font-size: 14px;
           color: var(--ink);
           background: var(--paper);
-          border: 1.5px solid var(--border);
+          border: 1px solid var(--paper-line);
           border-radius: var(--radius);
-          padding: 11px 14px;
-          outline: none;
-          transition: border-color 0.18s, background 0.18s, box-shadow 0.18s;
+          padding: 12px 14px;
           width: 100%;
+          transition: border-color 0.2s, box-shadow 0.2s;
         }
-
         .form-group input::placeholder,
         .form-group textarea::placeholder {
           color: var(--ink-mute);
-          opacity: 0.6;
         }
-
         .form-group input:focus,
         .form-group textarea:focus {
           border-color: var(--ink);
-          background: #ffffff;
-          box-shadow: 0 0 0 3px rgba(10,22,40,0.07);
+          background: var(--white);
+          box-shadow: 0 0 0 3px rgba(10, 22, 40, 0.05);
+          outline: none;
         }
-
         .form-group textarea {
           resize: vertical;
           min-height: 120px;
-          line-height: 1.6;
         }
-
-        /* Submit row */
         .form-actions {
           display: flex;
           align-items: center;
           gap: 16px;
-          margin-top: 6px;
-          flex-wrap: wrap;
+          margin-top: 8px;
         }
-
         .form-note {
           font-family: var(--mono);
           font-size: 10px;
           color: var(--ink-mute);
-          text-transform: uppercase;
           letter-spacing: 0.08em;
         }
 
         /* Spinner */
         .spinner {
-          width: 15px;
-          height: 15px;
-          border: 2px solid rgba(250,249,247,0.35);
-          border-top-color: #FAF9F7;
+          width: 16px;
+          height: 16px;
+          border: 2px solid rgba(250, 247, 242, 0.3);
+          border-top-color: var(--paper);
           border-radius: 50%;
-          animation: spin 0.7s linear infinite;
-          flex-shrink: 0;
+          animation: spin 0.8s linear infinite;
         }
         @keyframes spin { to { transform: rotate(360deg); } }
 
-        /* ── Success state ── */
+        /* =========================================
+           SUCCESS STATE
+           ========================================= */
         .success-state {
           text-align: center;
-          padding: 52px 16px;
+          padding: 40px 16px;
         }
-
         .success-icon-wrap {
           width: 56px;
           height: 56px;
           border-radius: 50%;
-          background: var(--signal-light);
-          border: 1px solid var(--signal-border);
+          background: rgba(0, 200, 150, 0.1);
+          border: 1px solid rgba(0, 200, 150, 0.2);
           display: flex;
           align-items: center;
           justify-content: center;
           margin: 0 auto 20px;
         }
-
         .success-state h3 {
           font-family: var(--serif);
-          font-size: 22px;
+          font-size: 28px;
           color: var(--ink);
           margin-bottom: 10px;
         }
-
         .success-state p {
-          font-size: 14px;
+          font-size: 15px;
           color: var(--ink-mute);
-          line-height: 1.65;
-          max-width: 300px;
+          line-height: 1.6;
+          max-width: 320px;
           margin: 0 auto;
         }
 
-        /* ── Info side ── */
+        /* =========================================
+           INFO SIDE (MATCH YOUR .service-cell STYLE)
+           ========================================= */
         .info-stack {
           display: flex;
           flex-direction: column;
-          gap: 16px;
+          gap: 20px;
         }
-
-        /* Info rows */
         .info-row {
           display: flex;
           align-items: flex-start;
           gap: 14px;
-          padding: 14px 0;
-          border-bottom: 1px solid var(--border-soft);
+          padding: 16px 0;
+          border-bottom: 1px solid var(--paper-line);
         }
-
         .info-row:last-child { border-bottom: none; padding-bottom: 0; }
-        .info-row:first-of-type { padding-top: 0; }
-
         .info-icon {
           width: 36px;
           height: 36px;
           border-radius: var(--radius);
-          background: var(--signal-light);
-          border: 1px solid var(--signal-border);
+          background: rgba(0, 200, 150, 0.08);
+          border: 1px solid rgba(0, 200, 150, 0.2);
           display: flex;
           align-items: center;
           justify-content: center;
           flex-shrink: 0;
-          margin-top: 1px;
         }
-
+        .info-icon svg { color: var(--signal); }
         .info-text strong {
-          display: block;
           font-family: var(--mono);
           font-size: 10px;
-          font-weight: 600;
           text-transform: uppercase;
           letter-spacing: 0.1em;
           color: var(--ink-mute);
-          margin-bottom: 3px;
+          margin-bottom: 4px;
+          display: block;
         }
-
         .info-text span,
         .info-text a {
-          font-size: 13px;
+          font-size: 14px;
           color: var(--ink);
           line-height: 1.55;
           text-decoration: none;
         }
-
         .info-text a:hover { color: var(--signal); }
 
-        /* Stats row */
+        /* Stats Grid */
         .stats-grid {
           display: grid;
-          grid-template-columns: 1fr 1fr 1fr;
-          gap: 12px;
-          margin-top: 16px;
-          padding-top: 16px;
-          border-top: 1px solid var(--border-soft);
+          grid-template-columns: repeat(3, 1fr);
+          gap: 16px;
+          margin-top: 20px;
+          padding-top: 20px;
+          border-top: 1px solid var(--paper-line);
         }
-
         .stat-item { text-align: center; }
-
         .stat-num {
           font-family: var(--serif);
-          font-size: 20px;
-          font-weight: 700;
+          font-size: 24px;
+          font-weight: 400;
           color: var(--ink);
           line-height: 1;
           margin-bottom: 4px;
         }
-
         .stat-label {
           font-family: var(--mono);
           font-size: 9px;
@@ -480,82 +458,74 @@ export default function ContactPage() {
           color: var(--ink-mute);
         }
 
-        /* Alert callout */
+        /* Alert Callout */
         .alert-callout {
-          background: var(--signal-light);
-          border: 1px solid var(--signal-border);
+          background: rgba(0, 200, 150, 0.05);
+          border: 1px solid rgba(0, 200, 150, 0.2);
           border-radius: var(--radius);
-          padding: 12px 14px;
+          padding: 14px 16px;
           margin-top: 16px;
         }
-
         .alert-callout-label {
           font-family: var(--mono);
           font-size: 9px;
           text-transform: uppercase;
           letter-spacing: 0.1em;
           color: var(--signal);
-          margin-bottom: 4px;
+          margin-bottom: 6px;
           font-weight: 600;
         }
-
         .alert-callout-text {
-          font-size: 12px;
+          font-size: 13px;
           color: var(--ink-soft);
           line-height: 1.5;
         }
 
-        /* Hours card */
+        /* Hours */
         .hours-row {
           display: flex;
           justify-content: space-between;
           align-items: center;
-          padding: 10px 0;
-          border-bottom: 1px solid var(--border-soft);
+          padding: 12px 0;
+          border-bottom: 1px solid var(--paper-line);
           font-size: 13px;
         }
-
         .hours-row:last-child { border-bottom: none; padding-bottom: 0; }
-        .hours-row:first-of-type { padding-top: 0; }
-
         .hours-row .day { color: var(--ink-mute); }
-        .hours-row .time { color: var(--ink); font-weight: 600; }
+        .hours-row .time { font-weight: 500; color: var(--ink); }
         .hours-row .time.closed { color: var(--danger); }
 
-        /* ── Map section ── */
+        /* =========================================
+           MAP SECTION
+           ========================================= */
         .map-section {
-          background: var(--paper-2);
-          border-top: 1px solid var(--border);
-          padding: 64px 24px;
+          background: var(--paper);
+          border-top: 1px solid var(--paper-line);
+          padding: 80px var(--gutter);
         }
-
         .map-inner {
-          max-width: 1160px;
+          max-width: var(--max);
           margin: 0 auto;
         }
-
         .map-header {
           text-align: center;
-          margin-bottom: 32px;
+          margin-bottom: 40px;
         }
-
         .map-header h2 {
           font-family: var(--serif);
-          font-size: clamp(24px, 3vw, 34px);
-          font-weight: 700;
+          font-size: clamp(34px, 4vw, 48px);
+          font-weight: 400;
+          letter-spacing: -0.02em;
           color: var(--ink);
-          margin-top: 10px;
-          letter-spacing: -0.01em;
+          margin-top: 12px;
         }
-
         .map-frame {
           border-radius: var(--radius-lg);
           overflow: hidden;
-          border: 1px solid var(--border);
-          box-shadow: var(--shadow-lg);
+          border: 1px solid var(--paper-line);
+          box-shadow: 0 20px 40px -20px rgba(10, 22, 40, 0.1);
           height: 400px;
         }
-
         .map-frame iframe {
           width: 100%;
           height: 100%;
@@ -563,71 +533,67 @@ export default function ContactPage() {
           display: block;
         }
 
-        /* ── Section divider ── */
+        /* Section Divider */
         .section-divider {
           height: 1px;
-          background: var(--border);
+          background: var(--paper-line);
           margin: 0;
         }
 
-        /* ── Trust strip ── */
+        /* =========================================
+           TRUST STRIP
+           ========================================= */
         .trust-strip {
-          background: #ffffff;
-          border-top: 1px solid var(--border);
-          padding: 28px 24px;
+          background: var(--white);
+          border-top: 1px solid var(--paper-line);
+          padding: 32px var(--gutter);
         }
-
         .trust-strip-inner {
-          max-width: 1160px;
+          max-width: var(--max);
           margin: 0 auto;
           display: flex;
           align-items: center;
           justify-content: center;
-          gap: 40px;
+          gap: 32px;
           flex-wrap: wrap;
         }
-
         .trust-item {
           display: flex;
           align-items: center;
           gap: 8px;
           font-family: var(--mono);
           font-size: 10px;
-          font-weight: 600;
           text-transform: uppercase;
           letter-spacing: 0.1em;
           color: var(--ink-mute);
         }
-
-        .trust-item svg { color: var(--signal); flex-shrink: 0; }
+        .trust-item svg { color: var(--signal); }
       `}</style>
 
       <div className="contact-page">
-
-        {/* ── Hero (dark, matching your site hero) ── */}
+        {/* HERO */}
         <section className="contact-hero">
           <div className="contact-hero-bg">
-            <svg viewBox="0 0 1440 600" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+            <svg viewBox="0 0 1440 600" preserveAspectRatio="xMidYMid slice">
               <defs>
-                <pattern id="c-grid" width="48" height="48" patternUnits="userSpaceOnUse">
-                  <path d="M 48 0 L 0 0 0 48" fill="none" stroke="#0A1628" strokeWidth="0.5" opacity="0.08" />
+                <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
+                  <path d="M 48 0 L 0 0 0 48" fill="none" stroke="var(--ink)" strokeWidth="0.5" opacity="0.08" />
                 </pattern>
               </defs>
-              <rect width="100%" height="100%" fill="url(#c-grid)" />
+              <rect width="100%" height="100%" fill="url(#grid)" />
             </svg>
             <div className="contact-hero-grain" />
           </div>
           <div className="contact-hero-inner">
             <span className="eyebrow eyebrow-light reveal reveal-1">— Contact Us</span>
             <h1 className="display display-light reveal reveal-2">
-              Let's Talk About Your <span>Billing Needs</span>
+              Let's Talk About Your <em>Billing Needs</em>
             </h1>
             <p className="sub sub-light reveal reveal-3">
-              Whether you're a solo practice or a large medical group, our billing
-              specialists respond within 1 business day.
+              Whether you're a solo practice or a large medical group, our billing specialists respond within 1 business day.
             </p>
             <div className="hero-actions reveal reveal-4">
-              <a href="#contact-form" className="btn btn-primary btn-lg" style={{ background: '#5ec49a', color: '#0A1628' }}>
+              <a href="#contact-form" className="btn btn-primary btn-lg">
                 Send a Message
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <path d="M5 12h14M13 5l7 7-7 7" />
@@ -642,10 +608,9 @@ export default function ContactPage() {
 
         <div className="section-divider" />
 
-        {/* ── Body: light background ── */}
+        {/* BODY */}
         <div className="contact-body" id="contact-form">
-
-          {/* ── Form Card ── */}
+          {/* FORM CARD */}
           <div className="light-card reveal reveal-2">
             {submitted ? (
               <div className="success-state">
@@ -655,60 +620,33 @@ export default function ContactPage() {
                   </svg>
                 </div>
                 <h3>Message Received</h3>
-                <p>
-                  A billing specialist will reach out within 1 business day
-                  to schedule your free consultation.
-                </p>
+                <p>A billing specialist will reach out within 1 business day to schedule your free consultation.</p>
               </div>
             ) : (
               <>
                 <div className="card-mono-label">— Free Consultation Request</div>
-                <div className="card-title">Get in Touch</div>
-                <div className="card-sub">Fill out the form and we'll get back to you within 24 hours.</div>
+                <h2 className="card-title">Get in Touch</h2>
+                <p className="card-sub">Fill out the form and we'll get back to you within 24 hours.</p>
 
                 <div className="form-grid-2">
                   <div className="form-group">
                     <label>Full Name<em>*</em></label>
-                    <input
-                      type="text"
-                      name="name"
-                      placeholder="Dr. Jane Smith"
-                      value={formData.name}
-                      onChange={handleChange}
-                    />
+                    <input type="text" name="name" placeholder="Dr. Jane Smith" value={formData.name} onChange={handleChange} />
                   </div>
                   <div className="form-group">
                     <label>Email Address<em>*</em></label>
-                    <input
-                      type="email"
-                      name="email"
-                      placeholder="jane@clinic.com"
-                      value={formData.email}
-                      onChange={handleChange}
-                    />
+                    <input type="email" name="email" placeholder="jane@clinic.com" value={formData.email} onChange={handleChange} />
                   </div>
                 </div>
 
                 <div className="form-grid-2">
                   <div className="form-group">
                     <label>Phone Number</label>
-                    <input
-                      type="tel"
-                      name="phone"
-                      placeholder="+1 (555) 000-0000"
-                      value={formData.phone}
-                      onChange={handleChange}
-                    />
+                    <input type="tel" name="phone" placeholder="+1 (555) 000-0000" value={formData.phone} onChange={handleChange} />
                   </div>
                   <div className="form-group">
                     <label>Practice / Company</label>
-                    <input
-                      type="text"
-                      name="company"
-                      placeholder="Sunrise Medical Group"
-                      value={formData.company}
-                      onChange={handleChange}
-                    />
+                    <input type="text" name="company" placeholder="Sunrise Medical Group" value={formData.company} onChange={handleChange} />
                   </div>
                 </div>
 
@@ -723,13 +661,11 @@ export default function ContactPage() {
                 </div>
 
                 <div className="form-actions">
-                  <button
-                    className="btn btn-primary-light btn-lg"
-                    onClick={handleSubmit}
-                    disabled={loading || !isValid}
-                  >
+                  <button className="btn btn-primary btn-lg" onClick={handleSubmit} disabled={loading || !isValid}>
                     {loading ? (
-                      <><div className="spinner" /> Sending…</>
+                      <>
+                        <div className="spinner" /> Sending…
+                      </>
                     ) : (
                       <>
                         Send Message
@@ -745,17 +681,15 @@ export default function ContactPage() {
             )}
           </div>
 
-          {/* ── Info Side ── */}
+          {/* INFO SIDE */}
           <div className="info-stack">
-
-            {/* Contact details */}
             <div className="light-card reveal reveal-3">
               <div className="card-mono-label">— Contact Information</div>
 
               <div className="info-row">
                 <div className="info-icon">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--signal)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.67A2 2 0 012 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.67A2 2 0 012 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" />
                   </svg>
                 </div>
                 <div className="info-text">
@@ -766,9 +700,9 @@ export default function ContactPage() {
 
               <div className="info-row">
                 <div className="info-icon">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--signal)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-                    <polyline points="22,6 12,13 2,6"/>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                    <polyline points="22,6 12,13 2,6" />
                   </svg>
                 </div>
                 <div className="info-text">
@@ -779,9 +713,9 @@ export default function ContactPage() {
 
               <div className="info-row">
                 <div className="info-icon">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--signal)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
-                    <circle cx="12" cy="10" r="3"/>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
+                    <circle cx="12" cy="10" r="3" />
                   </svg>
                 </div>
                 <div className="info-text">
@@ -796,7 +730,7 @@ export default function ContactPage() {
                   <div className="stat-label">Practices</div>
                 </div>
                 <div className="stat-item">
-                  <div className="stat-num" style={{ color: 'var(--amber)' }}>24hr</div>
+                  <div className="stat-num" style={{ color: 'var(--accent)' }}>24hr</div>
                   <div className="stat-label">Response</div>
                 </div>
                 <div className="stat-item">
@@ -807,13 +741,10 @@ export default function ContactPage() {
 
               <div className="alert-callout">
                 <div className="alert-callout-label">— HIPAA Compliant</div>
-                <div className="alert-callout-text">
-                  All communications and data handling are fully HIPAA-compliant. Your practice information is secure.
-                </div>
+                <div className="alert-callout-text">All communications and data handling are fully HIPAA-compliant.</div>
               </div>
             </div>
 
-            {/* Hours */}
             <div className="light-card reveal reveal-4">
               <div className="card-mono-label">— Business Hours</div>
               <div className="hours-row">
@@ -829,11 +760,10 @@ export default function ContactPage() {
                 <span className="time closed">Closed</span>
               </div>
             </div>
-
           </div>
         </div>
 
-        {/* ── Map ── */}
+        {/* MAP */}
         <section className="map-section" id="map-section">
           <div className="map-inner">
             <div className="map-header reveal reveal-2">
@@ -852,14 +782,14 @@ export default function ContactPage() {
           </div>
         </section>
 
-        {/* ── Trust Strip ── */}
+        {/* TRUST STRIP */}
         <div className="trust-strip">
           <div className="trust-strip-inner">
             {[
-              { label: 'HIPAA Compliant',        path: <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/> },
-              { label: 'Response Within 24 Hrs', path: <><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></> },
-              { label: 'Free Consultation',       path: <polyline points="20 6 9 17 4 12"/> },
-              { label: '500+ Practices Served',   path: <><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></> },
+              { label: 'HIPAA Compliant', path: <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /> },
+              { label: '24hr Response', path: <><circle cx="12" cy="12" r="10" /><polyline points="12 6 12 12 16 14" /></> },
+              { label: 'Free Consultation', path: <polyline points="20 6 9 17 4 12" /> },
+              { label: '500+ Practices', path: <><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75" /></> },
             ].map((t, i) => (
               <div className="trust-item" key={i}>
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -870,7 +800,6 @@ export default function ContactPage() {
             ))}
           </div>
         </div>
-
       </div>
     </>
   );

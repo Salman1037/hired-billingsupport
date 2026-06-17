@@ -72,40 +72,83 @@ const HeroMedicalBillingRcm: React.FC<HeroMedicalBillingRcmProps> = ({
           </div>
         </div>
         <div className="reveal reveal-4" style={{ animationDelay: '0.55s' }}>
-          <div className="hero-card">
-            <h4>— Practice Revenue Snapshot · 30-day</h4>
-            <div className="bar-set">
-              <div className="bar-row">
-                <span className="lbl">BILLED</span>
-                <div className="bar production">
-                  <span></span>
-                </div>
-                <span className="val">$198k</span>
-              </div>
-              <div className="bar-row">
-                <span className="lbl">BEFORE HBS</span>
-                <div className="bar collection-before">
-                  <span></span>
-                </div>
-                <span className="val">$141k</span>
-              </div>
-              <div className="bar-row">
-                <span className="lbl">WITH HBS</span>
-                <div className="bar collection-after">
-                  <span></span>
-                </div>
-                <span className="val">$189k</span>
-              </div>
-            </div>
-            <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
-              <span className="card-tag before">71% COLLECTION RATE</span>
-              <span className="card-tag after">95% COLLECTION RATE</span>
-            </div>
-            <div className="gap-callout">
-              <div className="gc-lbl">— Revenue recovered monthly</div>
-              <div className="gc-val">$48,000 — the production-to-collection gap, closed.</div>
-            </div>
-          </div>
+        <div className="hero-card">
+  <h4>
+    — Practice Revenue Snapshot · 30-day
+  </h4>
+
+  <div className="ar-card-row ar-green">
+    <span className="ar-lbl">
+      Billed
+    </span>
+
+    <div className="ar-bar">
+      <span style={{ width: '100%' }}></span>
+    </div>
+
+    <span className="ar-val">
+      $198K
+    </span>
+  </div>
+
+  <div className="ar-card-row ar-amber">
+    <span className="ar-lbl">
+      Before HBS
+    </span>
+
+    <div className="ar-bar">
+      <span style={{ width: '71%' }}></span>
+    </div>
+
+    <span className="ar-val">
+      $141K
+    </span>
+  </div>
+
+  <div className="ar-card-row ar-green">
+    <span className="ar-lbl">
+      With HBS
+    </span>
+
+    <div className="ar-bar">
+      <span style={{ width: '95%' }}></span>
+    </div>
+
+    <span className="ar-val">
+      $189K
+    </span>
+  </div>
+
+  <div
+    className="gap-callout"
+    style={{ marginTop: '20px' }}
+  >
+    <div className="gc-lbl">
+      — Revenue recovered monthly
+    </div>
+
+    <div className="gc-val">
+      $48,000 — the production-to-collection gap, closed.
+    </div>
+  </div>
+
+  <div
+    style={{
+      marginTop: '14px',
+      display: 'flex',
+      gap: '8px',
+      flexWrap: 'wrap',
+    }}
+  >
+    <span className="card-tag before">
+      71% COLLECTION RATE
+    </span>
+
+    <span className="card-tag after">
+      95% COLLECTION RATE
+    </span>
+  </div>
+</div>
         </div>
       </div>
     </section>

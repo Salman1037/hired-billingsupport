@@ -74,54 +74,186 @@ const HeroQualityAssurance: React.FC<HeroQualityAssuranceProps> = ({
         </div>
         <div className="reveal reveal-4" style={{ animationDelay: '0.55s' }}>
           <div className="hero-card">
-            <h4>— QA Performance Scorecard · Monthly</h4>
-            <div className="bar-set">
-              <div className="bar-row">
-                <span className="lbl">Claim Accuracy</span>
-                <div className="bar production">
-                  <span style={{ width: '97%' }}></span>
-                </div>
-                <span className="val">97%</span>
-              </div>
-              <div className="bar-row">
-                <span className="lbl">Coding QA Pass Rate</span>
-                <div className="bar collection-before">
-                  <span style={{ width: '95%' }}></span>
-                </div>
-                <span className="val">95%</span>
-              </div>
-              <div className="bar-row">
-                <span className="lbl">AR Follow-Up Compliance</span>
-                <div className="bar collection-after">
-                  <span style={{ width: '98%' }}></span>
-                </div>
-                <span className="val">98%</span>
-              </div>
-              <div className="bar-row">
-                <span className="lbl">Denial Work Rate</span>
-                <div className="bar collection-after">
-                  <span style={{ width: '100%' }}></span>
-                </div>
-                <span className="val">100%</span>
-              </div>
-              <div className="bar-row">
-                <span className="lbl">Process SOP Adherence</span>
-                <div className="bar collection-after">
-                  <span style={{ width: '91%' }}></span>
-                </div>
-                <span className="val">91%</span>
-              </div>
-            </div>
-            <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
-              <span className="card-tag before">12 Errors Caught Pre-Submit</span>
-              <span className="card-tag after">3 Process Gaps Found</span>
-              <span className="card-tag after">$0 Unreviewed Denials</span>
-            </div>
-            <div className="gap-callout">
-              <div className="gc-lbl">— This month's finding</div>
-              <div className="gc-val">SOP adherence gap in denial follow-up notes — corrected.</div>
-            </div>
-          </div>
+
+<h4>
+
+— QA Performance Scorecard · Monthly
+
+</h4>
+
+<div className="ar-card-row ar-green">
+
+<span className="ar-lbl">
+
+Claim Accuracy
+
+</span>
+
+<div className="ar-bar">
+
+<span style={{ width: '97%' }}></span>
+
+</div>
+
+<span className="ar-val">
+
+97%
+
+</span>
+
+</div>
+
+
+
+<div className="ar-card-row ar-green">
+
+<span className="ar-lbl">
+
+Coding QA Pass Rate
+
+</span>
+
+<div className="ar-bar">
+
+<span style={{ width: '95%' }}></span>
+
+</div>
+
+<span className="ar-val">
+
+95%
+
+</span>
+
+</div>
+
+
+
+<div className="ar-card-row ar-green">
+
+<span className="ar-lbl">
+
+AR Follow-Up Compliance
+
+</span>
+
+<div className="ar-bar">
+
+<span style={{ width: '98%' }}></span>
+
+</div>
+
+<span className="ar-val">
+
+98%
+
+</span>
+
+</div>
+
+
+
+<div className="ar-card-row ar-green">
+
+<span className="ar-lbl">
+
+Denial Work Rate
+
+</span>
+
+<div className="ar-bar">
+
+<span style={{ width: '100%' }}></span>
+
+</div>
+
+<span className="ar-val">
+
+100%
+
+</span>
+
+</div>
+
+
+
+<div className="ar-card-row ar-amber">
+
+<span className="ar-lbl">
+
+Process SOP Adherence
+
+</span>
+
+<div className="ar-bar">
+
+<span style={{ width: '91%' }}></span>
+
+</div>
+
+<span className="ar-val">
+
+91%
+
+</span>
+
+</div>
+
+
+
+<div
+className="gap-callout"
+style={{
+marginTop:'20px'
+}}
+>
+
+<div className="gc-lbl">
+
+— This month's finding
+
+</div>
+
+<div className="gc-val">
+
+SOP adherence gap in denial follow-up notes — corrected.
+
+</div>
+
+</div>
+
+
+
+<div
+style={{
+marginTop:'14px',
+display:'flex',
+gap:'8px',
+flexWrap:'wrap'
+}}
+>
+
+<span className="card-tag before">
+
+12 ERRORS CAUGHT PRE-SUBMIT
+
+</span>
+
+<span className="card-tag after">
+
+3 PROCESS GAPS FOUND
+
+</span>
+
+<span className="card-tag after">
+
+$0 UNREVIEWED DENIALS
+
+</span>
+
+</div>
+
+</div>
         </div>
       </div>
     </section>

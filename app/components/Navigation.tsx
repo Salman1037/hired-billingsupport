@@ -173,18 +173,15 @@ export default function Navigation() {
           </button>
           <div className={`dropdown-menu dropdown-grid-2 ${activeDropdown === 'resources' ? 'active' : ''}`}>
             <div className="dropdown-column">
-              <div className="column-header">LEARN</div>
-              <Link href="#">Blog & Insights</Link>
-              <Link href="#">Case Studies</Link>
-              <Link href="#">Healthcare Trends</Link>
-              <Link href="#">Webinars</Link>
+              <div className="column-header">Case Studies</div>
+             
+              <Link href="/case-study">Case Studies</Link>
+              
             </div>
             <div className="dropdown-column">
-              <div className="column-header">SUPPORT</div>
-              <Link href="#">Documentation</Link>
-              <Link href="#">FAQs</Link>
-              <Link href="#">Contact Support</Link>
-              <Link href="#">Schedule a Demo</Link>
+              <div className="column-header">Blog</div>
+              <Link href="#">Blog</Link>
+              
             </div>
           </div>
         </div>
@@ -197,23 +194,19 @@ export default function Navigation() {
           <div className={`dropdown-menu dropdown-grid-2 ${activeDropdown === 'company' ? 'active' : ''}`}>
             <div className="dropdown-column">
               <div className="column-header">ABOUT</div>
-              <Link href="#">Our Story</Link>
-              <Link href="#">Team</Link>
-              <Link href="#">Careers</Link>
-              <Link href="#">Press</Link>
+              <Link href="/about">Our Story</Link>
+             
             </div>
             <div className="dropdown-column">
-              <div className="column-header">TRUST & SECURITY</div>
-              <Link href="#">Security Overview</Link>
-              <Link href="#">HIPAA Compliance</Link>
-              <Link href="#">Privacy Policy</Link>
-              <Link href="#">Terms of Service</Link>
+              <div className="column-header">Articles & Facilities</div>
+              <Link href="/article-28-facilities">Article 28 Facilities</Link>
+             
             </div>
           </div>
         </div>
 
         <div className="nav-cta">
-          <Link href="#cta" className="btn btn-primary">
+          <Link href="/contact" className="btn btn-primary">
             Consultation
             <svg className="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
               <path d="M5 12h14M13 5l7 7-7 7" />

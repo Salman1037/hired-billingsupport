@@ -18,7 +18,7 @@ export default function HeroFqhc({ solution }: HeroFqhcProps) {
   const styles = `
     .who-hero {
       background: #FAF7F2;
-      padding: 140px 0 100px;
+      padding: 40px 0 100px;
       position: relative;
       overflow: hidden;
     }
@@ -365,7 +365,7 @@ export default function HeroFqhc({ solution }: HeroFqhcProps) {
 
         <div className="who-hero-inner">
           <div className="who-hero-content">
-            <div className="who-hero-badge reveal reveal-1">Who We Serve · FQHCs & Community Health Centers</div>
+            <div className="eyebrow reveal reveal-1">Who We Serve · FQHCs & Community Health Centers</div>
             
             <h1 className="who-hero-title reveal reveal-2">
               Your organization exists to serve patients who have fewer options.

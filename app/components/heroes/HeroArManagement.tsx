@@ -46,73 +46,93 @@ export default function HeroArManagement({ solution }: HeroProps) {
             </>
           )}
         </div>
-        {solution.hero && (
-          <div className="reveal reveal-4" style={{ animationDelay: "0.55s" }}>
-            <div className="hero-card">
-              <h4>— AR Aging Snapshot · Current</h4>
-              
-              {/* 0-30 days */}
-              <div style={{ marginBottom: "16px" }}>
-                <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "6px" }}>
-                  <span style={{ fontSize: "14px", color: "var(--ink-mute)" }}>0–30 days</span>
-                  <span style={{ fontSize: "14px", fontWeight: "600", color: "var(--ink)" }}>$68,400</span>
-                </div>
-                <div style={{ height: "6px", backgroundColor: "rgba(0,0,0,0.05)", borderRadius: "3px", overflow: "hidden" }}>
-                  <div style={{ height: "100%", width: "80%", backgroundColor: "#10b981" }}></div>
-                </div>
-              </div>
+      {solution.hero && (
+  <div className="hero-card">
+    <h4>— AR Aging Snapshot · Current</h4>
 
-              {/* 31-60 days */}
-              <div style={{ marginBottom: "16px" }}>
-                <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "6px" }}>
-                  <span style={{ fontSize: "14px", color: "var(--ink-mute)" }}>31–60 days</span>
-                  <span style={{ fontSize: "14px", fontWeight: "600", color: "var(--ink)" }}>$34,120</span>
-                </div>
-                <div style={{ height: "6px", backgroundColor: "rgba(0,0,0,0.05)", borderRadius: "3px", overflow: "hidden" }}>
-                  <div style={{ height: "100%", width: "55%", backgroundColor: "#f59e0b" }}></div>
-                </div>
-              </div>
+    <div className="ar-card-row ar-green">
+      <span className="ar-lbl">0–30 days</span>
 
-              {/* 61-90 days */}
-              <div style={{ marginBottom: "16px" }}>
-                <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "6px" }}>
-                  <span style={{ fontSize: "14px", color: "var(--ink-mute)" }}>61–90 days</span>
-                  <span style={{ fontSize: "14px", fontWeight: "600", color: "var(--ink)" }}>$21,880</span>
-                </div>
-                <div style={{ height: "6px", backgroundColor: "rgba(0,0,0,0.05)", borderRadius: "3px", overflow: "hidden" }}>
-                  <div style={{ height: "100%", width: "35%", backgroundColor: "#ff9500" }}></div>
-                </div>
-              </div>
+      <div className="ar-bar">
+        <span style={{ width: '80%' }}></span>
+      </div>
 
-              {/* 91-120 days */}
-              <div style={{ marginBottom: "16px" }}>
-                <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "6px" }}>
-                  <span style={{ fontSize: "14px", color: "var(--ink-mute)" }}>91–120 days</span>
-                  <span style={{ fontSize: "14px", fontWeight: "600", color: "var(--ink)" }}>$13,340</span>
-                </div>
-                <div style={{ height: "6px", backgroundColor: "rgba(0,0,0,0.05)", borderRadius: "3px", overflow: "hidden" }}>
-                  <div style={{ height: "100%", width: "20%", backgroundColor: "#ef4444" }}></div>
-                </div>
-              </div>
+      <span className="ar-val">$68,400</span>
+    </div>
 
-              {/* 120+ days */}
-              <div style={{ marginBottom: "20px" }}>
-                <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "6px" }}>
-                  <span style={{ fontSize: "14px", color: "var(--ink-mute)" }}>120+ days</span>
-                  <span style={{ fontSize: "14px", fontWeight: "600", color: "var(--ink)" }}>$8,700</span>
-                </div>
-                <div style={{ height: "6px", backgroundColor: "rgba(0,0,0,0.05)", borderRadius: "3px", overflow: "hidden" }}>
-                  <div style={{ height: "100%", width: "12%", backgroundColor: "#dc2626" }}></div>
-                </div>
-              </div>
+    <div className="ar-card-row ar-amber">
+      <span className="ar-lbl">31–60 days</span>
 
-              <div className="gap-callout" style={{ marginTop: "20px" }}>
-                <div className="gc-lbl">— Recoverable (60+ days)</div>
-                <div className="gc-val">$43,920 · actively being worked by HBS team</div>
-              </div>
-            </div>
-          </div>
-        )}
+      <div className="ar-bar">
+        <span style={{ width: '55%' }}></span>
+      </div>
+
+      <span className="ar-val">$34,120</span>
+    </div>
+
+    <div className="ar-card-row ar-orange">
+      <span className="ar-lbl">61–90 days</span>
+
+      <div className="ar-bar">
+        <span style={{ width: '35%' }}></span>
+      </div>
+
+      <span className="ar-val">$21,880</span>
+    </div>
+
+    <div className="ar-card-row ar-red">
+      <span className="ar-lbl">91–120 days</span>
+
+      <div className="ar-bar">
+        <span style={{ width: '20%' }}></span>
+      </div>
+
+      <span className="ar-val">$13,340</span>
+    </div>
+
+    <div className="ar-card-row ar-red">
+      <span className="ar-lbl">120+ days</span>
+
+      <div className="ar-bar">
+        <span style={{ width: '12%' }}></span>
+      </div>
+
+      <span className="ar-val">$8,700</span>
+    </div>
+
+    <div
+      className="gap-callout"
+      style={{
+        marginTop: '20px',
+      }}
+    >
+      <div className="gc-lbl">
+        — Recoverable (60+ days)
+      </div>
+
+      <div className="gc-val">
+        $43,920 · actively being worked by HBS team
+      </div>
+    </div>
+
+    <div
+      style={{
+        marginTop: '14px',
+        display: 'flex',
+        gap: '8px',
+        flexWrap: 'wrap',
+      }}
+    >
+      <span className="card-tag before">
+        $43,920 RECOVERABLE
+      </span>
+
+      <span className="card-tag after">
+        ACTIVE FOLLOW-UP
+      </span>
+    </div>
+  </div>
+)}
       </div>
     </section>
   );

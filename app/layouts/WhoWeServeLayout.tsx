@@ -215,12 +215,7 @@ const WhoWeServeLayout = ({ solution, slug }: WhoWeServeLayoutProps) => {
     }
 
     /* Hero Section */
-    .who-hero {
-      background: var(--paper);
-      padding: 140px 0 100px;
-      position: relative;
-      overflow: hidden;
-    }
+  
 
     .who-hero-bg {
       position: absolute;
@@ -1145,10 +1140,7 @@ const WhoWeServeLayout = ({ solution, slug }: WhoWeServeLayoutProps) => {
         padding: 64px 0;
       }
 
-      .who-hero {
-        padding: 110px 0 72px;
-      }
-
+    
       .cta-section {
         padding: 80px var(--gutter);
       }
@@ -1171,7 +1163,7 @@ const WhoWeServeLayout = ({ solution, slug }: WhoWeServeLayoutProps) => {
           <div className="who-hero-inner">
             <div>
               {solution.hero?.eyebrow && (
-                <div className="who-hero-badge reveal reveal-1">{solution.hero.eyebrow}</div>
+                <div className="eyebrow reveal reveal-1">{solution.hero.eyebrow}</div>
               )}
               {solution.hero?.title && (
                 <h1 className="who-hero-title reveal reveal-2">

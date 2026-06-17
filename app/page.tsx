@@ -409,7 +409,7 @@ export default function Home() {
                 The practice was running on two in-house billers, a stretched-thin front desk, and a $180k AR backlog. We embedded a 3-person remote team: one biller, one AR specialist, one verification VA. We took over the AR aging report on day one.
               </p>
               <p>By month six: AR days under 25, denials cut in half, the in-house team redeployed to patient experience, and the lead physician home for dinner.</p>
-              <a href="#" className="btn btn-light">Read the full case →</a>
+              <Link href="/case-study" className="btn btn-light">Read the full case →</Link>
             </div>
             <div className="case-metrics">
               {[

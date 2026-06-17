@@ -48,63 +48,62 @@ export default function HeroMedicalCoding({ solution }: HeroProps) {
         </div>
         {solution.hero && (
           <div className="reveal reveal-4" style={{ animationDelay: "0.55s" }}>
-            <div className="hero-card">
-              <h4>— Coding Accuracy · 30-day view</h4>
+         <div className="reveal reveal-4" style={{ animationDelay: "0.55s" }}>
+  <div className="hero-card">
+    <h4>— Coding Accuracy · 30-day view</h4>
 
-              {/* Row 1: ICD-10 Accuracy */}
-              <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "12px", paddingBottom: "12px", borderBottom: "1px solid rgba(0,0,0,0.08)" }}>
-                <span style={{ fontSize: "13px", fontWeight: "600", color: "var(--ink-mute)", textTransform: "uppercase", letterSpacing: "0.5px" }}>ICD-10 Accuracy</span>
-                <span style={{ fontSize: "14px", fontWeight: "700", color: "#10b981" }}>96%</span>
-              </div>
+    <div className="dash-row">
+      <span className="dash-label">ICD-10 Accuracy</span>
+      <span className="dash-value green">96%</span>
+    </div>
 
-              {/* Row 2: CPT Accuracy */}
-              <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "12px", paddingBottom: "12px", borderBottom: "1px solid rgba(0,0,0,0.08)" }}>
-                <span style={{ fontSize: "13px", fontWeight: "600", color: "var(--ink-mute)", textTransform: "uppercase", letterSpacing: "0.5px" }}>CPT Accuracy</span>
-                <span style={{ fontSize: "14px", fontWeight: "700", color: "#10b981" }}>94%</span>
-              </div>
+    <div className="dash-row">
+      <span className="dash-label">CPT Accuracy</span>
+      <span className="dash-value green">94%</span>
+    </div>
 
-              {/* Row 3: Modifier Accuracy */}
-              <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "12px", paddingBottom: "12px", borderBottom: "1px solid rgba(0,0,0,0.08)" }}>
-                <span style={{ fontSize: "13px", fontWeight: "600", color: "var(--ink-mute)", textTransform: "uppercase", letterSpacing: "0.5px" }}>Modifier Accuracy</span>
-                <span style={{ fontSize: "14px", fontWeight: "700", color: "#f59e0b" }}>88%</span>
-              </div>
+    <div className="dash-row">
+      <span className="dash-label">Modifier Accuracy</span>
+      <span className="dash-value amber">88%</span>
+    </div>
 
-              {/* Row 4: Doc-Code Alignment */}
-              <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "12px", paddingBottom: "12px", borderBottom: "1px solid rgba(0,0,0,0.08)" }}>
-                <span style={{ fontSize: "13px", fontWeight: "600", color: "var(--ink-mute)", textTransform: "uppercase", letterSpacing: "0.5px" }}>Doc–Code Alignment</span>
-                <span style={{ fontSize: "14px", fontWeight: "700", color: "#10b981" }}>97%</span>
-              </div>
+    <div className="dash-row">
+      <span className="dash-label">Doc–Code Alignment</span>
+      <span className="dash-value green">97%</span>
+    </div>
 
-              {/* Row 5: Coding Denial Rate */}
-              <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "12px", paddingBottom: "12px", borderBottom: "1px solid rgba(0,0,0,0.08)" }}>
-                <span style={{ fontSize: "13px", fontWeight: "600", color: "var(--ink-mute)", textTransform: "uppercase", letterSpacing: "0.5px" }}>Coding Denial Rate</span>
-                <span style={{ fontSize: "14px", fontWeight: "700", color: "var(--ink)" }}>
-                  <span style={{ display: "inline-block", padding: "3px 8px", borderRadius: "3px", backgroundColor: "rgba(16,185,129,0.15)", color: "#047857", fontSize: "12px", fontWeight: "600" }}>2.1% ↓</span>
-                </span>
-              </div>
+    <div className="dash-row">
+      <span className="dash-label">Coding Denial Rate</span>
+      <span className="dash-value">
+        <span className="dash-pill pill-green">2.1% ↓</span>
+      </span>
+    </div>
 
-              {/* Row 6: Errors Caught Pre-Submit */}
-              <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "20px", paddingBottom: "12px", borderBottom: "1px solid rgba(0,0,0,0.08)" }}>
-                <span style={{ fontSize: "13px", fontWeight: "600", color: "var(--ink-mute)", textTransform: "uppercase", letterSpacing: "0.5px" }}>Errors Caught Pre-Submit</span>
-                <span style={{ fontSize: "14px", fontWeight: "700", color: "#10b981" }}>14</span>
-              </div>
+    <div className="dash-row">
+      <span className="dash-label">Errors Caught Pre-Submit</span>
+      <span className="dash-value green">14</span>
+    </div>
 
-              {/* Stats Grid */}
-              <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "12px", marginTop: "16px" }}>
-                <div style={{ textAlign: "center" }}>
-                  <div style={{ fontSize: "18px", fontWeight: "700", color: "var(--ink)" }}>341</div>
-                  <div style={{ fontSize: "11px", fontWeight: "600", color: "var(--ink-mute)", marginTop: "4px", textTransform: "uppercase", letterSpacing: "0.5px" }}>Claims Reviewed</div>
-                </div>
-                <div style={{ textAlign: "center" }}>
-                  <div style={{ fontSize: "18px", fontWeight: "700", color: "var(--ink)" }}>0</div>
-                  <div style={{ fontSize: "11px", fontWeight: "600", color: "var(--ink-mute)", marginTop: "4px", textTransform: "uppercase", letterSpacing: "0.5px" }}>Unbilled Visits</div>
-                </div>
-                <div style={{ textAlign: "center" }}>
-                  <div style={{ fontSize: "18px", fontWeight: "700", color: "#10b981" }}>$18.4K</div>
-                  <div style={{ fontSize: "11px", fontWeight: "600", color: "var(--ink-mute)", marginTop: "4px", textTransform: "uppercase", letterSpacing: "0.5px" }}>Revenue Protected</div>
-                </div>
-              </div>
-            </div>
+    <div className="dash-divider"></div>
+
+    <div className="dash-stats">
+      <div className="dash-stat">
+        <span className="dash-stat-num">341</span>
+        <span className="dash-stat-label">Claims Reviewed</span>
+      </div>
+
+      <div className="dash-stat">
+        <span className="dash-stat-num">0</span>
+        <span className="dash-stat-label">Unbilled Visits</span>
+      </div>
+
+      <div className="dash-stat">
+        <span className="dash-stat-num green">$18.4K</span>
+        <span className="dash-stat-label">Revenue Protected</span>
+      </div>
+    </div>
+  </div>
+</div>
           </div>
         )}
       </div>

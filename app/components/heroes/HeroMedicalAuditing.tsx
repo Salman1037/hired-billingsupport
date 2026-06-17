@@ -48,87 +48,103 @@ export default function HeroMedicalAuditing({ solution }: HeroProps) {
         </div>
         {solution.hero && (
           <div className="reveal reveal-4" style={{ animationDelay: "0.55s" }}>
-            <div className="hero-card">
-              <h4>— Audit Findings Summary · Last Review</h4>
-              
-              {/* Metric 1: Claims Audited */}
-              <div style={{ marginBottom: "18px" }}>
-                <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "6px" }}>
-                  <span style={{ fontSize: "12px", fontWeight: "600", color: "var(--ink-mute)", textTransform: "uppercase", letterSpacing: "0.5px" }}>Claims Audited</span>
-                  <span style={{ fontSize: "14px", fontWeight: "700", color: "var(--ink)" }}>248 claims</span>
-                </div>
-                <div style={{ height: "8px", backgroundColor: "rgba(0,0,0,0.05)", borderRadius: "4px", overflow: "hidden" }}>
-                  <div style={{ height: "100%", width: "100%", backgroundColor: "#06b6d4" }}></div>
-                </div>
-              </div>
+          <div className="hero-card">
+  <h4>— Audit Findings Summary</h4>
 
-              {/* Metric 2: Coding Errors Found */}
-              <div style={{ marginBottom: "18px" }}>
-                <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "6px" }}>
-                  <span style={{ fontSize: "12px", fontWeight: "600", color: "var(--ink-mute)", textTransform: "uppercase", letterSpacing: "0.5px" }}>Coding Errors Found</span>
-                  <span style={{ fontSize: "14px", fontWeight: "700", color: "var(--ink)" }}>31 | <span style={{ fontSize: "12px", color: "var(--ink-mute)" }}>12.5%</span></span>
-                </div>
-                <div style={{ height: "8px", backgroundColor: "rgba(0,0,0,0.05)", borderRadius: "4px", overflow: "hidden" }}>
-                  <div style={{ height: "100%", width: "12%", backgroundColor: "#f59e0b" }}></div>
-                </div>
-              </div>
+  <div className="ar-card-row ar-green">
+    <span className="ar-lbl">Claims Audited</span>
 
-              {/* Metric 3: Documentation Gaps */}
-              <div style={{ marginBottom: "18px" }}>
-                <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "6px" }}>
-                  <span style={{ fontSize: "12px", fontWeight: "600", color: "var(--ink-mute)", textTransform: "uppercase", letterSpacing: "0.5px" }}>Documentation Gaps</span>
-                  <span style={{ fontSize: "14px", fontWeight: "700", color: "var(--ink)" }}>18 claims</span>
-                </div>
-                <div style={{ height: "8px", backgroundColor: "rgba(0,0,0,0.05)", borderRadius: "4px", overflow: "hidden" }}>
-                  <div style={{ height: "100%", width: "7%", backgroundColor: "#ec4899" }}></div>
-                </div>
-              </div>
+    <div className="ar-bar">
+      <span style={{ width: '100%' }}></span>
+    </div>
 
-              {/* Metric 4: Underpayments Identified */}
-              <div style={{ marginBottom: "18px" }}>
-                <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "6px" }}>
-                  <span style={{ fontSize: "12px", fontWeight: "600", color: "var(--ink-mute)", textTransform: "uppercase", letterSpacing: "0.5px" }}>Underpayments Identified</span>
-                  <span style={{ fontSize: "14px", fontWeight: "700", color: "var(--ink)" }}>$9,840</span>
-                </div>
-                <div style={{ height: "8px", backgroundColor: "rgba(0,0,0,0.05)", borderRadius: "4px", overflow: "hidden" }}>
-                  <div style={{ height: "100%", width: "44%", backgroundColor: "#8b5cf6" }}></div>
-                </div>
-              </div>
+    <span className="ar-val">248 Claims</span>
+  </div>
 
-              {/* Metric 5: Revenue Leakage Estimate */}
-              <div style={{ marginBottom: "18px" }}>
-                <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "6px" }}>
-                  <span style={{ fontSize: "12px", fontWeight: "600", color: "var(--ink-mute)", textTransform: "uppercase", letterSpacing: "0.5px" }}>Revenue Leakage Estimate</span>
-                  <span style={{ fontSize: "14px", fontWeight: "700", color: "var(--ink)" }}>$22,600</span>
-                </div>
-                <div style={{ height: "8px", backgroundColor: "rgba(0,0,0,0.05)", borderRadius: "4px", overflow: "hidden" }}>
-                  <div style={{ height: "100%", width: "100%", backgroundColor: "#10b981" }}></div>
-                </div>
-              </div>
+  <div className="ar-card-row ar-amber">
+    <span className="ar-lbl">Coding Errors Found</span>
 
-              {/* Metric 6: Compliance Flags */}
-              <div style={{ marginBottom: "20px" }}>
-                <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "6px" }}>
-                  <span style={{ fontSize: "12px", fontWeight: "600", color: "var(--ink-mute)", textTransform: "uppercase", letterSpacing: "0.5px" }}>Compliance Flags</span>
-                  <span style={{ fontSize: "14px", fontWeight: "700", color: "var(--ink)" }}>4 patterns</span>
-                </div>
-                <div style={{ height: "8px", backgroundColor: "rgba(0,0,0,0.05)", borderRadius: "4px", overflow: "hidden" }}>
-                  <div style={{ height: "100%", width: "6%", backgroundColor: "#f59e0b" }}></div>
-                </div>
-              </div>
+    <div className="ar-bar">
+      <span style={{ width: '12%' }}></span>
+    </div>
 
-              {/* Tags */}
-              <div style={{ display: "flex", gap: "8px", flexWrap: "wrap", marginBottom: "20px" }}>
-                <span style={{ fontSize: "12px", fontWeight: "600", padding: "4px 10px", borderRadius: "3px", backgroundColor: "rgba(16,185,129,0.1)", color: "#047857" }}>$22K Found</span>
-                <span style={{ fontSize: "12px", fontWeight: "600", padding: "4px 10px", borderRadius: "3px", backgroundColor: "rgba(0,0,0,0.05)", color: "var(--ink-mute)" }}>3 Root Causes</span>
-                <span style={{ fontSize: "12px", fontWeight: "600", padding: "4px 10px", borderRadius: "3px", backgroundColor: "rgba(0,0,0,0.05)", color: "var(--ink-mute)" }}>100% Documented</span>
-              </div>
+    <span className="ar-val">31</span>
+  </div>
 
-              <div className="gap-callout">
-                <div className="gc-lbl">— Action taken</div>
-                <div className="gc-val">All findings corrected. Two workflow changes recommended.</div>
-              </div>
-            </div>
+  <div className="ar-card-row ar-orange">
+    <span className="ar-lbl">Documentation Gaps</span>
+
+    <div className="ar-bar">
+      <span style={{ width: '7%' }}></span>
+    </div>
+
+    <span className="ar-val">18 Claims</span>
+  </div>
+
+  <div className="ar-card-row ar-red">
+    <span className="ar-lbl">Underpayments Identified</span>
+
+    <div className="ar-bar">
+      <span style={{ width: '44%' }}></span>
+    </div>
+
+    <span className="ar-val">$9,840</span>
+  </div>
+
+  <div className="ar-card-row ar-green">
+    <span className="ar-lbl">Revenue Leakage Estimate</span>
+
+    <div className="ar-bar">
+      <span style={{ width: '100%' }}></span>
+    </div>
+
+    <span className="ar-val">$22,600</span>
+  </div>
+
+  <div className="ar-card-row ar-red">
+    <span className="ar-lbl">Compliance Flags</span>
+
+    <div className="ar-bar">
+      <span style={{ width: '6%' }}></span>
+    </div>
+
+    <span className="ar-val">4 Patterns</span>
+  </div>
+
+  <div
+    className="gap-callout"
+    style={{ marginTop: '20px' }}
+  >
+    <div className="gc-lbl">
+      — Action taken
+    </div>
+
+    <div className="gc-val">
+      All findings corrected. Two workflow changes recommended.
+    </div>
+  </div>
+
+  <div
+    style={{
+      marginTop: '14px',
+      display: 'flex',
+      gap: '8px',
+      flexWrap: 'wrap',
+    }}
+  >
+    <span className="card-tag before">
+      $22K FOUND
+    </span>
+
+    <span className="card-tag after">
+      3 ROOT CAUSES
+    </span>
+
+    <span className="card-tag after">
+      100% DOCUMENTED
+    </span>
+  </div>
+</div>
           </div>
         )}
       </div>

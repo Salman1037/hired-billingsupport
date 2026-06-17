@@ -18,7 +18,7 @@ export default function HeroSmallMedicalPractices({ solution }: HeroProps) {
   const styles = `
     .who-hero {
       background: #FAF7F2;
-      padding: 140px 0 100px;
+      padding: 40px 0 100px;
       position: relative;
       overflow: hidden;
     }
@@ -369,7 +369,7 @@ export default function HeroSmallMedicalPractices({ solution }: HeroProps) {
 
         <div className="who-hero-inner">
           <div>
-            <div className="who-hero-badge reveal reveal-1">Who We Serve · Small Medical Practices</div>
+            <div className="eyebrow reveal reveal-1">Who We Serve · Small Medical Practices</div>
             <h1 className="who-hero-title reveal reveal-2">
               Your small team is doing the work of three.<br />
               <em>Some of it is not getting done — and revenue is leaking because of it.</em>

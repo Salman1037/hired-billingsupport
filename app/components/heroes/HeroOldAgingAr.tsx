@@ -41,7 +41,7 @@ const HeroOldAgingAr = () => {
         </div>
         <div className="hero-card">
           <h4>— Aging AR Recovery Snapshot</h4>
-          
+
           {/* AR Aging Buckets */}
           <div className="ar-card-row ar-green">
             <span className="ar-lbl">0–60 days</span>
@@ -50,7 +50,7 @@ const HeroOldAgingAr = () => {
             </div>
             <span className="ar-val">$82,400</span>
           </div>
-          
+
           <div className="ar-card-row ar-amber">
             <span className="ar-lbl">61–90 days</span>
             <div className="ar-bar">
@@ -58,7 +58,7 @@ const HeroOldAgingAr = () => {
             </div>
             <span className="ar-val">$48,200</span>
           </div>
-          
+
           <div className="ar-card-row ar-orange">
             <span className="ar-lbl">91–120 days</span>
             <div className="ar-bar">
@@ -66,7 +66,7 @@ const HeroOldAgingAr = () => {
             </div>
             <span className="ar-val">$32,700</span>
           </div>
-          
+
           <div className="ar-card-row ar-red">
             <span className="ar-lbl">121–180 days</span>
             <div className="ar-bar">
@@ -74,7 +74,7 @@ const HeroOldAgingAr = () => {
             </div>
             <span className="ar-val">$21,350</span>
           </div>
-          
+
           <div className="ar-card-row ar-red">
             <span className="ar-lbl">180+ days</span>
             <div className="ar-bar">
@@ -82,13 +82,13 @@ const HeroOldAgingAr = () => {
             </div>
             <span className="ar-val">$14,800</span>
           </div>
-          
+
           {/* Gap Callout */}
           <div className="gap-callout" style={{ marginTop: '20px' }}>
             <div className="gc-lbl">— Estimated collectible (90+ days)</div>
             <div className="gc-val">$47,200 · recoverable with systematic follow-up</div>
           </div>
-          
+
           {/* Tags */}
           <div style={{ marginTop: '14px', display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
             <span className="card-tag before">$68,850 OVER 90 DAYS</span>

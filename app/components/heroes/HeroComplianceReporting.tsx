@@ -49,87 +49,132 @@ export default function HeroComplianceReporting({ solution }: HeroProps) {
         {solution.hero && (
           <div className="reveal reveal-4" style={{ animationDelay: "0.55s" }}>
             <div className="hero-card">
-              <h4>— RCM Performance Dashboard · Monthly</h4>
-              
-              {/* Metric 1: Collection Rate */}
-              <div style={{ marginBottom: "18px" }}>
-                <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "6px" }}>
-                  <span style={{ fontSize: "12px", fontWeight: "600", color: "var(--ink-mute)", textTransform: "uppercase", letterSpacing: "0.5px" }}>Collection Rate</span>
-                  <span style={{ fontSize: "14px", fontWeight: "700", color: "var(--ink)" }}>94.2% <span style={{ fontSize: "12px", color: "#10b981" }}>↑ 2.1%</span></span>
-                </div>
-                <div style={{ height: "8px", backgroundColor: "rgba(0,0,0,0.05)", borderRadius: "4px", overflow: "hidden" }}>
-                  <div style={{ height: "100%", width: "94%", backgroundColor: "#10b981" }}></div>
-                </div>
-              </div>
+  <h4>
+    — RCM Performance Dashboard · Monthly
+  </h4>
 
-              {/* Metric 2: Clean Claim Rate */}
-              <div style={{ marginBottom: "18px" }}>
-                <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "6px" }}>
-                  <span style={{ fontSize: "12px", fontWeight: "600", color: "var(--ink-mute)", textTransform: "uppercase", letterSpacing: "0.5px" }}>Clean Claim Rate</span>
-                  <span style={{ fontSize: "14px", fontWeight: "700", color: "var(--ink)" }}>97.8%</span>
-                </div>
-                <div style={{ height: "8px", backgroundColor: "rgba(0,0,0,0.05)", borderRadius: "4px", overflow: "hidden" }}>
-                  <div style={{ height: "100%", width: "97%", backgroundColor: "#06b6d4" }}></div>
-                </div>
-              </div>
+  <div className="ar-card-row ar-green">
+    <span className="ar-lbl">
+      Collection Rate
+    </span>
 
-              {/* Metric 3: Denial Rate */}
-              <div style={{ marginBottom: "18px" }}>
-                <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "6px" }}>
-                  <span style={{ fontSize: "12px", fontWeight: "600", color: "var(--ink-mute)", textTransform: "uppercase", letterSpacing: "0.5px" }}>Denial Rate</span>
-                  <span style={{ fontSize: "14px", fontWeight: "700", color: "var(--ink)" }}>3.4% <span style={{ fontSize: "12px", color: "var(--ink-mute)" }}>Target &lt;3%</span></span>
-                </div>
-                <div style={{ height: "8px", backgroundColor: "rgba(0,0,0,0.05)", borderRadius: "4px", overflow: "hidden" }}>
-                  <div style={{ height: "100%", width: "34%", backgroundColor: "#f59e0b" }}></div>
-                </div>
-              </div>
+    <div className="ar-bar">
+      <span style={{ width: '94%' }}></span>
+    </div>
 
-              {/* Metric 4: Days in AR */}
-              <div style={{ marginBottom: "18px" }}>
-                <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "6px" }}>
-                  <span style={{ fontSize: "12px", fontWeight: "600", color: "var(--ink-mute)", textTransform: "uppercase", letterSpacing: "0.5px" }}>Days in AR</span>
-                  <span style={{ fontSize: "14px", fontWeight: "700", color: "var(--ink)" }}>24 days <span style={{ fontSize: "12px", color: "#10b981" }}>↓ 4</span></span>
-                </div>
-                <div style={{ height: "8px", backgroundColor: "rgba(0,0,0,0.05)", borderRadius: "4px", overflow: "hidden" }}>
-                  <div style={{ height: "100%", width: "48%", backgroundColor: "#8b5cf6" }}></div>
-                </div>
-              </div>
+    <span className="ar-val">
+      94.2%
+    </span>
+  </div>
 
-              {/* Metric 5: AR Over 90 Days */}
-              <div style={{ marginBottom: "18px" }}>
-                <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "6px" }}>
-                  <span style={{ fontSize: "12px", fontWeight: "600", color: "var(--ink-mute)", textTransform: "uppercase", letterSpacing: "0.5px" }}>AR Over 90 Days</span>
-                  <span style={{ fontSize: "14px", fontWeight: "700", color: "var(--ink)" }}>8.2% <span style={{ fontSize: "12px", color: "var(--ink-mute)" }}>Monitor</span></span>
-                </div>
-                <div style={{ height: "8px", backgroundColor: "rgba(0,0,0,0.05)", borderRadius: "4px", overflow: "hidden" }}>
-                  <div style={{ height: "100%", width: "16%", backgroundColor: "#ec4899" }}></div>
-                </div>
-              </div>
+  <div className="ar-card-row ar-green">
+    <span className="ar-lbl">
+      Clean Claim Rate
+    </span>
 
-              {/* Metric 6: Compliance Flags */}
-              <div style={{ marginBottom: "20px" }}>
-                <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "6px" }}>
-                  <span style={{ fontSize: "12px", fontWeight: "600", color: "var(--ink-mute)", textTransform: "uppercase", letterSpacing: "0.5px" }}>Compliance Flags</span>
-                  <span style={{ fontSize: "14px", fontWeight: "700", color: "var(--ink)" }}>0 <span style={{ fontSize: "12px", color: "#10b981" }}>this month</span></span>
-                </div>
-                <div style={{ height: "8px", backgroundColor: "rgba(0,0,0,0.05)", borderRadius: "4px", overflow: "hidden" }}>
-                  <div style={{ height: "100%", width: "0%", backgroundColor: "#10b981" }}></div>
-                </div>
-              </div>
+    <div className="ar-bar">
+      <span style={{ width: '97%' }}></span>
+    </div>
 
-              {/* Tags */}
-              <div style={{ display: "flex", gap: "8px", flexWrap: "wrap", marginBottom: "20px" }}>
-                <span style={{ fontSize: "12px", fontWeight: "600", padding: "4px 10px", borderRadius: "3px", backgroundColor: "rgba(16,185,129,0.1)", color: "#047857" }}>Monthly</span>
-                <span style={{ fontSize: "12px", fontWeight: "600", padding: "4px 10px", borderRadius: "3px", backgroundColor: "rgba(0,0,0,0.05)", color: "var(--ink-mute)" }}>Report Cadence</span>
-                <span style={{ fontSize: "12px", fontWeight: "600", padding: "4px 10px", borderRadius: "3px", backgroundColor: "rgba(0,0,0,0.05)", color: "var(--ink-mute)" }}>6 KPIs Tracked</span>
-                <span style={{ fontSize: "12px", fontWeight: "600", padding: "4px 10px", borderRadius: "3px", backgroundColor: "rgba(0,0,0,0.05)", color: "var(--ink-mute)" }}>✓ Leadership Ready</span>
-              </div>
+    <span className="ar-val">
+      97.8%
+    </span>
+  </div>
 
-              <div className="gap-callout">
-                <div className="gc-lbl">— This month's priority</div>
-                <div className="gc-val">Denial rate above target — root cause in progress.</div>
-              </div>
-            </div>
+  <div className="ar-card-row ar-amber">
+    <span className="ar-lbl">
+      Denial Rate
+    </span>
+
+    <div className="ar-bar">
+      <span style={{ width: '34%' }}></span>
+    </div>
+
+    <span className="ar-val">
+      3.4%
+    </span>
+  </div>
+
+  <div className="ar-card-row ar-orange">
+    <span className="ar-lbl">
+      Days in AR
+    </span>
+
+    <div className="ar-bar">
+      <span style={{ width: '48%' }}></span>
+    </div>
+
+    <span className="ar-val">
+      24 Days
+    </span>
+  </div>
+
+  <div className="ar-card-row ar-red">
+    <span className="ar-lbl">
+      AR Over 90 Days
+    </span>
+
+    <div className="ar-bar">
+      <span style={{ width: '16%' }}></span>
+    </div>
+
+    <span className="ar-val">
+      8.2%
+    </span>
+  </div>
+
+  <div className="ar-card-row ar-green">
+    <span className="ar-lbl">
+      Compliance Flags
+    </span>
+
+    <div className="ar-bar">
+      <span style={{ width: '0%' }}></span>
+    </div>
+
+    <span className="ar-val">
+      0
+    </span>
+  </div>
+
+  <div
+    className="gap-callout"
+    style={{ marginTop: '20px' }}
+  >
+    <div className="gc-lbl">
+      — This month's priority
+    </div>
+
+    <div className="gc-val">
+      Denial rate above target — root cause in progress.
+    </div>
+  </div>
+
+  <div
+    style={{
+      marginTop: '14px',
+      display: 'flex',
+      gap: '8px',
+      flexWrap: 'wrap',
+    }}
+  >
+    <span className="card-tag before">
+      MONTHLY
+    </span>
+
+    <span className="card-tag after">
+      REPORT CADENCE
+    </span>
+
+    <span className="card-tag after">
+      6 KPIs TRACKED
+    </span>
+
+    <span className="card-tag after">
+      LEADERSHIP READY
+    </span>
+  </div>
+</div>
           </div>
         )}
       </div>
