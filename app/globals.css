@@ -508,7 +508,7 @@ nav.top.scrolled {
 /* Hero */
 .hero {
     position: relative;
-    padding: 40px var(--gutter) 100px;
+    padding: 80px var(--gutter) 100px;
     min-height: 100vh;
     display: flex;
     align-items: center;
@@ -821,7 +821,7 @@ nav.top.scrolled {
 }
 
 .ticker-line.top {
-    top: 110px;
+    top: 120px;
 }
 
 .ticker-line.bot {
