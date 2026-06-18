@@ -788,19 +788,17 @@ nav.top.scrolled {
 }
 
 /* XL Devices (≥1280px) */
-@media (min-width: 1280px) {
+@media (min-width: 1920px) {
   .hero {
-    padding: 120px 0; /* Slightly more breathing room */
+    padding: 120px 0; /* More vertical breathing room */
   }
-
   .hero-inner {
-    gap: 60px; /* Reduce gap for better density */
-    max-width: 1200px; /* Prevent content from stretching too wide */
-    margin: 0 auto;
+    gap: 60px; /* Tighter gap for better density */
+    max-width: 1400px; /* Wider container for XL */
   }
-
   .container {
-    --gutter: 32px; /* Slightly smaller gutter for XL */
+    --gutter: 60px; /* Slightly larger gutter for XL */
+    max-width: 1400px;
   }
 }
 
