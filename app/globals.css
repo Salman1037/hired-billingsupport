@@ -787,6 +787,23 @@ nav.top.scrolled {
     pointer-events: none;
 }
 
+/* XL Devices (≥1280px) */
+@media (min-width: 1280px) {
+  .hero {
+    padding: 120px 0; /* Slightly more breathing room */
+  }
+
+  .hero-inner {
+    gap: 60px; /* Reduce gap for better density */
+    max-width: 1200px; /* Prevent content from stretching too wide */
+    margin: 0 auto;
+  }
+
+  .container {
+    --gutter: 32px; /* Slightly smaller gutter for XL */
+  }
+}
+
 .ticker-line.top {
     top: 60px;
 }
