@@ -194,11 +194,11 @@ export default function Navigation() {
           <div className={`dropdown-menu dropdown-grid-2 ${activeDropdown === 'company' ? 'active' : ''}`}>
             <div className="dropdown-column">
               <div className="column-header">ABOUT</div>
-              <Link href="/about">Our Story</Link>
+              <Link href="/about">About Us</Link>
              
             </div>
             <div className="dropdown-column">
-              <div className="column-header">Articles & Facilities</div>
+              <div className="column-header">Guides</div>
               <Link href="/article-28-facilities">Article 28 Facilities</Link>
              
             </div>
