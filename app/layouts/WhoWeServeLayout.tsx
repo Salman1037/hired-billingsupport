@@ -929,41 +929,23 @@ const WhoWeServeLayout = ({ solution, slug }: WhoWeServeLayoutProps) => {
 
     /* Outcome grid */
     .outcome-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
-      margin-top: 48px;
-    }
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-top: 48px;
+}
 
-    .outcome-card {
-      padding: 28px;
-      background: var(--white);
-      border: 1px solid var(--paper-line);
-      border-radius: var(--radius-lg);
-    }
+@media (max-width: 900px) {
+  .outcome-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 
-    .outcome-card-num {
-      font-family: var(--serif);
-      font-size: 2.4rem;
-      font-weight: 400;
-      color: var(--signal);
-      line-height: 1;
-      margin-bottom: 8px;
-    }
-
-    .outcome-card h4 {
-      font-size: 14px;
-      font-weight: 600;
-      color: var(--ink);
-      margin-bottom: 6px;
-    }
-
-    .outcome-card p {
-      font-size: 13px;
-      color: var(--ink-mute);
-      line-height: 1.65;
-    }
-
+@media (max-width: 600px) {
+  .outcome-grid {
+    grid-template-columns: 1fr;
+  }
+}
     /* Compare table */
     .compare-wrap {
       background: var(--ink);

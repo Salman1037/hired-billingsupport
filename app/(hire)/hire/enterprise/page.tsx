@@ -312,7 +312,7 @@ export default function enterprise() {
         <p>Drawn from multi-location clients (5–30+ locations) across primary care, dental, behavioral health, urgent
           care, and multi-specialty groups.</p>
       </div>
-      <div className="results-row fade-in">
+      <div className="results-row-three fade-in">
         <div className="result-block">
           <div className="v">+20<span className="unit">%</span></div>
           <div className="d">Group-wide collections lift within the first two quarters.</div>
@@ -326,7 +326,7 @@ export default function enterprise() {
           <div className="d">Standardized AR days across all sites within 6 months.</div>
         </div>
       </div>
-      <div className="results-row fade-in" style={{borderTop: 'none'}}>
+      <div className="results-row-three fade-in" style={{borderTop: 'none'}}>
         <div className="result-block">
           <div className="v">97<span className="unit">%+</span></div>
           <div className="d">First-pass clean-claim rate consistently across all sites.</div>

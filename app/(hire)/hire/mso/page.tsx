@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 export default function enterprise() {
   return (
-<section>
+<div>
   <section className="hero">
     <div className="hero-bg">
       <svg viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
@@ -124,7 +124,7 @@ export default function enterprise() {
     </div>
   </section>
   {/* ═══════════ SERVICES ═══════════ */}
-  <section className="block warm">
+  <section className="block warm" >
     <div className="container">
       <div className="block-head fade-in">
         <div className="eyebrow">What we run for MSOs &amp; payers</div>
@@ -200,7 +200,7 @@ export default function enterprise() {
         <h2 className="display">What MSOs and payers see <em>in 90 days.</em></h2>
         <p>Drawn from MSO and payer partners across value-based, risk, and fee-for-service models.</p>
       </div>
-      <div className="results-row fade-in">
+      <div className="results-row-three fade-in">
         <div className="result-block">
           <div className="v">+18<span className="unit">%</span></div>
           <div className="d">Lift in risk score capture and recapture accuracy.</div>
@@ -288,7 +288,8 @@ export default function enterprise() {
       <div className="trust-line">NDA available · HIPAA compliant · BAA on every engagement</div>
     </div>
   </section>
-</section>
+</div>
+
 
 
 

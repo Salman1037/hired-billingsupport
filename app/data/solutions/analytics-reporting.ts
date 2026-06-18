@@ -22,6 +22,8 @@ export const analyticsReporting: SolutionData = {
         '"Your team is not ignoring the data. They are buried in daily work and do not have the time, the tools, or the structure to turn scattered reports into clear decisions — and so the data sits unused while problems that the data could identify continue to compound."',
         'Analytics is not a technology problem. Most practices already have the data. The gap is in the interpretation layer — someone who synthesizes data from multiple sources, identifies what it means, connects it to operational root causes, and delivers clear findings with specific recommended actions on a schedule that allows leadership to act before problems get worse.',
       ],
+       ledgerEyebrow: "The reality every practice already knows",
+      ledgerHeading: "You can see the production number. <em>You cannot figure out where the money is going.</em>",
       ledger: [
         {
           num: '01',

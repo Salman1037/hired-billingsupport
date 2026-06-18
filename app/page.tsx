@@ -6,9 +6,9 @@ export default function Home() {
   return (
     <main>
       {/* HERO */}
-       <div className="ticker-line top">
+       {/* <div className="ticker-line top">
           <span className="ticker-track">RCM · AR RECOVERY · CREDENTIALING · PRIOR AUTHORIZATION · ELIGIBILITY · DENIAL MANAGEMENT · VIRTUAL ASSISTANTS · FRONT DESK · SCHEDULING · RCM · AR RECOVERY · CREDENTIALING · PRIOR AUTHORIZATION · ELIGIBILITY · DENIAL MANAGEMENT · VIRTUAL ASSISTANTS · FRONT DESK · SCHEDULING</span>
-        </div>
+        </div> */}
       <section className="hero">
         
         <div className="hero-bg">
@@ -216,7 +216,7 @@ export default function Home() {
       </section>
 
       {/* SERVICES SECTION */}
-      <section className="block" id="services">
+      <section className="block" >
         <div className="container">
           <div className="block-head fade-in" style={{ textAlign: 'center', marginLeft: 'auto', marginRight: 'auto' }}>
             <div className="eyebrow">What we operate</div>

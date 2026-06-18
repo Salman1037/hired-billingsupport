@@ -25,6 +25,8 @@ export const arManagement: SolutionData = {
         `"Uncollected AR is not a sign your team is doing nothing. It is a sign your team is doing everything — and AR follow-up is always the task that loses to the more urgent thing in front of it."`,
         "Every week that passes without active follow-up, the claims in your aging buckets become harder to collect. Some will cross a timely filing threshold. Some will go to voicemail indefinitely. And some will quietly become write-offs nobody consciously chose to make.",
       ],
+       ledgerEyebrow: "The reality every practice already knows",
+      ledgerHeading: "You can see the production number. <em>You cannot figure out where the money is going.</em>",
       ledger: [
         {
           num: "01",

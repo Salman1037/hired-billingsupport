@@ -6,7 +6,7 @@ import Footer from './components/Footer';
 import ScrollAnimations from './components/ScrollAnimations';
 import ScrollEffects from "./components/ScrollEffects";
 import './globals.css';
-// import HBSChatbot from "./components/HBSChatbot";
+import HBSChatbot from "./components/HBSChatbot";
 
 // Load fonts with display: 'swap' to prevent FOIT
 const fraunces = Fraunces({
@@ -42,12 +42,7 @@ export default function RootLayout({
       lang="en"
       className={`${fraunces.variable} ${interTight.variable} ${jetBrainsMono.variable}`}
     >
-      <head>
-        <meta charSet="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-      </head>
+    
       <body>
         <Navigation />
         <main style={{ paddingTop: '80px', minHeight: '100vh' }}>
@@ -56,7 +51,7 @@ export default function RootLayout({
           <ScrollEffects />
         </main>
         <Footer />
-        {/* <HBSChatbot /> */}
+        <HBSChatbot />
       </body>
     </html>
   );

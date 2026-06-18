@@ -25,6 +25,8 @@ export const arDenialFixation: SolutionData = {
         `"Your team is not doing denial management. They are doing denial recovery — putting out the same fire, in the same room, every single month. Until someone traces why the fire keeps starting."`,
         "That is denial fixation. Not just working the denial — finding the upstream cause, correcting the claim, building the right appeal, and closing the workflow gap so the same problem does not repeat. It is the difference between managing your denial rate and actually reducing it.",
       ],
+       ledgerEyebrow: "The reality every practice already knows",
+      ledgerHeading: "You can see the production number. <em>You cannot figure out where the money is going.</em>",
       ledger: [
         {
           num: "01",
