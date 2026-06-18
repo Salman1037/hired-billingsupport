@@ -201,7 +201,7 @@ export default function dental() {
     </div>
   </section>
   {/* SERVICES */}
-  <section className="block" id="services">
+  <section className="block" >
     <div className="container">
       <div className="block-head fade-in">
         <div className="eyebrow">What we run for your practice</div>
