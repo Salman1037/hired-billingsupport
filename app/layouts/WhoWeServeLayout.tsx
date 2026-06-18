@@ -1273,7 +1273,7 @@ const WhoWeServeLayout = ({ solution, slug }: WhoWeServeLayoutProps) => {
 
       {/* Services Section */}
       {solution.sections?.services && (
-        <section className="who-section" id="services">
+        <section className="who-section">
           <div className="container">
             <div className="section-header fade-in">
               <div className="eyebrow">{solution.sections.services.description}</div>
