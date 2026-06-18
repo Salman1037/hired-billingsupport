@@ -475,7 +475,7 @@ nav.top.scrolled {
 /* Hero */
 .hero {
     position: relative;
-    padding: 60px var(--gutter) 100px;
+    padding: 100px var(--gutter) 100px;
     min-height: 100vh;
     display: flex;
     align-items: center;
@@ -788,7 +788,7 @@ nav.top.scrolled {
 }
 
 .ticker-line.top {
-    top: 110px;
+    top: 60px;
 }
 
 .ticker-line.bot {
@@ -2846,6 +2846,10 @@ footer {
     color: #FF8585
 }
 
+.queue-row{display:grid;grid-template-columns:1fr 90px 90px;gap:8px;padding:12px 0;border-bottom:1px solid rgba(255,255,255,.06);font-size:13px;color:rgba(250,247,242,.85);align-items:center}.queue-row:last-child{border-bottom:none}
+  .queue-row .qn{font-family:var(--mono);font-size:11px;text-align:right}
+  .queue-row .qn.red{color:#FF8585}.queue-row .qn.amber{color:#D4A574}.queue-row .qn.green{color:var(--signal)}
+  .queue-head{font-family:var(--mono);font-size:9px;letter-spacing:.15em;color:var(--paper);text-transform:uppercase}
 
 
 
@@ -2853,10 +2857,15 @@ footer {
 
 
 
+.svc-list{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--paper-line);border-radius:var(--radius-lg);overflow:hidden;background:var(--white)}
+  .svc-item{padding:24px 28px;border-bottom:1px solid var(--paper-line);border-right:1px solid var(--paper-line)}.svc-item:nth-child(2n){border-right:none}.svc-item:nth-last-child(-n+2){border-bottom:none}
+  .svc-item h4{font-family:var(--serif);font-size:18px;font-weight:500;margin-bottom:6px}.svc-item p{font-size:13.5px;color:var(--ink-mute);line-height:1.5}
+  @media(max-width:700px){.svc-list{grid-template-columns:1fr}.svc-item{border-right:none}.svc-item:nth-last-child(-n+2){border-bottom:1px solid var(--paper-line)}.svc-item:last-child{border-bottom:none}}
 
 
-
-
+.metrics-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .metric-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:var(--radius-lg);padding:24px}
+  .metric-card .v{font-family:var(--serif);font-size:clamp(32px,3.5vw,44px);line-height:1;letter-spacing:-0.02em}.metric-card .v .unit{color:var(--signal)}.metric-card .k{font-size:12px;color:rgba(250,247,242,.6);margin-top:10px;line-height:1.4}
 
 
 

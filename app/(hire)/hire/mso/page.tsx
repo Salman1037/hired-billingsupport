@@ -3,289 +3,187 @@ import Link from 'next/link';
 export default function enterprise() {
   return (
 <div>
+  {/* HERO */}
   <section className="hero">
-    <div className="hero-bg">
-      <svg viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
-        <defs>
-          <pattern id="grid" width={48} height={48} patternUnits="userSpaceOnUse">
-            <path d="M 48 0 L 0 0 0 48" fill="none" stroke="#0A1628" strokeWidth="0.5" opacity="0.08" />
-          </pattern>
-        </defs>
-        <rect width="100%" height="100%" fill="url(#grid)" />
-      </svg>
-      <div className="hero-grain" />
-    </div>
+    <div className="hero-bg"><svg viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width={48} height={48} patternUnits="userSpaceOnUse"><path d="M 48 0 L 0 0 0 48" fill="none" stroke="#0A1628" strokeWidth="0.5" opacity="0.08" /></pattern></defs><rect width="100%" height="100%" fill="url(#grid)" /></svg><div className="hero-grain" /></div>
     <div className="hero-inner">
       <div>
-        <div className="eyebrow reveal reveal-1">For MSOs, payers &amp; value-based care operators</div>
-        <h1 className="display reveal reveal-2">Your model depends on clean data. <em>But your operations are built on <span className="ul">noise</span>.</em></h1>
-        <p className="sub reveal reveal-3">When claims aren't clean, quality metrics slip. When prior auths lag, patient
-          access suffers. When denials climb, margins drop. Your model doesn't break because of strategy — it breaks
-          because of ops.</p>
-        <p className="lede reveal reveal-3">Hired Billing Support is the operational layer behind MSOs and payers:
-          centralized claims QA, prior auth, risk adjustment support, provider enablement, and network ops — built to
-          run across large networks and value-based contracts.</p>
+        <div className="eyebrow reveal reveal-1">For MSOs, billing aggregators &amp; payer organizations</div>
+        <h1 className="display reveal reveal-2">Your backlog isn't going to clear itself. <em>And hiring won't get you there <span className="ul">fast enough</span>.</em></h1>
+        <p className="sub reveal reveal-3">You're processing thousands of claims a week. Your queues are growing faster than your team. Every new client adds volume your back office wasn't sized to absorb. The board wants margin. Operations wants headcount. Neither is going to win.</p>
+        <p className="lede reveal reveal-3">Hired Billing Support is the backend processing engine for healthcare operations at scale. Embedded in your systems, accountable to your SLAs, elastic enough to double when your volume does.</p>
         <div className="hero-actions reveal reveal-4">
-          <a href="#cta" className="btn btn-primary">Book a strategy call <svg className="arrow" width={14} height={14} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2}>
-              <path d="M5 12h14M13 5l7 7-7 7" />
-            </svg></a>
-          <a href="#cta" className="btn btn-text">Request a network ops assessment →</a>
+          <a href="#cta" className="btn btn-primary">Book a capacity-planning call <svg className="arrow" width={14} height={14} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2}><path d="M5 12h14M13 5l7 7-7 7" /></svg></a>
+          <a href="#cta" className="btn btn-text">Request a scalability assessment →</a>
         </div>
       </div>
-      {/* Quality dashboard card */}
       <div className="reveal reveal-4" style={{animationDelay: '.55s'}}>
         <div className="hero-card">
-          <h4>— Network quality monitor · Live</h4>
-          <div className="quality-row"><span>Claim clean rate</span><span className="val bad">86%</span></div>
-          <div className="quality-row"><span>Denial rate</span><span className="val bad">14.2%</span></div>
-          <div className="quality-row"><span>Prior auth SLA</span><span className="val warn">62%</span></div>
-          <div className="quality-row"><span>Risk score recapture</span><span className="val warn">71%</span></div>
-          <div className="quality-row"><span>HCC documentation gaps</span><span className="val bad">1,482</span></div>
-          <div className="quality-row"><span>Provider compliance audits</span><span className="val good">95%</span></div>
-          <div className="card-footer"><span className="lbl">Network margin impact</span><span className="val">-$1.2M /
-              quarter</span></div>
+          <h4>— Operations dashboard · Queue status</h4>
+          <div className="queue-row queue-head"><div>Queue</div><div style={{textAlign: 'right'}}>Depth</div><div style={{textAlign: 'right'}}>AHT</div></div>
+          <div className="queue-row"><div>Claims processing</div><div className="qn red">2,847</div><div className="qn amber">14m</div></div>
+          <div className="queue-row"><div>Eligibility verification</div><div className="qn amber">1,204</div><div className="qn green">4m</div></div>
+          <div className="queue-row"><div>Prior authorization</div><div className="qn red">892</div><div className="qn red">22m</div></div>
+          <div className="queue-row"><div>Denial management</div><div className="qn red">634</div><div className="qn amber">18m</div></div>
+          <div className="queue-row"><div>Payment posting</div><div className="qn amber">1,560</div><div className="qn green">3m</div></div>
+          <div className="sla-bar"><span className="lbl">SLA breach risk this week</span><span className="val">3 of 5 queues at risk</span></div>
         </div>
       </div>
     </div>
   </section>
-  {/* ═══════════ PAIN ═══════════ */}
+  {/* PAIN */}
   <section className="block" id="pain">
     <div className="container">
       <div className="block-head fade-in">
-        <div className="eyebrow">The operational drag</div>
-        <h2 className="display">Value-based contracts are <em>won in operations.</em></h2>
+        <div className="eyebrow">The capacity problem</div>
+        <h2 className="display">You know exactly where the bottleneck is. <em>You can't hire your way out fast enough.</em></h2>
       </div>
-      <div className="monologue fade-in" style={{maxWidth: 760}}>
-        <p style={{fontFamily: 'var(--serif)', fontSize: 'clamp(19px,1.8vw,23px)', lineHeight: '1.5', letterSpacing: '-0.01em', marginBottom: 24, color: 'var(--ink)', fontWeight: 400}}>
-          Your MSO can negotiate strong contracts. Your payer can design beautiful incentives. None of it matters if the
-          operational layer is leaking.</p>
-        <p style={{fontFamily: 'var(--serif)', fontSize: 'clamp(19px,1.8vw,23px)', lineHeight: '1.5', letterSpacing: '-0.01em', marginBottom: 24, color: 'var(--ink)', fontWeight: 400}}>
-          If coding is inconsistent, risk adjustment collapses. If claims are dirty, the revenue cycle stalls. If prior
-          auths are delayed, care gets postponed. If providers aren't trained, compliance fails quietly.</p>
-        <p style={{fontFamily: 'var(--serif)', fontSize: 'clamp(19px,1.8vw,23px)', lineHeight: '1.5', letterSpacing: '-0.01em', marginBottom: 24, color: 'var(--ink)', fontWeight: 400}}>
-          <em>The model doesn't break at the strategy layer — it breaks at the operations layer.</em>
-        </p>
+      <div className="monologue fade-in">
+        <p>The pipeline is full. Your sales team is closing new accounts. Operations is the constraint.</p>
+        <p>Team leads are working evenings. Average handle time is creeping up. SLA breach reports are landing on someone's desk every week. Two of your best processors gave notice last month, and replacements are two months out.</p>
+        <p>You can hire — but training a new processor to full productivity is 90-120 days. You can buy software — but software doesn't work the queues.</p>
+        <p><em>What you actually need is throughput. Today. Not next quarter.</em></p>
       </div>
       <div className="pain-ledger fade-in">
-        <div className="pain-row">
-          <div className="pn">01</div>
-          <div className="ptitle">Claims are inconsistent across sites.</div>
-          <div className="pdesc">Multi-site networks submit claims with varying accuracy. The payer sees it as risk. You see
-            it as denials, delays, and leakage.</div>
-        </div>
-        <div className="pain-row">
-          <div className="pn">02</div>
-          <div className="ptitle">Risk adjustment is leaving dollars on the table.</div>
-          <div className="pdesc">HCCs are missed. Documentation gaps linger. Recapture doesn't happen systematically. The
-            risk score is lower than reality.</div>
-        </div>
-        <div className="pain-row">
-          <div className="pn">03</div>
-          <div className="ptitle">Prior auth bottlenecks delay care.</div>
-          <div className="pdesc">Slow or inconsistent prior auths lead to delayed procedures and patient dissatisfaction —
-            which shows up in both outcomes and quality scores.</div>
-        </div>
-        <div className="pain-row">
-          <div className="pn">04</div>
-          <div className="ptitle">Provider enablement is too slow.</div>
-          <div className="pdesc">Policies, SOPs, and contract changes take months to roll out. By the time training reaches
-            the field, the contract is already changing again.</div>
-        </div>
-        <div className="pain-row">
-          <div className="pn">05</div>
-          <div className="ptitle">Data is noisy, not actionable.</div>
-          <div className="pdesc">You have dashboards. You don't have clarity. The data isn't standardized, so the insights
-            aren't real. Decisions are based on noise.</div>
-        </div>
-        <div className="pain-row">
-          <div className="pn">06</div>
-          <div className="ptitle">Network ops scale breaks down.</div>
-          <div className="pdesc">The bigger the network grows, the more operations break. Inconsistency compounds. The model
-            can't scale without a centralized ops layer.</div>
-        </div>
+        <div className="pain-row"><div className="pn">01</div><div className="ptitle">Volume scaling faster than headcount.</div><div className="pdesc">Every signed client adds queue depth your back office didn't budget for. Queue depth costs SLA performance.</div></div>
+        <div className="pain-row"><div className="pn">02</div><div className="ptitle">AHT is creeping up.</div><div className="pdesc">When processors are stretched, accuracy drops. When accuracy drops, rework spikes. Rework destroys margin faster than anything else.</div></div>
+        <div className="pain-row"><div className="pn">03</div><div className="ptitle">Hiring cycles are 90-180 days.</div><div className="pdesc">Recruit, screen, hire, train, ramp. Client launches don't wait that long. Neither does existing volume.</div></div>
+        <div className="pain-row"><div className="pn">04</div><div className="ptitle">Unit economics are compressing.</div><div className="pdesc">Operational cost per claim goes up. Reimbursement per claim goes down. Margin is the meat in the middle — getting thin.</div></div>
+        <div className="pain-row"><div className="pn">05</div><div className="ptitle">Standardization breaks at scale.</div><div className="pdesc">What worked at 2,000 claims/week stops working at 8,000. SOPs drift. Quality varies. Reporting gaps appear.</div></div>
+        <div className="pain-row"><div className="pn">06</div><div className="ptitle">Your best people are doing the wrong work.</div><div className="pdesc">Senior staff fill in on routine processing because junior processors aren't keeping up. Judgment work goes unattended.</div></div>
       </div>
     </div>
   </section>
-  {/* ═══════════ SOLUTION ═══════════ */}
+  {/* BEHIND THE SCENES */}
+  <section className="block warm">
+    <div className="container">
+      <div className="block-head fade-in">
+        <div className="eyebrow">What's actually happening behind the scenes</div>
+        <h2 className="display">You don't have a hiring problem. <em>You have a capacity elasticity problem.</em></h2>
+      </div>
+      <div className="monologue fade-in" style={{maxWidth: 820}}>
+        <p style={{fontFamily: 'var(--sans)', fontSize: 17, lineHeight: '1.65', color: 'var(--ink-mute)'}}>Traditional operations scale the way furniture is built — slow, fixed, expensive. You commit to headcount, real estate, training infrastructure, and management overhead, and you bear the cost whether volume is at peak or trough.</p>
+        <p style={{fontFamily: 'var(--sans)', fontSize: 17, lineHeight: '1.65', color: 'var(--ink-mute)'}}>But healthcare volume isn't smooth. It spikes on new client launches. It surges at the start of every benefit year. It dips, then bursts. Your fixed cost structure can't move with it.</p>
+      </div>
+      <div className="insight fade-in" style={{marginTop: 40}}>What you actually need is operations that flex — capacity that comes online in days, scales up or down without termination cost, and slots into your existing systems. <em>That's not BPO. That's an operational layer.</em></div>
+    </div>
+  </section>
+  {/* SOLUTION */}
   <section className="block" id="solution">
     <div className="container">
       <div className="solution-card fade-in">
         <div className="solution-glow" />
         <div className="eyebrow" style={{color: 'var(--signal)'}}>— Our model</div>
-        <h2 className="display" style={{marginTop: 20}}>We build the centralized ops layer <em>MSOs and payers need.</em>
-        </h2>
-        <p>Hired Billing Support becomes your operational backbone. A centralized team that ensures claims quality,
-          speeds prior auths, closes risk adjustment gaps, and standardizes provider enablement across your network.</p>
-        <p>We're not a vendor. We're your operations department — in your systems, following your contracts, reporting
-          to your leadership, and moving metrics you care about.</p>
-        <p style={{fontFamily: 'var(--serif)', fontStyle: 'italic', fontSize: 22, color: 'var(--paper)', marginTop: 32, maxWidth: 700}}>
-          You can have the best value-based contract in the market. If your ops are messy, you'll still lose.</p>
+        <h2 className="display" style={{marginTop: 20}}>We act as your backend processing engine. <em>Embedded. Elastic. Accountable.</em></h2>
+        <p>We don't replace your leadership, your systems, or your client relationships. We provide the throughput layer underneath them — staffed by trained healthcare specialists, supported by AI-assisted workflows, and accountable to your SLAs.</p>
+        <p>You'll have a dedicated team lead from our side who interfaces with your operations manager. You set the SOPs. We execute them. Queue depth, AHT, accuracy, and SLA performance — visible in a shared dashboard, updated in real time.</p>
+        <p style={{fontFamily: 'var(--serif)', fontStyle: 'italic', fontSize: 22, color: 'var(--paper)', marginTop: 32, maxWidth: 680}}>When your volume doubles next quarter, we scale with you in days. When it drops, we scale back without severance cost.</p>
       </div>
     </div>
   </section>
-  {/* ═══════════ SERVICES ═══════════ */}
-  <section className="block warm" >
+  {/* SERVICES */}
+  <section className="block warm" id="services">
     <div className="container">
       <div className="block-head fade-in">
-        <div className="eyebrow">What we run for MSOs &amp; payers</div>
-        <h2 className="display">Operations that make value-based care <em>actually work.</em></h2>
-        <p>Pick the layers you need. We can run a single function or become the centralized operational team behind the
-          entire network.</p>
+        <div className="eyebrow">What we run</div>
+        <h2 className="display">Backend processing. <em>Complete coverage.</em></h2>
+        <p>All deliverable under a white-label arrangement if your client relationships require it.</p>
       </div>
-      <div className="svc-grid-2 fade-in">
-        <div className="svc-card">
-          <h4>Centralized Claims QA</h4>
-          <p>Pre-submission edits, documentation audits, and payer-specific rules enforced across the entire network.
-            Clean claims = better cash flow.</p>
-        </div>
-        <div className="svc-card">
-          <h4>Risk Adjustment Support</h4>
-          <p>HCC validation, documentation review, and recapture workflows that improve risk score accuracy and revenue.
-          </p>
-        </div>
-        <div className="svc-card">
-          <h4>Prior Authorization Management</h4>
-          <p>Automated workflows + human specialists to ensure auths are submitted, tracked, and approved on time.</p>
-        </div>
-        <div className="svc-card">
-          <h4>Provider Enablement</h4>
-          <p>Training, SOP rollout, and contract updates deployed at scale — with audit trails and compliance reporting.
-          </p>
-        </div>
-        <div className="svc-card">
-          <h4>Claims Clean-up Projects</h4>
-          <p>Backlog purge, AR recovery, denial cleanup, and workflow resets to stabilize operations quickly.</p>
-        </div>
-        <div className="svc-card">
-          <h4>Network Operations Management</h4>
-          <p>Centralized ops leadership, KPI ownership, cross-site standardization, and reporting tied to contract
-            performance.</p>
-        </div>
+      <div className="svc-list fade-in">
+        <div className="svc-item"><h4>Claims processing at volume</h4><p>Submission, adjudication support, payer follow-up, exception handling.</p></div>
+        <div className="svc-item"><h4>Eligibility &amp; benefits verification</h4><p>Real-time and batch processing across all major payers.</p></div>
+        <div className="svc-item"><h4>Prior authorization processing</h4><p>Pre-cert submission, payer follow-up, status tracking at scale.</p></div>
+        <div className="svc-item"><h4>AR resolution</h4><p>Aging bucket clearance, payer escalation, root-cause analysis.</p></div>
+        <div className="svc-item"><h4>Denial management &amp; appeals</h4><p>Categorization, routing, appeal authoring, overturn tracking.</p></div>
+        <div className="svc-item"><h4>Payment posting &amp; reconciliation</h4><p>ERA/EOB posting, exception research, daily reconciliation.</p></div>
+        <div className="svc-item"><h4>Credentialing support</h4><p>Application processing, follow-up, maintenance cycles.</p></div>
+        <div className="svc-item"><h4>Data entry &amp; document processing</h4><p>Demographics, charge entry, document indexing at throughput volume.</p></div>
+        <div className="svc-item"><h4>Quality assurance &amp; audit</h4><p>Sample-based QA on all processed work. Accuracy tracking.</p></div>
+        <div className="svc-item"><h4>Reporting &amp; analytics</h4><p>Queue reporting, SLA dashboards, root-cause analysis.</p></div>
       </div>
     </div>
   </section>
-  {/* ═══════════ HOW WE WORK ═══════════ */}
+  {/* HOW WE WORK */}
   <section className="block">
     <div className="container">
       <div className="block-head fade-in">
-        <div className="eyebrow">How we work</div>
-        <h2 className="display">We sit between the contract and the clinics. <em>And we make them match.</em></h2>
+        <div className="eyebrow">How we integrate</div>
+        <h2 className="display">We slot into your operation. <em>Not the other way around.</em></h2>
       </div>
       <div className="steps fade-in">
-        <div className="step"><span className="num">— 01</span>
-          <h4>We embed into your systems.</h4>
-          <p>Your EHRs, your payer portals, your data warehouse. We run inside your stack, not outside of it.</p>
+        <div className="step"><span className="num">— 01</span><h4>We work in your systems.</h4><p>Your platform. Your ticketing. Your reporting tools. No migration. No duplication.</p></div>
+        <div className="step"><span className="num">— 02</span><h4>We follow your SOPs.</h4><p>Your QA standards. Your escalation rules. Your client-specific protocols. Documented and executed against.</p></div>
+        <div className="step"><span className="num">— 03</span><h4>We report into your ops leadership.</h4><p>Dedicated team lead. Daily syncs. Weekly SLA review. Monthly capacity planning.</p></div>
+        <div className="step"><span className="num">— 04</span><h4>We flex with your volume.</h4><p>Scale up in days. Scale back without cost. Operations becomes a variable cost, not fixed.</p></div>
+      </div>
+    </div>
+  </section>
+  {/* AI + HUMAN */}
+  <section className="block dark">
+    <div className="container">
+      <div className="aihum fade-in">
+        <div>
+          <div className="eyebrow">AI + human at scale</div>
+          <h2 className="display" style={{marginTop: 20}}>AI compresses the volume. <em>Humans handle the exceptions.</em></h2>
+          <p>At MSO and aggregator scale, AI matters more — not less. We use AI-assisted workflows for claim scrubbing, eligibility batching, denial categorization, and document classification. Throughput per processor goes up 2-4x on routine work.</p>
+          <p>The exceptions — denied claims needing root-cause analysis, payer escalations, complex appeals, edge-case eligibility — get a trained human every time. Because automated decisions on exceptions are how aggregators lose clients.</p>
+          <p style={{color: 'var(--paper)', fontStyle: 'italic', fontFamily: 'var(--serif)', fontSize: 20, marginTop: 24}}>The ratio matters. AI does the volume work. Human time is preserved for the work that decides whether your client renews.</p>
         </div>
-        <div className="step"><span className="num">— 02</span>
-          <h4>We enforce contract rules.</h4>
-          <p>Claims edits, documentation requirements, prior auth rules — standardized across every site so the contract
-            actually works.</p>
-        </div>
-        <div className="step"><span className="num">— 03</span>
-          <h4>We report to leadership.</h4>
-          <p>Weekly KPIs, monthly scorecard, quarterly strategy. You always know where leakage is occurring.</p>
-        </div>
-        <div className="step"><span className="num">— 04</span>
-          <h4>We scale with the network.</h4>
-          <p>New locations, new contracts, new providers. The ops layer expands without breaking the system.</p>
+        <div className="metrics-grid">
+          <div className="metric-card"><div className="v">2-4<span className="unit">x</span></div><div className="k">Throughput per processor on routine work via AI</div></div>
+          <div className="metric-card"><div className="v">98<span className="unit">%</span></div><div className="k">SLA compliance across processing categories</div></div>
+          <div className="metric-card"><div className="v">7-14<span className="unit">d</span></div><div className="k">Capacity scaling for new client launches</div></div>
+          <div className="metric-card"><div className="v">95<span className="unit">%+</span></div><div className="k">Quality scores on sampled work</div></div>
         </div>
       </div>
     </div>
   </section>
-  {/* ═══════════ RESULTS ═══════════ */}
+  {/* RESULTS */}
   <section className="block" id="results">
     <div className="container">
       <div className="block-head fade-in">
         <div className="eyebrow">By the numbers</div>
-        <h2 className="display">What MSOs and payers see <em>in 90 days.</em></h2>
-        <p>Drawn from MSO and payer partners across value-based, risk, and fee-for-service models.</p>
+        <h2 className="display">What scaling with us <em>looks like.</em></h2>
       </div>
       <div className="results-row-three fade-in">
-        <div className="result-block">
-          <div className="v">+18<span className="unit">%</span></div>
-          <div className="d">Lift in risk score capture and recapture accuracy.</div>
-        </div>
-        <div className="result-block">
-          <div className="v">-34<span className="unit">%</span></div>
-          <div className="d">Reduction in denial rate from standardized QA.</div>
-        </div>
-        <div className="result-block">
-          <div className="v">3.2<span className="unit">x</span></div>
-          <div className="d">Faster prior auth turnaround and fewer delayed procedures.</div>
-        </div>
-      </div>
-      <div className="testi fade-in">
-        <div className="testi-quote">With the help of HBS their support and expertise we have achieved a lot more in
-          practice.</div>
-        <div className="testi-attr">
-          <div className="testi-avatar">LH</div>
-          <div>
-            <div className="testi-name">Dr. Layla Hassan</div>
-            <div className="testi-role">Genesis Internal Medicine</div>
-          </div>
-        </div>
+        <div className="result-block"><div className="v">40-60<span className="unit">%</span></div><div className="d">Lower operational cost per claim versus equivalent in-house operations.</div></div>
+        <div className="result-block"><div className="v">-28<span className="unit">%</span></div><div className="d">AHT reduction via AI-assisted workflows on routine processing.</div></div>
+        <div className="result-block"><div className="v">14<span className="unit">d</span></div><div className="d">Average time to scale capacity for a new client launch.</div></div>
       </div>
     </div>
   </section>
-  {/* ═══════════ COMPARE ═══════════ */}
+  {/* COMPARE */}
   <section className="block warm">
     <div className="container">
       <div className="block-head fade-in">
         <div className="eyebrow">The honest comparison</div>
-        <h2 className="display">Why not build this ops layer <em>internally?</em></h2>
-        <p>Because it's expensive, slow, and hard to scale across a network. Here's the trade-off.</p>
+        <h2 className="display">Why not just build it <em>in-house?</em></h2>
+        <p>You can. Here's what it looks like.</p>
       </div>
       <div className="compare fade-in">
-        <div className="compare-row head">
-          <div className="col left">Build in-house</div>
-          <div className="col right">Embed HBS</div>
-        </div>
-        <div className="compare-row">
-          <div className="col left">12–18 months to design + hire</div>
-          <div className="col right">30–45 days to live</div>
-        </div>
-        <div className="compare-row">
-          <div className="col left">Multiple departments to manage</div>
-          <div className="col right">Single accountable ops team</div>
-        </div>
-        <div className="compare-row">
-          <div className="col left">Hiring risk + turnover</div>
-          <div className="col right">We staff, train, and retain</div>
-        </div>
-        <div className="compare-row">
-          <div className="col left">SOP drift across locations</div>
-          <div className="col right">Standardized workflows enforced</div>
-        </div>
-        <div className="compare-row">
-          <div className="col left">Fixed cost structure</div>
-          <div className="col right">Variable cost aligned to network size</div>
-        </div>
-        <div className="compare-row">
-          <div className="col left">Leadership time spent managing ops</div>
-          <div className="col right">Leadership time spent on strategy</div>
-        </div>
+        <div className="compare-row head"><div className="col left">Build in-house</div><div className="col right">Embed HBS</div></div>
+        <div className="compare-row"><div className="col left">6–12 months to stand up</div><div className="col right">14–30 days to live</div></div>
+        <div className="compare-row"><div className="col left">Fixed cost: salaries, real estate, infrastructure</div><div className="col right">Variable cost — scales with volume</div></div>
+        <div className="compare-row"><div className="col left">Hiring risk, training cost, attrition risk</div><div className="col right">We absorb those</div></div>
+        <div className="compare-row"><div className="col left">Capped at your local labor market</div><div className="col right">Global trained healthcare specialist pool</div></div>
+        <div className="compare-row"><div className="col left">You manage the operation</div><div className="col right">You manage the relationship. We manage execution.</div></div>
+        <div className="compare-row"><div className="col left">New client launch waits for hiring</div><div className="col right">New client launch starts day one</div></div>
       </div>
-      <div className="insight fade-in">If your contract economics depend on operational precision, then operational
-        execution can't be a secondary project. <em>It has to be a core function.</em></div>
+      <div className="insight fade-in">The question isn't whether to build operations — it's <em>which part to own vs which part to lease.</em> Most leadership we work with chooses to own client relationships and strategy. They lease the throughput layer. That's the math that wins.</div>
     </div>
   </section>
-  {/* ═══════════ FINAL CTA ═══════════ */}
+  {/* CTA */}
   <section className="final-cta" id="cta">
     <div className="final-cta-glow" />
     <div className="cta-inner">
-      <div className="eyebrow" style={{justifyContent: 'center', color: 'rgba(250,247,242,.55)'}}>Let's look at your network</div>
-      <h2 className="display">Send us a claims sample. <em>We'll show you the leakage.</em></h2>
-      <p>Share a recent claims export and a list of active contracts. We'll return an operational audit within 10
-        business days that highlights the biggest gaps in claims quality, risk adjustment, and auth workflow — and a
-        plan to close them.</p>
+      <div className="eyebrow" style={{justifyContent: 'center', color: 'rgba(250,247,242,.55)'}}>Let's plan capacity</div>
+      <h2 className="display">Tell us the volume. <em>We'll show you the model.</em></h2>
+      <p>Current volume, projected growth, top three bottlenecks. We'll come back with a capacity model and integration plan — typically within 7 business days.</p>
       <div className="actions">
-        <a href="#" className="btn btn-light">Book a strategy call <svg className="arrow" width={14} height={14} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2}>
-            <path d="M5 12h14M13 5l7 7-7 7" />
-          </svg></a>
-        <a href="#" className="btn btn-ghost" style={{color: 'var(--paper)', borderColor: 'rgba(250,247,242,.3)'}}>Request a
-          network ops assessment</a>
+        <a href="#" className="btn btn-light">Book a capacity-planning call <svg className="arrow" width={14} height={14} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2}><path d="M5 12h14M13 5l7 7-7 7" /></svg></a>
+        <a href="#" className="btn btn-ghost" style={{color: 'var(--paper)', borderColor: 'rgba(250,247,242,.3)'}}>Request a scalability assessment</a>
       </div>
-      <div className="trust-line">NDA available · HIPAA compliant · BAA on every engagement</div>
+      <div className="trust-line">Mutual NDA · BAA on every engagement · SOC 2 aligned</div>
     </div>
   </section>
 </div>
