@@ -194,7 +194,7 @@ export default function enterprise() {
     </div>
   </section>
   {/* ═══════════ SERVICES ═══════════ */}
-  <section className="block warm" id="services">
+  <section className="block warm">
     <div className="container">
       <div className="block-head fade-in">
         <div className="eyebrow">What we run for enterprise groups</div>

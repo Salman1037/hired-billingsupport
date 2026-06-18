@@ -93,6 +93,7 @@ export default function ContactPage() {
           color: var(--paper);
           padding: 100px var(--gutter) 80px;
           text-align: center;
+          margin-top: 60px;
         }
         .contact-hero-bg {
           position: absolute;

@@ -6,7 +6,7 @@ import Footer from './components/Footer';
 import ScrollAnimations from './components/ScrollAnimations';
 import ScrollEffects from "./components/ScrollEffects";
 import './globals.css';
-import HBSChatbot from "./components/HBSChatbot";
+// import HBSChatbot from "./components/HBSChatbot";
 
 // Load fonts with display: 'swap' to prevent FOIT
 const fraunces = Fraunces({
@@ -56,7 +56,7 @@ export default function RootLayout({
           <ScrollEffects />
         </main>
         <Footer />
-        <HBSChatbot />
+        {/* <HBSChatbot /> */}
       </body>
     </html>
   );
