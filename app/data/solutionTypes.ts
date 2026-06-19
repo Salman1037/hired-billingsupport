@@ -15,8 +15,9 @@ export interface SolutionData {
   };
   sections?: {
     pain?: {
+      eyebrow?: string;
       title: string;
-      description: string;
+      description?: string;
       monologue: string[];
       ledgerEyebrow?: string;
       ledgerHeading?: string;
@@ -31,6 +32,12 @@ export interface SolutionData {
       eyebrow: string;
       items: Array<{ num: string; label: string; sublabel: string; dotClass: string }>;
     };
+    workflow?: {
+      eyebrow: string;
+      title: string;
+      description: string;
+      items: Array<{ num: string; label: string; sublabel: string }>;
+    };
     solution?: {
       title: string;
       description: string;
@@ -42,6 +49,7 @@ export interface SolutionData {
       description?: string;
       items: Array<{ num: string; title: string; description: string }>;
       eyebrow?: string;
+      reportCards?: Array<{ eyebrow: string; num: string; title: string; description: string; trend: string }>;
     };
     howWeWork?: {
       eyebrow: string;
@@ -56,6 +64,8 @@ export interface SolutionData {
       human: string[];
       eyebrow?: string;
       pullQuote?: string;
+      machineLabel?: string;
+      humanLabel?: string;
     };
     results?: {
       title: string;

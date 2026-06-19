@@ -6,14 +6,33 @@ export const marketingPatientEngagement: SolutionData = {
   description: 'Most practices invest in marketing that generates inquiries, then lose a portion of that investment in the follow-up gap. Hired Billing Support connects patient marketing with the operational follow-through that converts interest into appointments, appointments into visits, and visits into long-term patient relationships.',
   hero: {
     eyebrow: 'Advanced Solutions · Marketing & Patient Engagement',
-    title: 'Marketing generates the inquiry. Operations determines whether it becomes a patient.',
+    title: 'Marketing generates the inquiry.<br><em>Operations determines whether it becomes a patient.</em>',
     subtitle: 'Most practices invest in marketing and then lose a portion of that investment in the follow-up gap — the hours between when a patient reaches out and when someone actually responds, schedules, and confirms their appointment.',
     description: 'Hired Billing Support connects patient marketing with the operational follow-through that converts interest into appointments, appointments into visits, and visits into long-term patient relationships.',
+    card: {
+      title: 'Patient Engagement Snapshot · 30-day',
+      journeys: [
+        { icon: 'done', text: 'Website inquiry received — same-day response', tag: 'Done' },
+        { icon: 'done', text: 'Follow-up call — appointment offered same call', tag: 'Done' },
+        { icon: 'done', text: 'Appointment confirmation + intake forms sent', tag: 'Done' },
+        { icon: 'done', text: 'Insurance verified pre-visit — no surprises', tag: 'Done' },
+        { icon: 'active', text: 'Post-visit recall — 6-week follow-up scheduled', tag: 'In progress' },
+        { icon: 'pending', text: 'Review request — post-visit satisfaction follow-up', tag: 'Queued' },
+      ],
+      stats: [
+        { num: '94%', label: 'Inquiry Response Rate' },
+        { num: '78%', label: 'Inquiry-to-Apt Rate' },
+        { num: '4.8★', label: 'Avg Review Score' },
+      ],
+      callout: 'Avg response time: 4 hrs → 38 min. Conversion up 22%.',
+    },
   },
   sections: {
     pain: {
-      title: 'The marketing is working. The follow-up is where growth stops.',
-      description: 'The patient engagement gap every practice knows',
+      title: 'The marketing is working. <em>The follow-up is where growth stops.</em>',
+      description: '',
+      ledgerEyebrow: 'Where the engagement breaks down',
+      ledgerHeading: 'The specific gaps <em>between interest and appointment.</em>',
       monologue: [
         'Someone searches for a specialist in your area. They find your practice. They fill out the contact form or call during a busy period and leave a voicemail. Your front desk team sees it — but they are already managing check-in, phones, prior authorizations, and the provider\'s schedule simultaneously. The callback happens four hours later, or the next morning, or sometimes not at all.',
         'That patient did not wait. They submitted an inquiry to two other practices at the same time. One of them responded in 20 minutes. That is where they booked.',
@@ -54,7 +73,8 @@ export const marketingPatientEngagement: SolutionData = {
       ],
     },
     solution: {
-      title: 'We connect your marketing to your operations. So interest becomes revenue.',
+      eyebrow: 'The solution',
+      title: 'We connect your marketing to your operations. <em>So interest becomes revenue.</em>',
       description: 'Hired Billing Support supports patient inquiry response, appointment conversion, scheduling coordination, reputation management, and patient retention workflows — filling the operational gap between marketing and revenue.',
       process: [
         {
@@ -90,8 +110,9 @@ export const marketingPatientEngagement: SolutionData = {
       ],
     },
     services: {
-      title: 'Every touchpoint in the patient journey. Managed and followed through.',
-      description: 'Patient engagement services',
+      eyebrow: 'Patient engagement services',
+      title: 'Every touchpoint in the patient journey. <em>Managed and followed through.</em>',
+      description: '',
       items: [
         {
           num: '01',
@@ -145,9 +166,59 @@ export const marketingPatientEngagement: SolutionData = {
         },
       ],
     },
+    workflow: {
+      eyebrow: 'Patient engagement workflow',
+      title: 'From first inquiry to long-term patient. <em>Every step supported.</em>',
+      description: 'Patient engagement is not a single touchpoint. It is a series of interactions that compound — each one building the relationship that makes patients stay.',
+      items: [
+        { num: '01', label: 'Inquiry Received', sublabel: 'Phone · Form · Portal' },
+        { num: '02', label: 'Rapid Response', sublabel: '<30 min target' },
+        { num: '03', label: 'Appointment Set', sublabel: 'Confirmed + intake sent' },
+        { num: '04', label: 'Pre-Visit Prep', sublabel: 'Forms · Insurance · Reminder' },
+        { num: '05', label: 'Visit Complete', sublabel: 'Clinical care delivered' },
+        { num: '06', label: 'Post-Visit Follow-Up', sublabel: 'Satisfaction · Review request' },
+        { num: '07', label: 'Recall Workflow', sublabel: 'Next appt coordinated' },
+        { num: '08', label: 'Long-Term Patient', sublabel: 'Retained · Referring' },
+      ],
+    },
+    howWeWork: {
+      eyebrow: 'How HBS supports patient engagement',
+      title: 'Inside your workflow. <em>Not managing it from the outside.</em>',
+      description: 'Patient engagement support only works when it is embedded in the practice\'s actual communication systems \u2014 not layered on top as a separate process your team has to manage.',
+      process: [
+        {
+          num: '01',
+          title: 'We work inside your scheduling system and communication tools',
+          description: 'Your EHR, your scheduling platform, your phone system, your patient portal \u2014 we operate inside the tools your practice already uses so patients receive a seamless experience, not a disconnected third-party interaction.',
+        },
+        {
+          num: '02',
+          title: 'We coordinate with your front desk team, not around it',
+          description: 'Patient engagement support does not replace your front desk. It removes the tasks that pull your front desk away from the patients in front of them \u2014 inquiry follow-up, recall outreach, review coordination \u2014 so your staff can focus on the experience that matters most.',
+        },
+        {
+          num: '03',
+          title: 'We communicate in the practice\'s voice',
+          description: 'Every patient interaction follows your communication standards \u2014 your tone, your language, your brand. Patients experience consistency, not a vendor they do not recognize.',
+        },
+        {
+          num: '04',
+          title: 'We track engagement metrics and report to leadership',
+          description: 'Inquiry response rates, appointment conversion rates, no-show rates, review scores, and patient recall results \u2014 reported regularly so leadership can see the direct connection between engagement activity and growth outcomes.',
+        },
+        {
+          num: '05',
+          title: 'We adjust as your practice and patient population evolve',
+          description: 'New services, new providers, new patient populations \u2014 we update the engagement workflow to reflect what your practice is offering and who it is trying to reach at any given time.',
+        },
+      ],
+    },
     aiHuman: {
-      title: 'Automated where speed matters. Human where judgment matters.',
-      description: 'The AI + human advantage',
+      eyebrow: 'The AI + human advantage',
+      title: 'Automated where speed matters. <em>Human where judgment matters.</em>',
+      description: '',
+      machineLabel: 'AI-assisted patient engagement',
+      humanLabel: 'Human engagement specialists',
       machine: [
         'Inquiry queue monitoring and response-time tracking',
         'Appointment reminder scheduling and delivery',
@@ -164,10 +235,12 @@ export const marketingPatientEngagement: SolutionData = {
         'Engagement strategy adjustments based on patient behavior patterns',
         'Leadership communication on growth outcomes and engagement results',
       ],
+      pullQuote: '"Patients do not always leave because of clinical care. Sometimes they leave because the communication felt slow, inconsistent, or disconnected from the care they received. The operational layer between clinical and patient is where the relationship is actually built."',
     },
     results: {
-      title: 'More of your marketing investment becomes actual patients.',
-      description: 'What changes',
+      eyebrow: 'What changes',
+      title: 'More of your marketing investment <em>becomes actual patients.</em>',
+      description: '',
       outcomes: [
         {
           icon: '↑',
@@ -202,8 +275,9 @@ export const marketingPatientEngagement: SolutionData = {
       ],
     },
     compare: {
-      title: 'Marketing creates interest. Operations converts it.',
-      description: 'Why marketing alone does not create growth',
+      eyebrow: 'Why marketing alone does not create growth',
+      title: 'Marketing creates interest. <em>Operations converts it.</em>',
+      description: 'The practices that grow consistently are not necessarily the ones with the best marketing. They are the ones with the best operational follow-through on every patient interaction.',
       rows: [
         {
           label: 'Inquiry response time',
@@ -236,6 +310,16 @@ export const marketingPatientEngagement: SolutionData = {
           other: 'Intuition-based',
         },
       ],
+    },
+    finalCta: {
+      eyebrow: 'Start with an engagement review',
+      title: 'If patients are reaching out but not always converting, <em>the gap is in the follow-through.</em>',
+      description: 'We start with a review of your current patient engagement workflow \u2014 response times, conversion rates, recall activity, and reputation status \u2014 and show you exactly where the operational gaps are. No commitment required.',
+      buttons: [
+        { text: 'Improve patient engagement', variant: 'primary' },
+        { text: 'Talk to our team first', variant: 'ghost' },
+      ],
+      trustLine: 'HIPAA \u00b7 BAA on every engagement \u00b7 No long-term contract required',
     },
   },
 };

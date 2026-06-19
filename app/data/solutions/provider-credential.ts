@@ -6,14 +6,33 @@ export const providerCredential: SolutionData = {
   description: 'Every day a provider is not credentialed is a day your practice is not getting paid for their work. Hired Billing Support manages the full credentialing workflow — from collecting provider documents and setting up CAQH to submitting payer applications, following up on status, and maintaining credentialing files so providers stay billing-ready.',
   hero: {
     eyebrow: 'Practice Management · Provider Credentialing',
-    title: 'Every day a provider is not credentialed is a day your practice is not getting paid for their work.',
+    title: 'Every day a provider is not credentialed<br><em>is a day your practice is not getting paid for their work.</em>',
     subtitle: 'Credentialing delays are not paperwork problems. They are revenue problems. Every week a provider sits outside the payer network is a week of patient visits that cannot generate a billable claim.',
     description: 'Hired Billing Support manages the full credentialing workflow — from collecting provider documents and setting up CAQH to submitting payer applications, following up on status, and maintaining credentialing files so providers stay billing-ready.',
+    card: {
+      title: '— Credentialing Status Board · Active Providers',
+      statusCards: [
+        { dot: 'green', label: 'Dr. Reyes — Primary Care', status: 'Active · All payers', statusClass: 'done' },
+        { dot: 'amber', label: 'Dr. Okafor — Cardiology', status: 'In progress', pill: '3 payers pending', pillClass: 'amber', statusClass: 'pending' },
+        { dot: 'amber', label: 'Dr. Kim — Behavioral Health', status: 'CAQH submitted', pill: 'Awaiting review', pillClass: 'amber', statusClass: 'pending' },
+        { dot: 'red', label: 'Dr. Patel — Orthopedics', status: 'Blocked', pill: 'Missing DEA', pillClass: 'red', statusClass: 'blocked' },
+        { dot: 'grey', label: 'NP Torres — Urgent Care', status: 'Not started · Onboarding Q3', statusClass: 'waiting' }
+      ],
+      stats: [
+        { num: '5', label: 'Providers Tracked' },
+        { num: '1', label: 'Blocked — Action', color: 'amber' },
+        { num: '0', label: 'Expired Docs', color: 'signal' }
+      ],
+      actionLabel: '— Next milestone',
+      actionValue: 'Dr. Okafor — Aetna approval expected within 18 days.'
+    }
   },
   sections: {
     pain: {
-      title: 'Credentialing looks like an administrative task.',
-      description: 'It behaves like a revenue bottleneck.',
+      title: 'The credentialing reality every practice knows',
+      description: 'Credentialing looks like an administrative task. <em>It behaves like a revenue bottleneck.</em>',
+      ledgerEyebrow: 'Where the problem lives',
+      ledgerHeading: 'The specific gaps <em>behind the surface.</em>',
       monologue: [
         'You hired a new provider. They start seeing patients next month. You assumed credentialing was being handled. But three months later, claims are still being denied, the provider is still out of network with half your payers, and your billing team is spending more time explaining the situation than fixing it.',
         'Nobody made a single serious mistake. Documents were collected — mostly. Applications were submitted — eventually. Follow-up happened — sometimes. But credentialing without a systematic, dedicated process almost always produces the same outcome: delays that cost more than anyone budgeted for.',
@@ -54,8 +73,9 @@ export const providerCredential: SolutionData = {
       ],
     },
     solution: {
-      title: 'An embedded credentialing team',
-      description: 'that treats provider readiness as a revenue priority.',
+      eyebrow: 'The solution',
+      title: 'An embedded credentialing team <em>that treats provider readiness as a revenue priority.</em>',
+      description: 'Hired Billing Support manages the full credentialing workflow — from initial document collection and CAQH setup through payer application submission, follow-up, status tracking, and ongoing maintenance — so your providers become billing-ready faster and stay that way.',
       process: [
         {
           num: '01',
@@ -90,8 +110,9 @@ export const providerCredential: SolutionData = {
       ],
     },
     services: {
-      title: 'Every step of provider credentialing.',
-      description: 'Managed and tracked.',
+      eyebrow: 'Credentialing services included',
+      title: 'Every step of provider credentialing. <em>Managed and tracked.</em>',
+      description: '',
       items: [
         {
           num: '01',
@@ -144,10 +165,56 @@ export const providerCredential: SolutionData = {
           description: 'Clear, current credentialing status report for all providers — active, pending, blocked, and upcoming expirations — delivered to leadership on a regular schedule.',
         },
       ],
+    },    workflow: {
+      eyebrow: 'Credentialing workflow overview',
+      title: 'From document collection to active billing status. <em>Every step tracked.</em>',
+      description: 'Credentialing is a multi-step process with parallel tracks running simultaneously. This is why it requires a dedicated process — not a checklist someone manages between other tasks.',
+      items: [
+        { num: '01', label: 'Document Collection', sublabel: 'Licenses · DEA · Malpractice' },
+        { num: '02', label: 'CAQH Setup', sublabel: 'Profile built & attested' },
+        { num: '03', label: 'NPI Verified', sublabel: 'Taxonomy confirmed' },
+        { num: '04', label: 'Applications', sublabel: 'Submitted per payer' },
+        { num: '05', label: 'Follow-Up', sublabel: 'Status tracked weekly' },
+        { num: '06', label: 'Corrections', sublabel: 'Responded promptly' },
+        { num: '07', label: 'Approval', sublabel: 'Effective date confirmed' },
+        { num: '08', label: 'Billing Active', sublabel: 'Revenue starts' }
+      ]
     },
-    aiHuman: {
-      title: 'Technology handles the tracking.',
-      description: 'People handle the follow-through.',
+    howWeWork: {
+      eyebrow: 'How HBS manages credentialing',
+      title: 'Not a checklist. A dedicated process <em>with an assigned team and defined timelines.</em>',
+      description: 'Credentialing only stays on track when someone owns every step — not when it is shared responsibility between a billing team that has other priorities.',
+      process: [
+        {
+          num: '01',
+          title: 'We review every provider\'s current credentialing status',
+          description: 'Before anything else, we assess where each provider stands — what is complete, what is missing, what is expiring, and which payers they need to be active with. We build from an honest current state, not assumptions.'
+        },
+        {
+          num: '02',
+          title: 'We collect and organize the full credentialing file',
+          description: 'We reach out to providers for missing documents, verify what exists, and organize everything in a structured, accessible credentialing file — so nothing is lost in an email thread or personal folder again.'
+        },
+        {
+          num: '03',
+          title: 'We submit applications and set follow-up schedules',
+          description: 'Applications submitted to target payers with payer-specific documentation. Follow-up scheduled immediately after submission — not when someone remembers to check.'
+        },
+        {
+          num: '04',
+          title: 'We report status to leadership on a regular schedule',
+          description: 'Clear, current credentialing status delivered to practice leadership — no surprises, no chasing down updates, no guessing about which provider is active with which payer.'
+        },
+        {
+          num: '05',
+          title: 'We manage ongoing maintenance — not just initial applications',
+          description: 'License renewals, malpractice updates, CAQH re-attestations, and payer recredentialing cycles tracked and managed on an ongoing basis — not as a fire drill when something lapses.'
+        }
+      ]
+    },    aiHuman: {
+      eyebrow: 'The AI + human advantage',
+      title: 'Technology handles the tracking. <em>People handle the follow-through.</em>',
+      description: '',
       machine: [
         'Provider document expiration tracking and renewal alerts',
         'CAQH profile completeness checking and update reminders',
@@ -164,10 +231,12 @@ export const providerCredential: SolutionData = {
         'Escalation decisions when applications stall beyond normal timelines',
         'Leadership communication on credentialing status and decisions',
       ],
+      pullQuote: '"Credentialing is not a one-time task. It is an ongoing operational function — and when it is treated as anything less, the practice pays for it in delayed revenue, billing gaps, and provider frustration."'
     },
     results: {
-      title: 'Providers who are billing-ready.',
-      description: 'Not billing-delayed.',
+      eyebrow: 'What changes',
+      title: 'Providers who are billing-ready. <em>Not billing-delayed.</em>',
+      description: '',
       outcomes: [
         {
           icon: '⚡',
@@ -202,8 +271,9 @@ export const providerCredential: SolutionData = {
       ],
     },
     compare: {
-      title: 'Managed credentialing prevents delays',
-      description: 'that unmanaged credentialing makes inevitable.',
+      eyebrow: 'Why credentialing cannot be handled casually',
+      title: 'Managed credentialing prevents delays <em>that unmanaged credentialing makes inevitable.</em>',
+      description: 'Every credentialing delay has a revenue cost. The difference between a 60-day credentialing process and a 120-day process is six weeks of billable claims that should have been submitted.',
       rows: [
         {
           label: 'Time to billing-active status',
@@ -237,5 +307,15 @@ export const providerCredential: SolutionData = {
         },
       ],
     },
-  },
+    finalCta: {
+      eyebrow: 'Start with a credentialing review',
+      title: 'If your providers are not fully credentialed with every relevant payer, <em>revenue is being left on the table right now.</em>',
+      description: 'We start with a credentialing status review — showing you exactly where each provider stands, what is missing, what is expiring, and what is stalled. You see the full picture before we discuss anything else.',
+      buttons: [
+        { text: 'Start credentialing review', variant: 'light' },
+        { text: 'Talk to our credentialing team', variant: 'ghost' }
+      ],
+      trustLine: 'HIPAA · BAA on every engagement · No long-term contract required'
+    }
+  }
 };

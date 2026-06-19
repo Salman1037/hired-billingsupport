@@ -7,21 +7,40 @@ export const virtualHealthcareSolutions: SolutionData = {
   
   hero: {
     eyebrow: 'Advanced Solutions · Virtual Healthcare',
-    title: 'Virtual care works when the workflow behind it works.',
-    subtitle: 'Most of the time, the workflow is the problem.',
-    description: 'Telehealth adds clinical access. It also adds scheduling complexity, documentation load, eligibility requirements, patient reminders, technical coordination, and follow-up tasks — all of which require the same operational infrastructure as in-person care, managed remotely. Hired Billing Support provides virtual healthcare operations support that works like an extension of your internal team — inside your EHR, inside your workflow, aligned with your providers\' daily schedule and your patients\' expectations.',
+    title: 'Virtual care works when the workflow behind it works.<br><em>Most of the time, the workflow is the problem.</em>',
+    subtitle: 'Telehealth adds clinical access. It also adds scheduling complexity, documentation load, eligibility requirements, patient reminders, technical coordination, and follow-up tasks — all of which require the same operational infrastructure as in-person care, managed remotely.',
+    description: 'Hired Billing Support provides virtual healthcare operations support that works like an extension of your internal team — inside your EHR, inside your workflow, aligned with your providers\' daily schedule and your patients\' expectations.',
+    card: {
+      title: '— Virtual Care Operations · Daily Queue',
+      items: [
+        { icon: 'done', text: 'Tomorrow\'s telehealth patients — eligibility verified', tag: 'Complete' },
+        { icon: 'done', text: 'Visit links sent — 24hr and 1hr reminders scheduled', tag: 'Complete' },
+        { icon: 'done', text: 'Intake forms completed — 8 of 9 patients', tag: 'Complete' },
+        { icon: 'active', text: 'Prior auth — 2 visits requiring review before noon', tag: 'In progress' },
+        { icon: 'active', text: 'Provider EHR tasks — 3 items pending review', tag: 'In progress' },
+        { icon: 'pending', text: 'Post-visit follow-up — yesterday\'s patients queued', tag: 'Queued' },
+      ],
+      stats: [
+        { num: '9', label: 'Visits Prepped' },
+        { num: '0', label: 'Missing Eligibility' },
+        { num: '2', label: 'Auth Actions Needed' },
+      ],
+      callout: 'Estimated 2.4 hrs of admin tasks handled before first visit.',
+    },
   },
 
   sections: {
     pain: {
-      title: 'Where Virtual Care Workflow Breaks',
-      description: 'Adding telehealth to a practice adds operational work, not less.',
+      eyebrow: 'The virtual care operations reality',
+      title: 'Adding telehealth to a practice <em>adds operational work, not less.</em>',
       monologue: [
         'The vision of virtual care is seamless. A patient logs in. The provider sees them. Documentation happens. Next patient. In practice, what actually happens is a provider starting a video visit with a patient who never received the link, did not complete intake forms, has unverified insurance, and is on a plan that requires prior authorization for the service being provided.',
         'Virtual care creates more messages, more coordination tasks, more follow-up requirements, and more documentation overhead — not less. And it creates all of that in addition to in-person care, which is still happening, still demanding the same staff bandwidth, and still generating its own administrative load.',
         '"Virtual care only works when the workflow behind it is organized — scheduling, reminders, documentation, eligibility, follow-up, and patient coordination all have to move together. When they do not, the provider carries the coordination burden alone."',
         'The problem is not the technology. Most telehealth platforms work adequately. The problem is the administrative infrastructure around the technology — the human and operational layer that ensures every patient is prepared, every visit is covered, every document is in place, and every follow-up task is handled before the provider has to think about it.',
       ],
+      ledgerEyebrow: 'Where virtual care workflow breaks',
+      ledgerHeading: 'The operational gaps <em>behind every difficult telehealth day.</em>',
       ledger: [
         {
           num: '01',
@@ -57,8 +76,9 @@ export const virtualHealthcareSolutions: SolutionData = {
     },
 
     solution: {
-      title: 'The Solution',
-      description: 'A virtual operations team that works like an extension of your in-house staff.',
+      eyebrow: 'The solution',
+      title: 'A virtual operations team that works <em>like an extension of your in-house staff.</em>',
+      description: 'Hired Billing Support provides virtual healthcare support that operates inside your EHR, your telehealth platform, and your daily workflow — handling the administrative layer that allows virtual care to run smoothly without burdening your providers or front desk team.',
       process: [
         {
           num: '01',
@@ -94,8 +114,8 @@ export const virtualHealthcareSolutions: SolutionData = {
     },
 
     services: {
-      title: 'Virtual Healthcare Services',
-      description: 'Every layer of virtual care operations. Handled inside your workflow.',
+      eyebrow: 'Virtual healthcare services',
+      title: 'Every layer of virtual care operations. <em>Handled inside your workflow.</em>',
       items: [
         {
           num: '01',
@@ -150,9 +170,60 @@ export const virtualHealthcareSolutions: SolutionData = {
       ],
     },
 
+    workflow: {
+      eyebrow: 'Virtual care support workflow',
+      title: 'Before the visit. During the visit. <em>After the visit.</em>',
+      description: 'Virtual care operational support needs to be present across the full visit lifecycle — not just at scheduling and not just at billing.',
+      items: [
+        { num: 'Pre', label: 'Scheduling', sublabel: 'Appointment booked' },
+        { num: 'Pre', label: 'Eligibility', sublabel: 'Telehealth coverage' },
+        { num: 'Pre', label: 'Prior Auth', sublabel: 'If required' },
+        { num: 'Pre', label: 'Patient Prep', sublabel: 'Forms · Link · Reminder' },
+        { num: 'Visit', label: 'Provider Visit', sublabel: 'Clinical care' },
+        { num: 'During', label: 'EHR Support', sublabel: 'Tasks · Messages' },
+        { num: 'Post', label: 'Follow-Up', sublabel: 'Referral · Summary' },
+        { num: 'Post', label: 'Billing Coord.', sublabel: 'Modifier · Codes' },
+      ],
+    },
+
+    howWeWork: {
+      eyebrow: 'How HBS works inside your virtual operations',
+      title: 'Not a generic VA. <em>A healthcare-specific operations team.</em>',
+      description: 'The difference between a generic virtual assistant and a healthcare virtual operations team is not the tasks — it is the knowledge, the context, and the integration.',
+      process: [
+        {
+          num: '01',
+          title: 'We work inside your EHR and telehealth platform',
+          description: 'Your electronic health record, your telehealth platform, your scheduling system — we access the same tools your in-house team uses so the patient experience is seamless and the operational record is complete and consistent.',
+        },
+        {
+          num: '02',
+          title: 'We understand clinical context and payer requirements',
+          description: 'Our virtual support team is trained in healthcare workflow — not general administrative work. We understand the difference between a routine follow-up and a new problem visit, the prior authorization requirements for specific payers, and the documentation standards that support billing for virtual encounters.',
+        },
+        {
+          num: '03',
+          title: 'We operate under HIPAA-compliant protocols',
+          description: 'Every interaction, every document, and every communication handled through HIPAA-compliant tools and protocols — with BAA in place and privacy practices aligned to your clinical standards.',
+        },
+        {
+          num: '04',
+          title: 'We communicate with your team through your channels',
+          description: 'EHR messaging, Slack, Teams, email — wherever your practice communicates internally, we communicate there too. Your providers and staff interact with a team member, not a support ticket.',
+        },
+        {
+          num: '05',
+          title: 'We report virtual care metrics to leadership',
+          description: 'Telehealth visit completion rates, no-show rates, eligibility failure rates, and administrative load metrics — reported regularly so leadership can see how virtual operations are performing and where support is having the most impact.',
+        },
+      ],
+    },
+
     aiHuman: {
-      title: 'The AI + Human Advantage',
-      description: 'Automation where repetition adds risk. Humans where context determines the outcome.',
+      eyebrow: 'The AI + human advantage',
+      title: 'Automation where repetition adds risk. <em>Humans where context determines the outcome.</em>',
+      machineLabel: 'AI-assisted virtual workflows',
+      humanLabel: 'Healthcare virtual specialists',
       machine: [
         'Pre-visit checklist monitoring and preparation status alerts',
         'Eligibility verification scheduling and result tracking',
@@ -169,11 +240,12 @@ export const virtualHealthcareSolutions: SolutionData = {
         'Complex patient coordination requiring care context',
         'Leadership communication on virtual operations performance',
       ],
+      pullQuote: '"Practices that want virtual support but do not want a low-quality VA experience need healthcare-specific knowledge, EHR access, and clinical context — not just someone available to answer messages. That distinction is the difference between virtual support that helps and virtual support that creates more work."',
     },
 
     results: {
-      title: 'What Changes',
-      description: 'Virtual care that runs as smoothly as your best in-person days.',
+      eyebrow: 'What changes',
+      title: 'Virtual care that runs as smoothly <em>as your best in-person days.</em>',
       outcomes: [
         {
           icon: '⚡',
@@ -209,8 +281,9 @@ export const virtualHealthcareSolutions: SolutionData = {
     },
 
     compare: {
-      title: 'Why Virtual Support Must Be Healthcare-Specific',
-      description: 'General virtual assistants create healthcare problems. Healthcare virtual specialists solve them.',
+      eyebrow: 'Why virtual support must be healthcare-specific',
+      title: 'General virtual assistants create healthcare problems. <em>Healthcare virtual specialists solve them.</em>',
+      description: 'The gap between a general VA and a healthcare virtual operations specialist is not speed or availability — it is knowledge, context, and the ability to work inside clinical systems without creating compliance risk.',
       rows: [
         {
           label: 'EHR access and operation',
@@ -243,6 +316,17 @@ export const virtualHealthcareSolutions: SolutionData = {
           other: 'Disconnected — separate vendor',
         },
       ],
+    },
+
+    finalCta: {
+      eyebrow: 'Build your virtual care support team',
+      title: 'If your virtual care workflow is creating more administrative burden than it removes, <em>the support structure needs to change.</em>',
+      description: 'We start with a review of your current virtual care operations — identifying where workflow breaks down, what is creating provider administrative burden, and what a healthcare-specific virtual support model would change. No commitment required.',
+      buttons: [
+        { text: 'Build my virtual care team', variant: 'primary' },
+        { text: 'Talk to our virtual team first', variant: 'ghost' },
+      ],
+      trustLine: 'HIPAA · BAA on every engagement · Healthcare-trained specialists · No long-term contract required',
     },
   },
 };

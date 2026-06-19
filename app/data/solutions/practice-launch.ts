@@ -6,18 +6,39 @@ export const practiceLaunch: SolutionData = {
   description: 'Most practices open clinically ready but operationally uncertain. Hired Billing Support coordinates the full pre-launch infrastructure — credentialing, payer enrollment, billing system setup, front desk workflow, and post-launch support — so your practice opens on an operational foundation that supports billing from day one.',
   hero: {
     eyebrow: 'Practice Management · Practice Launch',
-    title: 'Your practice will be clinically ready long before it is operationally ready. That gap costs more than most providers expect.',
+    title: 'Your practice will be clinically ready long before<br><em>it is operationally ready. That gap costs more than most providers expect.</em>',
     subtitle: 'Clinical preparation and operational preparation move on completely different timelines. Credentialing takes months. Payer enrollment takes months. Billing setup, intake workflow, EHR configuration, and team training all take time that does not automatically happen while you are focused on clinical readiness.',
     description: 'Hired Billing Support helps practices build the operational foundation they need before patient volume starts — coordinating credentialing, payer enrollment, billing workflow setup, admin structure, and RCM launch planning so the practice opens on a stronger backend than most providers start with.',
+    card: {
+      title: 'Practice Launch Readiness · Pre-Open Checklist',
+      checklist: [
+        { icon: 'done', text: 'Entity formation & tax ID obtained' },
+        { icon: 'done', text: 'NPI — Individual & Group registered' },
+        { icon: 'done', text: 'CAQH profile built and attested' },
+        { icon: 'pending', text: 'Medicare PECOS submitted — Day 28' },
+        { icon: 'pending', text: 'Commercial payer apps — 3 submitted, 2 pending' },
+        { icon: 'open', text: 'EHR billing module configured' },
+        { icon: 'open', text: 'Eligibility verification workflow set up' },
+        { icon: 'open', text: 'Patient intake forms finalized' },
+      ],
+      stats: [
+        { num: '3', label: 'Complete', color: 'signal' },
+        { num: '2', label: 'In Progress', color: 'amber' },
+        { num: '3', label: 'Not Started', color: 'mute' },
+      ],
+      callout: '6–8 weeks if started today. 4+ months if delayed.',
+    },
   },
   sections: {
     pain: {
-      title: 'Opening the doors is the easy part.',
-      description: 'The launch reality most providers discover too late',
+      title: 'Opening the doors is the easy part. <em>Opening the doors is the easy part.</em>',
+      description: '',
+      ledgerEyebrow: 'Where the problem lives',
+      ledgerHeading: 'The specific gaps <em>behind the surface.</em>',
       monologue: [
         'The lease is signed. The equipment is ordered. The provider\'s schedule is filling. And then — two weeks before opening — someone asks whether credentialing is done. Whether payer applications have been submitted. Whether the billing system is configured. Whether staff know how to verify insurance before a patient arrives.',
         'You already know how quickly a practice launch can turn into a stack of forms, portal deadlines, payer follow-ups, missing documents, and unanswered status requests — all competing for attention during the most operationally demanding period a new practice ever faces.',
-        '"A practice cannot scale on clinical skill alone. It needs a backend operation that is credentialing-ready, payer-enrolled, billing-configured, and administratively structured before the first patient walks in — not months afterward."',
+        `"A practice cannot scale on clinical skill alone. It needs a backend operation that is credentialing-ready, payer-enrolled, billing-configured, and administratively structured before the first patient walks in — not months afterward."`,
         'Most practices open with clinical confidence and operational uncertainty. The clinical work starts immediately. The operational infrastructure catches up slowly, in real time, at the expense of revenue, staff stress, and patient experience. HBS helps practices close that gap before it opens.',
       ],
       ledger: [
@@ -54,7 +75,8 @@ export const practiceLaunch: SolutionData = {
       ],
     },
     solution: {
-      title: 'A coordinated launch infrastructure',
+      eyebrow: 'The solution',
+      title: 'A coordinated launch infrastructure <em>A coordinated launch infrastructureEM</em>',
       description: 'Hired Billing Support coordinates all operational launch tracks simultaneously — credentialing, payer enrollment, billing setup, intake workflow, and admin structure — so the practice opens on a backend foundation that is ready to generate revenue from day one.',
       process: [
         {
@@ -90,8 +112,9 @@ export const practiceLaunch: SolutionData = {
       ],
     },
     services: {
-      title: 'Every operational track.',
-      description: 'Practice launch services',
+      eyebrow: 'Practice launch services',
+      title: 'Every operational track. <em>Every operational track.EM</em>',
+      description: '',
       items: [
         {
           num: '01',
@@ -145,9 +168,57 @@ export const practiceLaunch: SolutionData = {
         },
       ],
     },
+    workflow: {
+      eyebrow: 'Practice launch roadmap',
+      title: 'A sequenced operational timeline. <em>A sequenced operational timeline.EM</em>',
+      description: 'Every operational track runs on a different timeline. The ones with the longest lead times need to start first — and that means starting before you think you need to.',
+      items: [
+        { num: 'Pre-Open<br>M-4', label: 'Entity & NPI', sublabel: 'Tax ID · NPPES' },
+        { num: 'M-4', label: 'Credentialing', sublabel: 'CAQH · Docs' },
+        { num: 'M-4', label: 'Payer Apps', sublabel: 'All payers submitted' },
+        { num: 'M-2', label: 'Billing Setup', sublabel: 'EHR · Clearinghouse' },
+        { num: 'M-2', label: 'Workflows', sublabel: 'Front desk · Intake' },
+        { num: 'M-1', label: 'Readiness Check', sublabel: 'All tracks reviewed' },
+        { num: 'Open', label: 'First Patients', sublabel: 'Claims submit Day 1' },
+        { num: 'Post', label: 'Revenue Active', sublabel: 'Full billing operational' },
+      ],
+    },
+    howWeWork: {
+      eyebrow: 'How HBS supports your launch',
+      title: 'One team coordinating all operational tracks. <em>One team coordinating all operational tracks.EM</em>',
+      description: 'Launch fails operationally when different tasks are owned by different people with different timelines and no one coordinating the full picture. We provide that coordination.',
+      process: [
+        {
+          num: '01',
+          title: 'We map your full launch timeline in week one',
+          description: 'Every task identified, sequenced, and assigned a start date based on your opening target — with the long-lead tasks (credentialing, payer enrollment) identified as immediate priorities regardless of what else is happening.',
+        },
+        {
+          num: '02',
+          title: 'We run credentialing and enrollment in parallel from the start',
+          description: 'These processes take months. We start them immediately — before the EHR is configured, before staff is hired, before the physical space is ready. The timeline does not wait for other things to be done first.',
+        },
+        {
+          num: '03',
+          title: 'We configure billing operations ahead of opening',
+          description: 'EHR billing setup, clearinghouse connection, claim submission testing, and charge entry workflow — configured and tested before the first patient, not after the first denial.',
+        },
+        {
+          num: '04',
+          title: 'We document workflows your staff can use from day one',
+          description: 'Eligibility verification, prior authorization, patient intake, insurance collection — step-by-step SOPs for every administrative function, ready for staff training before opening.',
+        },
+        {
+          num: '05',
+          title: 'We stay through stabilization, not just opening',
+          description: 'The first four to eight weeks after opening are when operational gaps surface. We stay engaged through stabilization — completing pending enrollments, resolving early billing issues, and refining workflows under real conditions.',
+        },
+      ],
+    },
     aiHuman: {
-      title: 'Technology handles the tracking. People handle the follow-through.',
-      description: 'The AI + human advantage',
+      eyebrow: 'The AI + human advantage',
+      title: 'Technology handles the tracking. <em>People handle the follow-through.</em>',
+      description: '',
       machine: [
         'Launch timeline tracking and milestone monitoring',
         'Credentialing and enrollment status tracking across all providers',
@@ -164,10 +235,12 @@ export const practiceLaunch: SolutionData = {
         'Post-launch billing support and operational troubleshooting',
         'Leadership guidance on operational decisions and priorities',
       ],
+      pullQuote: '"The practices that launch well are not the ones that move fastest. They are the ones that started the right things first — and managed all the tracks simultaneously instead of sequentially."',
     },
     results: {
-      title: 'A practice that opens billing-ready.',
-      description: 'What changes',
+      eyebrow: 'What changes',
+      title: 'A practice that opens billing-ready. <em>A practice that opens billing-ready.EM</em>',
+      description: '',
       outcomes: [
         {
           icon: '⚡',
@@ -202,8 +275,9 @@ export const practiceLaunch: SolutionData = {
       ],
     },
     compare: {
-      title: 'Practices that plan operationally',
-      description: 'Why launch planning affects revenue',
+      eyebrow: 'Why launch planning affects revenue',
+      title: 'Practices that plan operationally <em>Practices that plan operationallyEM</em>',
+      description: 'The difference between a well-planned launch and an unplanned one is not just stress — it is months of revenue delay, credentialing gaps, billing errors, and operational inefficiency that compound through the practice\'s first year.',
       rows: [
         {
           label: 'Credentialing start date',
@@ -236,6 +310,16 @@ export const practiceLaunch: SolutionData = {
           other: 'Discovered and improvised',
         },
       ],
+    },
+    finalCta: {
+      eyebrow: 'Start with a launch readiness assessment',
+      title: 'If you are planning to open a practice in the next six months, <em>If you are planning to open a practice in the next six months,EM</em>',
+      description: 'We start with a launch readiness assessment — mapping your timeline, identifying what needs to start immediately, and showing you where the gaps are between your current status and billing-ready. No commitment required to see the picture.',
+      buttons: [
+        { text: 'Plan my practice launch', variant: 'primary' },
+        { text: 'Talk to our launch team', variant: 'ghost' },
+      ],
+      trustLine: 'HIPAA · BAA on every engagement · No long-term contract required',
     },
   },
 };

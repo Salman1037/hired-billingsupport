@@ -6,14 +6,33 @@ export const payerInsurerEnrollment: SolutionData = {
   description: 'A provider who cannot bill a payer cannot serve that payer\'s patients. Enrollment is access. Hired Billing Support manages the full payer enrollment process — from commercial applications and Medicare/Medicaid enrollment through follow-up, portal management, EFT/ERA setup, and status tracking.',
   hero: {
     eyebrow: 'Practice Management · Payer & Insurer Enrollment',
-    title: 'A provider who cannot bill a payer is a provider who cannot serve that payer\'s patients. Enrollment is access.',
+    title: 'A provider who cannot bill a payer<br><em>cannot serve that payer\'s patients. Enrollment is access.</em>',
     subtitle: 'Payer enrollment is not a back-office formality. It determines which patients your practice can see, which plans you can bill, and how quickly new providers and services generate revenue.',
     description: 'Hired Billing Support manages the full payer enrollment process — from commercial applications and Medicare/Medicaid enrollment through follow-up, portal management, EFT/ERA setup, and status tracking — so your practice expands payer access without the administrative overhead.',
+    card: {
+      title: 'Payer Enrollment Tracker · Active Applications',
+      rows: [
+        { dot: 'green', label: 'Blue Cross Blue Shield', value: 'Active — EFT confirmed' },
+        { dot: 'green', label: 'Aetna Commercial', value: 'Active — ERA set up' },
+        { dot: 'amber', label: 'UnitedHealthcare', value: 'Pending — Day 34 of ~45' },
+        { dot: 'amber', label: 'Medicare Part B', value: 'PECOS submitted — Under review' },
+        { dot: 'red', label: 'Medicaid — State', value: 'Blocked — Missing W-9' },
+        { dot: 'grey', label: 'Cigna Behavioral Health', value: 'Application prep in progress' },
+      ],
+      stats: [
+        { num: '6', label: 'Payers Tracked' },
+        { num: '2', label: 'Active & Billing' },
+        { num: '1', label: 'Needs Action' },
+      ],
+      callout: 'UHC approval adds ~$14K/month in billable access.',
+    },
   },
   sections: {
     pain: {
-      title: 'Payer enrollment looks like a one-time task.',
-      description: 'It is actually an ongoing operational function.',
+      title: 'The enrollment problem every growing practice faces',
+      description: 'Payer enrollment looks like a one-time task. <em>It is actually an ongoing operational function.</em>',
+      ledgerEyebrow: 'Where the problem lives',
+      ledgerHeading: 'The specific gaps <em>behind the surface.</em>',
       monologue: [
         'A new provider joins. A new service line is added. The practice wants to accept a payer it previously avoided. In every case, the answer is the same: someone needs to navigate payer portals, prepare documentation, submit applications, follow up, respond to requests, and track status across multiple payers simultaneously — for weeks or months.',
         'Most practices try to manage this inside their existing administrative bandwidth. And most of the time, it works — eventually. Applications get submitted late, follow-up is inconsistent, and the timeline stretches from 60 days to 120 days because nobody owns the process with the attention it needs.',
@@ -54,8 +73,9 @@ export const payerInsurerEnrollment: SolutionData = {
       ],
     },
     solution: {
-      title: 'From application to approval,',
-      description: 'every payer enrollment step owned and tracked.',
+      eyebrow: 'The solution',
+      title: 'From application to approval, <em>every payer enrollment step owned and tracked.</em>',
+      description: 'Hired Billing Support manages your complete payer enrollment process — preparing applications, managing portals, following up with payers, setting up EFT/ERA, and tracking every application from submission to active billing status.',
       process: [
         {
           num: '01',
@@ -90,8 +110,9 @@ export const payerInsurerEnrollment: SolutionData = {
       ],
     },
     services: {
-      title: 'Every layer of payer access.',
-      description: 'Applied and tracked.',
+      eyebrow: 'Enrollment services included',
+      title: 'Every layer of payer access. <em>Applied and tracked.</em>',
+      description: '',
       items: [
         {
           num: '01',
@@ -145,9 +166,57 @@ export const payerInsurerEnrollment: SolutionData = {
         },
       ],
     },
+    workflow: {
+      eyebrow: 'Payer enrollment process',
+      title: 'From application to active billing. <em>Every step documented.</em>',
+      description: 'Enrollment spans weeks to months. Every step in that process needs an owner, a timeline, and a follow-up trigger — or the timeline extends silently.',
+      items: [
+        { num: '01', label: 'Network Assessment', sublabel: 'Target payers identified' },
+        { num: '02', label: 'Docs Prepared', sublabel: 'W-9 · NPI · CAQH' },
+        { num: '03', label: 'Application Submitted', sublabel: 'Portal or paper' },
+        { num: '04', label: 'Follow-Up', sublabel: 'Weekly status checks' },
+        { num: '05', label: 'Corrections', sublabel: 'Responded promptly' },
+        { num: '06', label: 'Approval', sublabel: 'Effective date noted' },
+        { num: '07', label: 'EFT + ERA Setup', sublabel: 'Electronic configured' },
+        { num: '08', label: 'Billing Active', sublabel: 'First claim submitted' },
+      ],
+    },
+    howWeWork: {
+      eyebrow: 'How HBS manages enrollment',
+      title: 'One team. Full ownership. <em>Every payer. Every step.</em>',
+      description: 'Enrollment works when one team owns the full process for every payer simultaneously — not when different people handle different payers with different levels of attention.',
+      process: [
+        {
+          num: '01',
+          title: 'We assess your current enrollment and target network',
+          description: 'We review which payers you are currently enrolled with, which you need but lack, and which have pending applications that may be stalled or incomplete. We start from an honest current state.',
+        },
+        {
+          num: '02',
+          title: 'We prepare and submit applications with payer-specific requirements',
+          description: 'Each application prepared with the documentation that specific payer requires — no generic forms, no missing attachments, no incomplete fields that come back as correction requests.',
+        },
+        {
+          num: '03',
+          title: 'We check status on a defined schedule — not when we remember',
+          description: 'Every application has a follow-up calendar built from submission date. Payer portals checked on schedule. Correction requests responded to within 48 hours.',
+        },
+        {
+          num: '04',
+          title: 'We configure EFT and ERA at approval — not later',
+          description: 'As soon as enrollment is approved, we initiate EFT and ERA setup so the practice starts receiving payments electronically from the first claim — not after an additional setup delay.',
+        },
+        {
+          num: '05',
+          title: 'We report enrollment status to your leadership team',
+          description: 'Current status, expected timelines, and action items for every active application reported regularly — so leadership always knows which payers are active, which are pending, and which need attention.',
+        },
+      ],
+    },
     aiHuman: {
-      title: 'Technology handles the tracking.',
-      description: 'People handle the follow-through.',
+      eyebrow: 'The AI + human advantage',
+      title: 'Technology handles the tracking. <em>People handle the follow-through.</em>',
+      description: '',
       machine: [
         'Application status tracking across multiple payer portals',
         'Follow-up schedule generation and deadline monitoring',
@@ -164,10 +233,12 @@ export const payerInsurerEnrollment: SolutionData = {
         'EFT/ERA setup coordination with payer and clearinghouse',
         'Leadership communication on enrollment progress and decisions',
       ],
+      pullQuote: '"Payer enrollment is one of the highest-leverage administrative functions in a practice — because every payer you can bill is a patient population you can serve. Managing it properly is not optional. It is infrastructure."',
     },
     results: {
-      title: 'Broader payer access.',
-      description: 'Faster. Without the administrative chaos.',
+      eyebrow: 'What changes',
+      title: 'Broader payer access. <em>Faster. Without the administrative chaos.</em>',
+      description: '',
       outcomes: [
         {
           icon: '⚡',
@@ -202,8 +273,9 @@ export const payerInsurerEnrollment: SolutionData = {
       ],
     },
     compare: {
-      title: 'Practices with complete payer networks',
-      description: 'grow faster than practices with enrollment gaps.',
+      eyebrow: 'Why payer enrollment affects growth',
+      title: 'Practices with complete payer networks <em>grow faster than practices with enrollment gaps.</em>',
+      description: 'Every payer network gap limits patient access, reduces billable volume, and constrains growth. Managed enrollment is not administrative overhead — it is a growth function.',
       rows: [
         {
           label: 'Application timeline',
@@ -236,6 +308,16 @@ export const payerInsurerEnrollment: SolutionData = {
           other: 'Gaps remain until they create problems',
         },
       ],
+    },
+    finalCta: {
+      eyebrow: 'Start with an enrollment review',
+      title: 'If your practice has payer enrollment gaps, <em>revenue and patient access are being limited right now.</em>',
+      description: 'We start with a review of your current payer enrollment status — identifying gaps, pending applications, and the estimated revenue impact of completing your target network. You see the picture before we discuss anything else.',
+      buttons: [
+        { text: 'Review payer enrollment', variant: 'primary' },
+        { text: 'Talk to our enrollment team', variant: 'ghost' },
+      ],
+      trustLine: 'HIPAA · BAA on every engagement · No long-term contract required',
     },
   },
 };

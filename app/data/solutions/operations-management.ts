@@ -6,14 +6,33 @@ export const operationsManagement: SolutionData = {
   description: 'Most growing practices are busy but not well-organized. Staff are working hard but tasks fall behind, workflows depend on individual habits, and leadership cannot see what is happening until problems surface. Hired Billing Support becomes your embedded operations department — managing daily workflows, coordinating billing operations, documenting SOPs, and providing leadership visibility so the practice scales without operational chaos.',
   hero: {
     eyebrow: 'Practice Management · Operations Management',
-    title: 'Your practice is busy. Busy is not the same as running well.',
+    title: 'Your practice is busy.<br><em>Busy is not the same as running well.</em>',
     subtitle: 'Staff are working hard. Phones are being answered. Patients are being scheduled. But underneath the daily activity, tasks are falling behind, workflows are inconsistent, providers are frustrated by administrative gaps, and leadership does not have a clear picture of what is actually happening.',
     description: 'Hired Billing Support becomes your embedded remote operations team — managing daily administrative workflows, supporting billing coordination, maintaining task queues, implementing SOPs, and giving leadership the operational visibility to manage a growing practice with confidence.',
+    card: {
+      title: 'Operations Dashboard · Daily Status',
+      statuses: [
+        { icon: 'done', label: 'Prior Auth Queue', value: '12 managed — 0 expired' },
+        { icon: 'done', label: 'Eligibility Verifications', value: 'All tomorrow\'s appts verified' },
+        { icon: 'pending', label: 'Scheduling Gaps', value: '3 unfilled slots — follow-up sent' },
+        { icon: 'done', label: 'Patient Callbacks', value: 'All returned same-day' },
+        { icon: 'done', label: 'Claim Submission Queue', value: '0 claims pending >24hrs' },
+        { icon: 'pending', label: 'Provider Task Queue', value: '2 items need provider action' },
+      ],
+      stats: [
+        { num: '4', label: 'Green — On Track', color: 'signal' },
+        { num: '2', label: 'In Progress', color: 'amber' },
+        { num: '0', label: 'Critical Issues', color: 'signal' },
+      ],
+      callout: '3 schedule gaps — patient outreach in progress.',
+    },
   },
   sections: {
     pain: {
-      title: 'Growth does not automatically create operational control.',
-      description: 'The operations reality of a growing practice',
+      title: 'Growth does not automatically create operational control. <em>Growth does not automatically create operational control.EM</em>',
+      description: '',
+      ledgerEyebrow: 'Where the problem lives',
+      ledgerHeading: 'The specific gaps <em>behind the surface.</em>',
       monologue: [
         'The practice is growing. More providers. More patients. More locations, maybe. And the administrative team — which was already stretched — is now managing more volume with the same bandwidth, the same inconsistent processes, and the same lack of visibility that existed when the practice was half its current size.',
         'Phones, scheduling, insurance verification, prior authorizations, billing questions, patient callbacks, provider EHR tasks, credentialing follow-ups, and staff coordination all compete for the same hours. Important tasks fall behind not because nobody is working, but because everyone is working on whatever is most urgent — and the important things that are not urgent get deferred until they become urgent too.',
@@ -54,7 +73,8 @@ export const operationsManagement: SolutionData = {
       ],
     },
     solution: {
-      title: 'An embedded remote operations team',
+      eyebrow: 'The solution',
+      title: 'An embedded remote operations team <em>An embedded remote operations teamEM</em>',
       description: 'Hired Billing Support becomes your embedded operations department — managing daily administrative workflows, coordinating billing operations, maintaining task queues, implementing SOPs, and providing leadership with regular operational reporting so the practice runs consistently whether the day is routine or chaotic.',
       process: [
         {
@@ -90,8 +110,9 @@ export const operationsManagement: SolutionData = {
       ],
     },
     services: {
-      title: 'Every layer of practice backend operations.',
-      description: 'Operations services included',
+      eyebrow: 'Operations services included',
+      title: 'Every layer of practice backend operations. <em>Every layer of practice backend operations.EM</em>',
+      description: '',
       items: [
         {
           num: '01',
@@ -145,9 +166,59 @@ export const operationsManagement: SolutionData = {
         },
       ],
     },
+    workflow: {
+      eyebrow: 'Daily operations support model',
+      title: 'Not an occasional check-in. <em>Not an occasional check-in.EM</em>',
+      description: 'Operations support only improves a practice when it is embedded in the daily workflow — not when it is available periodically or consulted reactively.',
+      items: [
+        { num: 'AM', label: 'Queue Review', sublabel: 'Tasks · Auth · Eligibility' },
+        { num: 'Daily', label: 'Eligibility Check', sublabel: 'Next-day appointments' },
+        { num: 'Daily', label: 'Prior Auth', sublabel: 'Pending · Expiring' },
+        { num: 'Daily', label: 'Billing Coord.', sublabel: 'Claims · Denials · AR' },
+        { num: 'Daily', label: 'Patient Tasks', sublabel: 'Callbacks · Scheduling' },
+        { num: 'Daily', label: 'Provider Queue', sublabel: 'EHR items · Requests' },
+        { num: 'Weekly', label: 'Ops Report', sublabel: 'Leadership summary' },
+        { num: 'Monthly', label: 'Performance Review', sublabel: 'Metrics · SOP adherence' },
+      ],
+    },
+    howWeWork: {
+      eyebrow: 'How HBS works as your operations team',
+      title: 'Embedded in your workflow. <em>Embedded in your workflow.EM</em>',
+      description: 'Operations support only creates real change when the team is inside the workflow — using the same systems, seeing the same queues, and communicating with the same staff your practice runs on.',
+      process: [
+        {
+          num: '01',
+          title: 'We assess your current operational state',
+          description: 'Before recommending anything, we understand how your practice currently operates — which workflows are documented, which are not, where tasks are falling behind, and what leadership cannot currently see about daily operations.',
+        },
+        {
+          num: '02',
+          title: 'We work inside your EHR, PM, and communication tools',
+          description: 'We use your systems — not ours. Your EHR, your PM software, your communication channels. Your staff communicates with a team member, not a support ticket queue.',
+        },
+        {
+          num: '03',
+          title: 'We document SOPs for every workflow we manage',
+          description: 'Every task and process we take on is documented in a format your staff can follow, train on, and use independently — so operational knowledge lives in a system, not in individual people.',
+        },
+        {
+          num: '04',
+          title: 'We report operational status to leadership regularly',
+          description: 'Weekly snapshots and monthly performance reviews give leadership current status on task queues, workflow adherence, and operational metrics — so decisions are made with information, not intuition.',
+        },
+        {
+          num: '05',
+          title: 'We scale as your practice grows',
+          description: 'New providers, new services, new locations — we scale the operational support to match the new scope without requiring proportional increases in administrative headcount.',
+        },
+      ],
+    },
     aiHuman: {
-      title: 'Technology handles the tracking. People handle the follow-through.',
-      description: 'The AI + human advantage',
+      eyebrow: 'The AI + human advantage',
+      title: 'Technology handles the tracking. <em>People handle the follow-through.</em>',
+      description: '',
+      machineLabel: 'AI-assisted workflows',
+      humanLabel: 'Human specialists',
       machine: [
         'Daily task queue monitoring and priority scoring',
         'Prior authorization expiration tracking and alert generation',
@@ -164,10 +235,12 @@ export const operationsManagement: SolutionData = {
         'Provider administrative support and EHR task management',
         'Leadership communication and operational reporting',
       ],
+      pullQuote: '"A practice that runs well from the backend is a practice that can grow without operational chaos. The clinical work is the product. The operations are the infrastructure that determines whether that product reaches patients reliably, consistently, and profitably."',
     },
     results: {
-      title: 'A practice that runs consistently.',
-      description: 'What changes',
+      eyebrow: 'What changes',
+      title: 'A practice that runs consistently. <em>A practice that runs consistently.EM</em>',
+      description: '',
       outcomes: [
         {
           icon: '◎',
@@ -202,8 +275,9 @@ export const operationsManagement: SolutionData = {
       ],
     },
     compare: {
-      title: 'Practices that grow without operations infrastructure',
-      description: 'Why growth needs operational structure',
+      eyebrow: 'Why growth needs operational structure',
+      title: 'Practices that grow without operations infrastructure <em>Practices that grow without operations infrastructureEM</em>',
+      description: 'Every practice eventually hits a point where growth creates more problems than it solves. That point arrives much later — and is much less painful — for practices that built operational structure first.',
       rows: [
         {
           label: 'Task queue management',
@@ -236,6 +310,16 @@ export const operationsManagement: SolutionData = {
           other: 'Frustrating and variable',
         },
       ],
+    },
+    finalCta: {
+      eyebrow: 'Start with an operations review',
+      title: 'If your practice is growing but operations feel harder instead of easier, <em>If your practice is growing but operations feel harder instead of easier,EM</em>',
+      description: 'We start with an operations review — mapping your current workflow state, identifying where tasks are falling behind, and showing you what a structured operations model would change. No commitment required.',
+      buttons: [
+        { text: 'Strengthen my practice operations', variant: 'primary' },
+        { text: 'Talk to our operations team', variant: 'ghost' },
+      ],
+      trustLine: 'HIPAA · BAA on every engagement · No long-term contract required',
     },
   },
 };

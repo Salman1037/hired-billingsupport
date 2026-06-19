@@ -19,8 +19,8 @@ export default function SolutionLayout({ solution, slug }: SolutionLayoutProps) 
         <section className="block" id="pain">
           <div className="container">
             <div className="block-head fade-in">
-              <div className="eyebrow">{solution.sections.pain.title}</div>
-              <h2 className="display" dangerouslySetInnerHTML={{ __html: solution.sections.pain.description }} />
+              <div className="eyebrow">{solution.sections.pain.eyebrow || "The problem"}</div>
+              <h2 className="display" dangerouslySetInnerHTML={{ __html: solution.sections.pain.title }} />
             </div>
             <div className="monologue fade-in">
               {solution.sections.pain.monologue.map((paragraph, index) => (
@@ -142,6 +142,28 @@ export default function SolutionLayout({ solution, slug }: SolutionLayoutProps) 
         </section>
       )}
 
+      {/* WORKFLOW DASHBOARD */}
+      {solution.sections?.workflow && (
+        <section className="block block--warm">
+          <div className="container">
+            <div className="block-head fade-in">
+              <div className="eyebrow">{solution.sections.workflow.eyebrow}</div>
+              <h2 className="display" dangerouslySetInnerHTML={{ __html: solution.sections.workflow.title }} />
+              <p>{solution.sections.workflow.description}</p>
+            </div>
+            <div className="workflow-dashboard fade-in">
+              {solution.sections.workflow.items.map((item, index) => (
+                <div className="wf-node" key={index}>
+                  <div className="wf-dot wf-dot--signal">{item.num}</div>
+                  <div className="wf-node-label">{item.label}</div>
+                  <div className="wf-node-sub">{item.sublabel}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* PRIORITIZATION */}
       {solution.sections?.prioritization && (
         <section className="block block--warm">
@@ -201,7 +223,7 @@ export default function SolutionLayout({ solution, slug }: SolutionLayoutProps) 
             </div>
             <div className="ai-split fade-in">
               <div className="ai-col ai-col--machine">
-                <div className="ai-col-label">AI-assisted RCM workflows</div>
+                <div className="ai-col-label">{solution.sections.aiHuman.machineLabel || 'AI-assisted RCM workflows'}</div>
                 <div className="ai-items">
                   {solution.sections.aiHuman.machine.map((item, index) => (
                     <div className="ai-item" key={index}>
@@ -212,7 +234,7 @@ export default function SolutionLayout({ solution, slug }: SolutionLayoutProps) 
                 </div>
               </div>
               <div className="ai-col ai-col--human">
-                <div className="ai-col-label">Human RCM specialists</div>
+                <div className="ai-col-label">{solution.sections.aiHuman.humanLabel || 'Human RCM specialists'}</div>
                 <div className="ai-items">
                   {solution.sections.aiHuman.human.map((item, index) => (
                     <div className="ai-item" key={index}>
