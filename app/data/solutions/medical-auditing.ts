@@ -4,7 +4,7 @@ import { SolutionData } from '../solutionTypes';
 
 export const medicalAuditing: SolutionData = {
   title: 'Medical Auditing',
-  subtitle: 'Proactive billing audits that find what nobody had time to find.',
+  subtitle: 'Your billing is performing well enough that nobody is looking closely. That is exactly when you need someone to look closely.',
   description:
     'Hired Billing Support conducts structured medical billing and coding audits — identifying revenue leakage, documentation risk, coding errors, and compliance exposure — and delivering findings your leadership team can actually act on.',
   hero: {
@@ -13,11 +13,31 @@ export const medicalAuditing: SolutionData = {
     subtitle: 'Revenue leakage, coding errors, documentation gaps, and payer compliance risks do not announce themselves. They build quietly — until a payer audit, a denial pattern, or a reimbursement shortfall makes them impossible to ignore.',
     description:
       'Hired Billing Support conducts proactive medical billing and coding audits — finding the issues your internal team does not have time to find, and delivering the root-cause analysis your leadership needs to act.',
+    card: {
+      title: '— Audit Findings Summary · Last Review',
+      stats: [
+        { label: 'Claims Audited', value: '248 claims', class: 'production' },
+        { label: 'Coding Errors Found', value: '31 | 12.5%', class: 'collection-before' },
+        { label: 'Documentation Gaps', value: '18 claims', class: 'collection-after' },
+        { label: 'Underpayments Identified', value: '$9,840', class: 'collection-after' },
+        { label: 'Revenue Leakage Estimate', value: '$22,600', class: 'collection-after' },
+        { label: 'Compliance Flags', value: '4 patterns', class: 'collection-after' }
+      ],
+      tags: [
+        { text: '$22K Found', class: 'before' },
+        { text: '3 Root Causes', class: 'after' },
+        { text: '100% Documented', class: 'after' }
+      ],
+      actionLabel: '— Action taken',
+      actionValue: 'All findings corrected. Two workflow changes recommended.'
+    }
   },
   sections: {
     pain: {
-      title: 'Most revenue leakage is invisible <em>until someone is specifically looking for it.</em>',
-      description: 'What is actually happening in your billing',
+      title: 'What is actually happening in your billing',
+      description: 'Most revenue leakage is invisible <em>until someone is specifically looking for it.</em>',
+      ledgerEyebrow: 'Where the problem lives',
+      ledgerHeading: 'The specific gaps <em>beneath the surface.</em>',
       monologue: [
         'Your billing team submits claims. Payers adjudicate them. Payments come in. Reports show collection rates. Everything looks manageable — until someone runs a detailed audit and finds that 12 percent of claims reviewed had avoidable coding errors, $18,000 in underpayments were accepted without review, and three providers had a documentation pattern that creates compliance risk.',
         'None of that showed up in a report. None of it was visible from the dashboard. It was only visible when someone had uninterrupted time to look through the actual claims, compare codes to documentation, check payments against contracts, and trace denial patterns back to their source.',
@@ -64,6 +84,7 @@ export const medicalAuditing: SolutionData = {
       ],
     },
     solution: {
+      eyebrow: 'The solution',
       title: 'We look at your billing the way an auditor would <em>— before they do.</em>',
       description:
         'Hired Billing Support conducts structured medical billing and coding audits — identifying revenue leakage, documentation risk, coding errors, and compliance exposure — and delivering findings your leadership team can actually act on.',
@@ -107,6 +128,7 @@ export const medicalAuditing: SolutionData = {
       ],
     },
     services: {
+      eyebrow: 'Audit services included',
       title: 'Every layer of billing and coding risk. <em>Reviewed and reported.</em>',
       description:
         'We do not specialize in one piece of the audit puzzle. We own the full workflow so nothing falls in the gap between departments or responsibilities.',
@@ -174,6 +196,7 @@ export const medicalAuditing: SolutionData = {
       ],
     },
     aiHuman: {
+      eyebrow: 'The AI + human advantage',
       title: 'Technology handles the repetitive. <em>People handle the judgment.</em>',
       description:
         'Audit is not purely manual work. But it is also not something that can be handed entirely to automation. The practices that win are the ones that use both correctly.',
@@ -193,10 +216,12 @@ export const medicalAuditing: SolutionData = {
         'Findings report writing with actionable recommendations',
         'Leadership communication and audit findings presentation',
       ],
+      pullQuote: '"The value of an audit is not in finding errors. It is in understanding why they happened, estimating what they cost, and defining what needs to change so they stop happening. That requires judgment — not just detection."'
     },
     results: {
+      eyebrow: 'What audits deliver',
       title: 'Clarity on what is actually happening in your billing and revenue cycle.',
-      description: 'What audits deliver',
+      description: '',
       outcomes: [
         {
           icon: '$',
@@ -237,6 +262,7 @@ export const medicalAuditing: SolutionData = {
       ],
     },
     compare: {
+      eyebrow: 'Why proactive audits matter',
       title: 'Auditing yourself costs far less <em>than being audited by someone else.</em>',
       description:
         'A payer audit or compliance review is far more expensive — in time, risk, and potential recoupment — than a proactive internal audit that finds and corrects issues first.',
@@ -273,5 +299,27 @@ export const medicalAuditing: SolutionData = {
         },
       ],
     },
-  },
+    howWeWork: {
+      eyebrow: 'How the audit process works',
+      title: 'Structured. Documented. Actionable. <em>Not just a list of errors.</em>',
+      description: 'An audit is only valuable if the findings lead to changes. Every HBS audit is designed to produce specific, implementable recommendations — not just documentation of what was wrong.',
+      process: [
+        { num: '01', title: 'We define the scope with your leadership', description: 'What are we looking for? Which providers, code types, payers, and time period? Audit scope aligned to the specific questions your practice needs answered.' },
+        { num: '02', title: 'We access your EHR, billing system, and claim history', description: 'We work in your existing systems — no data exports or third-party upload steps. We see what your team sees, plus what a detailed review reveals.' },
+        { num: '03', title: 'We review claims against documentation at the individual level', description: 'Every claim in scope reviewed against the clinical record. Not a statistical sample that misses specific issues — a thorough review that produces findings at the claim level.' },
+        { num: '04', title: 'We deliver findings with root cause and recommended action', description: 'Every finding documented with the specific error, the root cause, the revenue impact, and the change that would prevent recurrence. Not a spreadsheet of errors — a structured action plan.' },
+        { num: '05', title: 'We support implementation of recommended changes', description: 'If the audit findings require workflow changes, documentation improvements, or billing process corrections, we support the implementation — not just identify the problem and leave.' }
+      ]
+    },
+    finalCta: {
+      eyebrow: 'Start with an audit review',
+      title: 'You do not know what your billing is hiding <em>until someone looks at it properly.</em>',
+      description: 'We start with a focused audit review — identifying your highest-risk areas, quantifying revenue leakage, and showing you what a structured audit would find before we discuss scope or commitment.',
+      buttons: [
+        { text: 'Request a billing audit', variant: 'light' },
+        { text: 'Talk to our audit team', variant: 'ghost' }
+      ],
+      trustLine: 'HIPAA · BAA on every engagement · No long-term contract required'
+    }
+  }
 };

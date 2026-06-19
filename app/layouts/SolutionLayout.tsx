@@ -39,14 +39,16 @@ export default function SolutionLayout({ solution, slug }: SolutionLayoutProps) 
     <div className="container">
       <div className="block-head fade-in">
       <div className="eyebrow">
-           {solution.sections.pain.ledgerEyebrow || "Why denials keep repeating"}
+           {solution.sections.pain.ledgerEyebrow || "The underlying issues"}
          </div>
          <h2 className="display"
           dangerouslySetInnerHTML={{
              __html: solution.sections.pain.ledgerHeading || 
-                    "Denials are symptoms. The root cause is always <em>somewhere upstream.</em>"
+                    "Why this problem <em>keeps repeating.</em>"
           }}
+          
          />
+         
        </div>
              <div className="pain-ledger fade-in">
                {solution.sections.pain.ledger.map((item) => (
@@ -120,7 +122,7 @@ export default function SolutionLayout({ solution, slug }: SolutionLayoutProps) 
 
       {/* SERVICES */}
       {solution.sections?.services && (
-        <section className="block" id="services">
+        <section className="block">
           <div className="container">
             <div className="block-head fade-in">
               <div className="eyebrow">{solution.sections.services.eyebrow}</div>
@@ -133,6 +135,30 @@ export default function SolutionLayout({ solution, slug }: SolutionLayoutProps) 
                   <span className="service-num">{item.num}</span>
                   <h4>{item.title}</h4>
                   <p>{item.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* PRIORITIZATION */}
+      {solution.sections?.prioritization && (
+        <section className="block block--warm">
+          <div className="container">
+            <div className="block-head fade-in">
+              <div className="eyebrow">{solution.sections.prioritization.eyebrow}</div>
+              <h2 className="display" dangerouslySetInnerHTML={{ __html: solution.sections.prioritization.title }} />
+              <p>{solution.sections.prioritization.description}</p>
+            </div>
+            <div className="pain-ledger fade-in">
+              {solution.sections.prioritization.categories.map((item) => (
+                <div className="pain-item" key={item.num}>
+                  <div className="pain-num">{item.num}</div>
+                  <div>
+                    <h4>{item.title}</h4>
+                    <p>{item.description}</p>
+                  </div>
                 </div>
               ))}
             </div>

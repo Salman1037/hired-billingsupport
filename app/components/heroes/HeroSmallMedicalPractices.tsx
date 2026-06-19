@@ -2,11 +2,11 @@
 
 import { useEffect } from 'react';
 
-interface HeroProps {
+interface HeroFqhcProps {
   solution?: any;
 }
 
-export default function HeroSmallMedicalPractices({ solution }: HeroProps) {
+export default function HeroFqhc({ solution }: HeroFqhcProps) {
   useEffect(() => {
     // Add staggered animation delays to status rows
     const rows = document.querySelectorAll('[data-animated="status-row"]');
@@ -51,6 +51,10 @@ export default function HeroSmallMedicalPractices({ solution }: HeroProps) {
       grid-template-columns: 1fr 420px;
       gap: 64px;
       align-items: center;
+    }
+
+    .who-hero-content {
+      flex: 1;
     }
 
     .who-hero-badge {
@@ -121,10 +125,20 @@ export default function HeroSmallMedicalPractices({ solution }: HeroProps) {
       border: 1px solid transparent;
       transition: background .2s, color .2s, transform .15s;
       white-space: nowrap;
+      text-decoration: none;
     }
 
     .btn:hover {
       transform: translateY(-1px);
+    }
+
+    .btn .arrow {
+      transition: transform .2s;
+      flex-shrink: 0;
+    }
+
+    .btn:hover .arrow {
+      transform: translateX(3px);
     }
 
     .btn-primary {
@@ -152,22 +166,6 @@ export default function HeroSmallMedicalPractices({ solution }: HeroProps) {
       font-size: 15px;
     }
 
-    .btn .arrow {
-      transition: transform .2s;
-      flex-shrink: 0;
-    }
-
-    .btn:hover .arrow {
-      transform: translateX(3px);
-    }
-
-    .who-hero-visual {
-      animation: rv 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
-      animation-delay: 0.55s;
-      opacity: 0;
-      transform: translateY(20px);
-    }
-
     .organization-dashboard {
       background: #0A1628;
       border: 1px solid #E8E2D5;
@@ -191,10 +189,6 @@ export default function HeroSmallMedicalPractices({ solution }: HeroProps) {
       gap: 10px;
       padding: 8px 0;
       border-bottom: 1px solid #E8E2D5;
-      opacity: 0;
-      transform: translateY(20px);
-      animation: rv 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
-      animation-delay: var(--reveal-delay, 0s);
     }
 
     .status-row:last-of-type {
@@ -214,15 +208,6 @@ export default function HeroSmallMedicalPractices({ solution }: HeroProps) {
 
     .dot-a {
       background: #F59E0B;
-    }
-
-    .dot-r {
-      background: #D64545;
-    }
-
-    .dot-x {
-      background: #E8E2D5;
-      border: 1px solid #475569;
     }
 
     .s-label {
@@ -245,12 +230,19 @@ export default function HeroSmallMedicalPractices({ solution }: HeroProps) {
       color: #B45309;
     }
 
-    .s-val.block {
-      color: #D64545;
+    .s-pill {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 9px;
+      letter-spacing: .1em;
+      padding: 2px 8px;
+      border-radius: 100px;
+      display: inline-block;
+      margin-left: 8px;
     }
 
-    .s-val.wait {
-      color: #475569;
+    .pill-g {
+      background: rgba(0, 200, 150, .12);
+      color: #00876B;
     }
 
     .dash-divider {
@@ -318,19 +310,19 @@ export default function HeroSmallMedicalPractices({ solution }: HeroProps) {
     }
 
     .reveal-1 {
-      animation: rv 0.8s cubic-bezier(0.22, 1, 0.36, 1) .10s forwards;
+      animation: rv 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.1s forwards;
     }
 
     .reveal-2 {
-      animation: rv 0.8s cubic-bezier(0.22, 1, 0.36, 1) .22s forwards;
+      animation: rv 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.22s forwards;
     }
 
     .reveal-3 {
-      animation: rv 0.8s cubic-bezier(0.22, 1, 0.36, 1) .36s forwards;
+      animation: rv 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.36s forwards;
     }
 
     .reveal-4 {
-      animation: rv 0.8s cubic-bezier(0.22, 1, 0.36, 1) .50s forwards;
+      animation: rv 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.5s forwards;
     }
 
     @keyframes rv {
@@ -338,6 +330,10 @@ export default function HeroSmallMedicalPractices({ solution }: HeroProps) {
         opacity: 1;
         transform: translateY(0);
       }
+    }
+
+    [data-animated="status-row"] {
+      animation: rv 0.8s cubic-bezier(0.22, 1, 0.36, 1) var(--reveal-delay, 0.1s) forwards;
     }
 
     @media(max-width:1024px) {
@@ -368,18 +364,30 @@ export default function HeroSmallMedicalPractices({ solution }: HeroProps) {
         </div>
 
         <div className="who-hero-inner">
-          <div>
+          <div className="who-hero-content">
             <div className="eyebrow reveal reveal-1">Who We Serve · Small Medical Practices</div>
+            
             <h1 className="who-hero-title reveal reveal-2">
-              Your small team is doing the work of three.<br />
+              Your small team is doing the work of three.
+              <br />
               <em>Some of it is not getting done — and revenue is leaking because of it.</em>
             </h1>
+
             <p className="who-hero-subtitle reveal reveal-3">
-              In a small practice, the same people who answer phones, check in patients, manage prior authorizations, verify insurance, and handle billing questions are also expected to follow up on denied claims, work the AR aging report, and manage payer portals — all before the day ends.
+            In a small practice, the same people who answer phones, check in patients,
+manage prior authorizations, verify insurance, and handle billing questions
+are also expected to follow up on denied claims, work the AR aging report,
+and manage payer portals — all before the day ends.
             </p>
+
             <p className="who-hero-lede reveal reveal-3">
-              Hired Billing Support gives small practices the operational depth of a larger team without forcing them to hire more in-house staff. We work inside your workflow, take ownership of billing and AR, and reduce the daily administrative pressure that is keeping your practice from running — and growing — the way it should.
+           Hired Billing Support gives small practices the operational depth
+of a larger team without forcing them to hire more in-house staff.
+We work inside your workflow, take ownership of billing and AR,
+and reduce the daily administrative pressure that is keeping
+your practice from running — and growing — the way it should.
             </p>
+
             <div className="who-hero-actions reveal reveal-4">
               <a href="#cta" className="btn btn-primary btn-lg">
                 Relieve my practice team
@@ -388,15 +396,15 @@ export default function HeroSmallMedicalPractices({ solution }: HeroProps) {
                 </svg>
               </a>
               <a href="#pain" className="btn btn-ghost btn-lg">
-                See what support looks like
+                See community health support
               </a>
             </div>
           </div>
 
-          <div className="who-hero-visual">
+          <div className="who-hero-visual reveal reveal-4" style={{ animationDelay: '0.55s' }}>
             <div className="organization-dashboard">
               <div className="org-dash-title">— Small Practice Operations · Daily Status</div>
-              
+
               <div className="status-row" data-animated="status-row">
                 <div className="s-dot dot-a"></div>
                 <span className="s-label">Prior Auth Queue</span>
@@ -410,9 +418,9 @@ export default function HeroSmallMedicalPractices({ solution }: HeroProps) {
               </div>
 
               <div className="status-row" data-animated="status-row">
-                <div className="s-dot dot-r"></div>
+                <div className="s-dot dot-a"></div>
                 <span className="s-label">Unworked Denials</span>
-                <span className="s-val block">7 claims — 3 over 20 days</span>
+                <span className="s-val pend">7 claims — 3 over 20 days</span>
               </div>
 
               <div className="status-row" data-animated="status-row">
@@ -431,15 +439,15 @@ export default function HeroSmallMedicalPractices({ solution }: HeroProps) {
 
               <div className="dash-stats">
                 <div className="dash-stat">
-                  <span className="dash-stat-num" style={{ color: '#D64545' }}>7</span>
+                  <span className="dash-stat-num">7</span>
                   <span className="dash-stat-label">Unworked Denials</span>
                 </div>
                 <div className="dash-stat">
-                  <span className="dash-stat-num" style={{ color: '#B45309' }}>4</span>
+                  <span className="dash-stat-num">4</span>
                   <span className="dash-stat-label">Auth Pending</span>
                 </div>
                 <div className="dash-stat">
-                  <span className="dash-stat-num" style={{ color: '#00876B' }}>$0</span>
+                  <span className="dash-stat-num">$0</span>
                   <span className="dash-stat-label">Missed Submissions</span>
                 </div>
               </div>

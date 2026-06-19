@@ -14,11 +14,32 @@ export const complianceReporting: SolutionData = {
       "Reports are not the same as visibility. A report that shows numbers without explaining trends, root causes, or recommended actions does not help leadership make decisions — it just confirms that billing is happening.",
     description:
       "Hired Billing Support turns your billing, coding, AR, and denial activity into structured reporting and compliance monitoring — giving your leadership team the operational visibility to manage revenue cycle performance with confidence.",
+    card: {
+      title: '— RCM Performance Dashboard · Monthly',
+      stats: [
+        { label: 'COLLECTION RATE', value: '94.2% ↑ 2.1%', class: 'production' },
+        { label: 'CLEAN CLAIM RATE', value: '97.8%', class: 'collection-before' },
+        { label: 'DENIAL RATE', value: '3.4% Target <3%', class: 'collection-after' },
+        { label: 'DAYS IN AR', value: '24 days ↓ 4', class: 'collection-after' },
+        { label: 'AR OVER 90 DAYS', value: '8.2% Monitor', class: 'collection-after' },
+        { label: 'COMPLIANCE FLAGS', value: '0 this month', class: 'collection-after' }
+      ],
+      tags: [
+        { text: 'Monthly', class: 'before' },
+        { text: 'Report Cadence', class: 'after' },
+        { text: '6 KPIs Tracked', class: 'after' },
+        { text: '✓ Leadership Ready', class: 'after' }
+      ],
+      actionLabel: '— This month\'s priority',
+      actionValue: 'Denial rate above target — root cause in progress.'
+    }
   },
   sections: {
     pain: {
       title: "The visibility problem in healthcare operations",
       description: "Leadership is making decisions with <em>incomplete information</em> about their own revenue cycle.",
+      ledgerEyebrow: 'Where the problem lives',
+      ledgerHeading: 'The specific gaps <em>beneath the surface.</em>',
       monologue: [
         "The billing team is working. Claims are going out. Payments are coming in. And at the leadership level, the most current view of the revenue cycle is a monthly summary report — numbers without context, trends without explanation, and issues without root causes.",
         "Leadership knows the collection rate. They do not know which payer is driving 40 percent of denials, why AR over 90 days grew last quarter, whether coding accuracy improved after the last feedback session, or whether the practice has any growing compliance exposure they should be aware of.",
@@ -65,6 +86,7 @@ export const complianceReporting: SolutionData = {
       ],
     },
     solution: {
+      eyebrow: 'The solution',
       title: "Reporting that gives leadership clarity. <em>Compliance monitoring that catches risk early.</em>",
       description:
         "Hired Billing Support builds and maintains structured reporting across your billing, coding, AR, and denial activity — and monitors for compliance risk so your leadership team always knows where performance stands and where attention is needed.",
@@ -108,6 +130,7 @@ export const complianceReporting: SolutionData = {
       ],
     },
     services: {
+      eyebrow: 'Reporting and compliance services',
       title: "Every layer of operational visibility. <em>Reported, monitored, and followed through.</em>",
       description:
         "We do not specialize in one piece of the reporting puzzle. We own the full workflow so nothing falls in the gap between departments or responsibilities.",
@@ -175,8 +198,9 @@ export const complianceReporting: SolutionData = {
       ],
     },
     aiHuman: {
-      title: "The AI + human advantage",
-      description: "Technology handles the repetitive. <em>People handle the judgment.</em>",
+      eyebrow: 'The AI + human advantage',
+      title: "Technology handles the repetitive. <em>People handle the judgment.</em>",
+      description: "Reporting is not purely manual work. But it is also not something that can be handed entirely to automation. The practices that win are the ones that use both correctly.",
       machine: [
         "KPI data collection, aggregation, and trend calculation",
         "Denial reason code categorization and frequency tracking",
@@ -193,10 +217,12 @@ export const complianceReporting: SolutionData = {
         "Corrective action recommendations and follow-up tracking",
         "Reporting framework updates as practice needs evolve",
       ],
+      pullQuote: '"The goal of compliance reporting is not to produce documents. It is to give the people making decisions about your practice a clear, accurate, and timely picture of what is happening in your revenue cycle — and what needs to change."'
     },
     results: {
+      eyebrow: 'What changes',
       title: "Leadership that understands what is happening. <em>Not just what was billed.</em>",
-      description: "What changes",
+      description: '',
       outcomes: [
         {
           icon: "◎",
@@ -237,8 +263,9 @@ export const complianceReporting: SolutionData = {
       ],
     },
     compare: {
+      eyebrow: 'Why visibility matters in healthcare operations',
       title: "Practices that monitor their performance <em>manage it better</em> than those that react to it.",
-      description: "Why visibility matters in healthcare operations",
+      description: "The difference between a practice that consistently improves and one that repeatedly addresses the same problems is systematic visibility — knowing what is happening before it becomes a crisis.",
       rows: [
         { label: "Performance visibility", hbs: "Tracked with trends and context", other: "Reactive after problems surface" },
         { label: "Compliance monitoring", hbs: "Ongoing — flags caught early", other: "Found during external audit" },
@@ -248,5 +275,15 @@ export const complianceReporting: SolutionData = {
         { label: "Audit documentation", hbs: "Current and organized", other: "Assembled under pressure" },
       ],
     },
-  },
+    finalCta: {
+      eyebrow: 'Start with a reporting review',
+      title: 'If your leadership does not have clear visibility into your revenue cycle, <em>decisions are being made with incomplete information.</em>',
+      description: 'We start with a review of your current reporting — showing you what is tracked, what is missing, and what your leadership team should be seeing on a regular basis. No commitment required.',
+      buttons: [
+        { text: 'Improve my RCM visibility', variant: 'light' },
+        { text: 'Talk to our compliance team', variant: 'ghost' }
+      ],
+      trustLine: 'HIPAA · BAA on every engagement · No long-term contract required'
+    }
+  }
 };

@@ -6,18 +6,38 @@ export const qualityAssurance: SolutionData = {
   description: 'A claim gets submitted. A denial comes back weeks later. An audit finds a pattern. A payment is short by 20 percent. In each case, the problem existed long before it surfaced — and a quality layer would have caught it first. Hired Billing Support builds a systematic QA layer across your billing, coding, AR, and revenue cycle operations — catching errors early, standardizing processes, and monitoring performance so problems are found before they become revenue loss.',
   hero: {
     eyebrow: 'Quality Assurance',
-    title: 'Mistakes in billing are not discovered when they are made.',
-    subtitle: 'They are discovered when they cost you something.',
-    description: 'A claim gets submitted. A denial comes back weeks later. An audit finds a pattern. A payment is short by 20 percent. In each case, the problem existed long before it surfaced — and a quality layer would have caught it first. Hired Billing Support builds a systematic QA layer across your billing, coding, AR, and revenue cycle operations — catching errors early, standardizing processes, and monitoring performance so problems are found before they become revenue loss.'
+    title: 'Mistakes in billing are not discovered when they are made.<br><em>They are discovered when they cost you something.</em>',
+    subtitle: 'A claim gets submitted. A denial comes back weeks later. An audit finds a pattern. A payment is short by 20 percent. In each case, the problem existed long before it surfaced — and a quality layer would have caught it first.',
+    description: 'Hired Billing Support builds a systematic QA layer across your billing, coding, AR, and revenue cycle operations — catching errors early, standardizing processes, and monitoring performance so problems are found before they become revenue loss.',
+    card: {
+      title: '— QA Performance Scorecard · Monthly',
+      stats: [
+        { label: 'CLAIM ACCURACY', value: '97%', class: 'production' },
+        { label: 'CODING QA PASS RATE', value: '95%', class: 'collection-before' },
+        { label: 'AR FOLLOW-UP COMPLIANCE', value: '98%', class: 'collection-after' },
+        { label: 'DENIAL WORK RATE', value: '100%', class: 'collection-after' },
+        { label: 'PROCESS SOP ADHERENCE', value: '91%', class: 'collection-after' }
+      ],
+      tags: [
+        { text: '12 Errors Caught Pre-Submit', class: 'before' },
+        { text: '3 Process Gaps Found', class: 'after' },
+        { text: '$0 Unreviewed Denials', class: 'after' }
+      ],
+      actionLabel: '— This month\'s finding',
+      actionValue: 'SOP adherence gap in denial follow-up notes — corrected.'
+    }
   },
   sections: {
     pain: {
       title: 'What quality gaps actually look like',
       description: 'Quality problems in billing are quiet <em>until they are suddenly very loud.</em>',
+      ledgerEyebrow: 'Where the problem lives',
+      ledgerHeading: 'The specific gaps <em>beneath the surface.</em>',
       monologue: [
-        'Two billers are following slightly different processes for working denials. Neither is wrong, exactly — but the inconsistency means some denials get thorough notes and some get vague ones, some get escalated and some get marked as closed when they are not, some get resubmitted correctly and some get resubmitted with the same error. Nobody designed this inconsistency. It emerged because nobody has the time to standardize and verify every step of every workflow, every month. And so the quality of your billing operation depends on who is working on a given day — not on a reliable process that produces consistent outcomes regardless of who is doing the work.',
-        '"Your team is not doing poor work. They are doing their best work in an environment that lacks the quality infrastructure to catch errors, standardize processes, and verify that the right steps are being taken consistently."',
-        'Quality assurance is not about checking on people. It is about building a system that catches problems early, makes processes consistent, and gives leadership the visibility to manage performance before errors become denials, denials become write-offs, and write-offs become unrecoverable revenue.'
+        'Two billers are following slightly different processes for working denials. Neither is wrong, exactly — but the inconsistency means some denials get thorough notes and some get vague ones, some get escalated and some get marked as closed when they are not, some get resubmitted correctly and some get resubmitted with the same error.',
+        'Nobody designed this inconsistency. It emerged because nobody has the time to standardize and verify every step of every workflow, every month. And so the quality of your billing operation depends on who is working on a given day — not on a reliable process that produces consistent outcomes regardless of who is doing the work.',
+        'Your team is not doing poor work. They are doing their best work in an environment that lacks the quality infrastructure to catch errors, standardize processes, and verify that the right steps are being taken consistently.',
+        'Compliance is the same. Billing compliance risk does not announce itself. It accumulates through coding patterns, documentation habits, and billing practices that nobody is systematically reviewing. By the time it surfaces — in a payer audit, a recoupment demand, or a corrective action plan — the damage is already done.',
       ],
       ledger: [
         {
@@ -53,6 +73,7 @@ export const qualityAssurance: SolutionData = {
       ]
     },
     solution: {
+      eyebrow: 'The solution',
       title: 'A quality layer that catches problems early <em>and keeps processes consistent as you grow.</em>',
       description: 'Hired Billing Support builds and maintains a systematic QA function across your billing, coding, AR, and denial workflows — reviewing claim accuracy before submission, monitoring process adherence, and delivering performance data that helps leadership manage with confidence.',
       process: [
@@ -89,6 +110,7 @@ export const qualityAssurance: SolutionData = {
       ]
     },
     services: {
+      eyebrow: 'QA services included',
       title: 'Every layer of billing and coding quality. <em>Reviewed, documented, and improved.</em>',
       description: 'We do not specialize in one piece of the QA puzzle. We own the full workflow so nothing falls in the gap between departments or responsibilities.',
       items: [
@@ -144,9 +166,42 @@ export const qualityAssurance: SolutionData = {
         }
       ]
     },
+    howWeWork: {
+      eyebrow: 'How HBS builds your QA layer',
+      title: 'Embedded in your workflow. <em>Not layered on top of it.</em>',
+      description: 'QA only works when it is part of the daily operation — not a separate review step that adds delays or creates additional administrative overhead for your team.',
+      process: [
+        {
+          num: '01',
+          title: 'We map your existing workflows and identify QA insertion points',
+          description: 'Before building a QA layer, we understand how your billing, coding, and AR workflows currently operate — and identify the specific points where quality checks add the most value.'
+        },
+        {
+          num: '02',
+          title: 'We document SOPs where they are missing',
+          description: 'For any workflow step without a documented standard process, we work with your team to define the right process and document it in a format that is practical for daily use.'
+        },
+        {
+          num: '03',
+          title: 'We build the QA review into the existing workflow',
+          description: 'QA review happens within your existing system and workflow — not as a separate task that requires additional steps, tools, or time from your team.'
+        },
+        {
+          num: '04',
+          title: 'We deliver feedback directly to the relevant team members',
+          description: 'QA findings go to the people who can act on them — coders, billers, AR specialists — with specific, work-sample-based feedback rather than general guidelines.'
+        },
+        {
+          num: '05',
+          title: 'We report QA performance to leadership monthly',
+          description: 'Monthly QA report delivered to leadership with quality scores, identified gaps, corrective actions, and trend data — making quality visible and manageable at the leadership level.'
+        }
+      ]
+    },
     aiHuman: {
-      title: 'The AI + human advantage',
-      description: 'Technology handles the repetitive. <em>People handle the judgment.</em>',
+      eyebrow: 'The AI + human advantage',
+      title: 'Technology handles the repetitive. <em>People handle the judgment.</em>',
+      description: 'Quality assurance is not purely manual work. But it is also not something that can be handed entirely to automation. The practices that win are the ones that use both correctly.',
       machine: [
         'Pre-submission claim accuracy checks against payer rule libraries',
         'SOP adherence monitoring across workflow steps',
@@ -162,11 +217,13 @@ export const qualityAssurance: SolutionData = {
         'Specific, actionable QA feedback delivery to team members',
         'Leadership communication and QA performance discussion',
         'Corrective action planning and implementation support'
-      ]
+      ],
+      pullQuote: '"Quality assurance is not about catching people making mistakes. It is about building a system that makes mistakes visible before they become expensive — and makes the right process easier to follow than the wrong one."'
     },
     results: {
+      eyebrow: 'What changes',
       title: 'Billing that is consistently accurate. <em>Not accurate when everything goes right.</em>',
-      description: 'What changes',
+      description: '',
       outcomes: [
         {
           icon: '↑',
@@ -201,6 +258,7 @@ export const qualityAssurance: SolutionData = {
       ]
     },
     compare: {
+      eyebrow: 'Why QA is necessary for growth',
       title: 'A billing operation without quality control <em>gets harder to manage as it scales.</em>',
       description: 'Every error that is not caught by a QA layer gets caught by a payer — or does not get caught at all, and becomes revenue that was never collected.',
       rows: [
@@ -235,6 +293,16 @@ export const qualityAssurance: SolutionData = {
           other: 'Known only after problems surface'
         }
       ]
+    },
+    finalCta: {
+      eyebrow: 'Start with a QA review',
+      title: 'If your billing operation does not have a systematic quality layer, <em>errors are reaching payers that should not be.</em>',
+      description: 'We start with a review of your current billing quality — identifying the gaps in your QA process, the highest-frequency error types, and what a systematic QA layer would catch. No commitment required.',
+      buttons: [
+        { text: 'Build a stronger QA layer', variant: 'light' },
+        { text: 'Talk to our QA team', variant: 'ghost' }
+      ],
+      trustLine: 'HIPAA · BAA on every engagement · No long-term contract required'
     }
   }
 };

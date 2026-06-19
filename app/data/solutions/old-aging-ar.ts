@@ -6,14 +6,34 @@ export const oldAgingAr: SolutionData = {
   description: 'Your aging AR is not a write-off pile — it is revenue you earned that is waiting for systematic recovery. Hired Billing Support audits your backlog, assesses collectibility, prioritizes the highest-value targets, and works them down without overwhelming your team.',
   hero: {
     eyebrow: 'Old & aging AR recovery',
-    title: 'You already did the work. You just have not been paid for all of it yet.',
+    title: 'You already did the work.<br><em>You just have not been paid for all of it yet.</em>',
     subtitle: 'Your 60, 90, 120, and 180+ day accounts receivable is not a write-off pile. It is revenue you earned through actual patient care — sitting in claims your team has not had the time or structure to systematically pursue.',
     description: 'Hired Billing Support reviews your entire aging AR, identifies what is still collectible, prioritizes the highest-value recovery targets, and works the backlog down — without overwhelming the team running your daily operations.',
+    card: {
+      title: '— Aging AR Recovery Snapshot',
+      arRows: [
+        { label: '0–60 days', value: '$82,400', class: 'ar-green', width: '85%' },
+        { label: '61–90 days', value: '$48,200', class: 'ar-amber', width: '58%' },
+        { label: '91–120 days', value: '$32,700', class: 'ar-orange', width: '38%' },
+        { label: '121–180 days', value: '$21,350', class: 'ar-red', width: '24%' },
+        { label: '180+ days', value: '$14,800', class: 'ar-red', width: '14%' }
+      ],
+      gapCallout: {
+        label: '— Estimated collectible (90+ days)',
+        value: '$47,200 · recoverable with systematic follow-up'
+      },
+      tags: [
+        { text: '$68,850 OVER 90 DAYS', class: 'before' },
+        { text: '68% COLLECTIBLE EST.', class: 'after' }
+      ]
+    }
   },
   sections: {
     pain: {
       title: 'Why aging AR stays aging',
-      description: 'Old claims do not stay old because they are uncollectible.',
+      description: 'Old claims do not stay old because <em>they are uncollectible.</em>',
+      ledgerEyebrow: 'Why old AR keeps growing',
+      ledgerHeading: 'Eight reasons your 90-day bucket <em>is bigger this month than last.</em>',
       monologue: [
         'They stay old because nobody has the uninterrupted time, the prioritized ownership, and the structured process to work through them systematically. New claims always feel more urgent. Old ones get pushed back week after week until they become a backlog that feels too large to start.',
         'And then the write-offs begin. Not because someone decided these accounts were uncollectible — but because they aged past the point where anyone had the bandwidth to dispute them properly.',
@@ -66,6 +86,7 @@ export const oldAgingAr: SolutionData = {
     solution: {
       title: 'The recovery solution',
       description: 'We turn your aging AR backlog into a prioritized recovery plan. Then we execute it.',
+      eyebrow: 'The recovery solution',
       process: [
         {
           num: '01',
@@ -100,8 +121,9 @@ export const oldAgingAr: SolutionData = {
       ],
     },
     services: {
-      title: 'Recovery services',
-      description: 'From audit to recovery. Every step managed.',
+      title: 'From audit to recovery. <em>Every step managed.</em>',
+      // description: 'From audit to recovery. Every step managed.',
+      eyebrow: 'Recovery services',
       items: [
         {
           num: '01',
@@ -165,9 +187,32 @@ export const oldAgingAr: SolutionData = {
         },
       ],
     },
+    prioritization: {
+      eyebrow: 'How we prioritize collectible claims',
+      title: 'Not all aging AR is the same. <em>Knowing the difference is what makes recovery efficient.</em>',
+      description: 'The difference between a productive recovery engagement and an exhausting one is prioritization. We work the claims that have the highest return first — and categorize the rest clearly so nothing valuable gets missed.',
+      categories: [
+        {
+          num: 'HIGH',
+          title: 'High-priority recovery claims',
+          description: 'High dollar value above practice threshold · Claims with documented follow-up history indicating payer delay · Claims approaching timely filing deadlines · Claims with payer-side error indicators · Claims with underpayment flags on prior partial payment.',
+        },
+        {
+          num: 'MID',
+          title: 'Standard recovery claims',
+          description: 'Claims with partial payment and remaining balance · Claims denied for correctable reasons · Claims requiring coordination of benefits resolution · Claims awaiting payer response to prior outreach · Claims with documentation correction needed.',
+        },
+        {
+          num: 'ESC',
+          title: 'Escalation or review required',
+          description: 'Claims past standard timely filing (exception review needed) · Complex denial history requiring formal appeal · Claims involving multiple payers and COB conflicts · Payer has not responded to multiple contacts · Claims where write-off eligibility needs formal review before closing.',
+        },
+      ],
+    },
     aiHuman: {
-      title: 'AI + human recovery model',
-      description: 'Technology finds what is collectible. People do the work of collecting it.',
+      title: 'Technology finds what is collectible. <em>People do the work of collecting it.</em>',
+      // description: 'Technology finds what is collectible. People do the work of collecting it.',
+      eyebrow: 'AI + human recovery model ',
       machine: [
         'Aging AR report analysis and collectibility scoring',
         'Timely filing deadline tracking and alert generation',
@@ -184,10 +229,12 @@ export const oldAgingAr: SolutionData = {
         'COB dispute resolution and multi-payer coordination',
         'Escalation conversations with payer supervisors and dispute departments',
       ],
+      pullQuote: '"The revenue in aging AR is not imaginary. It was earned through actual patient care. Most of it is still collectible. The only thing standing between you and that cash is time — and a structured plan to work through the backlog before the windows close."',
     },
     results: {
-      title: 'What the recovery delivers',
+      title: 'Cash from revenue you already earned. <em>Clarity on what you have been sitting on.</em>',
       description: 'Cash from revenue you already earned. Clarity on what you have been sitting on.',
+      eyebrow: 'What the recovery delivers',
       outcomes: [
         {
           icon: '$',
@@ -222,8 +269,9 @@ export const oldAgingAr: SolutionData = {
       ],
     },
     compare: {
-      title: 'Why old AR should not be ignored',
-      description: 'Every month you wait, more of it becomes uncollectible.',
+      title: 'Every month you wait, more of it <em>becomes uncollectible.</em>',
+      description: 'Aging AR does not hold its value. Every month without follow-up, the percentage of recoverable claims in your aging buckets decreases. Once a timely filing deadline passes without a valid exception, the claim is permanently lost.',
+      eyebrow: 'Why old AR should not be ignored',
       rows: [
         {
           label: '0–60 days',
@@ -251,6 +299,16 @@ export const oldAgingAr: SolutionData = {
           other: 'Written off without review',
         },
       ],
+    },
+    finalCta: {
+      eyebrow: 'Start with an aging AR audit',
+      title: 'Let us show you what is still sitting in your AR <em>before we discuss anything else.</em>',
+      description: 'The first step is an aging AR audit — we review your outstanding balances, assess collectibility, and show you exactly how much is likely recoverable and where the highest-priority targets are. No commitment required to see the results.',
+      buttons: [
+        { text: 'Start my AR audit', variant: 'light' },
+        { text: 'Talk to our recovery team', variant: 'ghost' }
+      ],
+      trustLine: 'We audit your AR first · You see what is recoverable before we begin any work · HIPAA · BAA included'
     },
   },
 };

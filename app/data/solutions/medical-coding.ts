@@ -4,26 +4,44 @@ import { SolutionData } from '../solutionTypes';
 
 export const medicalCoding: SolutionData = {
   title: 'Medical Coding',
-  subtitle: 'Accurate coding before the claim goes out.',
+  subtitle: 'A clean claim starts with accurate coding. Yours may be leaving the door before anyone has checked.',
   description:
-    'Hired Billing Support embeds medical coding support directly into your billing workflow — reviewing codes before submission, aligning documentation with billed services, and reducing the coding errors that quietly drain revenue every month.',
+    'Coding errors do not announce themselves. They show up as denials, underpayments, and compliance risk — weeks after the visit, long after the clinical moment that created them.',
   hero: {
     eyebrow: 'Medical Coding',
     title: 'A clean claim starts with accurate coding.<br><em>Yours may be leaving the door before anyone has checked.</em>',
     subtitle: 'Coding errors do not announce themselves. They show up as denials, underpayments, and compliance risk — weeks after the visit, long after the clinical moment that created them.',
     description:
       'Hired Billing Support embeds medical coding support directly into your billing workflow — reviewing codes before submission, aligning documentation with billed services, and reducing the coding errors that quietly drain revenue every month.',
+    card: {
+      title: '— Coding Accuracy · 30-day view',
+      stats: [
+        { label: 'ICD-10 Accuracy', value: '96%', class: 'green' },
+        { label: 'CPT Accuracy', value: '94%', class: 'green' },
+        { label: 'Modifier Accuracy', value: '88%', class: 'amber' },
+        { label: 'Doc–Code Alignment', value: '97%', class: 'green' },
+        { label: 'Coding Denial Rate', value: '<span class="dash-pill pill-green">2.1% ↓</span>' },
+        { label: 'Errors Caught Pre-Submit', value: '14', class: 'green' }
+      ],
+      dividerStats: [
+        { num: '341', label: 'Claims Reviewed' },
+        { num: '0', label: 'Unbilled Visits' },
+        { num: '$18.4K', label: 'Revenue Protected', color: 'var(--signal-deep)' }
+      ]
+    }
   },
   sections: {
     pain: {
-      title: 'Coding happens under pressure. <em>Accurate coding requires something pressure never allows.</em>',
-      description: 'The coding reality every practice knows',
+      title: 'The coding reality every practice knows',
+      description: 'Coding happens under pressure. <em>Accurate coding requires something pressure never allows.</em>',
       monologue: [
         'The provider finishes a complex visit, documents quickly between the next patient, and the coder assigns a code based on what the chart says. Or what the chart implies. Or what it usually says for this type of visit.',
         'Nobody is being careless. The coder is experienced. The provider documented. But the documentation was rushed, the modifier was not specified, and the diagnosis did not quite align with the procedure as the payer reads it. The claim goes out. Three weeks later, it comes back denied.',
         '"You already know the pressure of submitting claims while hoping the documentation is strong enough to support them. That hope is not a revenue strategy."',
         'Coding accuracy is not just a billing problem. It is a documentation problem, a workflow problem, and a communication problem between the clinical side and the billing side of your practice. When those two sides are not aligned — the codes that go out do not always match the care that was delivered.',
       ],
+      ledgerEyebrow: 'Where the problem lives',
+      ledgerHeading: 'The specific gaps <em>behind the surface.</em>',
       ledger: [
         {
           num: '01',
@@ -64,6 +82,7 @@ export const medicalCoding: SolutionData = {
       ],
     },
     solution: {
+       eyebrow: 'The solution',
       title: 'Accurate coding before the claim goes out. <em>Not a correction after it comes back denied.</em>',
       description:
         'Hired Billing Support embeds coding support directly into your billing workflow — reviewing codes, verifying documentation alignment, flagging modifier issues, and ensuring that what goes out matches both the care delivered and the payer\'s requirements.',
@@ -107,6 +126,7 @@ export const medicalCoding: SolutionData = {
       ],
     },
     services: {
+       eyebrow: 'Coding services included',
       title: 'Every layer of coding accuracy. <em>Reviewed before the claim leaves your system.</em>',
       description:
         'We do not specialize in one piece of the coding puzzle. We own the full workflow so nothing falls in the gap between departments or responsibilities.',
@@ -173,7 +193,9 @@ export const medicalCoding: SolutionData = {
         },
       ],
     },
+
     aiHuman: {
+      eyebrow: 'The AI + human advantage',
       title: 'Technology handles the repetitive. <em>People handle the judgment.</em>',
       description:
         'Coding is not purely manual work. But it is also not something that can be handed entirely to automation. The practices that win are the ones that use both correctly.',
@@ -193,10 +215,12 @@ export const medicalCoding: SolutionData = {
         'Denial root cause analysis and corrected claim submission',
         'Coding feedback delivery with specific, actionable guidance',
       ],
+      pullQuote: '"One small coding mismatch can delay payment, trigger a denial, or create a compliance concern weeks after the visit. AI catches the pattern. People make the judgment call about what to do next."'
     },
     results: {
+      eyebrow: 'What changes',
       title: 'Coding done right before the claim goes out. <em>Not fixed after it comes back.</em>',
-      description: 'What changes',
+      description: '',
       outcomes: [
         {
           icon: '↑',
@@ -237,6 +261,7 @@ export const medicalCoding: SolutionData = {
       ],
     },
     compare: {
+      eyebrow: 'Why coding cannot be a last-minute task',
       title: 'Coding reviewed after a denial costs more <em>than coding reviewed before submission.</em>',
       description:
         'Every coding error that reaches the payer adds denial management time, appeal writing, resubmission overhead, and AR aging. The cost of catching it early is a fraction of the cost of recovering from it late.',
@@ -273,5 +298,27 @@ export const medicalCoding: SolutionData = {
         },
       ],
     },
-  },
+    howWeWork: {
+      eyebrow: 'How HBS works in your coding workflow',
+      title: 'We work inside your billing system. <em>Not in a separate coding portal you have to manage.</em>',
+      description: 'Coding support only works if it is embedded in the workflow — not layered on top as an extra step that creates delays.',
+      process: [
+        { num: '01', title: 'We access your EHR documentation and PM queues', description: 'We review clinical documentation and billing queues in the same systems your team uses. No additional exports or upload steps required.' },
+        { num: '02', title: 'We review codes before they move to submission', description: 'Our coding review happens in the pre-submission stage — catching errors before they become denials rather than correcting them after.' },
+        { num: '03', title: 'We flag documentation gaps to the right person', description: 'When documentation does not support the billed code, we flag it — to the coder, the biller, or the provider depending on your workflow and SOP.' },
+        { num: '04', title: 'We track error patterns and report monthly', description: 'Coding errors are documented by type, frequency, and provider — reported monthly with root cause analysis and specific improvement recommendations.' },
+        { num: '05', title: 'We adapt to your payer mix and specialty', description: 'Coding requirements vary by payer and specialty. We apply the right rules for your specific environment — not a generic coding checklist.' }
+      ]
+    },
+    finalCta: {
+      eyebrow: 'Start with a coding review',
+      title: 'If your coding has not been reviewed recently, <em>revenue is leaving your practice that does not have to.</em>',
+      description: 'We start with a review of your current coding accuracy — identifying error patterns, documentation gaps, and denial risks before we discuss anything else. No commitment required to see what we find.',
+      buttons: [
+        { text: 'Review my coding workflow', variant: 'light' },
+        { text: 'Talk to our coding team', variant: 'ghost' }
+      ],
+      trustLine: 'HIPAA · BAA on every engagement · No long-term contract required'
+    }
+  }
 };

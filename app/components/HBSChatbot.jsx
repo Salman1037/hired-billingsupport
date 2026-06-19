@@ -29,6 +29,13 @@ export default function HBSChatbot() {
 
   useEffect(() => { bottomRef.current?.scrollIntoView({ behavior: "smooth" }); }, [messages, loading]);
   useEffect(() => { if (open && !minimized) inputRef.current?.focus(); }, [open, minimized]);
+  useEffect(() => {
+    const el = inputRef.current;
+    if (!el) return;
+    el.style.height = "auto";
+    const newHeight = Math.min(el.scrollHeight, 300);
+    el.style.height = `${newHeight}px`;
+  }, [input, open, minimized]);
 
   const send = useCallback(async (override) => {
     const text = (override ?? input).trim();
@@ -145,7 +152,7 @@ export default function HBSChatbot() {
         .hc-foot{padding:11px 13px 14px;background:#fff;border-top:1px solid #e8edf3;flex-shrink:0}
         .hc-irow{display:flex;align-items:center;gap:8px;background:#f1f5f9;border-radius:14px;padding:6px 6px 6px 14px;border:1.5px solid transparent;transition:border-color .2s}
         .hc-irow:focus-within{border-color:#1a6fa8;background:#fff}
-        .hc-inp{flex:1;border:none;background:transparent;outline:none;font-size:14px;color:#1e293b;resize:none;max-height:90px;min-height:22px;line-height:1.5;font-family:'Inter',sans-serif}
+        .hc-inp{flex:1;border:none;background:transparent;outline:none;font-size:14px;color:#1e293b;resize:none;max-height:300px;min-height:22px;line-height:1.5;font-family:'Inter',sans-serif;overflow-y:auto}
         .hc-inp::placeholder{color:#94a3b8}
         .hc-send{background:linear-gradient(135deg,#1a6fa8,#0e4d7a);border:none;color:#fff;width:38px;height:38px;border-radius:10px;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:transform .15s,opacity .15s;flex-shrink:0}
         .hc-send:disabled{opacity:.4;cursor:not-allowed;transform:none}

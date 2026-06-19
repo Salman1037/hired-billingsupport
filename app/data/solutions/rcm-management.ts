@@ -33,6 +33,9 @@ export const rcmManagement: SolutionData = {
     pain: {
       title: 'The reality every practice already knows',
       description: 'You can see the production number. <em>You cannot figure out where the money is going.</em>',
+       ledgerEyebrow: 'Where revenue actually disappears',
+      ledgerHeading: 'Revenue does not disappear all at once. <em>It leaks through daily workflow gaps.</em>',
+      
       monologue: [
         'The work is happening. Patients are being seen. Charges are being entered. Claims are going out. And yet every month, the collections report shows a number that does not match the work you know you produced.',
         'You pull the AR report. There are claims from 90 days ago that nobody has touched. There are denials sitting in a queue because new claims kept coming in. There are payments posted at amounts nobody compared to the contract. And somewhere in your system there are authorization gaps, eligibility errors, and coding mismatches that nobody had uninterrupted time to find.',
