@@ -31,9 +31,9 @@ export const rcmManagement: SolutionData = {
 
   sections: {
     pain: {
-      title: 'The reality every practice already knows',
-      description: 'You can see the production number. <em>You cannot figure out where the money is going.</em>',
-       ledgerEyebrow: 'Where revenue actually disappears',
+      eyebrow: 'The reality every practice already knows',
+      title: 'You can see the production number. <em>You cannot figure out where the money is going.</em>',
+      ledgerEyebrow: 'Where revenue actually disappears',
       ledgerHeading: 'Revenue does not disappear all at once. <em>It leaks through daily workflow gaps.</em>',
       
       monologue: [

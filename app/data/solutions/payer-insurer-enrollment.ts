@@ -29,8 +29,8 @@ export const payerInsurerEnrollment: SolutionData = {
   },
   sections: {
     pain: {
-      title: 'The enrollment problem every growing practice faces',
-      description: 'Payer enrollment looks like a one-time task. <em>It is actually an ongoing operational function.</em>',
+      eyebrow: 'The enrollment problem every growing practice faces',
+      title: 'Payer enrollment looks like a one-time task. <em>It is actually an ongoing operational function.</em>',
       ledgerEyebrow: 'Where the problem lives',
       ledgerHeading: 'The specific gaps <em>behind the surface.</em>',
       monologue: [

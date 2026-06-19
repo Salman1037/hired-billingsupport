@@ -7,15 +7,17 @@ export const startupPractices: SolutionData = {
   
   hero: {
     eyebrow: 'Who We Serve · Startup Practices',
-    title: 'You are clinically ready to see patients.',
-    subtitle: 'Your backend needs a few more months — whether you have them or not.',
-    description: 'Most new practices open with clinical confidence and operational uncertainty. The clinical work starts on day one. The billing, credentialing, enrollment, intake, and cash flow infrastructure catches up over the following months — at a cost most founders do not fully anticipate. Hired Billing Support helps startup practices build the operational foundation before patient pressure makes every delay more expensive. Credentialing, payer enrollment, billing readiness, workflow setup, and launch operations — coordinated in parallel from the start.',
+    title: 'You are clinically ready to see patients.<br><em>Your backend needs a few more months — whether you have them or not.</em>',
+    subtitle: 'Most new practices open with clinical confidence and operational uncertainty. The clinical work starts on day one. The billing, credentialing, enrollment, intake, and cash flow infrastructure catches up over the following months — at a cost most founders do not fully anticipate.',
+    description: 'Hired Billing Support helps startup practices build the operational foundation before patient pressure makes every delay more expensive. Credentialing, payer enrollment, billing readiness, workflow setup, and launch operations — coordinated in parallel from the start.',
   },
 
   sections: {
     pain: {
-      title: 'Where the Pressure Lives',
-      description: 'The startup reality every new provider discovers.',
+      eyebrow: 'The startup reality every new provider discovers',
+      title: 'The clinical part was the preparation. <em>Nobody told you how much the backend would demand.</em>',
+      ledgerEyebrow: 'Where the pressure lives',
+      ledgerHeading: 'The specific gaps <em>behind the daily grind.</em>',
       monologue: [
         'You spent years training for clinical excellence. You built a patient care model. You found a space, hired your first staff, and set a launch date. And then the payer applications, CAQH setup, NPI registrations, EHR configuration, billing workflow design, intake process documentation, insurance verification setup, and credentialing timelines all arrived at the same time — while you were also managing clinical work, hiring decisions, and the financial pressure of a practice that is not yet generating revenue.',
         'Nobody is unprepared for clinical care. Almost everyone underestimates the operational infrastructure that must be running before clinical care can generate reliable cash flow.',
@@ -52,8 +54,9 @@ export const startupPractices: SolutionData = {
     },
 
     solution: {
-      title: 'The Solution',
-      description: 'We build the backend before patient pressure makes every delay expensive.',
+      eyebrow: 'The solution',
+      title: 'We build the backend before patient pressure <em>makes every delay expensive.</em>',
+      description: 'Hired Billing Support coordinates all operational launch tracks simultaneously — credentialing, payer enrollment, billing setup, intake workflow, and administrative structure — so the practice opens on a foundation that generates revenue from the first week.',
       process: [
         {
           num: '01',
@@ -89,8 +92,8 @@ export const startupPractices: SolutionData = {
     },
 
     services: {
-      title: 'Services That Fit Startup Practices',
-      description: 'Every operational foundation your practice needs. Built before you need it.',
+      eyebrow: 'Services that fit startup practices',
+      title: 'Every operational foundation your practice needs. <em>Built before you need it.</em>',
       items: [
         {
           num: '01',
@@ -136,8 +139,10 @@ export const startupPractices: SolutionData = {
     },
 
     aiHuman: {
-      title: 'The AI + Human Advantage',
-      description: 'Technology handles the repetitive. People handle the judgment.',
+      eyebrow: 'The AI + human advantage',
+      title: 'Technology handles the repetitive. <em>People handle the judgment.</em>',
+      machineLabel: 'AI-assisted workflows',
+      humanLabel: 'Human specialists',
       machine: [
         'Launch timeline tracking and milestone monitoring',
         'Credentialing and enrollment status tracking across payers',
@@ -154,11 +159,12 @@ export const startupPractices: SolutionData = {
         'Post-launch billing management and denial follow-up',
         'Founder communication and operational guidance',
       ],
+      pullQuote: '"A startup practice that gets operational infrastructure right in the first four months collects more revenue in its first year than one that figures it out reactively. The clinical care is the same. The backend infrastructure determines how much of it gets paid."',
     },
 
     results: {
-      title: 'What Changes',
-      description: 'A practice that opens billing-ready. Not billing-delayed.',
+      eyebrow: 'What changes',
+      title: 'A practice that opens billing-ready. <em>Not billing-delayed.</em>',
       outcomes: [
         {
           icon: '⚡',
@@ -194,8 +200,9 @@ export const startupPractices: SolutionData = {
     },
 
     compare: {
-      title: 'Why Early Backend Setup Matters',
-      description: 'Practices that build operationally before opening recover revenue months before those that do not.',
+      eyebrow: 'Why early backend setup matters',
+      title: 'Practices that build operationally before opening <em>recover revenue months before those that do not.</em>',
+      description: 'Every week of credentialing or billing delay in a startup practice is a week of clinical work that either cannot be billed or will be denied. The cost compounds. Building the backend first is not overhead — it is investment in first-year revenue.',
       rows: [
         {
           label: 'Credentialing start date',
@@ -228,6 +235,66 @@ export const startupPractices: SolutionData = {
           other: 'Weaker — reactive setup',
         },
       ],
+    },
+
+    workflow: {
+      eyebrow: 'Practice launch roadmap',
+      title: 'The right things started at the right time. <em>Not in the order that feels most urgent.</em>',
+      description: 'Credentialing takes months. Billing setup takes weeks. Front desk workflows take days. Every track has a different timeline — and the ones with the longest lead time need to start first.',
+      items: [
+        { num: 'M-4', label: 'Entity & NPI', sublabel: 'Tax ID · NPPES' },
+        { num: 'M-4', label: 'CAQH & Docs', sublabel: 'Provider file built' },
+        { num: 'M-4', label: 'Payer Apps', sublabel: 'All submitted' },
+        { num: 'M-2', label: 'Billing Setup', sublabel: 'EHR · Clearinghouse' },
+        { num: 'M-2', label: 'Workflows', sublabel: 'SOPs documented' },
+        { num: 'M-1', label: 'Readiness Check', sublabel: 'All tracks reviewed' },
+        { num: 'Open', label: 'First Patients', sublabel: 'Claims submit Day 1' },
+        { num: 'Post', label: 'Revenue Active', sublabel: 'Billing stabilized' },
+      ],
+    },
+
+    howWeWork: {
+      eyebrow: 'How HBS works with your startup team',
+      title: 'We take ownership of the backend <em>so you can take ownership of clinical care.</em>',
+      description: 'A founder should not have to choose between seeing patients and building billing infrastructure. We manage the operational build so clinical focus remains where it belongs.',
+      process: [
+        {
+          num: '01',
+          title: 'We map your full launch timeline in week one',
+          description: 'Every task identified, sequenced, and assigned a start date — with long-lead items started immediately so the timeline does not extend because of late starts.',
+        },
+        {
+          num: '02',
+          title: 'We work inside your EHR and billing systems',
+          description: 'No separate portal, no file transfers, no workarounds — we build and operate inside the systems you will run the practice on from day one.',
+        },
+        {
+          num: '03',
+          title: 'We communicate with you directly — not through a support queue',
+          description: 'You talk to a team member. Questions get answered the same day. Decisions that require your input are surfaced clearly — not buried in a ticket system.',
+        },
+        {
+          num: '04',
+          title: 'We stay through the first 60 to 90 days of operations',
+          description: 'The weeks after opening surface the gaps that planning cannot fully anticipate. We stay engaged through stabilization — resolving early billing issues, completing pending enrollments, and refining workflows under real conditions.',
+        },
+        {
+          num: '05',
+          title: 'We become your ongoing billing and operations partner',
+          description: 'After launch, we transition from setup support to ongoing RCM, AR management, credentialing maintenance, and operations support — scaling as the practice grows.',
+        },
+      ],
+    },
+
+    finalCta: {
+      eyebrow: 'Start with a launch readiness review',
+      title: 'If you are opening a practice in the next six months, <em>the operational work needs to start now.</em>',
+      description: 'We start with a launch readiness assessment — mapping your timeline, identifying what needs to start immediately, and showing you where the gaps are between your current status and billing-ready. No commitment required.',
+      buttons: [
+        { text: 'Build my practice foundation', variant: 'light' },
+        { text: 'Talk to our startup team', variant: 'ghost' },
+      ],
+      trustLine: 'HIPAA · BAA on every engagement · No long-term contract required',
     },
   },
 };

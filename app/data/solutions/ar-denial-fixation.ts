@@ -302,7 +302,8 @@ export const arDenialFixation: SolutionData = {
 
   sections: {
     pain: {
-      title: 'The denial cycle that never ends',
+      eyebrow: 'The denial cycle that never ends',
+      title: 'You are not fixing denials. <em>You are clearing them.</em>',
       description: 'You are not fixing denials. <em>You are clearing them.</em>',
       monologue: [
         'A denial comes in. Someone on the billing team reviews it, makes a correction, and resubmits. The claim pays. The team moves on.',

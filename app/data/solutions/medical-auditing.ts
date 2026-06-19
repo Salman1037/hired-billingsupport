@@ -34,7 +34,8 @@ export const medicalAuditing: SolutionData = {
   },
   sections: {
     pain: {
-      title: 'What is actually happening in your billing',
+      eyebrow: 'What is actually happening in your billing',
+      title: 'Most revenue leakage is invisible <em>until someone is specifically looking for it.</em>',
       description: 'Most revenue leakage is invisible <em>until someone is specifically looking for it.</em>',
       ledgerEyebrow: 'Where the problem lives',
       ledgerHeading: 'The specific gaps <em>beneath the surface.</em>',

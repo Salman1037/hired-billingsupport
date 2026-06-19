@@ -29,8 +29,8 @@ export const marketingPatientEngagement: SolutionData = {
   },
   sections: {
     pain: {
+      eyebrow: 'The patient engagement gap every practice knows',
       title: 'The marketing is working. <em>The follow-up is where growth stops.</em>',
-      description: '',
       ledgerEyebrow: 'Where the engagement breaks down',
       ledgerHeading: 'The specific gaps <em>between interest and appointment.</em>',
       monologue: [

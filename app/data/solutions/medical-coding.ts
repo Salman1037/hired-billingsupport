@@ -32,8 +32,8 @@ export const medicalCoding: SolutionData = {
   },
   sections: {
     pain: {
-      title: 'The coding reality every practice knows',
-      description: 'Coding happens under pressure. <em>Accurate coding requires something pressure never allows.</em>',
+      eyebrow: 'The coding reality every practice knows',
+      title: 'Coding happens under pressure. <em>Accurate coding requires something pressure never allows.</em>',
       monologue: [
         'The provider finishes a complex visit, documents quickly between the next patient, and the coder assigns a code based on what the chart says. Or what the chart implies. Or what it usually says for this type of visit.',
         'Nobody is being careless. The coder is experienced. The provider documented. But the documentation was rushed, the modifier was not specified, and the diagnosis did not quite align with the procedure as the payer reads it. The claim goes out. Three weeks later, it comes back denied.',

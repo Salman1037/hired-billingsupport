@@ -2,20 +2,22 @@ import { SolutionData } from '@/app/data/solutionTypes';
 
 export const mediumLargeMedicalPractices: SolutionData = {
   title: 'Medical Group Billing & RCM Services',
-  subtitle: 'Standardize billing, AR, credentialing, and operations so growth creates revenue, not chaos.',
-  description: 'Hired Billing Support helps medium to large medical groups standardize billing, AR, credentialing tracking, reporting, and operations — so leadership can see what is happening across the organization and manage it.',
+  subtitle: 'Standardize billing, AR, credentialing, and operations across all providers and locations.',
+  description: 'Hired Billing Support helps medium to large medical groups standardize billing, AR, credentialing tracking, reporting, and operational workflows so leadership can see what is happening across the organization and manage it — not just react to it.',
 
   hero: {
     eyebrow: 'Who We Serve · Medium to Large Medical Groups',
-    title: 'Growth multiplied your clinical capacity.',
-    subtitle: 'It also multiplied every workflow inconsistency you had before.',
-    description: 'A medical group that adds providers, locations, and specialties without standardizing its operational workflows does not just grow — it grows more complex. The same billing gaps, the same AR delays, the same denial patterns — now occurring at scale, across multiple providers, sometimes with different processes running simultaneously. Hired Billing Support helps growing medical groups standardize billing, AR management, credentialing tracking, reporting, and operational workflows so leadership can see what is happening across the organization and manage it — not just react to it.',
+    title: 'Growth multiplied your clinical capacity.<br><em>It also multiplied every workflow inconsistency you had before.</em>',
+    subtitle: 'A medical group that adds providers, locations, and specialties without standardizing its operational workflows does not just grow — it grows more complex. The same billing gaps, the same AR delays, the same denial patterns — now occurring at scale, across multiple providers, sometimes with different processes running simultaneously.',
+    description: 'Hired Billing Support helps growing medical groups standardize billing, AR management, credentialing tracking, reporting, and operational workflows so leadership can see what is happening across the organization and manage it — not just react to it.',
   },
 
   sections: {
     pain: {
-      title: 'Growth does not automatically create control.',
-      description: 'Usually it creates the opposite.',
+      eyebrow: 'The medical group growth reality',
+      title: 'Growth does not automatically create control. <em>Usually it creates the opposite.</em>',
+      ledgerEyebrow: 'Where the pressure lives',
+      ledgerHeading: 'The specific gaps <em>behind the daily grind.</em>',
       monologue: [
         'Your group has grown. New providers added. Maybe a second location. Possibly a new specialty. And what worked operationally at six providers and one location now feels inconsistent at twelve providers and three locations. Different billers have different habits. Different locations follow slightly different intake processes. AR is being worked — but not uniformly across all providers. Denials are being addressed — but the root cause analysis that would prevent them from repeating is not being done systematically.',
         'The clinical care is excellent. The revenue cycle has become harder to manage, not easier, as the group has expanded.',
@@ -52,8 +54,9 @@ export const mediumLargeMedicalPractices: SolutionData = {
     },
 
     solution: {
-      title: 'Standardized operations across all providers and locations.',
-      description: 'Visibility that makes the group manageable.',
+      eyebrow: 'The solution',
+      title: 'Standardized operations across all providers and locations. <em>Visibility that makes the group manageable.</em>',
+      description: 'Hired Billing Support provides billing, AR management, credentialing coordination, denial management, and reporting infrastructure that works consistently across all providers and locations — giving leadership the standardization and visibility that growth requires.',
       process: [
         {
           num: '01',
@@ -89,8 +92,8 @@ export const mediumLargeMedicalPractices: SolutionData = {
     },
 
     services: {
-      title: 'Built for the complexity of multi-provider, multi-location operations.',
-      description: 'Not for a single-provider workflow.',
+      eyebrow: 'Services that fit medium to large groups',
+      title: 'Built for the complexity of multi-provider, multi-location operations. <em>Not for a single-provider workflow.</em>',
       items: [
         {
           num: '01',
@@ -135,9 +138,59 @@ export const mediumLargeMedicalPractices: SolutionData = {
       ],
     },
 
+    workflow: {
+      eyebrow: 'Standardization and workflow model',
+      title: 'One process across all providers and locations. <em>Visibility at every level of the organization.</em>',
+      description: 'The operational structure that allows a large group to perform consistently is not complexity — it is standardization. The same process applied consistently produces predictable outcomes at any scale.',
+      items: [
+        { num: 'Intake', label: 'Eligibility', sublabel: 'All providers' },
+        { num: 'Charge', label: 'Entry Standards', sublabel: 'Standardized' },
+        { num: 'Claims', label: 'Submission', sublabel: 'Same-day rule' },
+        { num: 'AR', label: 'Follow-Up', sublabel: 'By provider · location' },
+        { num: 'Denials', label: 'Root Cause', sublabel: 'Tracked group-wide' },
+        { num: 'Cred.', label: 'Tracking', sublabel: 'All providers' },
+        { num: 'Report', label: 'Leadership View', sublabel: 'Provider · location' },
+      ],
+    },
+
+    howWeWork: {
+      eyebrow: 'How HBS works across your group',
+      title: 'Inside your system. Across all your providers. <em>Not managing one and leaving others unattended.</em>',
+      description: 'Multi-provider support only creates value when it is applied consistently across the entire organization — not concentrated on the highest-volume providers while smaller ones receive less attention.',
+      process: [
+        {
+          num: '01',
+          title: 'We assess billing performance across all providers and locations',
+          description: 'Before recommending anything, we understand the full picture — which providers have above-average denial rates, which locations have growing AR, and where billing workflow inconsistency is creating performance variation.',
+        },
+        {
+          num: '02',
+          title: 'We standardize the process across all providers',
+          description: 'One billing workflow applied consistently — same charge entry timing, same claim scrubbing standards, same denial turnaround expectations — so performance becomes predictable rather than dependent on who is working that day.',
+        },
+        {
+          num: '03',
+          title: 'We work inside your EHR and PM across all locations',
+          description: 'We access your existing systems for every provider and location — no separate workflows, no parallel systems, no additional steps for your team.',
+        },
+        {
+          num: '04',
+          title: 'We report at the provider and location level — not just the group aggregate',
+          description: 'Leadership receives the provider-level and location-level visibility needed to make management decisions — not just group averages that mask variation.',
+        },
+        {
+          num: '05',
+          title: 'We scale the support as the group continues to grow',
+          description: 'New providers and locations added to the support model as the group expands — without a new procurement process or a separate onboarding engagement each time.',
+        },
+      ],
+    },
+
     aiHuman: {
-      title: 'Technology handles the repetitive.',
-      description: 'People handle the judgment.',
+      eyebrow: 'The AI + human advantage',
+      title: 'Technology handles the repetitive. <em>People handle the judgment.</em>',
+      machineLabel: 'AI-assisted workflows',
+      humanLabel: 'Human specialists',
       machine: [
         'Multi-provider billing queue monitoring and status tracking',
         'Provider-level AR aging alerts and follow-up scheduling',
@@ -154,11 +207,12 @@ export const mediumLargeMedicalPractices: SolutionData = {
         'Leadership reporting with group and provider-level commentary',
         'Operational standardization recommendations and SOP development',
       ],
+      pullQuote: '"A medical group that grows without standardizing its operational backbone eventually reaches a point where growth creates more management work than it creates revenue. The inflection point is earlier than most groups expect — and the fix requires structure, not just more staff."',
     },
 
     results: {
-      title: 'A group that grows without losing operational control.',
-      description: 'What changes.',
+      eyebrow: 'What changes',
+      title: 'A group that grows without losing <em>operational control.</em>',
       outcomes: [
         {
           icon: '◎',
@@ -194,8 +248,9 @@ export const mediumLargeMedicalPractices: SolutionData = {
     },
 
     compare: {
-      title: 'Groups that standardize before they grow manage growth.',
-      description: 'Groups that do not, react to it.',
+      eyebrow: 'Why growth requires operational structure',
+      title: 'Groups that standardize before they grow <em>manage growth. Groups that do not, react to it.</em>',
+      description: 'The operational infrastructure that works for a six-provider group is not the same infrastructure that manages a twelve-provider group across three locations. Scaling without standardizing creates the kind of complexity that is expensive and time-consuming to unwind.',
       rows: [
         {
           label: 'Billing process consistency',
@@ -228,6 +283,17 @@ export const mediumLargeMedicalPractices: SolutionData = {
           other: 'Complexity increases proportionally',
         },
       ],
+    },
+
+    finalCta: {
+      eyebrow: 'Start with a group operations review',
+      title: 'See where the revenue cycle is breaking <em>across all providers and locations.</em>',
+      description: 'We assess your group\'s current billing, AR, credentialing, denial patterns, and reporting structure to identify where standardization would reduce operational complexity and improve revenue outcomes.',
+      buttons: [
+        { text: 'Standardize my group operations', variant: 'light' },
+        { text: 'Talk to group operations team', variant: 'ghost' },
+      ],
+      trustLine: 'No commitment. No software required. Just diagnostic expertise.',
     },
   },
 };

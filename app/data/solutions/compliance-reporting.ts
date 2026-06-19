@@ -36,8 +36,8 @@ export const complianceReporting: SolutionData = {
   },
   sections: {
     pain: {
-      title: "The visibility problem in healthcare operations",
-      description: "Leadership is making decisions with <em>incomplete information</em> about their own revenue cycle.",
+      eyebrow: "The visibility problem in healthcare operations",
+      title: "Leadership is making decisions with <em>incomplete information</em> about their own revenue cycle.",
       ledgerEyebrow: 'Where the problem lives',
       ledgerHeading: 'The specific gaps <em>beneath the surface.</em>',
       monologue: [

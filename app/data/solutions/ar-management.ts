@@ -276,8 +276,9 @@ export const arManagement: SolutionData = {
 
   sections: {
     pain: {
-      title: 'What AR neglect actually looks like',
-      description: 'You already know the feeling of seeing <em>production on paper but not cash in the bank.</em>',
+      eyebrow: 'What AR neglect actually looks like',
+      title: 'You already know the feeling of seeing <em>production on paper but not cash in the bank.</em>',
+   
       
       monologue: [
         'It is the end of the month. The production number looks reasonable. The schedule was full. Your providers worked hard. And yet the deposit does not match what should have come in.',

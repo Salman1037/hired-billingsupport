@@ -31,8 +31,8 @@ export const medicalBillingRcm: SolutionData = {
 
   sections: {
     pain: {
-      title: 'The billing reality every practice already knows',
-      description: 'You already know how this <em>feels.</em>',
+      eyebrow: 'The billing reality every practice already knows',
+      title: 'You already know how this <em>feels.</em>',
       monologue: [
         'It is Wednesday afternoon. The schedule ran long. Two providers are still finishing charts. Three prior auth requests came back incomplete. And your biller — who has been with you for four years — just told you she is overwhelmed.',
         'You are not surprised. You watch it every week. New claims keep coming in. Old denials keep sitting in a queue nobody has uninterrupted time to work. The 90-day AR bucket keeps growing. And the collections report keeps showing a number that does not match the work you know you did.',

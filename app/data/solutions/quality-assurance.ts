@@ -29,8 +29,8 @@ export const qualityAssurance: SolutionData = {
   },
   sections: {
     pain: {
-      title: 'What quality gaps actually look like',
-      description: 'Quality problems in billing are quiet <em>until they are suddenly very loud.</em>',
+      eyebrow: 'What quality gaps actually look like',
+      title: 'Quality problems in billing are quiet <em>until they are suddenly very loud.</em>',
       ledgerEyebrow: 'Where the problem lives',
       ledgerHeading: 'The specific gaps <em>beneath the surface.</em>',
       monologue: [

@@ -1179,8 +1179,8 @@ const WhoWeServeLayout = ({ solution, slug }: WhoWeServeLayoutProps) => {
           <section className="who-section" id="pain">
             <div className="container">
               <div className="section-header fade-in">
-                <div className="eyebrow">{solution.sections.pain.description}</div>
-                <h2 className="section-title">{solution.sections.pain.title}</h2>
+                <div className="eyebrow">{solution.sections.pain.eyebrow}</div>
+                <h2 className="section-title" dangerouslySetInnerHTML={{ __html: solution.sections.pain.title }}></h2>
               </div>
               <div className="monologue fade-in">
                 {solution.sections.pain.monologue.map((para, i) => (
@@ -1219,8 +1219,8 @@ const WhoWeServeLayout = ({ solution, slug }: WhoWeServeLayoutProps) => {
         <section className="who-section who-section--ink" id="solution">
           <div className="container">
             <div className="section-header fade-in">
-              <div className="eyebrow">The solution</div>
-              <h2 className="section-title">{solution.sections.solution.title}</h2>
+              <div className="eyebrow">{solution.sections.solution.eyebrow}</div>
+              <h2 className="section-title" dangerouslySetInnerHTML={{ __html: solution.sections.solution.title }}></h2>
               <p className="section-subtitle">{solution.sections.solution.description}</p>
             </div>
 
@@ -1258,8 +1258,8 @@ const WhoWeServeLayout = ({ solution, slug }: WhoWeServeLayoutProps) => {
         <section className="who-section">
           <div className="container">
             <div className="section-header fade-in">
-              <div className="eyebrow">{solution.sections.services.description}</div>
-              <h2 className="section-title">{solution.sections.services.title}</h2>
+              <div className="eyebrow">{solution.sections.services.eyebrow}</div>
+              <h2 className="section-title" dangerouslySetInnerHTML={{ __html: solution.sections.services.title }}></h2>
             </div>
             <div className="service-fit-grid fade-in">
               {solution.sections.services.items.map((service) => (
@@ -1274,19 +1274,20 @@ const WhoWeServeLayout = ({ solution, slug }: WhoWeServeLayoutProps) => {
         </section>
       )}
 
-      {/* Workflow Section */}
-      <section className="who-section who-section--warm">
-        <div className="container">
-          <div className="section-header fade-in">
-            <div className="eyebrow">Practice launch roadmap</div>
-            <h2 className="section-title">
-              The right things started at the right time. <em>Not in the order that feels most urgent.</em>
-            </h2>
-            <p className="section-subtitle">
-              Credentialing takes months. Billing setup takes weeks. Front desk workflows take days. Every track has a
-              different timeline — and the ones with the longest lead time need to start first.
-            </p>
-          </div>
+      {/* Workflow Section - Startup Practices (Practice Launch Roadmap) */}
+      {!solution.sections?.workflow && (
+        <section className="who-section who-section--warm">
+          <div className="container">
+            <div className="section-header fade-in">
+              <div className="eyebrow">Practice launch roadmap</div>
+              <h2 className="section-title">
+                The right things started at the right time. <em>Not in the order that feels most urgent.</em>
+              </h2>
+              <p className="section-subtitle">
+                Credentialing takes months. Billing setup takes weeks. Front desk workflows take days. Every track has a
+                different timeline — and the ones with the longest lead time need to start first.
+              </p>
+            </div>
           <div className="workflow-dashboard fade-in">
             {[
               { time: 'M-4', label: 'Entity & NPI', sub: 'Tax ID · NPPES', dotClass: 'wf-dot--signal' },
@@ -1307,12 +1308,14 @@ const WhoWeServeLayout = ({ solution, slug }: WhoWeServeLayoutProps) => {
           </div>
         </div>
       </section>
+      )}
 
-      {/* How We Work Section */}
-      <section className="who-section">
-        <div className="container">
-          <div className="section-header fade-in">
-            <div className="eyebrow">How HBS works with your startup team</div>
+      {/* How We Work Section - Startup Practices */}
+      {!solution.sections?.howWeWork && (
+        <section className="who-section">
+          <div className="container">
+            <div className="section-header fade-in">
+              <div className="eyebrow">How HBS works with your startup team</div>
             <h2 className="section-title">
               We take ownership of the backend <em>so you can take ownership of clinical care.</em>
             </h2>
@@ -1360,14 +1363,61 @@ const WhoWeServeLayout = ({ solution, slug }: WhoWeServeLayoutProps) => {
           </div>
         </div>
       </section>
+      )}
+
+      {/* Workflow Section - Dynamic (for pages like small-medical-practices) */}
+      {solution.sections?.workflow && (
+        <section className="who-section who-section--warm">
+          <div className="container">
+            <div className="section-header fade-in">
+              <div className="eyebrow">{solution.sections.workflow.eyebrow}</div>
+              <h2 className="section-title" dangerouslySetInnerHTML={{ __html: solution.sections.workflow.title }}></h2>
+              <p className="section-subtitle">{solution.sections.workflow.description}</p>
+            </div>
+            <div className="workflow-dashboard fade-in">
+              {solution.sections.workflow.items.map((node, index) => (
+                <div key={index} className="wf-node">
+                  <div className="wf-dot wf-dot--signal">{node.num}</div>
+                  <div className="wf-node-label">{node.label}</div>
+                  <div className="wf-node-sub">{node.sublabel}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* How We Work Section */}
+      {solution.sections?.howWeWork && (
+        <section className="who-section">
+          <div className="container">
+            <div className="section-header fade-in">
+              <div className="eyebrow">{solution.sections.howWeWork.eyebrow}</div>
+              <h2 className="section-title" dangerouslySetInnerHTML={{ __html: solution.sections.howWeWork.title }}></h2>
+              <p className="section-subtitle">{solution.sections.howWeWork.description}</p>
+            </div>
+            <div className="process-timeline fade-in" style={{ maxWidth: '780px' }}>
+              {solution.sections.howWeWork.process.map((step) => (
+                <div key={step.num} className="process-step">
+                  <div className="process-step-num">{step.num}</div>
+                  <div>
+                    <h4>{step.title}</h4>
+                    <p>{step.description}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* AI + Human Section */}
       {solution.sections?.aiHuman && (
         <section className="who-section who-section--warm">
           <div className="container">
             <div className="section-header fade-in">
-              <div className="eyebrow">The AI + human advantage</div>
-              <h2 className="section-title">{solution.sections.aiHuman.title}</h2>
+              <div className="eyebrow">{solution.sections.aiHuman.eyebrow}</div>
+              <h2 className="section-title" dangerouslySetInnerHTML={{ __html: solution.sections.aiHuman.title }}></h2>
             </div>
             <div className="ai-split fade-in">
               <div className="ai-col ai-col--machine">
@@ -1393,11 +1443,9 @@ const WhoWeServeLayout = ({ solution, slug }: WhoWeServeLayoutProps) => {
                 </div>
               </div>
             </div>
-            <div className="pull-quote fade-in">
-              "A startup practice that gets operational infrastructure right in the first four months collects more
-              revenue in its first year than one that figures it out reactively. The clinical care is the same. The backend
-              infrastructure determines how much of it gets paid."
-            </div>
+            {solution.sections.aiHuman.pullQuote && (
+              <div className="pull-quote fade-in">{solution.sections.aiHuman.pullQuote}</div>
+            )}
           </div>
         </section>
       )}
@@ -1407,8 +1455,8 @@ const WhoWeServeLayout = ({ solution, slug }: WhoWeServeLayoutProps) => {
         <section className="who-section" id="results">
           <div className="container">
             <div className="section-header fade-in">
-              <div className="eyebrow">What changes</div>
-              <h2 className="section-title">{solution.sections.results.title}</h2>
+              <div className="eyebrow">{solution.sections.results.eyebrow}</div>
+              <h2 className="section-title" dangerouslySetInnerHTML={{ __html: solution.sections.results.title }}></h2>
             </div>
             <div className="outcome-grid fade-in">
               {solution.sections.results.outcomes.map((outcome, i) => (
@@ -1428,8 +1476,8 @@ const WhoWeServeLayout = ({ solution, slug }: WhoWeServeLayoutProps) => {
         <section className="who-section who-section--ink-soft">
           <div className="container">
             <div className="section-header fade-in">
-              <div className="eyebrow">Why early backend setup matters</div>
-              <h2 className="section-title">{solution.sections.compare.title}</h2>
+              <div className="eyebrow">{solution.sections.compare.eyebrow}</div>
+              <h2 className="section-title" dangerouslySetInnerHTML={{ __html: solution.sections.compare.title }}></h2>
               <p className="section-subtitle">{solution.sections.compare.description}</p>
             </div>
             <div className="compare-wrap fade-in">
@@ -1451,34 +1499,63 @@ const WhoWeServeLayout = ({ solution, slug }: WhoWeServeLayoutProps) => {
       )}
 
       {/* CTA Section */}
-      <section className="cta-section" id="cta">
-        <div className="cta-glow"></div>
-        <div className="cta-inner">
-          <div className="eyebrow eyebrow--light" style={{ justifyContent: 'center' }}>
-            Start with a launch readiness review
+      {solution.sections?.finalCta ? (
+        <section className="cta-section" id="cta">
+          <div className="cta-glow"></div>
+          <div className="cta-inner">
+            <div className="eyebrow eyebrow--light" style={{ justifyContent: 'center' }}>
+              {solution.sections.finalCta.eyebrow}
+            </div>
+            <h2 className="cta-title" dangerouslySetInnerHTML={{ __html: solution.sections.finalCta.title }}></h2>
+            <p className="cta-text">{solution.sections.finalCta.description}</p>
+            <div className="cta-actions">
+              {solution.sections.finalCta.buttons.map((button, index) => (
+                <a
+                  key={index}
+                  href="#"
+                  className={`btn btn-${button.variant} btn-lg`}
+                  style={button.variant === 'ghost' ? { color: 'var(--paper)', borderColor: 'rgba(250,247,242,.25)' } : {}}
+                >
+                  {button.text}
+                  <svg className="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M5 12h14M13 5l7 7-7 7" />
+                  </svg>
+                </a>
+              ))}
+            </div>
+            <div className="trust-line">{solution.sections.finalCta.trustLine}</div>
           </div>
-          <h2 className="cta-title">
-            If you are opening a practice in the next six months, <em>the operational work needs to start now.</em>
-          </h2>
-          <p className="cta-text">
-            We start with a launch readiness assessment — mapping your timeline, identifying what needs to start
-            immediately, and showing you where the gaps are between your current status and billing-ready. No commitment
-            required.
-          </p>
-          <div className="cta-actions">
-            <a href="#" className="btn btn-light btn-lg">
-              Build my practice foundation
-              <svg className="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <path d="M5 12h14M13 5l7 7-7 7" />
-              </svg>
-            </a>
-            <a href="#" className="btn btn-ghost btn-lg" style={{ color: 'var(--paper)', borderColor: 'rgba(250,247,242,.25)' }}>
-              Talk to our startup team
-            </a>
+        </section>
+      ) : (
+        <section className="cta-section" id="cta">
+          <div className="cta-glow"></div>
+          <div className="cta-inner">
+            <div className="eyebrow eyebrow--light" style={{ justifyContent: 'center' }}>
+              Start with a launch readiness review
+            </div>
+            <h2 className="cta-title">
+              If you are opening a practice in the next six months, <em>the operational work needs to start now.</em>
+            </h2>
+            <p className="cta-text">
+              We start with a launch readiness assessment — mapping your timeline, identifying what needs to start
+              immediately, and showing you where the gaps are between your current status and billing-ready. No commitment
+              required.
+            </p>
+            <div className="cta-actions">
+              <a href="#" className="btn btn-light btn-lg">
+                Build my practice foundation
+                <svg className="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M5 12h14M13 5l7 7-7 7" />
+                </svg>
+              </a>
+              <a href="#" className="btn btn-ghost btn-lg" style={{ color: 'var(--paper)', borderColor: 'rgba(250,247,242,.25)' }}>
+                Talk to our startup team
+              </a>
+            </div>
+            <div className="trust-line">HIPAA · BAA on every engagement · No long-term contract required</div>
           </div>
-          <div className="trust-line">HIPAA · BAA on every engagement · No long-term contract required</div>
-        </div>
-      </section>
+        </section>
+      )}
 
       
     </>

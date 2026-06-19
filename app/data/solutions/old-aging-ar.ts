@@ -30,8 +30,8 @@ export const oldAgingAr: SolutionData = {
   },
   sections: {
     pain: {
-      title: 'Why aging AR stays aging',
-      description: 'Old claims do not stay old because <em>they are uncollectible.</em>',
+      eyebrow: 'Why aging AR stays aging',
+      title: 'Old claims do not stay old because <em>they are uncollectible.</em>',
       ledgerEyebrow: 'Why old AR keeps growing',
       ledgerHeading: 'Eight reasons your 90-day bucket <em>is bigger this month than last.</em>',
       monologue: [

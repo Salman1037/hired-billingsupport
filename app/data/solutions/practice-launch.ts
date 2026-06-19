@@ -31,6 +31,7 @@ export const practiceLaunch: SolutionData = {
   },
   sections: {
     pain: {
+      eyebrow: 'The launch reality most providers discover too late',
       title: 'Opening the doors is the easy part. <em>Opening the doors is the easy part.</em>',
       description: '',
       ledgerEyebrow: 'Where the problem lives',

@@ -29,8 +29,8 @@ export const providerCredential: SolutionData = {
   },
   sections: {
     pain: {
-      title: 'The credentialing reality every practice knows',
-      description: 'Credentialing looks like an administrative task. <em>It behaves like a revenue bottleneck.</em>',
+      eyebrow: 'The credentialing reality every practice knows',
+      title: 'Credentialing looks like an administrative task. <em>It behaves like a revenue bottleneck.</em>',
       ledgerEyebrow: 'Where the problem lives',
       ledgerHeading: 'The specific gaps <em>behind the surface.</em>',
       monologue: [
