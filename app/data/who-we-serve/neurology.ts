@@ -12,8 +12,10 @@ export const neurology: SolutionData = {
   },
   sections: {
     pain: {
-      title: 'The neurology billing reality',
-      description: 'Neurological care involves complex diagnoses, long treatment relationships, and the kind of medical necessity scrutiny that generic billing is not equipped to handle.',
+      eyebrow: 'The neurology billing reality',
+      title: 'Neurological care involves complex diagnoses, long treatment relationships, <em>and the kind of medical necessity scrutiny that generic billing is not equipped to handle.</em>',
+      ledgerEyebrow: 'Where the revenue pressure builds',
+      ledgerHeading: 'The specific billing gaps <em>behind the specialty workflow.</em>',
       monologue: [
         'A neurologist sees a patient with multiple sclerosis who requires quarterly infusion therapy. That therapy needs a prior authorization that must document clinical criteria — diagnosis confirmed, previous therapy trials documented, current disease activity supported. The authorization is approved for six months. Six months later, the same documentation process begins again — every time, for every patient on an ongoing disease-modifying treatment.',
         'Neurology practices manage dozens of these ongoing authorization relationships simultaneously, across multiple disease categories — each with different payer-specific criteria, different documentation requirements, and different renewal timelines. When a small administrative team is managing this alongside nerve conduction study billing, EEG claims, inpatient consult billing, and outpatient visit follow-up, something consistently falls behind.',
@@ -49,7 +51,8 @@ export const neurology: SolutionData = {
       ],
     },
     solution: {
-      title: 'Documentation-aware billing and authorization management that matches the complexity of neurological specialty care.',
+      eyebrow: 'The solution',
+      title: 'Documentation-aware billing and authorization management <em>that matches the complexity of neurological specialty care.</em>',
       description: 'Hired Billing Support manages neurology billing with the documentation awareness, authorization tracking, and diagnostic coding knowledge that this high-scrutiny specialty requires — preventing the denials that are most common in neurology and following up on the complex claims that require persistent attention.',
       process: [
         {
@@ -85,8 +88,8 @@ export const neurology: SolutionData = {
       ],
     },
     services: {
-      title: 'Services that fit neurology practices',
-      description: 'Specialty-aware billing for complex neurological care.',
+      eyebrow: 'Services that fit neurology practices',
+      title: 'Specialty-aware billing for complex <em>neurological care.</em>',
       items: [
         {
           num: '01',
@@ -130,9 +133,71 @@ export const neurology: SolutionData = {
         },
       ],
     },
+    workflow: {
+      eyebrow: 'Neurology revenue workflow',
+      title: 'Documentation and authorization first. <em>Claims and follow-up built on that foundation.</em>',
+      description: 'Neurology claims that deny do so because something failed before submission — at authorization, at documentation, or at coding. The billing workflow must address those steps first, then manage the claims that still require persistent follow-up.',
+      items: [
+        { num: '01', label: 'Eligibility', sublabel: 'Specialty benefits' },
+        { num: '02', label: 'Auth Request', sublabel: 'Criteria docs ready' },
+        { num: '03', label: 'Auth Confirmed', sublabel: 'Before service' },
+        { num: '04', label: 'Doc Review', sublabel: 'Necessity aligned' },
+        { num: '05', label: 'Neurology Coding', sublabel: 'Specialty-specific' },
+        { num: '06', label: 'Claim Submitted', sublabel: 'High-scrutiny noted' },
+        { num: '07', label: 'Follow-Up', sublabel: 'P2P if needed' },
+        { num: '08', label: 'Payment', sublabel: 'Revenue collected' },
+      ],
+    },
+
+    denialPatterns: {
+      eyebrow: 'Common neurology denial patterns',
+      title: 'The billing failures that appear most often <em>in neurological specialty practices.</em>',
+      description: 'Neurology denials are concentrated in authorization, medical necessity, and diagnostic coding — each preventable with the right process in place before claims submit.',
+      patterns: [
+        {
+          tag: 'Authorization',
+          tagClass: 'tag-auth',
+          title: 'Infusion Therapy — Auth Not Obtained',
+          description: 'High-cost infusion proceeded without confirmed authorization. Prevented through authorization-before-scheduling protocol and auth status confirmation at infusion prep.',
+        },
+        {
+          tag: 'Medical Necessity',
+          tagClass: 'tag-doc',
+          title: 'Step Therapy Not Documented',
+          description: 'Disease-modifying therapy denied because prior therapy failure not documented per payer criteria. Prevented through step therapy documentation checklist at authorization request.',
+        },
+        {
+          tag: 'Diagnostic Coding',
+          tagClass: 'tag-coding',
+          title: 'NCS/EMG Bundling Error',
+          description: 'Nerve conduction study and EMG submitted with incorrect modifier combination or incorrect number of units. Prevented through neurology-specific diagnostic coding review.',
+        },
+        {
+          tag: 'Payer Review',
+          tagClass: 'tag-payer',
+          title: 'High-Cost Therapy — Medical Director Review',
+          description: 'Disease-modifying therapy triggers payer medical director review. Managed through complete clinical documentation response and peer-to-peer coordination when needed.',
+        },
+        {
+          tag: 'Documentation',
+          tagClass: 'tag-doc',
+          title: 'Neurology Visit — Level of Service Downgrade',
+          description: 'Complex neurology visit documentation does not support billed complexity level. Prevented through documentation-to-code alignment review before submission.',
+        },
+        {
+          tag: 'Authorization',
+          tagClass: 'tag-auth',
+          title: 'Quarterly Botox Auth Expired Before Treatment',
+          description: 'Authorization renewal not initiated before prior auth expired. Prevented through authorization renewal calendar with alerts before quarterly expiration.',
+        },
+      ],
+    },
+
     aiHuman: {
-      title: 'Automation where speed matters. Specialists where judgment does.',
-      description: 'The AI + human advantage',
+      eyebrow: 'The AI + human advantage',
+      title: 'Automation where speed matters. <em>Specialists where judgment does.</em>',
+      machineLabel: 'AI-assisted specialty workflows',
+      humanLabel: 'Human billing specialists',
       machine: [
         'Treatment authorization tracking with renewal calendars',
         'Step therapy documentation checklist monitoring per patient',
@@ -149,10 +214,11 @@ export const neurology: SolutionData = {
         'Denial appeals with neurology-specific clinical documentation',
         'Inter-visit patient coordination and administrative support',
       ],
+      pullQuote: '"Neurology billing is demanding not because the codes are exotic but because the documentation and authorization standards are high — and because the consequences of getting them wrong involve clinical treatments that cannot simply be delayed while paperwork is corrected. The billing process must be disciplined enough to match the clinical stakes."',
     },
     results: {
-      title: 'Neurology billing that matches the documentation and authorization standards the specialty requires.',
-      description: 'What changes',
+      eyebrow: 'What changes',
+      title: 'Neurology billing that matches <em>the documentation and authorization standards the specialty requires.</em>',
       outcomes: [
         {
           icon: '◎',
@@ -187,8 +253,9 @@ export const neurology: SolutionData = {
       ],
     },
     compare: {
-      title: 'Neurology billing done without specialty knowledge fails at the authorization and documentation steps that matter most.',
-      description: 'Why neurology needs specialty-aware execution',
+      eyebrow: 'Why neurology needs specialty-aware execution',
+      title: 'Neurology billing done without specialty knowledge <em>fails at the authorization and documentation steps that matter most.</em>',
+      description: 'The most expensive neurology billing failures occur before claims are submitted — at authorization and documentation. Fixing them after denial is slower, more expensive, and produces worse outcomes than preventing them with a specialty-aware billing process.',
       rows: [
         {
           label: 'Authorization before treatment',
@@ -221,6 +288,17 @@ export const neurology: SolutionData = {
           other: 'General medical billing',
         },
       ],
+    },
+
+    finalCta: {
+      eyebrow: 'Start with a neurology billing review',
+      title: 'If your neurology practice has authorization gaps, step therapy denials, or complex claims aging in AR, <em>specialty-aware billing changes the outcome.</em>',
+      description: 'We start with a review of your current billing performance — authorization workflows, documentation gaps, diagnostic coding accuracy, and AR aging on complex claims. No commitment required.',
+      buttons: [
+        { text: 'Strengthen neurology billing', variant: 'light' },
+        { text: 'Talk to our neurology billing team', variant: 'ghost' },
+      ],
+      trustLine: 'HIPAA · BAA on every engagement · Specialty-trained billing team · No long-term contract required',
     },
   },
 };

@@ -1193,10 +1193,8 @@ const WhoWeServeLayout = ({ solution, slug }: WhoWeServeLayoutProps) => {
           <section className="who-section who-section--warm">
             <div className="container">
               <div className="section-header fade-in">
-                <div className="eyebrow">Where the pressure lives</div>
-                <h2 className="section-title">
-                  The specific gaps <em>behind the daily grind.</em>
-                </h2>
+                <div className="eyebrow">{solution.sections.pain.ledgerEyebrow || 'Where the pressure lives'}</div>
+                <h2 className="section-title" dangerouslySetInnerHTML={{ __html: solution.sections.pain.ledgerHeading || 'The specific gaps <em>behind the daily grind.</em>' }}></h2>
               </div>
               <div className="pain-grid fade-in">
                 {solution.sections.pain.ledger.map((item) => (
@@ -1262,13 +1260,30 @@ const WhoWeServeLayout = ({ solution, slug }: WhoWeServeLayoutProps) => {
               <h2 className="section-title" dangerouslySetInnerHTML={{ __html: solution.sections.services.title }}></h2>
             </div>
             <div className="service-fit-grid fade-in">
-              {solution.sections.services.items.map((service) => (
-                <div key={service.num} className="service-fit-card">
-                  <span className="service-fit-card-num">{service.num}</span>
-                  <h4>{service.title}</h4>
-                  <p>{service.description}</p>
-                </div>
-              ))}
+              {solution.sections.services.items.map((service) => {
+                const categoryColorMap: { [key: string]: string } = {
+                  'WORKFLOW': '#00C896',
+                  'TECHNICAL': '#0A1628',
+                  'IMPLEMENTATION': '#F59E0B',
+                  'DATA': '#D4A574',
+                  'PROCESS': '#D64545',
+                  'INTELLIGENCE': '#F59E0B',
+                  'FEEDBACK': '#D64545',
+                  'QA': '#858B93',
+                };
+                const categoryColor = service.category ? categoryColorMap[service.category] || '#0A1628' : '#0A1628';
+                return (
+                  <div key={service.num} className="service-fit-card">
+                    {service.category && (
+                      <span className="service-category" style={{ color: categoryColor, fontFamily: 'JetBrains Mono, monospace', fontSize: '9px', letterSpacing: '0.16em', textTransform: 'uppercase', marginBottom: '12px', display: 'inline-block', fontWeight: 500 }}>
+                        {service.category}
+                      </span>
+                    )}
+                    <h4>{service.title}</h4>
+                    <p>{service.description}</p>
+                  </div>
+                );
+              })}
             </div>
           </div>
         </section>
@@ -1311,7 +1326,7 @@ const WhoWeServeLayout = ({ solution, slug }: WhoWeServeLayoutProps) => {
       )}
 
       {/* How We Work Section - Startup Practices */}
-      {!solution.sections?.howWeWork && (
+      {!solution.sections?.howWeWork && slug === 'start-ups' && (
         <section className="who-section">
           <div className="container">
             <div className="section-header fade-in">
@@ -1380,6 +1395,37 @@ const WhoWeServeLayout = ({ solution, slug }: WhoWeServeLayoutProps) => {
                   <div className="wf-dot wf-dot--signal">{node.num}</div>
                   <div className="wf-node-label">{node.label}</div>
                   <div className="wf-node-sub">{node.sublabel}</div>
+                </div>
+              ))}
+            </div>
+            {solution.sections.workflow.codeBlock && (
+              <div className="code-block fade-in" style={{ marginTop: '48px', background: '#FAF7F2', border: '1px solid #E8E2D5', borderRadius: '8px', padding: '28px', fontFamily: 'JetBrains Mono, monospace', fontSize: '13px', lineHeight: '1.8', color: '#0A1628', overflowX: 'auto' }}>
+                <div style={{ color: '#00876B', marginBottom: '14px' }}>// Healthcare workflow context — what documentation misses</div>
+                {solution.sections.workflow.codeBlock.map((item, idx) => (
+                  <div key={idx}>{item.label} = "{item.value}"</div>
+                ))}
+                <div style={{ color: '#00876B', marginTop: '14px' }}>// HBS provides the operational context your spec does not</div>
+              </div>
+            )}
+          </div>
+        </section>
+      )}
+
+      {/* Denial Patterns Section */}
+      {solution.sections?.denialPatterns && (
+        <section className="who-section">
+          <div className="container">
+            <div className="section-header fade-in">
+              <div className="eyebrow">{solution.sections.denialPatterns.eyebrow}</div>
+              <h2 className="section-title" dangerouslySetInnerHTML={{ __html: solution.sections.denialPatterns.title }}></h2>
+              <p className="section-subtitle">{solution.sections.denialPatterns.description}</p>
+            </div>
+            <div className="denial-grid fade-in">
+              {solution.sections.denialPatterns.patterns.map((pattern, index) => (
+                <div key={index} className="denial-card">
+                  <div className={`denial-card-tag ${pattern.tagClass}`}>{pattern.tag}</div>
+                  <h4>{pattern.title}</h4>
+                  <p>{pattern.description}</p>
                 </div>
               ))}
             </div>

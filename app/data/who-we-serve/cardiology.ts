@@ -12,8 +12,10 @@ export const cardiology: SolutionData = {
   },
   sections: {
     pain: {
-      title: 'The cardiology billing reality',
-      description: 'Cardiology generates high-value claims with high payer scrutiny. The combination requires billing discipline at every step.',
+      eyebrow: 'The cardiology billing reality',
+      title: 'Cardiology generates high-value claims with high payer scrutiny. <em>The combination requires billing discipline at every step.</em>',
+      ledgerEyebrow: 'Where the revenue pressure builds',
+      ledgerHeading: 'The specific billing gaps <em>behind the specialty workflow.</em>',
       monologue: [
         'A cardiology practice runs a full diagnostic schedule — stress tests, echocardiograms, Holter monitors, nuclear imaging, cardiac catheterizations — alongside outpatient consultations, device follow-up visits, and inpatient consults. Each service type has its own authorization pathway, its own medical necessity documentation requirements, and its own payer-specific coverage rules.',
         'When authorization is missing, the claim denies. When documentation does not clearly establish medical necessity for a high-cost diagnostic test, the payer requests additional information or denies outright. When a provider bills two diagnostic tests on the same day without understanding payer-specific bundling rules, one of them comes back denied. And when follow-up is inconsistent, high-value cardiology claims sit in payer review queues longer than they should while revenue accumulates in AR instead of in the practice bank account.',
@@ -49,7 +51,8 @@ export const cardiology: SolutionData = {
       ],
     },
     solution: {
-      title: 'Authorization discipline and coding precision that keep cardiology claims moving through the cycle.',
+      eyebrow: 'The solution',
+      title: 'Authorization discipline and coding precision <em>that keep cardiology claims moving through the cycle.</em>',
       description: 'Hired Billing Support manages cardiology billing with the authorization management, documentation awareness, and claim follow-up that the specialty requires — preventing the denials that are most common in cardiology and following up aggressively on the ones that occur.',
       process: [
         {
@@ -85,8 +88,8 @@ export const cardiology: SolutionData = {
       ],
     },
     services: {
-      title: 'Services that fit cardiology practices',
-      description: 'Specialty billing for high-complexity, high-volume cardiovascular care.',
+      eyebrow: 'Services that fit cardiology practices',
+      title: 'Specialty billing for high-complexity, high-volume <em>cardiovascular care.</em>',
       items: [
         {
           num: '01',
@@ -130,9 +133,71 @@ export const cardiology: SolutionData = {
         },
       ],
     },
+    workflow: {
+      eyebrow: 'Cardiology revenue workflow',
+      title: 'From authorization to payment. <em>No step left unmanaged.</em>',
+      description: 'Cardiology billing requires each step to execute correctly — authorization before testing, documentation aligned with necessity, coding at submission, and follow-up that does not let claims sit.',
+      items: [
+        { num: '01', label: 'Eligibility', sublabel: 'Cardiology benefits' },
+        { num: '02', label: 'Auth Submitted', sublabel: 'Before scheduling' },
+        { num: '03', label: 'Auth Confirmed', sublabel: 'Procedure cleared' },
+        { num: '04', label: 'Documentation', sublabel: 'Necessity aligned' },
+        { num: '05', label: 'Coding Review', sublabel: 'Bundling checked' },
+        { num: '06', label: 'Claim Submitted', sublabel: 'Priority by value' },
+        { num: '07', label: 'Follow-Up', sublabel: 'Persistent schedule' },
+        { num: '08', label: 'Payment', sublabel: 'Revenue collected' },
+      ],
+    },
+
+    denialPatterns: {
+      eyebrow: 'Common cardiology denial patterns',
+      title: 'The denial categories cardiology practices <em>face most — and how prevention outperforms appeal.</em>',
+      description: 'Cardiology denials cluster around authorization, medical necessity, and bundling — each preventable with the right process applied at the right step.',
+      patterns: [
+        {
+          tag: 'Authorization',
+          tagClass: 'tag-auth',
+          title: 'Diagnostic Test Without Authorization',
+          description: 'Test performed before authorization confirmed. Prevented through authorization-before-scheduling protocol and auth status check at appointment prep.',
+        },
+        {
+          tag: 'Medical Necessity',
+          tagClass: 'tag-doc',
+          title: 'Insufficient Clinical Indicators Documented',
+          description: 'Documentation supports ordering diagnosis but not specific payer necessity criteria for the test ordered. Prevented through pre-submission documentation review.',
+        },
+        {
+          tag: 'Bundling',
+          tagClass: 'tag-coding',
+          title: 'Two Procedures Bundled — One Denied',
+          description: 'Same-day procedure submitted as separately billable when payer bundles them under one allowable. Prevented through same-day bundling rules applied at coding review.',
+        },
+        {
+          tag: 'Payer Rule',
+          tagClass: 'tag-payer',
+          title: 'Frequency Limit — Duplicate Test Denial',
+          description: 'Diagnostic test performed within payer-defined frequency period. Prevented through frequency limit tracking per payer and test type.',
+        },
+        {
+          tag: 'Documentation',
+          tagClass: 'tag-doc',
+          title: 'Cardiac Procedure — Peer Review Requested',
+          description: 'High-cost procedure triggers payer peer review request. Managed through complete documentation response and escalation to avoid denial through non-response.',
+        },
+        {
+          tag: 'Eligibility',
+          tagClass: 'tag-elig',
+          title: 'Cardiac Testing Not Covered on Current Plan',
+          description: 'Patient benefits do not cover specific diagnostic test type. Prevented through cardiology-specific eligibility verification before scheduling.',
+        },
+      ],
+    },
+
     aiHuman: {
-      title: 'Automation where speed matters. Specialists where judgment does.',
-      description: 'The AI + human advantage',
+      eyebrow: 'The AI + human advantage',
+      title: 'Automation where speed matters. <em>Specialists where judgment does.</em>',
+      machineLabel: 'AI-assisted specialty workflows',
+      humanLabel: 'Human billing specialists',
       machine: [
         'Diagnostic authorization tracking with scheduling coordination',
         'Medical necessity documentation checklist monitoring per test type',
@@ -149,10 +214,11 @@ export const cardiology: SolutionData = {
         'Denial appeals with cardiology clinical documentation',
         'Payer trend analysis and leadership reporting',
       ],
+      pullQuote: '"Cardiology billing is most vulnerable at authorization and medical necessity documentation — two steps that occur before the visit and before the claim. Fixing denials after submission is more expensive, slower, and less effective than building the process that prevents them."',
     },
     results: {
-      title: 'Cardiology revenue that moves through the cycle without stalling at authorization or documentation.',
-      description: 'What changes',
+      eyebrow: 'What changes',
+      title: 'Cardiology revenue that moves through the cycle <em>without stalling at authorization or documentation.</em>',
       outcomes: [
         {
           icon: '◎',
@@ -187,8 +253,9 @@ export const cardiology: SolutionData = {
       ],
     },
     compare: {
-      title: 'Cardiology denials are not random. They follow patterns that a disciplined billing process prevents.',
-      description: 'Why cardiology billing requires workflow discipline',
+      eyebrow: 'Why cardiology billing requires workflow discipline',
+      title: 'Cardiology denials are not random. <em>They follow patterns that a disciplined billing process prevents.</em>',
+      description: 'The most expensive cardiology denials — missing authorization, insufficient medical necessity documentation, same-day bundling errors — all occur at predictable steps in the billing workflow. A billing process built around those specific prevention points produces measurably better outcomes than one that manages them reactively.',
       rows: [
         {
           label: 'Authorization before scheduling',
@@ -221,6 +288,17 @@ export const cardiology: SolutionData = {
           other: 'General medical billing',
         },
       ],
+    },
+
+    finalCta: {
+      eyebrow: 'Start with a cardiology billing review',
+      title: 'If your cardiology practice has authorization gaps, medical necessity denials, or aging high-value AR, <em>specialty-aware billing discipline changes the outcome.</em>',
+      description: 'We start with a review of your current billing performance — authorization workflow, denial patterns, and AR aging — and show you where the largest revenue risks are. No commitment required.',
+      buttons: [
+        { text: 'Improve cardiology revenue flow', variant: 'light' },
+        { text: 'Talk to our cardiology billing team', variant: 'ghost' },
+      ],
+      trustLine: 'HIPAA · BAA on every engagement · Specialty-trained billing team · No long-term contract required',
     },
   },
 };

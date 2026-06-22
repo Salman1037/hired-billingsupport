@@ -7,15 +7,17 @@ export const memberCentricCare: SolutionData = {
   
   hero: {
     eyebrow: 'Who We Serve · Member-Centric Care Organizations',
-    title: 'Member experience is built in the front office.',
-    subtitle: 'It is sustained or broken in the backend.',
+    title: 'Member experience is built in the front office.<br><em>It is sustained or broken in the backend.</em>',
+    subtitle: 'Care coordination, member engagement, and value-based care outcomes depend on more than clinical quality. They depend on the reliability of every administrative workflow behind the clinical interaction — eligibility, authorization, referral, follow-up, documentation, and communication — running consistently enough that members never feel the gaps.',
     description: 'Hired Billing Support helps member-centric care organizations coordinate the backend workflows that make member experience consistent — eligibility, referral tracking, prior authorization, documentation support, patient communication, and operational reporting — so care teams can focus on the member, not the process.',
   },
 
   sections: {
     pain: {
-      title: 'Member-centered care is the vision.',
-      description: 'Consistent backend execution is what makes it real.',
+      eyebrow: 'The care coordination operations reality',
+      title: 'Member-centered care is the vision. <em>Consistent backend execution is what makes it real.</em>',
+      ledgerEyebrow: 'Where coordination breaks down',
+      ledgerHeading: 'The operational gaps <em>that member experience reveals.</em>',
       monologue: [
         'A care coordinator has a caseload of 45 members. She is responsible for outreach, scheduling, referral tracking, authorization follow-up, documentation support, and post-visit follow-up — for all of them, simultaneously, with a caseload that keeps growing because the program is expanding. On any given day, some members receive excellent coordination. Others fall through — not because of neglect, but because the day ran out before the task queue did.',
         'Member-centric care models are built on the premise that consistent follow-up, proactive outreach, and coordinated administrative support improve outcomes. That premise is correct. The operational challenge is ensuring that the coordination is actually happening — systematically, for every member, every day — rather than happening for the members who happened to be at the top of the queue when time ran out.',
@@ -52,7 +54,8 @@ export const memberCentricCare: SolutionData = {
     },
 
     solution: {
-      title: 'Backend coordination support that keeps every member in view.',
+      eyebrow: 'The solution',
+      title: 'Backend coordination support that keeps every member in view. <em>Every day.</em>',
       description: 'Hired Billing Support provides the administrative coordination layer that allows care teams to focus on member relationships — eligibility verification, referral tracking, authorization management, documentation support, communication coordination, and operational reporting handled systematically so no member falls through the gaps.',
       process: [
         {
@@ -89,8 +92,8 @@ export const memberCentricCare: SolutionData = {
     },
 
     services: {
-      title: 'Every backend coordination function.',
-      description: 'Managed so care teams can coordinate.',
+      eyebrow: 'Services that fit member-centric organizations',
+      title: 'Every backend coordination function. <em>Managed so care teams can coordinate.</em>',
       items: [
         {
           num: '01',
@@ -135,9 +138,59 @@ export const memberCentricCare: SolutionData = {
       ],
     },
 
+    workflow: {
+      eyebrow: 'Care coordination workflow model',
+      title: 'Every member in view. <em>Every coordination task managed.</em>',
+      description: 'Care coordination at scale requires systematic backend support — so the human work that only coordinators can do gets the attention it deserves.',
+      items: [
+        { num: 'Member', label: 'Eligibility', sublabel: 'Coverage verified' },
+        { num: 'Outreach', label: 'Contact Queue', sublabel: 'Systematic' },
+        { num: 'Auth', label: 'Prior Auth', sublabel: 'Proactive' },
+        { num: 'Referral', label: 'Tracking', sublabel: 'To completion' },
+        { num: 'Visit', label: 'Coordination', sublabel: 'Scheduling · Prep' },
+        { num: 'Post', label: 'Follow-Up', sublabel: 'Documentation' },
+        { num: 'Report', label: 'Performance', sublabel: 'Member metrics' },
+      ],
+    },
+
+    howWeWork: {
+      eyebrow: 'How HBS works with care teams',
+      title: 'Inside your workflow. <em>Aligned with your care model.</em>',
+      description: 'Care coordination support only works when it is embedded in the actual workflow — not managed from outside as a separate administrative layer that care teams have to interact with.',
+      process: [
+        {
+          num: '01',
+          title: 'We work inside your EHR and care coordination platform',
+          description: 'Your clinical and operational systems — we access them directly so the support integrates into the existing workflow rather than creating an additional system for care teams to manage.',
+        },
+        {
+          num: '02',
+          title: 'We understand the context of member-centered care',
+          description: 'Value-based care models, care coordination programs, managed care relationships, and population health goals — understood and respected in every administrative decision and communication.',
+        },
+        {
+          num: '03',
+          title: 'We communicate through the channels your care team uses',
+          description: 'EHR messaging, care coordination platform notifications, email — the support communicates where your team communicates, not through a separate vendor interaction.',
+        },
+        {
+          num: '04',
+          title: 'We report member and operational metrics on a regular schedule',
+          description: 'Member engagement rates, referral completion, authorization performance, and care continuity data — reported to leadership in a format that supports program management and performance demonstration.',
+        },
+        {
+          num: '05',
+          title: 'We scale as caseloads and member populations grow',
+          description: 'New care programs, expanded member populations, additional coordination functions — the support scales with the organization without requiring a new engagement or a separate onboarding process.',
+        },
+      ],
+    },
+
     aiHuman: {
-      title: 'Technology handles the repetitive.',
-      description: 'People handle the judgment.',
+      eyebrow: 'The AI + human advantage',
+      title: 'Technology handles the repetitive. <em>People handle the judgment.</em>',
+      machineLabel: 'AI-assisted coordination workflows',
+      humanLabel: 'Care coordination specialists',
       machine: [
         'Member outreach queue scheduling and contact status tracking',
         'Referral status monitoring and follow-up trigger generation',
@@ -154,11 +207,12 @@ export const memberCentricCare: SolutionData = {
         'Care team communication and coordination decisions',
         'Leadership reporting with program performance context',
       ],
+      pullQuote: '\"Member experience in care coordination is the sum of every interaction — including the ones that never reach a human. Eligibility that fails silently. A referral that was never followed up. An authorization that expired before anyone caught it. Backend execution is not separate from member experience. It determines it.\"',
     },
 
     results: {
-      title: 'Care teams that coordinate.',
-      description: 'Members who do not fall through.',
+      eyebrow: 'What changes',
+      title: 'Care teams that coordinate. <em>Members who do not fall through.</em>',
       outcomes: [
         {
           icon: '◎',
@@ -194,7 +248,8 @@ export const memberCentricCare: SolutionData = {
     },
 
     compare: {
-      title: 'The member experience is built clinically.',
+      eyebrow: 'Why member experience depends on backend execution',
+      title: 'The member experience is built clinically. <em>It is sustained or broken operationally.</em>',
       description: 'Clinical quality creates the foundation of member experience. Operational consistency determines whether members actually receive the care they need — or fall through gaps that nobody intended but nobody prevented.',
       rows: [
         {
@@ -228,6 +283,17 @@ export const memberCentricCare: SolutionData = {
           other: 'Requires proportional coordinator hiring',
         },
       ],
+    },
+
+    finalCta: {
+      eyebrow: 'Start with a coordination workflow review',
+      title: 'If members are falling through administrative gaps, <em>the backend workflow needs to change.</em>',
+      description: 'We start with a review of your current care coordination workflow — identifying where members fall through, what outreach and referral tracking gaps exist, and what a systematic backend support model would change. No commitment required.',
+      buttons: [
+        { text: 'Strengthen member-care operations', variant: 'light' },
+        { text: 'Talk to our care coordination team', variant: 'ghost' },
+      ],
+      trustLine: 'HIPAA · BAA on every engagement · No long-term contract required',
     },
   },
 };

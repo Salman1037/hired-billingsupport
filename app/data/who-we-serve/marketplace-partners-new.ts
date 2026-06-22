@@ -6,7 +6,7 @@ export const marketplacePartners: SolutionData = {
   description: 'Hired Billing Support acts as the operational engine behind your healthcare partnerships — delivering billing, RCM, credentialing, payer enrollment, coding, compliance, AR management, and practice operations support to your clients while protecting your brand and the relationship you built.',
   hero: {
     eyebrow: 'Partners · Marketplace Partners',
-    title: 'You created the opportunity. We deliver the operations that make it worth it for your client.',
+    title: 'You created the opportunity.<br><em>We deliver the operations that make it worth it for your client.</em>',
     subtitle: 'Marketplace partners and healthcare platforms are excellent at connecting providers with solutions, generating demand, and creating the conditions for growth. The gap appears after the client says yes — when the actual billing, credentialing, payer enrollment, AR management, and practice operations work has to happen and the partner has no reliable backend execution layer to deliver it.',
     description: 'Hired Billing Support acts as the operational engine behind your healthcare partnerships — delivering billing, RCM, credentialing, payer enrollment, coding, compliance, AR management, and practice operations support to your clients while protecting your brand and the relationship you built.',
   },
@@ -15,6 +15,14 @@ export const marketplacePartners: SolutionData = {
       eyebrow: 'The healthcare partnership execution gap',
       title: 'Generating healthcare demand is one skill.<br><em>Delivering the operations behind it is a completely different capability.</em>',
       description: '',
+      monologue: [
+        'Healthcare marketplaces and partner organizations are built on relationships, trust, and the promise of better outcomes for the providers and practices they serve. That promise holds when the operational delivery behind it is strong. It breaks down — quietly at first, then loudly — when the client is referred or onboarded and then discovers that the actual billing, credentialing, payer enrollment, and AR management support does not match what was described in the sales conversation.',
+        'Most marketplace partners do not have a full internal team of billing specialists, credentialing coordinators, payer enrollment experts, coding auditors, and operations managers. They are marketplaces, platforms, or agencies — not healthcare operations companies. But their healthcare clients need all of those functions delivered competently, consistently, and compliantly.',
+        '"Partnership breaks down when the client says yes but the operational support behind the promise is not strong enough to deliver what was sold. The partner\'s reputation is the casualty — not just the client relationship."',
+        'The solution is not building an internal healthcare operations department. The solution is a backend operations partner who works under your brand, delivers to your clients, and makes the operational execution strong enough that your clients stay — and refer others.',
+      ],
+      ledgerEyebrow: 'Where marketplace partnerships lose clients',
+      ledgerHeading: 'The specific delivery gaps<br><em>that damage partner reputation.</em>',
       ledger: [
         {
           num: '01',
@@ -42,14 +50,6 @@ export const marketplacePartners: SolutionData = {
           description: 'A successful marketplace or platform that generates 20 new healthcare clients in a quarter needs backend operations capacity that scales to support all 20 — not just the first five. When growth outpaces delivery capacity, the newest clients receive the least attention, churn rates increase, and the growth that should strengthen the business begins to damage it instead.',
         },
       ],
-      monologue: [
-        'Healthcare marketplaces and partner organizations are built on relationships, trust, and the promise of better outcomes for the providers and practices they serve. That promise holds when the operational delivery behind it is strong. It breaks down — quietly at first, then loudly — when the client is referred or onboarded and then discovers that the actual billing, credentialing, payer enrollment, and AR management support does not match what was described in the sales conversation.',
-        'Most marketplace partners do not have a full internal team of billing specialists, credentialing coordinators, payer enrollment experts, coding auditors, and operations managers. They are marketplaces, platforms, or agencies — not healthcare operations companies. But their healthcare clients need all of those functions delivered competently, consistently, and compliantly.',
-        '"Partnership breaks down when the client says yes but the operational support behind the promise is not strong enough to deliver what was sold. The partner\'s reputation is the casualty — not just the client relationship."',
-        'The solution is not building an internal healthcare operations department. The solution is a backend operations partner who works under your brand, delivers to your clients, and makes the operational execution strong enough that your clients stay — and refer others.',
-      ],
-       ledgerEyebrow: 'Where marketplace partnerships lose clients',
-      ledgerHeading: 'The specific gaps<br><em>that damage partner reputation.</em>',
     },
     solution: {
       eyebrow: 'The solution',

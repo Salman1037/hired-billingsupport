@@ -1,92 +1,46 @@
 'use client';
 
-import { useState } from 'react';
+import Link from 'next/link';
 
 export default function CaseStudyPage() {
-  const [expandedId, setExpandedId] = useState<number | null>(null);
-
   const testimonials = [
     {
       id: 1,
+      slug: 'dr-ruth-parkin-edwin',
       quote: "Partnering with Hired Billing Support gave us peace of mind. Our billing is cleaner, our staff works on patient care instead of paperwork, and we are now capturing more appointments than ever.",
-      name: "Dr Ruth - Edwin",
+      name: "Dr Ruth Parkin-Edwin",
       title: "DMD/MS",
       credential: "Diplomate of American Board of Periodontology",
       practice: "Edwin Dental Specialists",
-      details: {
-        challenge: "Faced a 28% claim denial rate and spent 15+ hours weekly on billing corrections, diverting focus from patient care.",
-        solution: "Implemented HBS's full-service billing support with dedicated specialists for periodontology coding.",
-        results: [
-          "30% reduction in claim denials within 3 months",
-          "20% increase in monthly revenue",
-          "12 hours/week reclaimed for patient care",
-          "95% clean claim rate achieved"
-        ],
-        impact: "The practice expanded by 2 additional operatory rooms within 6 months due to improved cash flow."
-      }
     },
     {
       id: 2,
+      slug: 'thompson-mental-health',
       quote: "Working with HBS has been a game-changer. The team is professional, responsive, and has streamlined our billing operations seamlessly.",
       name: "Herma Thompson",
       title: "PMHNP-BC",
       credential: "Nurse Practitioner - Psych/Mental Health",
       practice: "Thompson Mental Health",
-      details: {
-        challenge: "Complex insurance verifications for mental health services caused delays and revenue loss.",
-        solution: "HBS provided specialized mental health billing staff and automated verification systems.",
-        results: [
-          "40% faster claim processing",
-          "98% first-pass acceptance rate",
-          "Reduced AR days from 45 to 22",
-          "Eliminated $47K in outstanding claims"
-        ],
-        impact: "Allowed the practice to accept 3 new insurance providers, expanding patient access by 35%."
-      }
     },
     {
       id: 3,
+      slug: 'sheikh-internal-medicine',
       quote: "Remote staffing solution by HBS has freed the resources of the practice, enabling us to spend more time at the bedside and enhance the efficiency of the whole process.",
       name: "Dr Afreen Sheikh",
       title: "MD",
       credential: "Internal Medicine",
       practice: "Sheikh Internal Medicine",
-      details: {
-        challenge: "Chronic staffing shortages led to a 6-week billing backlog and burned-out employees.",
-        solution: "HBS provided 2 dedicated remote billing specialists and a part-time coder.",
-        results: [
-          "50% reduction in billing backlog within 4 weeks",
-          "Staff overtime reduced by 60%",
-          "Patient visit capacity increased by 15%",
-          "Employee satisfaction scores improved by 40%"
-        ],
-        impact: "The practice was able to hire 2 additional clinicians without increasing administrative overhead."
-      }
     },
     {
       id: 4,
+      slug: 'genesis-internal-medicine',
       quote: "With the help of HBS their support and expertise we have achieved a lot more in practice.",
       name: "Dr. Layla Hassan",
       title: "MD",
       credential: "Genesis Internal Medicine",
       practice: "Genesis Internal Medicine",
-      details: {
-        challenge: "Rapid practice growth (30% YoY) outpaced their billing infrastructure, causing cash flow issues.",
-        solution: "HBS implemented a scalable billing system with dedicated account managers and growth analytics.",
-        results: [
-          "25% practice revenue growth in 6 months",
-          "Cash flow cycle reduced from 45 to 28 days",
-          "Patient volume increased by 35% without adding staff",
-          "99% claim accuracy rate"
-        ],
-        impact: "Opened a second location in Q3 2024 with seamless billing integration."
-      }
     }
   ];
-
-  const toggleExpand = (id: number) => {
-    setExpandedId(expandedId === id ? null : id);
-  };
 
   return (
     <>
@@ -143,11 +97,6 @@ export default function CaseStudyPage() {
         .reveal-2 { animation: reveal 0.9s var(--ease) 0.15s forwards; }
         .reveal-3 { animation: reveal 0.9s var(--ease) 0.3s forwards; }
         .reveal-4 { animation: reveal 0.9s var(--ease) 0.45s forwards; }
-
-        @keyframes expand {
-          from { opacity: 0; max-height: 0; padding: 0 16px; }
-          to { opacity: 1; max-height: 1000px; padding: 20px 16px; }
-        }
 
         /* =========================================
            HERO SECTION (DARK - MATCHES YOUR SITE)
@@ -361,28 +310,30 @@ export default function CaseStudyPage() {
           letter-spacing: 0.05em;
         }
 
-        /* Read More Button */
         .read-more-btn {
           display: inline-flex;
           align-items: center;
-          gap: 8px;
-          padding: 10px 20px;
-          background: var(--ink);
-          border: 1px solid var(--ink);
-          border-radius: var(--radius);
-          font-family: var(--sans);
-          font-size: 13px;
-          font-weight: 500;
-          color: var(--paper);
-          cursor: pointer;
-          transition: all 0.25s var(--ease);
+          gap: 6px;
           margin-top: 12px;
-          align-self: flex-start;
+          padding: 8px 0;
+          background: none;
+          color: var(--signal);
+          font-family: var(--sans);
+          font-size: 14px;
+          font-weight: 500;
+          text-decoration: none;
+          cursor: pointer;
+          border: none;
+          transition: all 0.25s var(--ease);
+          white-space: nowrap;
+          align-self: auto;
         }
 
         .read-more-btn:hover {
-          background: var(--ink-soft);
-          border-color: var(--ink-soft);
+          gap: 10px;
+          color: var(--signal);
+          background: none;
+          border: none;
         }
 
         .read-more-btn .arrow {
@@ -390,84 +341,7 @@ export default function CaseStudyPage() {
         }
 
         .read-more-btn:hover .arrow {
-          transform: translateX(4px);
-        }
-
-        /* Expanded Details */
-        .testimonial-details {
-          max-height: 0;
-          overflow: hidden;
-          transition: max-height 0.4s var(--ease), padding 0.4s var(--ease);
-          padding: 0 16px;
-          border-top: 1px solid var(--paper-line);
-          margin-top: 16px;
-        }
-
-        .testimonial-details.expanded {
-          max-height: 1000px;
-          padding: 20px 16px;
-          animation: expand 0.4s var(--ease) forwards;
-        }
-
-        .details-section {
-          margin-bottom: 16px;
-        }
-
-        .details-section:last-child {
-          margin-bottom: 0;
-        }
-
-        .details-label {
-          font-family: var(--mono);
-          font-size: 10px;
-          text-transform: uppercase;
-          letter-spacing: 0.12em;
-          color: var(--signal);
-          margin-bottom: 8px;
-          display: block;
-        }
-
-        .details-content {
-          font-size: 14px;
-          line-height: 1.6;
-          color: var(--ink-soft);
-        }
-
-        .details-content strong {
-          color: var(--ink);
-          font-weight: 600;
-        }
-
-        .results-list {
-          list-style: none;
-          margin: 12px 0 0;
-          padding: 0;
-        }
-
-        .results-list li {
-          display: flex;
-          align-items: center;
-          gap: 10px;
-          padding: 6px 0;
-          font-size: 13px;
-          color: var(--ink-soft);
-        }
-
-        .results-list li::before {
-          content: '✓';
-          color: var(--signal);
-          font-weight: bold;
-          flex-shrink: 0;
-        }
-
-        .impact-statement {
-          background: rgba(0, 200, 150, 0.08);
-          border-left: 3px solid var(--signal);
-          padding: 12px 16px;
-          border-radius: 0 var(--radius) var(--radius) 0;
-          margin-top: 16px;
-          font-style: italic;
-          color: var(--ink-soft);
+          transform: translateX(2px);
         }
 
         /* =========================================
@@ -630,57 +504,33 @@ export default function CaseStudyPage() {
 
           <div className="testimonials-grid">
             {testimonials.map((testimonial, index) => (
-              <div key={testimonial.id} className={`testimonial-card reveal reveal-${(index % 4) + 2}`}>
-                <p className="testimonial-quote">{testimonial.quote}</p>
+              <Link key={testimonial.id} href={`/case-study/${testimonial.slug}`}>
+                <div className={`testimonial-card reveal reveal-${(index % 4) + 2}`}>
+                  <p className="testimonial-quote">{testimonial.quote}</p>
 
-                <div className="testimonial-author">
-                  <span className="author-name">{testimonial.name}</span>
-                  <span className="author-title">{testimonial.title}</span>
-                  <span className="author-credential">{testimonial.credential}</span>
-                  <span className="author-credential">{testimonial.practice}</span>
+                  <div className="testimonial-author">
+                    <span className="author-name">{testimonial.name}</span>
+                    <span className="author-title">{testimonial.title}</span>
+                    <span className="author-credential">{testimonial.credential}</span>
+                    <span className="author-credential">{testimonial.practice}</span>
+                  </div>
+
+                  <button className="read-more-btn">
+                    Read More
+                    <svg
+                      className="arrow"
+                      width="14"
+                      height="14"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                    >
+                      <path d="M5 12h14M13 5l7 7-7 7" />
+                    </svg>
+                  </button>
                 </div>
-
-                <button className="read-more-btn" onClick={() => toggleExpand(testimonial.id)}>
-                  {expandedId === testimonial.id ? 'Show Less' : 'Read More'}
-                  <svg
-                    className="arrow"
-                    width="14"
-                    height="14"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                  >
-                    <path d="M5 12h14M13 5l7 7-7 7" />
-                  </svg>
-                </button>
-
-                <div className={`testimonial-details ${expandedId === testimonial.id ? 'expanded' : ''}`}>
-                  <div className="details-section">
-                    <span className="details-label">— Challenge</span>
-                    <p className="details-content">{testimonial.details.challenge}</p>
-                  </div>
-
-                  <div className="details-section">
-                    <span className="details-label">— Solution</span>
-                    <p className="details-content">{testimonial.details.solution}</p>
-                  </div>
-
-                  <div className="details-section">
-                    <span className="details-label">— Results</span>
-                    <ul className="results-list">
-                      {testimonial.details.results.map((result, i) => (
-                        <li key={i}>{result}</li>
-                      ))}
-                    </ul>
-                  </div>
-
-                  <div className="details-section">
-                    <span className="details-label">— Impact</span>
-                    <p className="impact-statement">{testimonial.details.impact}</p>
-                  </div>
-                </div>
-              </div>
+              </Link>
             ))}
           </div>
         </section>

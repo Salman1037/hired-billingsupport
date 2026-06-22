@@ -97,61 +97,51 @@ export const developerPortal: SolutionData = {
           num: '01',
           title: 'RCM Process Mapping',
           description: 'End-to-end revenue cycle workflow documented with decision points, payer-specific variations, and exception paths — the operational architecture behind billing software integration.',
-          category: 'WORKFLOW',
         },
         {
           num: '02',
           title: 'Billing Workflow Architecture Review',
           description: 'Technical billing workflow reviewed against actual payer requirements, coding standards, and documentation rules — identifying gaps between the system\'s assumptions and operational reality.',
-          category: 'TECHNICAL',
         },
         {
           num: '03',
           title: 'Operational Implementation Support',
           description: 'Healthcare client onboarding supported from the operational side — practice billing assessment, workflow mapping, and operational continuity maintained through technical transitions.',
-          category: 'IMPLEMENTATION',
         },
         {
           num: '04',
           title: 'Payer Rule Library',
           description: 'Payer-specific rules, documentation requirements, authorization criteria, and billing variations documented from operational experience — the context that technical specifications rarely capture completely.',
-          category: 'DATA',
         },
         {
           num: '05',
           title: 'EHR Workflow Integration Support',
           description: 'EHR-to-billing workflow touchpoints mapped and tested against operational requirements — identifying integration friction before it becomes client-facing disruption.',
-          category: 'TECHNICAL',
         },
         {
           num: '06',
           title: 'Denial Taxonomy & Root Cause Mapping',
           description: 'Denial reason code taxonomy built from operational experience — mapping technical denial codes to the specific process failures that produce them, enabling automation that targets root causes, not just symptoms.',
-          category: 'PROCESS',
         },
         {
           num: '07',
           title: 'Authorization Workflow Modeling',
           description: 'Prior authorization workflows documented by payer and specialty — the process maps, criteria libraries, and exception paths that authorization automation needs to handle correctly in production.',
-          category: 'WORKFLOW',
         },
         {
           num: '08',
           title: 'Automation Opportunity Assessment',
           description: 'Healthcare workflows assessed for genuine automation opportunities — where automation reduces friction versus where it creates exceptions that require more human intervention than the manual process did.',
-          category: 'INTELLIGENCE',
         },
         {
           num: '09',
           title: 'Product Workflow Feedback',
           description: 'Operational experience with your product in real healthcare environments translated into structured product feedback — friction points, workflow misalignments, and improvement opportunities from the practice operations perspective.',
-          category: 'FEEDBACK',
         },
         {
           num: '10',
           title: 'Healthcare Operations QA',
           description: 'Operational quality assurance for healthcare product releases — testing against real workflow scenarios, payer-specific edge cases, and documentation requirements that purely technical QA processes do not always cover.',
-          category: 'QA',
         },
       ],
     },
@@ -169,12 +159,6 @@ export const developerPortal: SolutionData = {
         { num: '06', label: 'Product Feedback', sublabel: 'Real-world QA' },
         { num: '07', label: 'Automation ID', sublabel: 'Real opportunities' },
         { num: '08', label: 'Product Works', sublabel: 'In production' },
-      ],
-      codeBlock: [
-        { label: 'payer_rules', value: '200+ payer-specific variations documented' },
-        { label: 'denial_taxonomy', value: '38 root causes mapped to process steps' },
-        { label: 'auth_workflows', value: '12 steps per payer — not always documented' },
-        { label: 'ehr_integration_points', value: '24 touchpoints — many undocumented' },
       ],
     },
 
@@ -271,6 +255,7 @@ export const developerPortal: SolutionData = {
         },
       ],
     },
+
     compare: {
       eyebrow: 'Why healthcare technology needs operational context',
       title: 'Technical excellence without operational context <em>produces excellent software that does not work the way it should in practice.</em>',

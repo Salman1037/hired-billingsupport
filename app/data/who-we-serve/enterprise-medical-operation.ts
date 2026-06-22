@@ -2,20 +2,22 @@ import { SolutionData } from '@/app/data/solutionTypes';
 
 export const enterpriseMedicaloperation: SolutionData = {
   title: 'Enterprise Healthcare Operations Support',
-  subtitle: 'Scalable backend operations infrastructure for complex healthcare organizations.',
-  description: 'Hired Billing Support provides scalable backend operations support for enterprise healthcare organizations — strengthening RCM execution, improving reporting visibility, standardizing workflows, and providing the operational depth that allows enterprise leadership to manage performance rather than just react to it.',
+  subtitle: 'Scalable backend operations support for enterprise healthcare organizations and health systems.',
+  description: 'Hired Billing Support supports enterprise healthcare organizations and health systems as a scalable backend operations partner — RCM, AR, credentialing, denial management, compliance, and reporting infrastructure at enterprise scale.',
 
   hero: {
     eyebrow: 'Who We Serve · Enterprises & Health Systems',
-    title: 'Your organization is large enough that operational problems are invisible until they are expensive.',
+    title: 'Your organization is large enough that operational problems<br><em>are invisible until they are expensive.</em>',
     subtitle: 'At enterprise scale, revenue cycle gaps do not announce themselves through a single denied claim or a missed prior authorization. They emerge through aggregate trends — a denial rate that has quietly risen two percentage points over six months, an AR aging percentage that has grown across three departments without being attributed to any specific cause, a compliance risk that has been building in a billing pattern nobody has reviewed.',
     description: 'Hired Billing Support provides scalable backend operations support for enterprise healthcare organizations — strengthening RCM execution, improving reporting visibility, standardizing workflows, and providing the operational depth that allows enterprise leadership to manage performance rather than just react to it.',
   },
 
   sections: {
     pain: {
-      title: 'Scale creates revenue problems that summary reports cannot see.',
-      description: 'And operational decisions that data cannot easily support.',
+      eyebrow: 'The enterprise operations reality',
+      title: 'Scale creates revenue problems that summary reports cannot see. <em>And operational decisions that data cannot easily support.</em>',
+      ledgerEyebrow: 'Where the pressure lives',
+      ledgerHeading: 'The specific gaps <em>behind enterprise operations.</em>',
       monologue: [
         'At the executive level, the organization looks like it is performing. Collection rates are in an acceptable range. AR aging is within historical norms. And then an operational review reveals that a specific service line has had an above-average denial rate for eight months that never appeared in the aggregate because it was masked by strong performance from larger departments.',
         'Enterprise healthcare organizations face a specific operational challenge: the scale that makes them powerful also makes their problems harder to see. Revenue leakage that would be immediately apparent in a small practice accumulates quietly across departments, locations, and service lines — becoming significant before it becomes visible to the people responsible for addressing it.',
@@ -52,7 +54,8 @@ export const enterpriseMedicaloperation: SolutionData = {
     },
 
     solution: {
-      title: 'A scalable backend operations partner that gives enterprise leadership operational control.',
+      eyebrow: 'The solution',
+      title: 'A scalable backend operations partner <em>that gives enterprise leadership operational control.</em>',
       description: 'Hired Billing Support provides the operational infrastructure that allows enterprise healthcare organizations to standardize execution, improve visibility, and scale support without proportional increases in administrative headcount.',
       process: [
         {
@@ -89,8 +92,8 @@ export const enterpriseMedicaloperation: SolutionData = {
     },
 
     services: {
-      title: 'Backend operations infrastructure for complex healthcare organizations.',
-      description: 'Not practice management tools applied at scale.',
+      eyebrow: 'Services that fit enterprise organizations',
+      title: 'Backend operations infrastructure for complex healthcare organizations. <em>Not practice management tools applied at scale.</em>',
       items: [
         {
           num: '01',
@@ -133,6 +136,164 @@ export const enterpriseMedicaloperation: SolutionData = {
           description: 'Operational support that scales with organizational volume — new departments, locations, and service lines integrated into the support model as the organization grows.',
         },
       ],
+    },
+
+    workflow: {
+      eyebrow: 'Enterprise backend operations model',
+      title: 'Standardized. Visible. Scalable. <em>At every level of the organization.</em>',
+      description: 'Enterprise operational support requires a model that works consistently at every level — from individual claim decisions to executive performance reporting — without requiring separate engagements for each department or location.',
+      items: [
+        { num: 'Dept.', label: 'Billing Exec.', sublabel: 'Standardized' },
+        { num: 'Claim', label: 'Quality Layer', sublabel: 'Pre-submit' },
+        { num: 'AR', label: 'Dept-Level', sublabel: 'Tracked + worked' },
+        { num: 'Denial', label: 'Pattern Analysis', sublabel: 'Enterprise-wide' },
+        { num: 'Cred.', label: 'Full Roster', sublabel: 'Centrally tracked' },
+        { num: 'Compliance', label: 'QA Monitoring', sublabel: 'All departments' },
+        { num: 'Exec.', label: 'Dashboard', sublabel: 'Weekly · Monthly' },
+      ],
+    },
+
+    howWeWork: {
+      eyebrow: 'How HBS integrates with enterprise workflows',
+      title: 'Inside your systems. Across your departments. <em>Without the overhead of a separate platform or process.</em>',
+      description: 'Enterprise support that requires new systems, new portals, or new process layers for every department creates its own operational burden. We integrate into existing infrastructure.',
+      process: [
+        {
+          num: '01',
+          title: 'We assess operational performance across departments and service lines',
+          description: 'Before recommending anything, we understand the full enterprise picture — which departments have above-average denial rates, where AR aging is building, and where workflow inconsistency is creating performance variation.',
+        },
+        {
+          num: '02',
+          title: 'We integrate into your existing systems and workflows',
+          description: 'Your EHR, your PM system, your clearinghouse, your reporting infrastructure — we work inside the tools your organization already uses, not alongside them.',
+        },
+        {
+          num: '03',
+          title: 'We standardize processes across all departments and locations',
+          description: 'One billing standard, one AR process, one denial management workflow applied consistently across the organization — so performance variation reflects payer behavior, not process inconsistency.',
+        },
+        {
+          num: '04',
+          title: 'We deliver executive-level reporting on a defined schedule',
+          description: 'Weekly operational snapshots and monthly executive reports — with department-level breakdowns, root cause analysis, and recommended actions — delivered before leadership needs to ask for them.',
+        },
+        {
+          num: '05',
+          title: 'We scale support as the organization grows',
+          description: 'New departments, new locations, new service lines — integrated into the support model as they are added, without a separate engagement or a new procurement process.',
+        },
+      ],
+    },
+
+    aiHuman: {
+      eyebrow: 'The AI + human advantage',
+      title: 'Technology handles the repetitive. <em>People handle the judgment.</em>',
+      machineLabel: 'AI-assisted workflows',
+      humanLabel: 'Human specialists',
+      machine: [
+        'Enterprise-wide billing queue monitoring and performance alerts',
+        'Department-level AR aging monitoring and threshold alerts',
+        'Denial pattern detection across departments and service lines',
+        'Full-roster credentialing expiration tracking',
+        'Compliance pattern detection and risk flag generation',
+        'Executive reporting data aggregation and trend calculation',
+      ],
+      human: [
+        'Enterprise billing review and standardization decisions',
+        'Denial root cause analysis and department-level recommendations',
+        'Payer escalations and enterprise contract review coordination',
+        'Credentialing coordination across the full provider roster',
+        'Executive reporting with commentary and strategic recommendations',
+        'Compliance risk assessment and corrective action coordination',
+      ],
+      pullQuote: '"At enterprise scale, operational excellence is not achieved by working harder — it is achieved by building systems that make the right process easier to follow than the wrong one, and that surface problems early enough to address them before they compound into significant revenue impact."',
+    },
+
+    results: {
+      eyebrow: 'What changes',
+      title: 'An enterprise that manages its revenue cycle. <em>Not one that discovers problems after the fact.</em>',
+      outcomes: [
+        {
+          icon: '◎',
+          title: 'Operational visibility at every level',
+          description: 'Department-level, service-line-level, and location-level performance — leadership sees the full picture, not just the enterprise average.',
+        },
+        {
+          icon: '↓',
+          title: 'Enterprise denial rates decline systematically',
+          description: 'Pattern analysis across departments identifies which service lines and payers are driving denial rates — and what upstream changes would reduce them.',
+        },
+        {
+          icon: '✓',
+          title: 'Process consistency across departments and locations',
+          description: 'One billing standard applied consistently — performance variation reflects payer behavior, not workflow inconsistency between teams.',
+        },
+        {
+          icon: '$',
+          title: 'Revenue leakage identified at department and service-line level',
+          description: 'Leakage that was hidden in enterprise aggregates surfaces at the department level where it can be addressed specifically.',
+        },
+        {
+          icon: '⚡',
+          title: 'Executive decisions made with current operational intelligence',
+          description: 'Weekly and monthly reporting delivered on schedule — with root cause analysis and recommended actions, not just historical data.',
+        },
+        {
+          icon: '→',
+          title: 'Scalable support without proportional payroll increases',
+          description: 'Operational capacity that adjusts to volume without fixed headcount cost — growth adds capability to a structured system, not complexity to an already stretched one.',
+        },
+      ],
+    },
+
+    compare: {
+      eyebrow: 'Why enterprise growth needs operational infrastructure',
+      title: 'Organizations that manage operations proactively <em>control their revenue. Others react to the results.</em>',
+      description: 'The difference between proactive and reactive operational management at enterprise scale is visibility, standardization, and timing. All three require infrastructure — not just intention.',
+      rows: [
+        {
+          label: 'Operational visibility',
+          hbs: 'Department and service-line level',
+          other: 'Enterprise aggregate only',
+        },
+        {
+          label: 'Process consistency',
+          hbs: 'Standardized across all departments',
+          other: 'Varies by team and location',
+        },
+        {
+          label: 'Denial pattern detection',
+          hbs: 'Enterprise-wide analysis monthly',
+          other: 'Discovered after significant impact',
+        },
+        {
+          label: 'Executive reporting timing',
+          hbs: 'Weekly — actionable',
+          other: 'Monthly — retrospective',
+        },
+        {
+          label: 'Scale-up cost',
+          hbs: 'Adjusts without fixed headcount',
+          other: 'Payroll increase per addition',
+        },
+        {
+          label: 'Compliance monitoring',
+          hbs: 'Ongoing — proactive flagging',
+          other: 'Periodic — often reactive',
+        },
+      ],
+    },
+
+    finalCta: {
+      eyebrow: 'Start with an enterprise operations review',
+      title: 'If your organization is growing but operational visibility is not keeping pace, <em>the infrastructure needs to change.</em>',
+      description: 'We start with an enterprise operations assessment — identifying where reporting gaps, workflow inconsistencies, and revenue leakage are occurring across your organization. No commitment required to see the picture.',
+      buttons: [
+        { text: 'Scale my backend operations', variant: 'light' },
+        { text: 'Talk to our enterprise team', variant: 'ghost' },
+      ],
+      trustLine: 'HIPAA · BAA on every engagement · No long-term contract required',
     },
   },
 };

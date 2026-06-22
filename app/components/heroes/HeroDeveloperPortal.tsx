@@ -468,30 +468,30 @@ export default function HeroDeveloperPortal({ solution }: HeroProps) {
 
         <div className="who-hero-inner">
           <div className="who-hero-content">
-            <div className="eyebrow reveal reveal-1">Partners · Marketplace Partners</div>
+            <div className="eyebrow reveal reveal-1">Partners · Developers</div>
             
             <h1 className="who-hero-title reveal reveal-2">
-              You created the opportunity.<br />
-              <em>We deliver the operations that make it worth it for your client.</em>
+              Healthcare software works in demos.<br />
+              <em>It has to work in the practice's actual billing system, payer portal, EHR workflow, and denial queue.</em>
             </h1>
 
             <p className="who-hero-subtitle reveal reveal-3">
-              Marketplace partners and healthcare platforms are excellent at connecting providers with solutions, generating demand, and creating the conditions for growth. The gap appears after the client says yes — when the actual billing, credentialing, payer enrollment, AR management, and practice operations work has to happen and the partner has no reliable backend execution layer to deliver it.
+              Technical execution and operational execution are different disciplines. You build the system. We understand how the system needs to behave inside a real healthcare practice — with the payer rules, documentation requirements, coding standards, authorization workflows, and AR management processes that clinical software has to navigate every day.
             </p>
 
             <p className="who-hero-lede reveal reveal-3">
-              Hired Billing Support acts as the operational engine behind your healthcare partnerships — delivering billing, RCM, credentialing, payer enrollment, coding, compliance, AR management, and practice operations support to your clients while protecting your brand and the relationship you built.
+              Hired Billing Support partners with healthcare developers, SaaS teams, and healthtech builders to bridge the gap between what technology is designed to do and what healthcare operations actually require — providing workflow intelligence, implementation support, and operational context that makes your product work in the field, not just in the sandbox.
             </p>
 
             <div className="who-hero-actions reveal reveal-4">
               <a href="#cta" className="btn btn-primary btn-lg">
-                Partner with HBS
+                Build with operations insight
                 <svg className="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <path d="M5 12h14M13 5l7 7-7 7" />
                 </svg>
               </a>
               <a href="#pain" className="btn btn-ghost btn-lg">
-                See the partnership model
+                Talk to our developer partnership team
               </a>
             </div>
           </div>
@@ -504,7 +504,7 @@ export default function HeroDeveloperPortal({ solution }: HeroProps) {
     {/* Header */}
     <div className="cp-header">
       <div className="cp-header-label">
-        — Healthcare Workflow Intelligence · API Context
+        — Healthcare Workflow Context · Developer Intelligence
       </div>
 
       <div className="cp-main-row">

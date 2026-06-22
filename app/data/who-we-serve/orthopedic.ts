@@ -12,8 +12,10 @@ export const orthopedic: SolutionData = {
   },
   sections: {
     pain: {
-      title: 'The orthopedic billing reality',
-      description: 'Every authorization gap in orthopedic billing is measured in thousands of dollars, not hundreds.',
+      eyebrow: 'The orthopedic billing reality',
+      title: 'Every authorization gap in orthopedic billing <em>is measured in thousands of dollars, not hundreds.</em>',
+      ledgerEyebrow: 'Where the revenue pressure builds',
+      ledgerHeading: 'The specific billing gaps <em>behind the specialty workflow.</em>',
       monologue: [
         'An orthopedic surgical claim averages several times the value of a standard medical visit. That means every billing error — every missing authorization, every documentation gap, every underpayment that goes unnoticed — carries proportionally more financial impact. The same denial rate that costs a primary care practice a manageable amount costs an orthopedic practice significantly more per month.',
         'Orthopedic practices also carry unique billing complexity: procedures with DME, imaging, injections, surgical follow-up visits, modifiers for bilateral procedures, co-surgeon billing, and payer-specific global period rules — each requiring specific knowledge and consistent application to avoid denials that stall large payments.',
@@ -49,7 +51,8 @@ export const orthopedic: SolutionData = {
       ],
     },
     solution: {
-      title: 'Authorization control and procedure-level billing precision that protects high-value orthopedic revenue.',
+      eyebrow: 'The solution',
+      title: 'Authorization control and procedure-level billing precision <em>that protects high-value orthopedic revenue.</em>',
       description: 'Hired Billing Support manages orthopedic billing with the specialty knowledge that high-value procedure claims require — authorization tracking, procedure-aware coding review, surgical claim follow-up, and AR management that treats every aged claim with the financial weight it deserves.',
       process: [
         {
@@ -85,8 +88,8 @@ export const orthopedic: SolutionData = {
       ],
     },
     services: {
-      title: 'Services that fit orthopedic practices',
-      description: 'Procedure-level billing precision for high-value orthopedic claims.',
+      eyebrow: 'Services that fit orthopedic practices',
+      title: 'Procedure-level billing precision for <em>high-value orthopedic claims.</em>',
       items: [
         {
           num: '01',
@@ -130,9 +133,71 @@ export const orthopedic: SolutionData = {
         },
       ],
     },
+    workflow: {
+      eyebrow: 'Orthopedic revenue workflow',
+      title: 'From authorization to payment. <em>Every high-value step protected.</em>',
+      description: 'Orthopedic billing protection starts before the procedure — at authorization — and continues through coding review, claim submission, follow-up, and denial resolution. Each step must be executed correctly for high-value claims to pay.',
+      items: [
+        { num: '01', label: 'Auth Obtained', sublabel: 'Validity confirmed' },
+        { num: '02', label: 'Eligibility', sublabel: 'Benefits verified' },
+        { num: '03', label: 'Procedure Done', sublabel: 'Documentation ready' },
+        { num: '04', label: 'Coding Review', sublabel: 'CPT · modifiers' },
+        { num: '05', label: 'Claim Submitted', sublabel: 'High-value priority' },
+        { num: '06', label: 'Payer Follow-Up', sublabel: 'Aggressive schedule' },
+        { num: '07', label: 'Denial Response', sublabel: 'Procedure-specific' },
+        { num: '08', label: 'Payment', sublabel: 'Revenue protected' },
+      ],
+    },
+
+    denialPatterns: {
+      eyebrow: 'Common orthopedic denial patterns',
+      title: 'The denial categories orthopedic practices <em>see most often — and the prevention that stops them.</em>',
+      description: 'High-value claims attract more payer scrutiny. The denial patterns in orthopedic billing are predictable — and each one has a prevention strategy that works better than an appeal.',
+      patterns: [
+        {
+          tag: 'Authorization',
+          tagClass: 'tag-auth',
+          title: 'Expired or Missing Surgical Authorization',
+          description: 'Authorization obtained but expired before rescheduled surgery. Prevented through authorization expiration tracking aligned with surgery scheduling.',
+        },
+        {
+          tag: 'Documentation',
+          tagClass: 'tag-doc',
+          title: 'Medical Necessity — Conservative Treatment',
+          description: 'Payer requires documented conservative treatment failure before surgical authorization. Prevented through pre-authorization documentation review.',
+        },
+        {
+          tag: 'Coding',
+          tagClass: 'tag-coding',
+          title: 'Bilateral Modifier or Co-Surgeon Error',
+          description: 'Bilateral procedure submitted without correct modifier or co-surgeon claim without required supporting documentation. Prevented through procedure-level coding review.',
+        },
+        {
+          tag: 'Global Period',
+          tagClass: 'tag-payer',
+          title: 'Post-Surgical Visit in Global Period',
+          description: 'Follow-up visit billed separately when included in global surgery package. Prevented through global period tracking and visit classification.',
+        },
+        {
+          tag: 'Bundling',
+          tagClass: 'tag-coding',
+          title: 'Procedure Bundled — Separate Lines Denied',
+          description: 'Multiple procedure codes submitted that payer bundles under one allowable. Prevented through bundling rules applied at pre-submission review.',
+        },
+        {
+          tag: 'Eligibility',
+          tagClass: 'tag-elig',
+          title: 'Benefits Changed Between Authorization and Surgery',
+          description: 'Patient insurance changed after authorization was obtained. Prevented through eligibility re-verification immediately before procedure date.',
+        },
+      ],
+    },
+
     aiHuman: {
-      title: 'Automation where speed matters. Specialists where judgment does.',
-      description: 'The AI + human advantage',
+      eyebrow: 'The AI + human advantage',
+      title: 'Automation where speed matters. <em>Specialists where judgment does.</em>',
+      machineLabel: 'AI-assisted specialty workflows',
+      humanLabel: 'Human billing specialists',
       machine: [
         'Surgical authorization expiration tracking and renewal alerts',
         'High-value claim status monitoring with priority flagging',
@@ -149,10 +214,11 @@ export const orthopedic: SolutionData = {
         'Underpayment identification and payer contract review',
         'Leadership reporting on surgical claim performance and AR exposure',
       ],
+      pullQuote: '"In orthopedic billing, the financial stakes of every administrative decision are proportionally higher than most specialties. A missed authorization or a coding error on a surgical claim does not cost the practice a moderate amount — it costs a significant one. The return on operational precision is higher here than almost anywhere else in specialty medicine."',
     },
     results: {
-      title: 'Orthopedic revenue protected at the procedure level.',
-      description: 'What changes',
+      eyebrow: 'What changes',
+      title: 'Orthopedic revenue protected <em>at the procedure level.</em>',
       outcomes: [
         {
           icon: '◎',
@@ -187,8 +253,9 @@ export const orthopedic: SolutionData = {
       ],
     },
     compare: {
-      title: 'High-value claims require high-precision billing. The financial stakes leave no margin for casual execution.',
-      description: 'Why orthopedic billing needs stronger operational control',
+      eyebrow: 'Why orthopedic billing needs stronger operational control',
+      title: 'High-value claims require high-precision billing. <em>The financial stakes leave no margin for casual execution.</em>',
+      description: 'Orthopedic billing managed casually produces orthopedic denials at surgical claim values. The same operational discipline that produces acceptable results in lower-value specialties is not sufficient when every denied claim carries a proportionally larger revenue impact.',
       rows: [
         {
           label: 'Authorization tracking',
@@ -221,6 +288,17 @@ export const orthopedic: SolutionData = {
           other: 'Managed reactively — high cost',
         },
       ],
+    },
+
+    finalCta: {
+      eyebrow: 'Start with an orthopedic billing review',
+      title: 'If your orthopedic practice has authorization gaps, high-value denials, or aging surgical AR, <em>the revenue impact is larger than the numbers suggest.</em>',
+      description: 'We start with a review of your current billing performance — identifying authorization exposures, denial patterns, and AR aging risks on your highest-value claims. No commitment required.',
+      buttons: [
+        { text: 'Protect orthopedic revenue', variant: 'light' },
+        { text: 'Talk to our orthopedic billing team', variant: 'ghost' },
+      ],
+      trustLine: 'HIPAA · BAA on every engagement · Specialty-trained billing team · No long-term contract required',
     },
   },
 };

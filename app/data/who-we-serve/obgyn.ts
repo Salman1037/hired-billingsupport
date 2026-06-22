@@ -12,8 +12,10 @@ export const obgyn: SolutionData = {
   },
   sections: {
     pain: {
-      title: 'The OBGYN billing reality',
-      description: 'Coverage can change three times during a pregnancy. OBGYN billing must change with it.',
+      eyebrow: 'The OBGYN billing reality',
+      title: 'Coverage can change three times during a pregnancy. <em>OBGYN billing must change with it.</em>',
+      ledgerEyebrow: 'Where the revenue pressure builds',
+      ledgerHeading: 'The specific billing gaps <em>behind the specialty workflow.</em>',
       monologue: [
         "A patient enrolls in prenatal care in January with one insurance plan. By her second trimester, her employer changes carriers. By her third trimester, her husband's company offers a different plan and she switches again. Each change requires a new eligibility verification, a review of how the new plan handles the global maternity package, and a determination of how to handle the visits already billed under the previous coverage.",
         'That scenario is not unusual in an OBGYN practice. Insurance changes during pregnancy happen regularly — and each one requires billing adjustments that most practices manage inconsistently because the volume of maternity patients means there is always another prenatal visit to schedule, another ultrasound to order, and another patient who needs attention more immediately than the billing problem that just appeared.',
@@ -49,8 +51,9 @@ export const obgyn: SolutionData = {
       ],
     },
     solution: {
-      title: "Women's health billing that understands global periods, eligibility changes, and the full OBGYN workflow.",
-      description: "Hired Billing Support manages OBGYN billing with the specialty knowledge that maternity care, gynecology procedures, and women's health patient communication require — systematically tracking global periods, monitoring eligibility changes, managing authorizations, and following up on AR with the accuracy and sensitivity this specialty demands.",
+      eyebrow: 'The solution',
+      title: 'Women\'s health billing that understands <em>global periods, eligibility changes, and the full OBGYN workflow.</em>',
+      description: 'Hired Billing Support manages OBGYN billing with the specialty knowledge that maternity care, gynecology procedures, and women\'s health patient communication require — systematically tracking global periods, monitoring eligibility changes, managing authorizations, and following up on AR with the accuracy and sensitivity this specialty demands.',
       process: [
         {
           num: '01',
@@ -85,8 +88,8 @@ export const obgyn: SolutionData = {
       ],
     },
     services: {
-      title: "Services that fit OBGYN practices",
-      description: "Women's health billing support that understands every layer of OBGYN billing complexity.",
+      eyebrow: 'Services that fit OBGYN practices',
+      title: 'Women\'s health billing support that understands <em>every layer of OBGYN billing complexity.</em>',
       items: [
         {
           num: '01',
@@ -130,9 +133,70 @@ export const obgyn: SolutionData = {
         },
       ],
     },
+    workflow: {
+      eyebrow: 'Women\'s health billing workflow',
+      title: 'From prenatal enrollment to postpartum collection. <em>Every global billing step managed.</em>',
+      description: 'Maternity billing is the most extended billing workflow in outpatient medicine — spanning months, involving coverage changes, and requiring precise management of what is included in the global and what is separately billable.',
+      items: [
+        { num: '01', label: 'New OB Patient', sublabel: 'Global registered' },
+        { num: '02', label: 'Eligibility', sublabel: 'T1 · T2 · T3 checks' },
+        { num: '03', label: 'Insurance Change', sublabel: 'Flag & adjust' },
+        { num: '04', label: 'Prenatal Visits', sublabel: 'Global vs. separate' },
+        { num: '05', label: 'Delivery', sublabel: 'Global claim' },
+        { num: '06', label: 'Postpartum', sublabel: 'Follow-up billing' },
+        { num: '07', label: 'AR & Balance', sublabel: 'Sensitive comms' },
+      ],
+    },
+
+    denialPatterns: {
+      eyebrow: 'Common OBGYN denial patterns',
+      title: 'The billing failures women\'s health practices <em>see most — and the prevention behind each.</em>',
+      description: 'OBGYN denials cluster around a small number of billing categories — global period rules, eligibility changes, preventive versus diagnostic distinctions, and procedure bundling. Each is preventable.',
+      patterns: [
+        {
+          tag: 'Global Period',
+          tagClass: 'tag-payer',
+          title: 'Service Not Covered Under Global Package',
+          description: 'Delivery or follow-up billed outside global package parameters. Prevented through payer-specific global billing rules applied at claim submission.',
+        },
+        {
+          tag: 'Eligibility',
+          tagClass: 'tag-elig',
+          title: 'Coverage Changed During Pregnancy',
+          description: 'Prenatal visits billed to lapsed or changed insurance. Prevented through eligibility monitoring at each trimester touchpoint.',
+        },
+        {
+          tag: 'Preventive vs. Diagnostic',
+          tagClass: 'tag-coding',
+          title: 'Preventive Service Billed as Diagnostic',
+          description: 'Annual GYN visit coded incorrectly — different cost-sharing applies. Prevented through preventive versus diagnostic classification review.',
+        },
+        {
+          tag: 'Authorization',
+          tagClass: 'tag-auth',
+          title: 'GYN Procedure Without Prior Auth',
+          description: 'Procedure performed without confirmed authorization. Prevented through authorization tracking before procedure scheduling.',
+        },
+        {
+          tag: 'Bundling',
+          tagClass: 'tag-coding',
+          title: 'Ultrasound Bundled with Global Visit',
+          description: 'Diagnostic ultrasound beyond global allowable billed but denied as bundled. Prevented through ultrasound type and frequency rules applied at submission.',
+        },
+        {
+          tag: 'Documentation',
+          tagClass: 'tag-doc',
+          title: 'Medical Necessity — GYN Procedure Denial',
+          description: 'Procedure documentation does not clearly support medical necessity. Prevented through pre-submission documentation alignment check.',
+        },
+      ],
+    },
+
     aiHuman: {
-      title: 'Automation where speed matters. Specialists where judgment does.',
-      description: 'The AI + human advantage',
+      eyebrow: 'The AI + human advantage',
+      title: 'Automation where speed matters. <em>Specialists where judgment does.</em>',
+      machineLabel: 'AI-assisted specialty workflows',
+      humanLabel: 'Human billing specialists',
       machine: [
         'Global period registration and tracking per patient',
         'Eligibility monitoring alerts at each trimester checkpoint',
@@ -149,10 +213,11 @@ export const obgyn: SolutionData = {
         'Patient balance communication with appropriate sensitivity',
         'Preventive versus diagnostic coding judgment calls',
       ],
+      pullQuote: '"OBGYN billing requires a level of patient-specific tracking that is unusual in specialty medicine — global periods that span months, eligibility changes mid-pregnancy, and patient communication that must be accurate and sensitive simultaneously. The practices that manage it well protect revenue and patient relationships at the same time."',
     },
     results: {
-      title: "Women's health billing that reflects the complexity of the specialty.",
-      description: 'What changes',
+      eyebrow: 'What changes',
+      title: 'Women\'s health billing that reflects <em>the complexity of the specialty.</em>',
       outcomes: [
         {
           icon: '◎',
@@ -187,8 +252,9 @@ export const obgyn: SolutionData = {
       ],
     },
     compare: {
-      title: 'Generic billing applied to OBGYN misses the global billing, eligibility, and coding nuances that drive denials.',
-      description: 'Why OBGYN billing needs specialty-aware support',
+      eyebrow: 'Why OBGYN billing needs specialty-aware support',
+      title: 'Generic billing applied to OBGYN <em>misses the global billing, eligibility, and coding nuances that drive denials.</em>',
+      description: 'OBGYN billing complexity is not visible from the outside. The denial patterns in women\'s health are preventable — but only when the billing team understands global billing mechanics, mid-pregnancy eligibility management, and the specific coding distinctions that payers apply differently to this specialty.',
       rows: [
         {
           label: 'Global period management',
@@ -221,6 +287,17 @@ export const obgyn: SolutionData = {
           other: 'General medical billing',
         },
       ],
+    },
+
+    finalCta: {
+      eyebrow: 'Start with an OBGYN billing review',
+      title: 'If your women\'s health practice has global billing errors, mid-pregnancy eligibility gaps, or aging GYN procedure AR, <em>specialty-aware support changes the outcome.</em>',
+      description: 'We start with a review of your current OBGYN billing performance — global period management, eligibility gaps, denial patterns, and AR aging. No commitment required to see the picture.',
+      buttons: [
+        { text: 'Strengthen OBGYN billing', variant: 'light' },
+        { text: 'Talk to our women\'s health team', variant: 'ghost' },
+      ],
+      trustLine: 'HIPAA · BAA on every engagement · Specialty-trained billing team · No long-term contract required',
     },
   },
 };

@@ -12,8 +12,10 @@ export const psychiatry: SolutionData = {
   },
   sections: {
     pain: {
-      title: 'The psychiatry billing reality',
-      description: 'Mental health parity is the law. Payers enforce it inconsistently — and billing errors let them.',
+      eyebrow: 'The psychiatry billing reality',
+      title: 'Mental health parity is the law. <em>Payers enforce it inconsistently — and billing errors let them.</em>',
+      ledgerEyebrow: 'Where the revenue pressure builds',
+      ledgerHeading: 'The specific billing gaps <em>behind the specialty workflow.</em>',
       monologue: [
         'Mental health parity requires that behavioral health benefits be comparable to medical benefits. In practice, payers apply inconsistent eligibility rules, session limits that are not always clearly disclosed, and telehealth coverage variations that change by state and plan year. A psychiatry practice that is not verifying mental health benefits specifically — not just general medical coverage — is billing into gaps it cannot see.',
         'Your providers document carefully. Your team submits claims. And then a denial arrives because the session was the 61st when the plan limits 60, or because the telehealth code was submitted with the wrong modifier for that specific payer, or because the authorization expired three days before the visit and nobody caught the renewal window.',
@@ -49,7 +51,8 @@ export const psychiatry: SolutionData = {
       ],
     },
     solution: {
-      title: 'Behavioral health billing that understands parity rules, session limits, and telehealth complexity.',
+      eyebrow: 'The solution',
+      title: 'Behavioral health billing that understands <em>parity rules, session limits, and telehealth complexity.</em>',
       description: 'Hired Billing Support manages psychiatry and behavioral health billing with the payer-specific knowledge the specialty requires — verifying mental health benefits specifically, tracking session limits proactively, handling telehealth claims correctly, and following up on AR before it ages past recovery.',
       process: [
         {
@@ -85,8 +88,8 @@ export const psychiatry: SolutionData = {
       ],
     },
     services: {
-      title: 'Services that fit psychiatry practices',
-      description: 'Specialty-aware billing for behavioral health. Not general billing applied to a complex specialty.',
+      eyebrow: 'Services that fit psychiatry practices',
+      title: 'Specialty-aware billing for behavioral health. <em>Not general billing applied to a complex specialty.</em>',
       items: [
         {
           num: '01',
@@ -130,9 +133,71 @@ export const psychiatry: SolutionData = {
         },
       ],
     },
+
+    workflow: {
+      eyebrow: 'Behavioral health billing workflow',
+      title: 'From eligibility to payment. <em>Every step specialty-aware.</em>',
+      description: 'Behavioral health billing has more payer-specific variation than most specialties. Every step in the workflow requires mental health-specific knowledge — not general billing applied to a different code set.',
+      items: [
+        { num: '01', label: 'MH Eligibility', sublabel: 'Benefits · Parity' },
+        { num: '02', label: 'Auth / Session', sublabel: 'Limits tracked' },
+        { num: '03', label: 'Visit Documented', sublabel: 'Code alignment' },
+        { num: '04', label: 'Claim Submitted', sublabel: 'Correct modifier' },
+        { num: '05', label: 'Payer Review', sublabel: 'Follow-up scheduled' },
+        { num: '06', label: 'Denial Response', sublabel: 'Parity-aware' },
+        { num: '07', label: 'Payment', sublabel: 'Revenue collected' },
+      ],
+    },
+
+    denialPatterns: {
+      eyebrow: 'Common psychiatry denial patterns',
+      title: 'The denials behavioral health practices <em>see most often — and how we address them.</em>',
+      description: 'Psychiatry denials cluster around a small number of predictable causes. Identifying the pattern is the first step to preventing it.',
+      patterns: [
+        {
+          tag: 'Authorization',
+          tagClass: 'tag-auth',
+          title: 'Session Limit Exceeded',
+          description: 'Plan benefit exhausted without a renewal request in place. Prevented through proactive session tracking and timely extension submissions.',
+        },
+        {
+          tag: 'Eligibility',
+          tagClass: 'tag-elig',
+          title: 'Mental Health Benefit Verification Failure',
+          description: 'General coverage confirmed but MH-specific benefits not checked. Prevented through specialty-specific eligibility verification.',
+        },
+        {
+          tag: 'Documentation',
+          tagClass: 'tag-doc',
+          title: 'Medical Necessity — Insufficient Documentation',
+          description: 'Session documentation does not clearly support clinical necessity for billed service type. Prevented through pre-submission documentation alignment review.',
+        },
+        {
+          tag: 'Coding',
+          tagClass: 'tag-coding',
+          title: 'Telehealth Modifier / POS Error',
+          description: 'Incorrect place of service or modifier for payer-specific telehealth rules. Prevented through payer-specific telehealth billing standards applied at submission.',
+        },
+        {
+          tag: 'Payer Rule',
+          tagClass: 'tag-payer',
+          title: 'Parity Violation — Benefit Applied Differently',
+          description: 'Payer applying mental health deductible or cost-sharing differently than medical benefits. Addressed through parity compliance escalation with supporting documentation.',
+        },
+        {
+          tag: 'Authorization',
+          tagClass: 'tag-auth',
+          title: 'Service Not Covered Under Plan Auth',
+          description: 'Visit type differs from what was authorized. Prevented through authorization matching at claim submission.',
+        },
+      ],
+    },
+
     aiHuman: {
-      title: 'Automation where speed matters. Specialists where judgment does.',
-      description: 'The AI + human advantage',
+      eyebrow: 'The AI + human advantage',
+      title: 'Automation where speed matters. <em>Specialists where judgment does.</em>',
+      machineLabel: 'AI-assisted specialty workflows',
+      humanLabel: 'Human billing specialists',
       machine: [
         'Session limit tracking per patient and payer with renewal alerts',
         'Mental health eligibility verification scheduling and results tracking',
@@ -149,10 +214,11 @@ export const psychiatry: SolutionData = {
         'Payer portal follow-up and AR escalation decisions',
         'Denial root cause identification and upstream process corrections',
       ],
+      pullQuote: '\"Behavioral health billing requires specialty-specific knowledge at every step — from eligibility verification that actually checks mental health benefits to denial appeals that invoke parity law correctly. Generic billing does not produce consistently different results than billing done without specialty knowledge.\"',
     },
     results: {
-      title: 'Psychiatry revenue that reflects the clinical work being delivered.',
-      description: 'What changes',
+      eyebrow: 'What changes',
+      title: 'Psychiatry revenue that reflects <em>the clinical work being delivered.</em>',
       outcomes: [
         {
           icon: '◎',
@@ -187,8 +253,9 @@ export const psychiatry: SolutionData = {
       ],
     },
     compare: {
-      title: 'Generic billing applied to behavioral health misses the complexity that creates the denials.',
-      description: 'Why psychiatry billing needs specialty-aware support',
+      eyebrow: 'Why psychiatry billing needs specialty-aware support',
+      title: 'Generic billing applied to behavioral health <em>misses the complexity that creates the denials.</em>',
+      description: 'The denial patterns in psychiatry are predictable and preventable — but only when the billing team understands mental health parity rules, session limit mechanics, telehealth coverage variation, and the documentation standards specific to behavioral health.',
       rows: [
         {
           label: 'MH eligibility verification',
@@ -221,6 +288,17 @@ export const psychiatry: SolutionData = {
           other: 'General medical billing',
         },
       ],
+    },
+
+    finalCta: {
+      eyebrow: 'Start with a psychiatry billing review',
+      title: 'If your behavioral health practice is seeing denials, aging AR, or telehealth billing errors, <em>specialty-aware support changes the outcome.</em>',
+      description: 'We start with a review of your current billing performance — identifying denial patterns, eligibility gaps, session limit exposures, and AR aging issues. No commitment required.',
+      buttons: [
+        { text: 'Strengthen psychiatry billing', variant: 'light' },
+        { text: 'Talk to our behavioral health team', variant: 'ghost' },
+      ],
+      trustLine: 'HIPAA · BAA on every engagement · Specialty-trained billing team · No long-term contract required',
     },
   },
 };

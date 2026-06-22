@@ -12,8 +12,10 @@ export const endocrinology: SolutionData = {
   },
   sections: {
     pain: {
-      title: 'The endocrinology billing reality',
-      description: 'Chronic care billing is not complicated. It is persistent — and the revenue leaks when consistency fails.',
+      eyebrow: 'The endocrinology billing reality',
+      title: 'Chronic care billing is not complicated. <em>It is persistent — and the revenue leaks when consistency fails.</em>',
+      ledgerEyebrow: 'Where the revenue pressure builds',
+      ledgerHeading: 'The specific billing gaps <em>behind the specialty workflow.</em>',
       monologue: [
         'An endocrinology practice does not bill episodic care. It bills ongoing relationships — patients who come back every three months for A1C monitoring, every six months for thyroid management, every year for diabetes device renewals. The billing behind those relationships requires the same recurring attention the clinical care does: authorizations renewed before they expire, lab claims coordinated against coverage, medication prior authorizations resubmitted as plans update their formularies.',
         'The challenge is that chronic care billing failures are quiet. A CGM authorization that expires does not produce an immediate denial — it produces a series of denials over weeks as claims submit against lapsed coverage before anyone notices. A GLP-1 prior authorization that was not renewed because the payer changed its criteria produces denials that require clinical documentation to correct. These are not dramatic billing failures. They are slow revenue leaks that compound over months.',
@@ -49,7 +51,8 @@ export const endocrinology: SolutionData = {
       ],
     },
     solution: {
-      title: 'Recurring authorization management and chronic care billing that keeps pace with ongoing patient care.',
+      eyebrow: 'The solution',
+      title: 'Recurring authorization management and chronic care billing <em>that keeps pace with ongoing patient care.</em>',
       description: 'Hired Billing Support provides endocrinology billing support built around the recurring care model — proactive authorization renewals, lab claim coordination, eligibility verification at each visit, and consistent AR follow-up that does not let chronic care revenue leak quietly between visits.',
       process: [
         {
@@ -85,8 +88,8 @@ export const endocrinology: SolutionData = {
       ],
     },
     services: {
-      title: 'Services that fit endocrinology practices',
-      description: "Chronic care billing that tracks the full ongoing patient care relationship.",
+      eyebrow: 'Services that fit endocrinology practices',
+      title: 'Chronic care billing that tracks the full <em>ongoing patient care relationship.</em>',
       items: [
         {
           num: '01',
@@ -130,9 +133,71 @@ export const endocrinology: SolutionData = {
         },
       ],
     },
+    workflow: {
+      eyebrow: 'Endocrinology recurring care billing workflow',
+      title: 'From initial authorization to long-term billing continuity. <em>Every renewal tracked, every lab claim coordinated.</em>',
+      description: 'Chronic care billing is circular — every successful visit leads to a follow-up, every follow-up requires current authorization and eligibility, and every authorization has a renewal date. The workflow needs to track all of them simultaneously.',
+      items: [
+        { num: '01', label: 'Eligibility Check', sublabel: 'Each visit' },
+        { num: '02', label: 'Auth Renewal', sublabel: 'Before expiry' },
+        { num: '03', label: 'Visit & Labs', sublabel: 'Coordinated' },
+        { num: '04', label: 'Lab Claims', sublabel: 'Diagnosis aligned' },
+        { num: '05', label: 'Visit Claim', sublabel: 'Chronic codes' },
+        { num: '06', label: 'AR Follow-Up', sublabel: 'Recurring patients' },
+        { num: '07', label: 'Patient Recall', sublabel: 'Next visit set' },
+        { num: '08', label: 'Revenue Cycle', sublabel: 'Continuous' },
+      ],
+    },
+
+    denialPatterns: {
+      eyebrow: 'Common endocrinology denial patterns',
+      title: 'The denials chronic care practices see most — <em>each one preventable with proactive billing management.</em>',
+      description: 'Endocrinology denials cluster around authorization expiration, lab frequency, and diagnosis alignment — all predictable and preventable with systematic tracking.',
+      patterns: [
+        {
+          tag: 'Authorization',
+          tagClass: 'tag-auth',
+          title: 'CGM or Device Authorization Lapsed',
+          description: 'Chronic device authorization expired before renewal. Prevented through authorization renewal calendar with alerts before expiration.',
+        },
+        {
+          tag: 'Authorization',
+          tagClass: 'tag-auth',
+          title: 'GLP-1 / Specialty Medication Prior Auth Expired',
+          description: 'Medication authorization not renewed after payer-defined validity period. Prevented through medication auth tracking with automatic renewal initiation.',
+        },
+        {
+          tag: 'Lab Frequency',
+          tagClass: 'tag-coding',
+          title: 'Duplicate Lab Claim — Frequency Limit',
+          description: 'Lab test ordered within payer-defined frequency restriction. Prevented through frequency limit tracking per test and payer.',
+        },
+        {
+          tag: 'Diagnosis',
+          tagClass: 'tag-doc',
+          title: 'Lab Claim — Diagnosis Code Mismatch',
+          description: 'Lab ordered under diagnosis that does not match payer coverage criteria for the test. Prevented through diagnosis-to-test alignment review at submission.',
+        },
+        {
+          tag: 'Eligibility',
+          tagClass: 'tag-elig',
+          title: 'Coverage Changed Between Visits',
+          description: 'Patient insurance changed since last visit — claim submits to prior payer. Prevented through eligibility verification at each recurring visit.',
+        },
+        {
+          tag: 'Formulary',
+          tagClass: 'tag-payer',
+          title: 'Medication Not Covered Under Updated Formulary',
+          description: 'Payer formulary changed — previously covered medication now requires step therapy or new auth. Prevented through formulary change monitoring for active patients.',
+        },
+      ],
+    },
+
     aiHuman: {
-      title: 'Automation where speed matters. Specialists where judgment does.',
-      description: 'The AI + human advantage',
+      eyebrow: 'The AI + human advantage',
+      title: 'Automation where speed matters. <em>Specialists where judgment does.</em>',
+      machineLabel: 'AI-assisted specialty workflows',
+      humanLabel: 'Human billing specialists',
       machine: [
         'Medication and device authorization renewal calendar tracking',
         'Lab claim frequency limit monitoring per payer and test',
@@ -149,10 +214,11 @@ export const endocrinology: SolutionData = {
         'Patient follow-up communication and recall coordination',
         'Leadership reporting on recurring care billing performance',
       ],
+      pullQuote: '"Endocrinology billing is fundamentally about continuity — the same patients, the same conditions, the same recurring billing requirements, every quarter. The practices that manage it well build the tracking systems that make renewal and follow-up automatic rather than reactive. The ones that do not accumulate quiet revenue losses that compound over years."',
     },
     results: {
-      title: 'Chronic care billing that keeps pace with the ongoing care it supports.',
-      description: 'What changes',
+      eyebrow: 'What changes',
+      title: 'Chronic care billing that keeps pace <em>with the ongoing care it supports.</em>',
       outcomes: [
         {
           icon: '◎',
@@ -187,8 +253,9 @@ export const endocrinology: SolutionData = {
       ],
     },
     compare: {
-      title: 'Chronic care billing fails consistently when authorization and lab tracking are inconsistent.',
-      description: 'Why endocrinology needs consistent backend support',
+      eyebrow: 'Why endocrinology needs consistent backend support',
+      title: 'Chronic care billing fails consistently <em>when authorization and lab tracking are inconsistent.</em>',
+      description: 'The revenue leaks in endocrinology practices are predictable — expired authorizations, missed lab claim rules, eligibility gaps for recurring patients. Each one is preventable. Together, they represent a meaningful portion of revenue that was earned and not collected.',
       rows: [
         {
           label: 'Authorization renewal management',
@@ -221,6 +288,17 @@ export const endocrinology: SolutionData = {
           other: 'General medical billing',
         },
       ],
+    },
+
+    finalCta: {
+      eyebrow: 'Start with an endocrinology billing review',
+      title: 'If your practice has recurring authorization lapses, lab claim denials, or aging chronic care AR, <em>consistent backend support changes the outcome.</em>',
+      description: 'We start with a review of your current billing performance — authorization renewal gaps, lab billing patterns, and AR aging — and show you where revenue is leaking. No commitment required.',
+      buttons: [
+        { text: 'Strengthen endocrinology billing', variant: 'light' },
+        { text: 'Talk to our chronic care billing team', variant: 'ghost' },
+      ],
+      trustLine: 'HIPAA · BAA on every engagement · Specialty-trained billing team · No long-term contract required',
     },
   },
 };

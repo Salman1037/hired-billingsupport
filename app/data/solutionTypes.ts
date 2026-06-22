@@ -37,6 +37,13 @@ export interface SolutionData {
       title: string;
       description: string;
       items: Array<{ num: string; label: string; sublabel: string }>;
+      codeBlock?: Array<{ label: string; value: string }>;
+    };
+    denialPatterns?: {
+      eyebrow: string;
+      title: string;
+      description: string;
+      patterns: Array<{ tag: string; tagClass: string; title: string; description: string }>;
     };
     solution?: {
       title: string;
@@ -47,7 +54,7 @@ export interface SolutionData {
     services?: {
       title: string;
       description?: string;
-      items: Array<{ num: string; title: string; description: string }>;
+      items: Array<{ num: string; title: string; description: string; category?: string }>;
       eyebrow?: string;
       reportCards?: Array<{ eyebrow: string; num: string; title: string; description: string; trend: string }>;
     };
