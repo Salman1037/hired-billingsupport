@@ -7,10 +7,10 @@ export const rcmManagement: SolutionData = {
   description: 'Claims go out. Payments come in. But somewhere between eligibility and final deposit, revenue is being lost — quietly, consistently, and in ways no single person on your team has the bandwidth to track. Hired Billing Support becomes your embedded RCM team — working inside your EHR, managing every step from eligibility to payment posting, and taking ownership of the revenue cycle so you do not have to.',
 
   hero: {
-    eyebrow: 'Revenue cycle management',
-    title: 'Your revenue cycle has more leaks than your billing team <em>can see.</em>',
-    subtitle: 'Claims go out. Payments come in. But somewhere between eligibility and final deposit, revenue is being lost — quietly, consistently, and in ways no single person on your team has the bandwidth to track.',
-    description: 'Hired Billing Support becomes your embedded RCM team — working inside your EHR, managing every step from eligibility to payment posting, and taking ownership of the revenue cycle so you do not have to.',
+    eyebrow: 'RCM Management',
+    title: 'Your RCM is only as strong as the team  <em>team <em>behind it.</em>',
+    subtitle: 'Most practices have billing. Few have a revenue cycle that is actually managed — with consistent follow-up, denial control, and AR visibility across every payer and every claim.',
+    description: 'HBS operates as your dedicated RCM team, inside your systems, on a daily cadence that keeps revenue moving.',
     card: {
       title: '— Revenue Cycle Health · 30-day view',
       stats: [

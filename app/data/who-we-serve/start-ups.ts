@@ -7,9 +7,9 @@ export const startupPractices: SolutionData = {
   
   hero: {
     eyebrow: 'Who We Serve · Startup Practices',
-    title: 'You are clinically ready to see patients.<br><em>Your backend needs a few more months — whether you have them or not.</em>',
-    subtitle: 'Most new practices open with clinical confidence and operational uncertainty. The clinical work starts on day one. The billing, credentialing, enrollment, intake, and cash flow infrastructure catches up over the following months — at a cost most founders do not fully anticipate.',
-    description: 'Hired Billing Support helps startup practices build the operational foundation before patient pressure makes every delay more expensive. Credentialing, payer enrollment, billing readiness, workflow setup, and launch operations — coordinated in parallel from the start.',
+    title: 'Your practice is ready to open. Is the<em>billing infrastructure ready too?</em>',
+    subtitle: 'Most startup practices focus on clinical readiness and discover billing and credentialing gaps after the first week of seeing patients. HBS builds the revenue foundation before you need it.',
+    description: '',
   },
 
   sections: {

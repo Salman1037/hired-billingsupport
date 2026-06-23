@@ -1,6 +1,12 @@
 'use client';
 
-const HeroOldAgingAr = () => {
+import { SolutionData } from '@/app/data/solutionTypes';
+
+interface HeroProps {
+  solution: SolutionData;
+}
+
+const HeroOldAgingAr = ({ solution }: HeroProps) => {
   return (
     <section className="hero">
       <div className="hero-bg">
@@ -16,28 +22,25 @@ const HeroOldAgingAr = () => {
       </div>
       <div className="hero-inner">
         <div>
-          <div className="eyebrow">Old & aging AR recovery</div>
-          <h1 className="display">
-            You already did the work.<br />
-            <em>You just have not been paid for all of it yet.</em>
-          </h1>
-          <p className="sub">
-            Your 60, 90, 120, and 180+ day accounts receivable is not a write-off pile. It is revenue you earned through actual patient care — sitting in claims your team has not had the time or structure to systematically pursue.
-          </p>
-          <p className="lede">
-            Hired Billing Support reviews your entire aging AR, identifies what is still collectible, prioritizes the highest-value recovery targets, and works the backlog down — without overwhelming the team running your daily operations.
-          </p>
-          <div className="hero-actions">
-            <a href="#cta" className="btn btn-primary btn-lg">
-              Start my AR audit
-              <svg className="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <path d="M5 12h14M13 5l7 7-7 7" />
-              </svg>
-            </a>
-            <a href="#pain" className="btn btn-ghost btn-lg">
-              See what we recover
-            </a>
-          </div>
+          {solution.hero && (
+            <>
+              <div className="eyebrow">{solution.hero.eyebrow}</div>
+              <h1 className="display" dangerouslySetInnerHTML={{ __html: solution.hero.title }} />
+              <p className="sub">{solution.hero.subtitle}</p>
+              <p className="lede">{solution.hero.description}</p>
+              <div className="hero-actions">
+                <a href="#cta" className="btn btn-primary btn-lg">
+                  Start my AR audit
+                  <svg className="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M5 12h14M13 5l7 7-7 7" />
+                  </svg>
+                </a>
+                <a href="#pain" className="btn btn-ghost btn-lg">
+                  See what we recover
+                </a>
+              </div>
+            </>
+          )}
         </div>
         <div className="hero-card">
           <h4>— Aging AR Recovery Snapshot</h4>

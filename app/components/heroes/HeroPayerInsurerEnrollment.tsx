@@ -1,6 +1,12 @@
 'use client';
 
-const HeroPayerInsurerEnrollment = () => {
+import { SolutionData } from '@/app/data/solutionTypes';
+
+interface HeroProps {
+  solution: SolutionData;
+}
+
+const HeroPayerInsurerEnrollment = ({ solution }: HeroProps) => {
   const styles = `
     .payer-enroll-hero-card {
       background: var(--ink);
@@ -188,28 +194,25 @@ const HeroPayerInsurerEnrollment = () => {
         </div>
         <div className="hero-inner">
           <div>
-            <div className="eyebrow">Practice Management · Payer & Insurer Enrollment</div>
-            <h1 className="display">
-              A provider who cannot bill a payer<br />
-              <em>cannot serve that payer&apos;s patients. Enrollment is access.</em>
-            </h1>
-            <p className="sub">
-              Payer enrollment is not a back-office formality. It determines which patients your practice can see, which plans you can bill, and how quickly new providers and services generate revenue.
-            </p>
-            <p className="lede">
-              Hired Billing Support manages the full payer enrollment process — from commercial applications and Medicare/Medicaid enrollment through follow-up, portal management, EFT/ERA setup, and status tracking — so your practice expands payer access without the administrative overhead.
-            </p>
-            <div className="hero-actions">
-              <a href="#cta" className="btn btn-primary btn-lg">
-                Review payer enrollment status
-                <svg className="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <path d="M5 12h14M13 5l7 7-7 7" />
-                </svg>
-              </a>
-              <a href="#pain" className="btn btn-ghost btn-lg">
-                See what enrollment covers
-              </a>
-            </div>
+            {solution.hero && (
+              <>
+                <div className="eyebrow">{solution.hero.eyebrow}</div>
+                <h1 className="display" dangerouslySetInnerHTML={{ __html: solution.hero.title }} />
+                <p className="sub">{solution.hero.subtitle}</p>
+                <p className="lede">{solution.hero.description}</p>
+                <div className="hero-actions">
+                  <a href="#cta" className="btn btn-primary btn-lg">
+                    Review payer enrollment status
+                    <svg className="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                      <path d="M5 12h14M13 5l7 7-7 7" />
+                    </svg>
+                  </a>
+                  <a href="#pain" className="btn btn-ghost btn-lg">
+                    See what enrollment covers
+                  </a>
+                </div>
+              </>
+            )}
           </div>
           <div className="payer-enroll-hero-card">
             <h4>— Payer Enrollment Tracker · Active Applications</h4>

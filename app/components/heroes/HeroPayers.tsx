@@ -1,20 +1,17 @@
 'use client';
 
-import { useEffect } from 'react';
+import { SolutionData } from '@/app/data/solutionTypes';
 
 interface HeroProps {
-  solution?: any;
+  solution: SolutionData;
 }
 
 export default function HeroPayers({ solution }: HeroProps) {
-  useEffect(() => {
-    // Animation setup if needed
-  }, []);
 
   const styles = `
     .who-hero {
       background: #FAF7F2;
-      padding: 40px 0 100px;
+       padding: 110px 0 72px;
       position: relative;
       overflow: hidden;
     }
@@ -162,14 +159,7 @@ export default function HeroPayers({ solution }: HeroProps) {
       font-size: 15px;
     }
 
-    .who-hero-visual {
-      animation: rv 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
-      animation-delay: 0.55s;
-      opacity: 0;
-      transform: translateY(20px);
-    }
-
-    /* Command Panel Card */
+    /* [HeroPayers] Dashboard Card */
     .cp-card {
       background: #FFF;
       border: 1px solid #E8E2D5;
@@ -422,34 +412,27 @@ export default function HeroPayers({ solution }: HeroProps) {
     }
 
     .reveal-1 {
-      animation: rv 0.8s cubic-bezier(0.22, 1, 0.36, 1) .10s forwards;
+      animation: reveal 0.9s var(--ease) .05s forwards;
     }
 
     .reveal-2 {
-      animation: rv 0.8s cubic-bezier(0.22, 1, 0.36, 1) .22s forwards;
+      animation: reveal 0.9s var(--ease) .15s forwards;
     }
 
     .reveal-3 {
-      animation: rv 0.8s cubic-bezier(0.22, 1, 0.36, 1) .36s forwards;
+      animation: reveal 0.9s var(--ease) .30s forwards;
     }
 
     .reveal-4 {
-      animation: rv 0.8s cubic-bezier(0.22, 1, 0.36, 1) .50s forwards;
-    }
-
-    @keyframes rv {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+      animation: reveal 0.9s var(--ease) .45s forwards;
     }
 
     @media(max-width:1024px) {
-      .who-hero-inner {
+      .hero-inner {
         grid-template-columns: 1fr;
       }
 
-      .who-hero-visual {
+      .hero-visual {
         display: none;
       }
     }
@@ -458,8 +441,8 @@ export default function HeroPayers({ solution }: HeroProps) {
   return (
     <>
       <style>{styles}</style>
-      <section className="who-hero">
-        <div className="who-hero-bg">
+      <section className="hero">
+        <div className="hero-bg">
           <svg viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
             <defs>
               <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
@@ -468,27 +451,18 @@ export default function HeroPayers({ solution }: HeroProps) {
             </defs>
             <rect width="100%" height="100%" fill="url(#grid)" />
           </svg>
-          <div className="who-hero-grain"></div>
+          <div className="hero-grain"></div>
         </div>
 
-        <div className="who-hero-inner">
-          <div className="who-hero-content">
-            <div className="eyebrow reveal reveal-1">Who We Serve · Other Organizations · Healthcare Payers</div>
-            
-            <h1 className="who-hero-title reveal reveal-2">
-              Payer operations break down when the processing queue<br />
-              <em>grows faster than the team that manages it.</em>
-            </h1>
-
-            <p className="who-hero-subtitle reveal reveal-3">
-              Claims that need review, authorizations that need follow-up, providers calling for status updates, enrollment documents requiring indexing, eligibility questions building up in the queue — payer backend operations do not fail dramatically. They slow down incrementally, and the cost compounds across every stakeholder who is waiting.
-            </p>
-
-            <p className="who-hero-lede reveal reveal-3">
-              Hired Billing Support acts as your backend processing engine — providing scalable operations support that adapts to your queue volumes, your internal systems, and your workflows — so your core team manages the decisions while we manage the volume.
-            </p>
-
-            <div className="who-hero-actions reveal reveal-4">
+        <div className="hero-inner">
+          <div>
+            {solution.hero && (
+              <>
+                <div className="eyebrow reveal reveal-1">{solution.hero.eyebrow}</div>
+                <h1 className="display reveal reveal-2" dangerouslySetInnerHTML={{ __html: solution.hero.title }} />
+                <p className="sub reveal reveal-3">{solution.hero.subtitle}</p>
+                <p className="lede reveal reveal-3">{solution.hero.description}</p>
+                <div className="hero-actions reveal reveal-4">
               <a href="#cta" className="btn btn-primary btn-lg">
                 Scale payer backend operations
                 <svg className="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -499,9 +473,11 @@ export default function HeroPayers({ solution }: HeroProps) {
                 See the processing model
               </a>
             </div>
+              </>
+            )}
           </div>
 
-          <div className="who-hero-visual reveal reveal-4" style={{ animationDelay: '0.55s' }}>
+          <div className="hero-visual reveal reveal-4" style={{ animationDelay: '0.55s' }}>
             <div className="cp-card">
               <div className="cp-header">
                 <div className="cp-header-label">— Payer Operations Center · Daily Queue</div>

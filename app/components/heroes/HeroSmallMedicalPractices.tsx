@@ -1,14 +1,15 @@
 'use client';
 
 import { useEffect } from 'react';
+import { SolutionData } from '@/app/data/solutionTypes';
 
-interface HeroFqhcProps {
-  solution?: any;
+interface HeroProps {
+  solution: SolutionData;
 }
 
-export default function HeroFqhc({ solution }: HeroFqhcProps) {
+export default function HeroSmallMedicalPractices({ solution }: HeroProps) {
   useEffect(() => {
-    // Add staggered animation delays to status rows
+    // Set staggered animation delays for status rows
     const rows = document.querySelectorAll('[data-animated="status-row"]');
     rows.forEach((row, index) => {
       (row as HTMLElement).style.setProperty('--reveal-delay', `${0.1 + index * 0.14}s`);
@@ -16,155 +17,8 @@ export default function HeroFqhc({ solution }: HeroFqhcProps) {
   }, []);
 
   const styles = `
-    .who-hero {
-      background: #FAF7F2;
-      padding: 40px 0 100px;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .who-hero-bg {
-      position: absolute;
-      inset: 0;
-      pointer-events: none;
-    }
-
-    .who-hero-bg svg {
-      width: 100%;
-      height: 100%;
-    }
-
-    .who-hero-grain {
-      position: absolute;
-      inset: 0;
-      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
-      opacity: .4;
-    }
-
-    .who-hero-inner {
-      position: relative;
-      z-index: 1;
-      max-width: 1280px;
-      margin: 0 auto;
-      padding: 0 clamp(20px, 4vw, 48px);
-      display: grid;
-      grid-template-columns: 1fr 420px;
-      gap: 64px;
-      align-items: center;
-    }
-
-    .who-hero-content {
-      flex: 1;
-    }
-
-    .who-hero-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 10px;
-      text-transform: uppercase;
-      letter-spacing: .16em;
-      color: #00876B;
-      background: rgba(0, 200, 150, .08);
-      border: 1px solid rgba(0, 200, 150, .2);
-      padding: 6px 14px;
-      border-radius: 100px;
-      margin-bottom: 24px;
-    }
-
-    .who-hero-title {
-      font-family: 'Fraunces', serif;
-      font-size: clamp(2.6rem, 5.5vw, 4.2rem);
-      font-weight: 400;
-      letter-spacing: -.025em;
-      line-height: 1.02;
-      color: #0A1628;
-      margin-bottom: 24px;
-      font-variation-settings: "opsz" 144;
-    }
-
-    .who-hero-title em {
-      font-style: italic;
-      font-weight: 300;
-      color: #475569;
-    }
-
-    .who-hero-subtitle {
-      font-size: 17px;
-      line-height: 1.7;
-      color: #1B2942;
-      margin-bottom: 14px;
-      max-width: 560px;
-    }
-
-    .who-hero-lede {
-      font-size: 15px;
-      line-height: 1.75;
-      color: #475569;
-      max-width: 540px;
-      margin-bottom: 40px;
-    }
-
-    .who-hero-actions {
-      display: flex;
-      gap: 12px;
-      flex-wrap: wrap;
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 11px 22px;
-      border-radius: 4px;
-      font-family: 'Inter Tight', sans-serif;
-      font-size: 14px;
-      font-weight: 600;
-      cursor: pointer;
-      border: 1px solid transparent;
-      transition: background .2s, color .2s, transform .15s;
-      white-space: nowrap;
-      text-decoration: none;
-    }
-
-    .btn:hover {
-      transform: translateY(-1px);
-    }
-
-    .btn .arrow {
-      transition: transform .2s;
-      flex-shrink: 0;
-    }
-
-    .btn:hover .arrow {
-      transform: translateX(3px);
-    }
-
-    .btn-primary {
-      background: #0A1628;
-      color: #FAF7F2;
-    }
-
-    .btn-primary:hover {
-      background: #1B2942;
-    }
-
-    .btn-ghost {
-      background: transparent;
-      color: #0A1628;
-      border-color: #E8E2D5;
-    }
-
-    .btn-ghost:hover {
-      background: #F2EDE3;
-      border-color: #475569;
-    }
-
-    .btn-lg {
-      padding: 14px 28px;
-      font-size: 15px;
-    }
+    /* Small Practice Dashboard Card */
+    /* All hero layout classes (.hero, .hero-inner, .display, .lede, .sub, .hero-actions, .reveal, etc.) are in globals.css */
 
     .organization-dashboard {
       background: #0A1628;
@@ -304,44 +158,27 @@ export default function HeroFqhc({ solution }: HeroFqhcProps) {
       color: #FAF7F2;
     }
 
-    .reveal {
+    .status-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 0;
+      border-bottom: 1px solid #E8E2D5;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: reveal 0.9s var(--ease) forwards;
+      animation-delay: var(--reveal-delay, 0s);
+    }
+
+    .hero-visual {
+      animation: reveal 0.9s var(--ease) forwards;
+      animation-delay: 0.55s;
       opacity: 0;
       transform: translateY(20px);
     }
 
-    .reveal-1 {
-      animation: rv 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.1s forwards;
-    }
-
-    .reveal-2 {
-      animation: rv 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.22s forwards;
-    }
-
-    .reveal-3 {
-      animation: rv 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.36s forwards;
-    }
-
-    .reveal-4 {
-      animation: rv 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.5s forwards;
-    }
-
-    @keyframes rv {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    [data-animated="status-row"] {
-      animation: rv 0.8s cubic-bezier(0.22, 1, 0.36, 1) var(--reveal-delay, 0.1s) forwards;
-    }
-
     @media(max-width:1024px) {
-      .who-hero-inner {
-        grid-template-columns: 1fr;
-      }
-
-      .who-hero-visual {
+      .hero-visual {
         display: none;
       }
     }
@@ -350,8 +187,8 @@ export default function HeroFqhc({ solution }: HeroFqhcProps) {
   return (
     <>
       <style>{styles}</style>
-      <section className="who-hero">
-        <div className="who-hero-bg">
+      <section className="hero">
+        <div className="hero-bg">
           <svg viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
             <defs>
               <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
@@ -360,48 +197,34 @@ export default function HeroFqhc({ solution }: HeroFqhcProps) {
             </defs>
             <rect width="100%" height="100%" fill="url(#grid)" />
           </svg>
-          <div className="who-hero-grain"></div>
+          <div className="hero-grain"></div>
         </div>
 
-        <div className="who-hero-inner">
-          <div className="who-hero-content">
-            <div className="eyebrow reveal reveal-1">Who We Serve · Small Medical Practices</div>
-            
-            <h1 className="who-hero-title reveal reveal-2">
-              Your small team is doing the work of three.
-              <br />
-              <em>Some of it is not getting done — and revenue is leaking because of it.</em>
-            </h1>
-
-            <p className="who-hero-subtitle reveal reveal-3">
-            In a small practice, the same people who answer phones, check in patients,
-manage prior authorizations, verify insurance, and handle billing questions
-are also expected to follow up on denied claims, work the AR aging report,
-and manage payer portals — all before the day ends.
-            </p>
-
-            <p className="who-hero-lede reveal reveal-3">
-           Hired Billing Support gives small practices the operational depth
-of a larger team without forcing them to hire more in-house staff.
-We work inside your workflow, take ownership of billing and AR,
-and reduce the daily administrative pressure that is keeping
-your practice from running — and growing — the way it should.
-            </p>
-
-            <div className="who-hero-actions reveal reveal-4">
-              <a href="#cta" className="btn btn-primary btn-lg">
-                Relieve my practice team
-                <svg className="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <path d="M5 12h14M13 5l7 7-7 7" />
-                </svg>
-              </a>
-              <a href="#pain" className="btn btn-ghost btn-lg">
-                See community health support
-              </a>
-            </div>
+        <div className="hero-inner">
+          <div>
+            {solution.hero && (
+              <>
+                <div className="eyebrow reveal reveal-1">{solution.hero.eyebrow}</div>
+                <h1 className="display reveal reveal-2" dangerouslySetInnerHTML={{ __html: solution.hero.title }} />
+                <p className="lede reveal reveal-3">{solution.hero.subtitle}</p>
+                <p className="sub reveal reveal-3">{solution.hero.description}</p>
+                <div className="hero-actions reveal reveal-4">
+                  <a href="#cta" className="btn btn-primary btn-lg">
+                    Relieve my practice team
+                    <svg className="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                      <path d="M5 12h14M13 5l7 7-7 7" />
+                    </svg>
+                  </a>
+                  <a href="#pain" className="btn btn-ghost btn-lg">
+                    See community health support
+                  </a>
+                </div>
+              </>
+            )}
           </div>
 
-          <div className="who-hero-visual reveal reveal-4" style={{ animationDelay: '0.55s' }}>
+          {solution.hero && (
+          <div className="hero-visual">
             <div className="organization-dashboard">
               <div className="org-dash-title">— Small Practice Operations · Daily Status</div>
 
@@ -458,6 +281,7 @@ your practice from running — and growing — the way it should.
               </div>
             </div>
           </div>
+          )}
         </div>
       </section>
     </>

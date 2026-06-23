@@ -5,10 +5,10 @@ export const obgyn: SolutionData = {
   subtitle: "Women's health billing with global period management, eligibility monitoring during pregnancy, and patient-sensitive billing communication",
   description: "Hired Billing Support provides specialty-aware OBGYN billing — maternity workflow support, global billing management, eligibility verification, authorization tracking, denial management, and patient-friendly AR coordination for women's health practices.",
   hero: {
-    eyebrow: 'Who We Serve · Medical Specialties · OBGYN',
-    title: 'OBGYN billing combines some of the most variable payer rules <em>in all of specialty medicine. Coverage changes during pregnancy. Global periods require precise management. And patient communication must be handled with care.</em>',
-    subtitle: 'Maternity care, gynecology procedures, labs, ultrasounds, preventive care, and complex deliveries — each with different billing rules, different authorization requirements, and different payer expectations. OBGYN billing done well requires knowing which applies when.',
-    description: "Hired Billing Support provides women's health billing support that understands the specific billing challenges OBGYN practices face — global billing management, eligibility changes during pregnancy, authorization tracking, procedure billing, and patient-friendly billing communication that reflects the sensitivity of women's healthcare.",
+    eyebrow: 'OBGYN & Women\'s Health',
+    title: 'OBGYN billing has gaps that most billing teams do not catch .<em>until a claim denies.</em>',
+    subtitle: 'Global maternity billing, mid-pregnancy insurance changes, GYN procedure authorizations, and parity compliance create OBGYN-specific billing complexity that generic workflows consistently miss.',
+    description: "HBS provides women's health billing support that manages the specific rules your specialty runs on.",
   },
   sections: {
     pain: {

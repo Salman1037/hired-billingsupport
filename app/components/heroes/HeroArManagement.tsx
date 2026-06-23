@@ -27,7 +27,7 @@ export default function HeroArManagement({ solution }: HeroProps) {
               <div className="eyebrow reveal reveal-1">{solution.hero.eyebrow}</div>
               <h1 className="display reveal reveal-2" style={{ fontSize: "clamp(38px, 5vw, 64px)", marginTop: "20px" }} dangerouslySetInnerHTML={{ __html: solution.hero.title }} />
               <p className="sub reveal reveal-3" style={{ fontSize: "18px", lineHeight: "1.6", color: "var(--ink-mute)", marginTop: "24px" }}>
-                {solution.subtitle}
+                {solution.hero.subtitle}
               </p>
               <p className="lede reveal reveal-3" style={{ fontSize: "18px", lineHeight: "1.6", color: "var(--ink-mute)", marginTop: "16px" }}>
                 {solution.hero.description}

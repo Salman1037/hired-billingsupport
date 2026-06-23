@@ -6,10 +6,10 @@ export const fqhc: SolutionData = {
   description: 'Hired Billing Support helps Federally Qualified Health Centers strengthen billing, AR, eligibility, credentialing, reporting, and operational workflows — supporting the mission-driven work of community health with reliable revenue cycle infrastructure.',
 
   hero: {
-    eyebrow: 'Who We Serve · FQHCs & Community Health Centers',
-    title: 'Your organization exists to serve patients who have fewer options.<br><em>The billing and operations that sustain that mission deserve the same dedication.</em>',
-    subtitle: 'FQHCs and community health centers carry a unique operational burden — serving complex, high-need patient populations with administrative infrastructure that is often stretched thinner than the clinical load demands. Revenue that leaks through billing gaps, eligibility failures, or unworked denials is not just a financial problem. It is a threat to the organization\'s ability to keep serving its community.',
-    description: 'FQHCs and community health centers carry a unique operational burden — serving complex, high-need patient populations with administrative infrastructure that is often stretched thinner than the clinical load demands. Revenue that leaks through billing gaps, eligibility failures, or unworked denials is not just a financial problem. It is a threat to the organization\'s ability to keep serving its community. Hired Billing Support helps FQHCs strengthen their billing, AR management, eligibility verification, credentialing, and reporting workflows — protecting the revenue that allows community health organizations to continue doing the work they exist to do.',
+    eyebrow: 'FQHCs & Community Health Centers',
+    title: 'FQHC billing is different. Generic billing<em>support is not enough.</em>',
+    subtitle: 'Prospective payment, Medicaid managed care, encounter-based billing, and sliding fee documentation are FQHC-specific requirements that standard billing vendors consistently apply incorrectly.',
+    description: 'HBS provides FQHC-aware billing and operations support that understands the rules your funding depends on.',
   },
 
   sections: {

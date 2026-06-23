@@ -3461,19 +3461,21 @@ nav.top.scrolled {
 }
 
 .hero .sub {
-  font-size: 17px;
-  line-height: 1.7;
-  color: var(--ink-soft);
-  margin-bottom: 16px;
-  max-width: 560px;
-}
+ 
 
-.hero .lede {
-  font-size: 15px;
+    font-size: 15px;
   line-height: 1.75;
   color: var(--ink-mute);
   max-width: 540px;
   margin-bottom: 40px;
+}
+
+.hero .lede {
+ font-size: 17px;
+  line-height: 1.7;
+  color: var(--ink-soft);
+  margin-bottom: 16px;
+  max-width: 560px;
 }
 
 .hero-actions {
@@ -3726,7 +3728,7 @@ nav.top.scrolled {
   font-family: var(--mono);
   font-size: 9px;
   letter-spacing: 0.1em;
-  color: var(--ink-mute);
+  color: var(--paper);
   min-width: 80px;
 }
 
@@ -3783,7 +3785,7 @@ nav.top.scrolled {
 
 .denial-lbl {
   font-size: 12px;
-  color: var(--ink-mute);
+  color: var(--paper);
 }
 
 .denial-val {

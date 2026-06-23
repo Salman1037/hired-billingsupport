@@ -6,10 +6,10 @@ export const analyticsReporting: SolutionData = {
   description: 'Hired Billing Support turns your billing, AR, denial, operational, and patient engagement data into structured healthcare analytics and reporting — giving leadership the visibility to make better decisions, control revenue, and manage operations with confidence.',
   
   hero: {
-    eyebrow: 'Advanced Solutions · Analytics & Reporting',
-    title: 'Your practice generates data every day.<br><em>Most of it is not being turned into decisions.</em>',
-    subtitle: 'Your EHR has reports. Your billing software has dashboards. Your clearinghouse has claim analytics. And yet leadership still cannot answer with confidence: where is revenue leaking, which payer is causing the most problems, and what changed in AR this month compared to last?',
-    description: 'Hired Billing Support turns scattered healthcare operations data into structured reporting that gives leadership the visibility to manage revenue, control operational risk, and make better decisions — consistently, not just when a crisis makes it necessary.',
+    eyebrow: 'Analytics & Reporting',
+    title: 'Your data exists. The decisions <em>it should drive do not.</em>',
+    subtitle: 'Billing reports, AR aging summaries, and denial logs are only useful if they produce action. Most practices generate data but lack the structured analytics layer that turns numbers into operational decisions.',
+    description: 'HBS delivers reporting that shows you what is happening, why it is happening, and what to do next.',
     card: {
       title: '— Practice Analytics Dashboard · Monthly',
       kpis: [

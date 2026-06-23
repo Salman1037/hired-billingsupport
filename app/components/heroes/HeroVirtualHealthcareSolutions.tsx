@@ -1,6 +1,12 @@
 'use client';
 
-const HeroVirtualHealthcareSolutions = () => {
+import { SolutionData } from '@/app/data/solutionTypes';
+
+interface HeroProps {
+  solution: SolutionData;
+}
+
+const HeroVirtualHealthcareSolutions = ({ solution }: HeroProps) => {
   const styles = `
     .virtual-healthcare-hero-card {
       background: var(--ink);
@@ -157,28 +163,25 @@ const HeroVirtualHealthcareSolutions = () => {
         </div>
         <div className="hero-inner">
           <div>
-            <div className="eyebrow">Advanced Solutions · Virtual Healthcare</div>
-            <h1 className="display">
-              Virtual care works when the workflow behind it works.<br />
-              <em>Most of the time, the workflow is the problem.</em>
-            </h1>
-            <p className="sub">
-              Telehealth adds clinical access. It also adds scheduling complexity, documentation load, eligibility requirements, patient reminders, technical coordination, and follow-up tasks — all of which require the same operational infrastructure as in-person care, managed remotely.
-            </p>
-            <p className="lede">
-              Hired Billing Support provides virtual healthcare operations support that works like an extension of your internal team — inside your EHR, inside your workflow, aligned with your providers' daily schedule and your patients' expectations.
-            </p>
-            <div className="hero-actions">
-              <a href="#cta" className="btn btn-primary btn-lg">
-                Build your virtual care team
-                <svg className="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <path d="M5 12h14M13 5l7 7-7 7" />
-                </svg>
-              </a>
-              <a href="#pain" className="btn btn-ghost btn-lg">
-                See what virtual support covers
-              </a>
-            </div>
+            {solution.hero && (
+              <>
+                <div className="eyebrow">{solution.hero.eyebrow}</div>
+                <h1 className="display" dangerouslySetInnerHTML={{ __html: solution.hero.title }} />
+                <p className="sub">{solution.hero.description}</p>
+                <p className="lede">{solution.hero.subtitle}</p>
+                <div className="hero-actions">
+                  <a href="#cta" className="btn btn-primary btn-lg">
+                    Build your virtual care team
+                    <svg className="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                      <path d="M5 12h14M13 5l7 7-7 7" />
+                    </svg>
+                  </a>
+                  <a href="#pain" className="btn btn-ghost btn-lg">
+                    See what virtual support covers
+                  </a>
+                </div>
+              </>
+            )}
           </div>
           <div className="virtual-healthcare-hero-card">
             <h4>— Virtual Care Operations · Daily Queue</h4>

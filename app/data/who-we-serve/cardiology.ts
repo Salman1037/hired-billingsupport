@@ -5,9 +5,9 @@ export const cardiology: SolutionData = {
   subtitle: 'High-complexity diagnostic and procedure billing with authorization control, medical necessity documentation review, and aggressive payer follow-up',
   description: 'Hired Billing Support provides specialty-aware cardiology billing — diagnostic authorization support, procedure coding accuracy, medical necessity documentation, high-volume claim management, denial management, and AR follow-up for cardiology practices.',
   hero: {
-    eyebrow: 'Who We Serve · Medical Specialties · Cardiology',
-    title: 'Cardiology billing combines high procedure volume, <em>complex authorization requirements, and medical necessity scrutiny from every major payer.</em>',
-    subtitle: 'Echocardiograms, stress tests, catheterizations, device implants, diagnostic imaging, and multi-provider consultations — each requires authorization, precise coding, documented medical necessity, and follow-up that does not let high-value claims sit in payer queues indefinitely.',
+    eyebrow: 'Cardiology Billing',
+    title: 'Cardiology billing is complex. Your revenue <em>should not suffer for it</em>',
+    subtitle: ' Echocardiograms, stress tests, catheterizations, and device implants each require authorization, precise coding, and documented medical necessity. One gap in the process and the claim sits — or denies.',
     description: 'Hired Billing Support manages cardiology billing with the workflow discipline and specialty knowledge this high-complexity specialty demands — authorization control before procedures, coding accuracy at submission, and aggressive follow-up that keeps revenue moving through the cycle.',
   },
   sections: {

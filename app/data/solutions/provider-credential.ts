@@ -5,10 +5,10 @@ export const providerCredential: SolutionData = {
   subtitle: 'Manage provider credentialing from document collection to payer activation',
   description: 'Every day a provider is not credentialed is a day your practice is not getting paid for their work. Hired Billing Support manages the full credentialing workflow — from collecting provider documents and setting up CAQH to submitting payer applications, following up on status, and maintaining credentialing files so providers stay billing-ready.',
   hero: {
-    eyebrow: 'Practice Management · Provider Credentialing',
-    title: 'Every day a provider is not credentialed<br><em>is a day your practice is not getting paid for their work.</em>',
-    subtitle: 'Credentialing delays are not paperwork problems. They are revenue problems. Every week a provider sits outside the payer network is a week of patient visits that cannot generate a billable claim.',
-    description: 'Hired Billing Support manages the full credentialing workflow — from collecting provider documents and setting up CAQH to submitting payer applications, following up on status, and maintaining credentialing files so providers stay billing-ready.',
+    eyebrow: 'Provider Credentialing',
+    title: 'Every day a provider is not credentialed is a day<em>you are not getting paid.</em>',
+    subtitle: 'Credentialing delays do not just delay paperwork. They delay revenue — and every week a provider cannot bill their full payer panel is revenue that cannot be recovered later.',
+    description: 'HBS manages the full credentialing workflow so providers reach billing-active status as fast as the payer allows.',
     card: {
       title: '— Credentialing Status Board · Active Providers',
       statusCards: [

@@ -5,10 +5,10 @@ export const endocrinology: SolutionData = {
   subtitle: "Chronic care billing that tracks the full ongoing patient care relationship",
   description: "Hired Billing Support provides specialty-aware endocrinology billing — medication and device authorization management, lab claim billing coordination, recurring eligibility verification, denial management, AR follow-up, and patient recall support for diabetes, thyroid, and metabolic care practices.",
   hero: {
-    eyebrow: 'Who We Serve · Medical Specialties · Endocrinology',
-    title: 'Endocrinology patients require ongoing care. <em>Their billing requires the same consistent attention.</em>',
-    subtitle: 'Diabetes management, thyroid disorders, hormonal conditions, metabolic care — endocrinology treats conditions that do not resolve between visits. The billing infrastructure behind that ongoing care needs to be equally consistent: recurring authorizations renewed on schedule, labs tracked against coverage, and patient follow-up coordinated so no one falls out of the revenue cycle.',
-    description: 'Hired Billing Support provides endocrinology billing support that understands the chronic care billing cycle — recurring authorization management, lab and testing billing coordination, medication coverage tracking, and patient follow-up support that keeps the revenue cycle moving between visits.',
+    eyebrow: 'Endocrinology & Chronic Care',
+    title: 'Chronic disease billing requires the same consistency  <em>as chronic disease management.</em>',
+    subtitle: 'CGM authorizations, insulin pump approvals, GLP-1 step therapy documentation, and frequent lab billing — endocrinology billing creates recurring authorization and coding demands that require structured management.',
+    description: 'HBS handles the billing complexity behind chronic care so your team focuses on the clinical complexity.',
   },
   sections: {
     pain: {

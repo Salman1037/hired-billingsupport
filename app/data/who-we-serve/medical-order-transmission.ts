@@ -6,10 +6,10 @@ export const medicalOrderTransmission: SolutionData = {
   description: 'Hired Billing Support helps labs and imaging centers manage medical order transmission, referral intake, eligibility verification, prior authorization, scheduling coordination, provider communication, billing handoffs, and order workflow control.',
 
   hero: {
-    eyebrow: 'Who We Serve · Other Organizations · Labs & Imaging Centers',
-    title: 'A diagnostic service begins with an order. Every gap between that order and the completed service is a revenue and access risk.',
-    subtitle: 'Incomplete orders. Missing authorizations. Eligibility that was not verified before the patient arrived. Provider offices calling for results or status updates while the intake queue is still backed up from yesterday. Labs and imaging centers operate at the intersection of clinical urgency and administrative complexity — and the margin for workflow error is narrow.',
-    description: 'Hired Billing Support helps labs and imaging centers manage the full order-to-service workflow — from referral intake and eligibility verification through authorization management, scheduling coordination, provider communication, and billing handoff — so every order that comes in has the information it needs to become a completed, billable service.',
+    eyebrow: 'Labs & Imaging Centers',
+    title: 'A diagnostic service begins with an order.Every gap between that order and the<em> completed service is a revenue and access risk.</em>',
+    subtitle: 'Incomplete orders, missing authorizations, unverified eligibility — billing problems in labs and imaging almost always start at intake, not at the billing stage where they get discovered.',
+    description: 'HBS manages the order-to-service workflow so every completed service has a clean billing handoff.',
   },
 
   sections: {

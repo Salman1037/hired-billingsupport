@@ -5,10 +5,10 @@ export const operationsManagement: SolutionData = {
   subtitle: 'Embedded remote operations team managing daily workflows, task queues, billing coordination, SOP implementation, and operational reporting so your practice runs consistently as it grows.',
   description: 'Most growing practices are busy but not well-organized. Staff are working hard but tasks fall behind, workflows depend on individual habits, and leadership cannot see what is happening until problems surface. Hired Billing Support becomes your embedded operations department — managing daily workflows, coordinating billing operations, documenting SOPs, and providing leadership visibility so the practice scales without operational chaos.',
   hero: {
-    eyebrow: 'Practice Management · Operations Management',
-    title: 'Your practice is busy.<br><em>Busy is not the same as running well.</em>',
-    subtitle: 'Staff are working hard. Phones are being answered. Patients are being scheduled. But underneath the daily activity, tasks are falling behind, workflows are inconsistent, providers are frustrated by administrative gaps, and leadership does not have a clear picture of what is actually happening.',
-    description: 'Hired Billing Support becomes your embedded remote operations team — managing daily administrative workflows, supporting billing coordination, maintaining task queues, implementing SOPs, and giving leadership the operational visibility to manage a growing practice with confidence.',
+    eyebrow: ' Operations Management',
+    title: 'Your team is not failing. They are doing<em>too many jobs at once.</em>',
+    subtitle: 'Prior auths, eligibility checks, scheduling coordination, documentation follow-up — daily administrative tasks pile up faster than any team can manage systematically without a structure behind them.',
+    description: 'HBS provides daily operational support that keeps practice workflow moving without adding to your payroll.',
     card: {
       title: 'Operations Dashboard · Daily Status',
       statuses: [

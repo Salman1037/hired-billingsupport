@@ -5,10 +5,10 @@ export const psychiatry: SolutionData = {
   subtitle: 'Specialty-aware behavioral health billing with session limit tracking, telehealth support, and parity compliance',
   description: 'Hired Billing Support provides specialty-aware psychiatry and behavioral health billing — prior authorization support, eligibility verification, telehealth billing, session limit tracking, denial management, and AR follow-up.',
   hero: {
-    eyebrow: 'Who We Serve · Medical Specialties · Psychiatry',
-    title: 'Psychiatry visits are straightforward clinically. <em>The billing behind them rarely is.</em>',
-    subtitle: 'Mental health coverage is inconsistent across payers, benefits vary by plan, session limits create authorization complexity, and telehealth rules add another layer that changes by payer and state. Your clinical work is clean. The administrative infrastructure around it often is not.',
-    description: 'Hired Billing Support provides behavioral health billing support that understands how psychiatry practices actually operate — eligibility verification that checks mental health benefits specifically, authorization tracking for session limits, telehealth claim handling, and AR follow-up that does not let payer delays become practice losses.',
+    eyebrow: 'Psychiatry & Behavioral Health',
+    title: 'Behavioral health billing has specific rules most  <em>billing vendors get wrong.</em>',
+    subtitle: ' Session limits, parity compliance, telehealth modifiers, prior authorization tracking — psychiatry and behavioral health billing requires specialty knowledge that a generic billing team rarely has.',
+    description: 'HBS provides behavioral health billing support that understands how your payers actually process your claims.',
   },
   sections: {
     pain: {

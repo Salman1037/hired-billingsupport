@@ -8,12 +8,12 @@ export const complianceReporting: SolutionData = {
   description:
     "Hired Billing Support turns your billing, coding, AR, and denial activity into structured reporting and compliance monitoring — giving your leadership team the operational visibility to manage revenue cycle performance with confidence.",
   hero: {
-    eyebrow: "Coding & Compliance · Compliance & Reporting",
-    title: "Your billing generates data every day.<br><em>Your leadership team deserves to understand what it means.</em>",
+    eyebrow: "Compliance & Reporting",
+    title: "Billing compliance is not a checklist. It is <em>an ongoing operational discipline.</em>",
     subtitle:
-      "Reports are not the same as visibility. A report that shows numbers without explaining trends, root causes, or recommended actions does not help leadership make decisions — it just confirms that billing is happening.",
+      "Regulations change. Payer rules shift. Documentation standards evolve. Practices that manage compliance reactively are always one audit away from a problem they did not see coming.",
     description:
-      "Hired Billing Support turns your billing, coding, AR, and denial activity into structured reporting and compliance monitoring — giving your leadership team the operational visibility to manage revenue cycle performance with confidence.",
+      "HBS supports ongoing compliance monitoring, billing accuracy review, and reporting that keeps your operation ahead of risk.",
     card: {
       title: '— RCM Performance Dashboard · Monthly',
       stats: [

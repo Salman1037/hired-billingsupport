@@ -6,10 +6,10 @@ export const enterpriseMedicaloperation: SolutionData = {
   description: 'Hired Billing Support supports enterprise healthcare organizations and health systems as a scalable backend operations partner — RCM, AR, credentialing, denial management, compliance, and reporting infrastructure at enterprise scale.',
 
   hero: {
-    eyebrow: 'Who We Serve · Enterprises & Health Systems',
-    title: 'Your organization is large enough that operational problems<br><em>are invisible until they are expensive.</em>',
-    subtitle: 'At enterprise scale, revenue cycle gaps do not announce themselves through a single denied claim or a missed prior authorization. They emerge through aggregate trends — a denial rate that has quietly risen two percentage points over six months, an AR aging percentage that has grown across three departments without being attributed to any specific cause, a compliance risk that has been building in a billing pattern nobody has reviewed.',
-    description: 'Hired Billing Support provides scalable backend operations support for enterprise healthcare organizations — strengthening RCM execution, improving reporting visibility, standardizing workflows, and providing the operational depth that allows enterprise leadership to manage performance rather than just react to it.',
+    eyebrow: 'Enterprise Healthcare Operations',
+    title: 'Enterprise operations need backend infrastructure<em>that scales without chaos.</em>',
+    subtitle: 'Health systems and multi-entity organizations face billing complexity, credentialing volume, and operational coordination that outpaces in-house capacity — especially during growth.',
+    description: 'HBS provides enterprise-grade backend operations support that scales with your organization\'s structure.',
   },
 
   sections: {

@@ -5,10 +5,10 @@ export const neurology: SolutionData = {
   subtitle: 'Specialty-aware billing for complex neurological care',
   description: "Hired Billing Support provides specialty-aware neurology billing — treatment authorization management, documentation-aligned claim workflows, diagnostic and infusion billing, denial management, complex claim follow-up, and AR management for neurology and neurological specialty practices.",
   hero: {
-    eyebrow: 'Who We Serve · Medical Specialties · Neurology',
-    title: 'Neurology treats some of the most complex conditions in medicine. <em>The billing behind that care is equally complex — and equally unforgiving of errors.</em>',
-    subtitle: 'Epilepsy management, headache care, neuromuscular disease, stroke follow-up, multiple sclerosis treatment, nerve conduction studies — each requires precise authorization management, documentation that clearly supports medical necessity, and billing that applies neurology-specific coding correctly for every service type.',
-    description: 'Hired Billing Support provides neurology billing support that understands the documentation demands, authorization complexity, and diagnostic billing requirements of neurological specialty care — managing the billing workflow so providers can focus on the clinical work that requires their expertise.',
+    eyebrow: ' Neurology Billing',
+    title: 'Neurology billing is complex enough without a billing  <em>team that does not understand it.</em>',
+    subtitle: 'Infusion therapy authorizations, EEG and nerve conduction billing, step therapy documentation, and high-value device approvals — neurology claims require specialty-specific billing knowledge and consistent prior auth management.',
+    description: 'HBS provides neurology billing support with the specialty depth your claims require.',
   },
   sections: {
     pain: {

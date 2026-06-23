@@ -5,10 +5,10 @@ export const developerPortal: SolutionData = {
   subtitle: 'Healthcare workflow integration and operational context for healthcare software teams',
   description: 'Hired Billing Support partners with healthcare software developers, EHR vendors, billing platforms, and healthtech teams to bridge the gap between technical systems and real-world practice operations — providing workflow intelligence, implementation support, and operational context that makes healthcare products work in practice.',
   hero: {
-    eyebrow: 'Partners · Developers',
-    title: 'Healthcare software works in demos.<br><em>It has to work in the practice\'s actual billing system, payer portal, EHR workflow, and denial queue.</em>',
-    subtitle: 'Technical execution and operational execution are different disciplines. You build the system. We understand how the system needs to behave inside a real healthcare practice — with the payer rules, documentation requirements, coding standards, authorization workflows, and AR management processes that clinical software has to navigate every day.',
-    description: 'Hired Billing Support partners with healthcare developers, SaaS teams, and healthtech builders to bridge the gap between what technology is designed to do and what healthcare operations actually require — providing workflow intelligence, implementation support, and operational context that makes your product work in the field, not just in the sandbox.',
+    eyebrow: 'Developers Partners  ',
+    title: 'Healthcare software works in demos. It has to work in <em>the actual billing workflow too.</em>',
+    subtitle: 'Technical execution and operational execution are different disciplines. HBS bridges the gap between what healthcare technology is designed to do and how healthcare operations actually work in practice.',
+    description: 'Partner with HBS to build products that work in the field, not just in the sandbox.',
   },
   sections: {
     pain: {

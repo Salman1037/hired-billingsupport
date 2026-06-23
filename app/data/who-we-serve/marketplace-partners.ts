@@ -5,10 +5,10 @@ export const marketplacePartners: SolutionData = {
   subtitle: 'Partnership execution support for healthcare marketplaces and platforms',
   description: 'Hired Billing Support acts as the operational engine behind your healthcare partnerships — delivering billing, RCM, credentialing, payer enrollment, coding, compliance, AR management, and practice operations support to your clients while protecting your brand and the relationship you built.',
   hero: {
-    eyebrow: 'Partners · Marketplace Partners',
-    title: 'You created the opportunity. We deliver the operations that make it worth it for your client.',
-    subtitle: 'Marketplace partners and healthcare platforms are excellent at connecting providers with solutions, generating demand, and creating the conditions for growth. The gap appears after the client says yes — when the actual billing, credentialing, payer enrollment, AR management, and practice operations work has to happen and the partner has no reliable backend execution layer to deliver it.',
-    description: 'Hired Billing Support acts as the operational engine behind your healthcare partnerships — delivering billing, RCM, credentialing, payer enrollment, coding, compliance, AR management, and practice operations support to your clients while protecting your brand and the relationship you built.',
+    eyebrow: 'Marketplace Partners',
+    title: 'You created the opportunity.We deliver the operations that make <em>it worth it for your client.</em>',
+    subtitle: 'Marketplace partners and platforms generate demand well. The gap appears after the client says yes — when the actual billing, credentialing, and operations work has to happen and there is no reliable backend execution layer behind it.',
+    description: 'HBS acts as the operational engine behind your healthcare partnerships.',
   },
   sections: {
     pain: {

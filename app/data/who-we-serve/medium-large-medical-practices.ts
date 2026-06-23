@@ -6,10 +6,10 @@ export const mediumLargeMedicalPractices: SolutionData = {
   description: 'Hired Billing Support helps medium to large medical groups standardize billing, AR, credentialing tracking, reporting, and operational workflows so leadership can see what is happening across the organization and manage it — not just react to it.',
 
   hero: {
-    eyebrow: 'Who We Serve · Medium to Large Medical Groups',
-    title: 'Growth multiplied your clinical capacity.<br><em>It also multiplied every workflow inconsistency you had before.</em>',
-    subtitle: 'A medical group that adds providers, locations, and specialties without standardizing its operational workflows does not just grow — it grows more complex. The same billing gaps, the same AR delays, the same denial patterns — now occurring at scale, across multiple providers, sometimes with different processes running simultaneously.',
-    description: 'Hired Billing Support helps growing medical groups standardize billing, AR management, credentialing tracking, reporting, and operational workflows so leadership can see what is happening across the organization and manage it — not just react to it.',
+    eyebrow: 'Medical Groups',
+    title: 'More providers. More complexity. The same revenue<em>cycle pressure multiplied.</em>',
+    subtitle: 'Multi-provider groups deal with inconsistent billing across providers, credentialing timelines that never align, and AR management that no single staff member can track across every payer.',
+    description: 'HBS standardizes revenue cycle operations across your group so every provider performs consistently.',
   },
 
   sections: {

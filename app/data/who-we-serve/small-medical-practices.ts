@@ -6,10 +6,10 @@ export const smallMedicalPractices: SolutionData = {
   description: 'Hired Billing Support gives small medical practices the operational depth of a larger team — billing, AR follow-up, prior authorizations, coding support, and credentialing maintenance — without adding in-house payroll.',
 
   hero: {
-    eyebrow: 'Who We Serve · Small Medical Practices',
-    title: 'Your small team is doing the work of three.<br><em>Some of it is not getting done — and revenue is leaking because of it.</em>',
-    subtitle: 'In a small practice, the same people who answer phones, check in patients, manage prior authorizations, verify insurance, and handle billing questions are also expected to follow up on denied claims, work the AR aging report, and manage payer portals — all before the day ends.',
-    description: 'Hired Billing Support gives small practices the operational depth of a larger team without forcing them to hire more in-house staff. We work inside your workflow, take ownership of billing and AR, and reduce the daily administrative pressure that is keeping your practice from running — and growing — the way it should.',
+    eyebrow: 'Small Medical Practices',
+    title: 'A small practice deserves the same billing <em>depth as a large one.</em>',
+    subtitle: 'Solo providers and small groups often carry the full billing burden on one or two staff members. When that team is stretched, revenue leaks — and it leaks quietly. HBS gives small practices full-cycle RCM support without the overhead of a full-time billing department.',
+    description: '',
   },
 
   sections: {

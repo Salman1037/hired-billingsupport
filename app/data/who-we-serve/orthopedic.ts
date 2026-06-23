@@ -5,10 +5,10 @@ export const orthopedic: SolutionData = {
   subtitle: 'High-precision surgical billing with authorization control, procedure-level coding review, and high-value AR protection',
   description: 'Hired Billing Support provides specialty-aware orthopedic billing — prior authorization control, surgical claim management, procedure coding accuracy, high-value AR protection, and denial management for orthopedic and musculoskeletal practices.',
   hero: {
-    eyebrow: 'Who We Serve · Medical Specialties · Orthopedic',
-    title: 'Orthopedic care generates the highest-value claims in your practice. <em>It also generates the highest-cost denials when billing is not managed precisely.</em>',
-    subtitle: 'A surgical claim denied for a missing authorization is not a minor billing error — it is a multi-thousand-dollar revenue gap that requires clinical documentation review, payer escalation, and weeks of appeal work to resolve. Orthopedic billing requires the kind of systematic precision that prevents those denials before they happen.',
-    description: 'Hired Billing Support manages orthopedic billing with the procedure-level attention and authorization discipline that high-value specialty claims demand — protecting revenue before it is at risk, not recovering it after it is already denied.',
+    eyebrow: 'Orthopedic Billing',
+    title: ' One missing authorization can turn a $15,000 claim  <em>into a $0 payment.</em>',
+    subtitle: 'Orthopedic billing is high-stakes. Surgical authorizations, global period management, and modifier accuracy are not areas where a billing error is a minor inconvenience — it is a major revenue event.',
+    description: 'HBS manages orthopedic billing with the specialty precision that high-value claims require.',
   },
   sections: {
     pain: {

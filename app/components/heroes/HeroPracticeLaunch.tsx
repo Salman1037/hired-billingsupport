@@ -1,6 +1,12 @@
 'use client';
 
-const HeroPracticeLaunch = () => {
+import { SolutionData } from '@/app/data/solutionTypes';
+
+interface HeroProps {
+  solution: SolutionData;
+}
+
+const HeroPracticeLaunch = ({ solution }: HeroProps) => {
   const styles = `
     .practice-launch-hero-card {
       background: var(--ink);
@@ -152,28 +158,25 @@ const HeroPracticeLaunch = () => {
         </div>
         <div className="hero-inner">
           <div>
-            <div className="eyebrow">Practice Management · Practice Launch</div>
-            <h1 className="display">
-              Your practice will be clinically ready<br />
-              <em>long before it is operationally ready. That gap costs more than most providers expect.</em>
-            </h1>
-            <p className="sub">
-              Clinical preparation and operational preparation move on completely different timelines. Credentialing takes months. Payer enrollment takes months. Billing setup, intake workflow, EHR configuration, and team training all take time that does not automatically happen while you are focused on clinical readiness.
-            </p>
-            <p className="lede">
-              Hired Billing Support helps practices build the operational foundation they need before patient volume starts — coordinating credentialing, payer enrollment, billing workflow setup, admin structure, and RCM launch planning so the practice opens on a stronger backend than most providers start with.
-            </p>
-            <div className="hero-actions">
-              <a href="#cta" className="btn btn-primary btn-lg">
-                Plan my practice launch
-                <svg className="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <path d="M5 12h14M13 5l7 7-7 7" />
-                </svg>
-              </a>
-              <a href="#pain" className="btn btn-ghost btn-lg">
-                See what launch covers
-              </a>
-            </div>
+            {solution.hero && (
+              <>
+                <div className="eyebrow">{solution.hero.eyebrow}</div>
+                <h1 className="display" dangerouslySetInnerHTML={{ __html: solution.hero.title }} />
+                <p className="sub">{solution.hero.subtitle}</p>
+                <p className="lede">{solution.hero.description}</p>
+                <div className="hero-actions">
+                  <a href="#cta" className="btn btn-primary btn-lg">
+                    Plan my practice launch
+                    <svg className="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                      <path d="M5 12h14M13 5l7 7-7 7" />
+                    </svg>
+                  </a>
+                  <a href="#pain" className="btn btn-ghost btn-lg">
+                    See what launch covers
+                  </a>
+                </div>
+              </>
+            )}
           </div>
           <div className="practice-launch-hero-card">
             <h4>— Practice Launch Readiness · Pre-Open Checklist</h4>

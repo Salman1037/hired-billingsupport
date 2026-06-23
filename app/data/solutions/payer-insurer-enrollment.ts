@@ -5,10 +5,10 @@ export const payerInsurerEnrollment: SolutionData = {
   subtitle: 'Manage payer and insurer enrollment from application to active billing status',
   description: 'A provider who cannot bill a payer cannot serve that payer\'s patients. Enrollment is access. Hired Billing Support manages the full payer enrollment process — from commercial applications and Medicare/Medicaid enrollment through follow-up, portal management, EFT/ERA setup, and status tracking.',
   hero: {
-    eyebrow: 'Practice Management · Payer & Insurer Enrollment',
-    title: 'A provider who cannot bill a payer<br><em>cannot serve that payer\'s patients. Enrollment is access.</em>',
-    subtitle: 'Payer enrollment is not a back-office formality. It determines which patients your practice can see, which plans you can bill, and how quickly new providers and services generate revenue.',
-    description: 'Hired Billing Support manages the full payer enrollment process — from commercial applications and Medicare/Medicaid enrollment through follow-up, portal management, EFT/ERA setup, and status tracking — so your practice expands payer access without the administrative overhead.',
+    eyebrow: 'Payer Enrollment',
+    title: 'If you are not enrolled, you cannot get paid no<em>matter how well you bill.</em>',
+    subtitle: 'Payer enrollment gaps block revenue before a single claim is submitted. Most practices do not know which payers their providers are missing until a claim comes back unprocessable.',
+    description: 'HBS manages enrollment from application to approval and flags every gap before it costs a billing cycle.',
     card: {
       title: 'Payer Enrollment Tracker · Active Applications',
       rows: [

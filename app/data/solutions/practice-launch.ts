@@ -5,10 +5,10 @@ export const practiceLaunch: SolutionData = {
   subtitle: 'Operational infrastructure coordinated before your practice opens — credentialing, payer enrollment, billing setup, intake workflow, and RCM launch planning so the backend is ready when patient volume arrives.',
   description: 'Most practices open clinically ready but operationally uncertain. Hired Billing Support coordinates the full pre-launch infrastructure — credentialing, payer enrollment, billing system setup, front desk workflow, and post-launch support — so your practice opens on an operational foundation that supports billing from day one.',
   hero: {
-    eyebrow: 'Practice Management · Practice Launch',
-    title: 'Your practice will be clinically ready long before<br><em>it is operationally ready. That gap costs more than most providers expect.</em>',
-    subtitle: 'Clinical preparation and operational preparation move on completely different timelines. Credentialing takes months. Payer enrollment takes months. Billing setup, intake workflow, EHR configuration, and team training all take time that does not automatically happen while you are focused on clinical readiness.',
-    description: 'Hired Billing Support helps practices build the operational foundation they need before patient volume starts — coordinating credentialing, payer enrollment, billing workflow setup, admin structure, and RCM launch planning so the practice opens on a stronger backend than most providers start with.',
+    eyebrow: ' Practice Launch',
+    title: 'Your practice opens once. The billing foundation needs<em>to be right from day one.</em>',
+    subtitle: 'Credentialing, payer enrollment, EHR setup, and billing workflows take 90–120 days to establish properly. Practices that start late spend their first six months recovering instead of collecting.',
+    description: 'HBS builds your billing and operations foundation before you see your first patient.',
     card: {
       title: 'Practice Launch Readiness · Pre-Open Checklist',
       checklist: [

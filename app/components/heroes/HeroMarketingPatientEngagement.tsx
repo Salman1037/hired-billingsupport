@@ -1,8 +1,25 @@
 'use client';
 
-const HeroMarketingPatientEngagement = () => {
+import { useEffect } from 'react';
+import { SolutionData } from '@/app/data/solutionTypes';
+
+interface HeroProps {
+  solution: SolutionData;
+}
+
+export default function HeroMarketingPatientEngagement({ solution }: HeroProps) {
+  useEffect(() => {
+    // Set staggered animation delays for journey cards
+    const cards = document.querySelectorAll('[data-animated="journey-card"]');
+    cards.forEach((card, index) => {
+      (card as HTMLElement).style.setProperty('--reveal-delay', `${0.1 + index * 0.14}s`);
+    });
+  }, []);
+
   const styles = `
-    .marketing-engagement-hero-card {
+    /* Patient Engagement Journey Card */
+    /* All hero layout classes (.hero, .hero-inner, .display, .lede, .sub, .hero-actions, .reveal, etc.) are in globals.css */
+.marketing-engagement-hero-card {
       background: var(--ink);
       color: var(--paper);
       border-radius: 12px;
@@ -27,6 +44,10 @@ const HeroMarketingPatientEngagement = () => {
       gap: 12px;
       padding: 9px 0;
       border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      opacity: 0;
+      transform: translateY(20px);
+      animation: reveal 0.9s var(--ease) forwards;
+      animation-delay: var(--reveal-delay, 0s);
     }
 
     .journey-card:last-of-type {
@@ -116,7 +137,7 @@ const HeroMarketingPatientEngagement = () => {
       letter-spacing: 0.1em;
     }
 
-    .gap-callout {
+.gap-callout {
       margin-top: 18px;
       padding: 14px 16px;
       background: rgba(0, 200, 150, 0.08);
@@ -138,6 +159,19 @@ const HeroMarketingPatientEngagement = () => {
       font-weight: 500;
       color: var(--paper);
     }
+
+    .hero-visual {
+      animation: reveal 0.9s var(--ease) forwards;
+      animation-delay: 0.55s;
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    @media(max-width:1024px) {
+      .hero-visual {
+        display: none;
+      }
+    }
   `;
 
   return (
@@ -157,63 +191,62 @@ const HeroMarketingPatientEngagement = () => {
         </div>
         <div className="hero-inner">
           <div>
-            <div className="eyebrow">Advanced Solutions · Marketing & Patient Engagement</div>
-            <h1 className="display">
-              Marketing generates the inquiry.<br />
-              <em>Operations determines whether it becomes a patient.</em>
-            </h1>
-            <p className="sub">
-              Most practices invest in marketing and then lose a portion of that investment in the follow-up gap — the hours between when a patient reaches out and when someone actually responds, schedules, and confirms their appointment.
-            </p>
-            <p className="lede">
-              Hired Billing Support connects patient marketing with the operational follow-through that converts interest into appointments, appointments into visits, and visits into long-term patient relationships.
-            </p>
-            <div className="hero-actions">
-              <a href="#cta" className="btn btn-primary btn-lg">
-                Improve patient engagement
-                <svg className="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <path d="M5 12h14M13 5l7 7-7 7" />
-                </svg>
-              </a>
-              <a href="#pain" className="btn btn-ghost btn-lg">
-                See where patients fall through
-              </a>
-            </div>
+            {solution.hero && (
+              <>
+                <div className="eyebrow reveal reveal-1">{solution.hero.eyebrow}</div>
+                <h1 className="display reveal reveal-2" dangerouslySetInnerHTML={{ __html: solution.hero.title }} />
+                <p className="lede reveal reveal-3">{solution.hero.subtitle}</p>
+                <p className="sub reveal reveal-3">{solution.hero.description}</p>
+                <div className="hero-actions reveal reveal-4">
+                  <a href="#cta" className="btn btn-primary btn-lg">
+                    Improve patient engagement
+                    <svg className="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                      <path d="M5 12h14M13 5l7 7-7 7" />
+                    </svg>
+                  </a>
+                  <a href="#pain" className="btn btn-ghost btn-lg">
+                    See where patients fall through
+                  </a>
+                </div>
+              </>
+            )}
           </div>
-          <div className="marketing-engagement-hero-card">
+          {solution.hero && (
+          <div className="hero-visual">
+            <div className="marketing-engagement-hero-card">
             <h4>— Patient Engagement Snapshot · 30-day</h4>
             
-            <div className="journey-card">
+              <div className="journey-card" data-animated="journey-card">
               <div className="journey-dot jdot-done"></div>
               <span className="journey-text">Website inquiry received — same-day response</span>
               <span className="journey-tag jtag-done">Done</span>
             </div>
             
-            <div className="journey-card">
+            <div className="journey-card" data-animated="journey-card">
               <div className="journey-dot jdot-done"></div>
               <span className="journey-text">Follow-up call — appointment offered same call</span>
               <span className="journey-tag jtag-done">Done</span>
             </div>
             
-            <div className="journey-card">
+            <div className="journey-card" data-animated="journey-card">
               <div className="journey-dot jdot-done"></div>
               <span className="journey-text">Appointment confirmation + intake forms sent</span>
               <span className="journey-tag jtag-done">Done</span>
             </div>
             
-            <div className="journey-card">
+            <div className="journey-card" data-animated="journey-card">
               <div className="journey-dot jdot-done"></div>
               <span className="journey-text">Insurance verified pre-visit — no surprises</span>
               <span className="journey-tag jtag-done">Done</span>
             </div>
             
-            <div className="journey-card">
+            <div className="journey-card" data-animated="journey-card">
               <div className="journey-dot jdot-active"></div>
               <span className="journey-text">Post-visit recall — 6-week follow-up scheduled</span>
               <span className="journey-tag jtag-active">In progress</span>
             </div>
             
-            <div className="journey-card">
+            <div className="journey-card" data-animated="journey-card">
               <div className="journey-dot jdot-pending"></div>
               <span className="journey-text">Review request — post-visit satisfaction follow-up</span>
               <span className="journey-tag jtag-pending">Queued</span>
@@ -241,10 +274,10 @@ const HeroMarketingPatientEngagement = () => {
               <div className="gc-val">Avg response time: 4 hrs → 38 min. Conversion up 22%.</div>
             </div>
           </div>
+          </div>
+          )}
         </div>
       </section>
     </>
   );
-};
-
-export default HeroMarketingPatientEngagement;
+}

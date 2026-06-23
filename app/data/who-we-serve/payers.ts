@@ -6,10 +6,10 @@ export const payers: SolutionData = {
   description: 'Hired Billing Support provides scalable backend operations support for healthcare payers and health plans — claims queue management, authorization support, provider inquiry handling, enrollment processing, and operational throughput without proportional headcount increases.',
 
   hero: {
-    eyebrow: 'Who We Serve · Other Organizations · Healthcare Payers',
-    title: 'Payer operations break down when the processing queue grows faster than the team that manages it.',
-    subtitle: 'Claims that need review, authorizations that need follow-up, providers calling for status updates, enrollment documents requiring indexing, eligibility questions building up in the queue — payer backend operations do not fail dramatically. They slow down incrementally, and the cost compounds across every stakeholder who is waiting.',
-    description: 'Hired Billing Support acts as your backend processing engine — providing scalable operations support that adapts to your queue volumes, your internal systems, and your workflows — so your core team manages the decisions while we manage the volume.',
+    eyebrow: 'Healthcare Payers',
+    title: 'Payer operations break down when the queue<em> grows fasterthan the team processing it.</em>',
+    subtitle: 'Claims queues, authorization backlogs, provider inquiries, enrollment documentation — payer backend operations do not fail dramatically. They slow down incrementally, and the cost compounds across every stakeholder waiting.',
+    description: 'HBS acts as your backend processing engine — scalable, systematic, and adapted to your payer workflow.',
   },
 
   sections: {

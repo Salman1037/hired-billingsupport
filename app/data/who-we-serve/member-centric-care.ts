@@ -6,10 +6,10 @@ export const memberCentricCare: SolutionData = {
   description: 'Care coordination, member engagement, and value-based care outcomes depend on the reliability of every administrative workflow behind the clinical interaction.',
   
   hero: {
-    eyebrow: 'Who We Serve · Member-Centric Care Organizations',
-    title: 'Member experience is built in the front office.<br><em>It is sustained or broken in the backend.</em>',
-    subtitle: 'Care coordination, member engagement, and value-based care outcomes depend on more than clinical quality. They depend on the reliability of every administrative workflow behind the clinical interaction — eligibility, authorization, referral, follow-up, documentation, and communication — running consistently enough that members never feel the gaps.',
-    description: 'Hired Billing Support helps member-centric care organizations coordinate the backend workflows that make member experience consistent — eligibility, referral tracking, prior authorization, documentation support, patient communication, and operational reporting — so care teams can focus on the member, not the process.',
+    eyebrow: 'Member-Centric Care',
+    title: 'Care coordination only works when the operations<em>behind it do too.</em>',
+    subtitle: 'Member-focused care models depend on referral tracking, authorization management, eligibility accuracy, and billing alignment across multiple care team touchpoints — any gap affects both care and revenue.',
+    description: 'HBS supports the operational layer that keeps member-centric care models running without administrative breakdown.',
   },
 
   sections: {

@@ -6,10 +6,10 @@ export const virtualHealthcareSolutions: SolutionData = {
   description: 'Hired Billing Support provides virtual healthcare operations support — telehealth coordination, virtual medical assistants, remote scheduling, eligibility verification, EHR task management, and care coordination inside your existing workflow.',
   
   hero: {
-    eyebrow: 'Advanced Solutions · Virtual Healthcare',
-    title: 'Virtual care works when the workflow behind it works.<br><em>Most of the time, the workflow is the problem.</em>',
-    subtitle: 'Telehealth adds clinical access. It also adds scheduling complexity, documentation load, eligibility requirements, patient reminders, technical coordination, and follow-up tasks — all of which require the same operational infrastructure as in-person care, managed remotely.',
-    description: 'Hired Billing Support provides virtual healthcare operations support that works like an extension of your internal team — inside your EHR, inside your workflow, aligned with your providers\' daily schedule and your patients\' expectations.',
+    eyebrow: 'Virtual Healthcare Solutions',
+    title: 'Healthcare-trained virtual support inside<em>your workflow, not beside it.</em>',
+    subtitle: 'A general virtual assistant is not the same as a healthcare-trained operations specialist. Your EHR, your payer portals, your prior auth queues — these require context that most VA services do not have.',
+    description: 'HBS provides virtual support that works inside your clinical and administrative systems from day one.',
     card: {
       title: '— Virtual Care Operations · Daily Queue',
       items: [

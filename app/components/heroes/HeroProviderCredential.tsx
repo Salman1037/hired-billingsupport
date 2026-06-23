@@ -1,6 +1,12 @@
 'use client';
 
-const HeroProviderCredential = () => {
+import { SolutionData } from '@/app/data/solutionTypes';
+
+interface HeroProps {
+  solution: SolutionData;
+}
+
+const HeroProviderCredential = ({ solution }: HeroProps) => {
   const styles = `
     .provider-cred-hero-card {
       background: var(--ink);
@@ -188,28 +194,25 @@ const HeroProviderCredential = () => {
         </div>
         <div className="hero-inner">
           <div>
-            <div className="eyebrow">Practice Management · Provider Credentialing</div>
-            <h1 className="display">
-              Every day a provider is not credentialed<br />
-              <em>is a day your practice is not getting paid for their work.</em>
-            </h1>
-            <p className="sub">
-              Credentialing delays are not paperwork problems. They are revenue problems. Every week a provider sits outside the payer network is a week of patient visits that cannot generate a billable claim.
-            </p>
-            <p className="lede">
-              Hired Billing Support manages the full credentialing workflow — from collecting provider documents and setting up CAQH to submitting payer applications, following up on status, and maintaining credentialing files so providers stay billing-ready.
-            </p>
-            <div className="hero-actions">
-              <a href="#cta" className="btn btn-primary btn-lg">
-                Start credentialing review
-                <svg className="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <path d="M5 12h14M13 5l7 7-7 7" />
-                </svg>
-              </a>
-              <a href="#pain" className="btn btn-ghost btn-lg">
-                See how we manage it
-              </a>
-            </div>
+            {solution.hero && (
+              <>
+                <div className="eyebrow">{solution.hero.eyebrow}</div>
+                <h1 className="display" dangerouslySetInnerHTML={{ __html: solution.hero.title }} />
+                <p className="sub">{solution.hero.subtitle}</p>
+                <p className="lede">{solution.hero.description}</p>
+                <div className="hero-actions">
+                  <a href="#cta" className="btn btn-primary btn-lg">
+                    Start credentialing review
+                    <svg className="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                      <path d="M5 12h14M13 5l7 7-7 7" />
+                    </svg>
+                  </a>
+                  <a href="#pain" className="btn btn-ghost btn-lg">
+                    See how we manage it
+                  </a>
+                </div>
+              </>
+            )}
           </div>
           <div className="provider-cred-hero-card">
             <h4>— Credentialing Status Board · Active Providers</h4>

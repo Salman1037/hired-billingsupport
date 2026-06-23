@@ -1,20 +1,13 @@
 'use client';
 
 import React from 'react';
+import { SolutionData } from '@/app/data/solutionTypes';
 
-interface HeroMedicalBillingRcmProps {
-  eyebrow?: string;
-  title?: string;
-  subtitle?: string;
-  description?: string;
+interface HeroProps {
+  solution: SolutionData;
 }
 
-const HeroMedicalBillingRcm: React.FC<HeroMedicalBillingRcmProps> = ({
-  eyebrow = 'For medical practices & specialty clinics',
-  title = 'Your production looks fine on paper. Your collections tell a different story.',
-  subtitle = 'You are seeing patients. Charges are being entered. Claims are going out. And yet the money in the bank never quite matches the work you did this month. That gap is not accidental — and it is not unfixable.',
-  description = 'Hired Billing Support becomes your embedded medical billing and RCM team — working inside your EHR, following your workflow, and taking ownership of every step between eligibility and final payment.'
-}) => {
+export default function HeroMedicalBillingRcm({ solution }: HeroProps) {
   return (
     <section className="hero">
       <div className="hero-bg">
@@ -45,32 +38,39 @@ const HeroMedicalBillingRcm: React.FC<HeroMedicalBillingRcmProps> = ({
       </div>
       <div className="hero-inner">
         <div>
-          <div className="eyebrow reveal reveal-1">{eyebrow}</div>
-          <h1 className="display reveal reveal-2">
-            {title}
-          </h1>
-          <p className="sub reveal reveal-3">{subtitle}</p>
-          <p className="lede reveal reveal-3">{description}</p>
-          <div className="hero-actions reveal reveal-4">
-            <a href="#cta" className="btn btn-primary btn-lg">
-              Review my billing workflow
-              <svg
-                className="arrow"
-                width="14"
-                height="14"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-              >
-                <path d="M5 12h14M13 5l7 7-7 7" />
-              </svg>
-            </a>
-            <a href="#pain" className="btn btn-ghost btn-lg">
-              See where revenue leaks
-            </a>
-          </div>
+          {solution.hero && (
+            <>
+              <div className="eyebrow reveal reveal-1">{solution.hero.eyebrow}</div>
+              <h1 className="display reveal reveal-2" style={{ fontSize: "clamp(38px, 5vw, 64px)", marginTop: "20px" }} dangerouslySetInnerHTML={{ __html: solution.hero.title }} />
+              <p className="sub reveal reveal-3" style={{ fontSize: "18px", lineHeight: "1.6", color: "var(--ink-mute)", marginTop: "24px" }}>
+                {solution.hero.subtitle}
+              </p>
+              <p className="lede reveal reveal-3" style={{ fontSize: "18px", lineHeight: "1.6", color: "var(--ink-mute)", marginTop: "16px" }}>
+                {solution.hero.description}
+              </p>
+              <div className="hero-actions reveal reveal-4" style={{ marginTop: "32px" }}>
+                <a href="#cta" className="btn btn-primary btn-lg">
+                  Review my billing workflow
+                  <svg
+                    className="arrow"
+                    width="14"
+                    height="14"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                  >
+                    <path d="M5 12h14M13 5l7 7-7 7" />
+                  </svg>
+                </a>
+                <a href="#pain" className="btn btn-ghost btn-lg">
+                  See where revenue leaks
+                </a>
+              </div>
+            </>
+          )}
         </div>
+        {solution.hero && (
         <div className="reveal reveal-4" style={{ animationDelay: '0.55s' }}>
         <div className="hero-card">
   <h4>
@@ -150,9 +150,8 @@ const HeroMedicalBillingRcm: React.FC<HeroMedicalBillingRcmProps> = ({
   </div>
 </div>
         </div>
+        )}
       </div>
     </section>
   );
-};
-
-export default HeroMedicalBillingRcm;
+}

@@ -9,10 +9,10 @@ export const medicalAuditing: SolutionData = {
     'Hired Billing Support conducts structured medical billing and coding audits — identifying revenue leakage, documentation risk, coding errors, and compliance exposure — and delivering findings your leadership team can actually act on.',
   hero: {
     eyebrow: 'Medical Auditing',
-    title: 'Your billing is performing well enough that nobody is looking closely.<br><em>That is exactly when you need someone to look closely.</em>',
-    subtitle: 'Revenue leakage, coding errors, documentation gaps, and payer compliance risks do not announce themselves. They build quietly — until a payer audit, a denial pattern, or a reimbursement shortfall makes them impossible to ignore.',
+    title: 'The billing problems you cannot see are <em>the ones that cost the most.</em>',
+    subtitle: 'A billing audit is not a sign something is wrong. It is how practices find out what is wrong before a payer does. Documentation gaps, coding patterns, and compliance risks are easier to fix internally than externally.',
     description:
-      'Hired Billing Support conducts proactive medical billing and coding audits — finding the issues your internal team does not have time to find, and delivering the root-cause analysis your leadership needs to act.',
+      'HBS conducts billing and coding audits that identify revenue leakage and compliance exposure before they escalate.',
     card: {
       title: '— Audit Findings Summary · Last Review',
       stats: [

@@ -1,6 +1,12 @@
 'use client';
 
-const HeroAnalyticsReporting = () => {
+import { SolutionData } from '@/app/data/solutionTypes';
+
+interface HeroProps {
+  solution: SolutionData;
+}
+
+const HeroAnalyticsReporting = ({ solution }: HeroProps) => {
   const styles = `
     .analytics-hero-card {
       background: var(--ink);
@@ -155,30 +161,32 @@ const HeroAnalyticsReporting = () => {
         </div>
         <div className="hero-inner">
           <div>
-            <div className="eyebrow">Advanced Solutions · Analytics & Reporting</div>
-            <h1 className="display">
-              Your practice generates data every day.<br />
-              <em>Most of it is not being turned into decisions.</em>
-            </h1>
-            <p className="sub">
-              Your EHR has reports. Your billing software has dashboards. Your clearinghouse has claim analytics. And yet leadership still cannot answer with confidence: where is revenue leaking, which payer is causing the most problems, and what changed in AR this month compared to last?
-            </p>
-            <p className="lede">
-              Hired Billing Support turns scattered healthcare operations data into structured reporting that gives leadership the visibility to manage revenue, control operational risk, and make better decisions — consistently, not just when a crisis makes it necessary.
-            </p>
-            <div className="hero-actions">
-              <a href="#cta" className="btn btn-primary btn-lg">
-                Improve reporting visibility
-                <svg className="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <path d="M5 12h14M13 5l7 7-7 7" />
-                </svg>
-              </a>
-              <a href="#pain" className="btn btn-ghost btn-lg">
-                See what data is missing
-              </a>
-            </div>
+            {solution.hero && (
+              <>
+                <div className="eyebrow reveal reveal-1">{solution.hero.eyebrow}</div>
+                <h1 className="display reveal reveal-2" style={{ fontSize: "clamp(38px, 5vw, 64px)", marginTop: "20px" }} dangerouslySetInnerHTML={{ __html: solution.hero.title }} />
+                <p className="sub reveal reveal-3" style={{ fontSize: "18px", lineHeight: "1.6", color: "var(--ink-mute)", marginTop: "24px" }}>
+                  {solution.hero.subtitle}
+                </p>
+                <p className="lede reveal reveal-3" style={{ fontSize: "18px", lineHeight: "1.6", color: "var(--ink-mute)", marginTop: "16px" }}>
+                  {solution.hero.description}
+                </p>
+                <div className="hero-actions reveal reveal-4" style={{ marginTop: "32px" }}>
+                  <a href="#cta" className="btn btn-primary btn-lg">
+                    Improve reporting visibility
+                    <svg className="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                      <path d="M5 12h14M13 5l7 7-7 7" />
+                    </svg>
+                  </a>
+                  <a href="#pain" className="btn btn-ghost btn-lg">
+                    See what data is missing
+                  </a>
+                </div>
+              </>
+            )}
           </div>
-          <div className="analytics-hero-card">
+          {solution.hero && (
+            <div className="analytics-hero-card">
             <h4>— Practice Analytics Dashboard · Monthly</h4>
             
             <div className="kpi-row">
@@ -250,7 +258,8 @@ const HeroAnalyticsReporting = () => {
               <div className="gc-lbl">— This month's finding</div>
               <div className="gc-val">Denial rate above target — Cigna auth-related. Fix in progress.</div>
             </div>
-          </div>
+            </div>
+          )}
         </div>
       </section>
     </>

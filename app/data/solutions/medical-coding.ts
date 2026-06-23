@@ -9,10 +9,10 @@ export const medicalCoding: SolutionData = {
     'Coding errors do not announce themselves. They show up as denials, underpayments, and compliance risk — weeks after the visit, long after the clinical moment that created them.',
   hero: {
     eyebrow: 'Medical Coding',
-    title: 'A clean claim starts with accurate coding.<br><em>Yours may be leaving the door before anyone has checked.</em>',
-    subtitle: 'Coding errors do not announce themselves. They show up as denials, underpayments, and compliance risk — weeks after the visit, long after the clinical moment that created them.',
+    title: 'A wrong code does not just get denied.<em> It gets underpaid  or flagged.</em>',
+    subtitle: ' Coding errors cost practices revenue in two directions: undercoding leaves money on the table, overcoding creates compliance exposure. Most practices never see either problem clearly until it is expensive.',
     description:
-      'Hired Billing Support embeds medical coding support directly into your billing workflow — reviewing codes before submission, aligning documentation with billed services, and reducing the coding errors that quietly drain revenue every month.',
+      'HBS provides specialty-aware coding review that catches errors before claims submit and before auditors do.',
     card: {
       title: '— Coding Accuracy · 30-day view',
       stats: [
