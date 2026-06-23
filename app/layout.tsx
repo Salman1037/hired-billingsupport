@@ -5,6 +5,7 @@ import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 import ScrollAnimations from './components/ScrollAnimations';
 import ScrollEffects from "./components/ScrollEffects";
+import ScrollToTop from './components/ScrollToTop';
 import './globals.css';
 import HBSChatbot from "./components/HBSChatbot";
 
@@ -44,6 +45,7 @@ export default function RootLayout({
     >
     
       <body>
+        <ScrollToTop />
         <Navigation />
         <main style={{ paddingTop: '80px', minHeight: '100vh' }}>
           {children}
