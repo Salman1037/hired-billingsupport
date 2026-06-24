@@ -47,8 +47,8 @@ export default function HeroRcmManagement({ solution }: HeroProps) {
                 dangerouslySetInnerHTML={{ __html: solution.hero.title }}
               >
               </h1>
-              <p className="lede reveal reveal-3" style={{ fontSize: "18px", lineHeight: "1.6", color: "var(--ink-mute)", marginTop: "16px" }}>{solution.hero.subtitle}</p>
-              <p className="sub reveal reveal-3" style={{ fontSize: "18px", lineHeight: "1.6", color: "var(--ink-mute)", marginTop: "24px" }}>{solution.hero.description}</p>
+              <p className="sub reveal reveal-3" style={{ fontSize: "18px", lineHeight: "1.6", color: "var(--ink-mute)", marginTop: "24px" }}>{solution.hero.subtitle}</p>
+              <p className="lede reveal reveal-3" style={{ fontSize: "18px", lineHeight: "1.6", color: "var(--ink-mute)", marginTop: "16px" }}>{solution.hero.description}</p>
               <div className="hero-actions reveal reveal-4" style={{ marginTop: "32px" }}>
                 <a href="#cta" className="btn btn-primary btn-lg">
                   Review my revenue cycle

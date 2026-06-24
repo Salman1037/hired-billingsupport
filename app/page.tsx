@@ -413,32 +413,70 @@ export default function Home() {
             <div className="eyebrow">In their own words</div>
             <h2 className="display">From physicians who got their <em>evenings back.</em></h2>
           </div>
-          <div className="testi-wrap fade-in">
-            {[
-              {
-                quote: 'Partnering with Hired Billing Support gave us peace of mind. Our billing is cleaner, our staff works on patient care instead of paperwork, and we are now capturing more appointments than ever.',
-                avatar: 'RE',
-                name: 'Dr Ruth - Edwin DMD/MS',
-                role: 'Diplomate of American Board of Periodontology'
-              },
-              {
-                quote: 'Working with HBS has been a game-changer. The team is professional, responsive, and has streamlined our billing operations seamlessly.',
-                avatar: 'HM',
-                name: 'Herma Thompson PMHNP-BC',
-                role: 'Nurse Practitioner - Psych/Mental Health'
-              }
-            ].map((testi, idx) => (
-              <div key={idx} className="testi">
-                <div className="testi-quote">{testi.quote}</div>
-                <div className="testi-attr">
-                  <div className="testi-avatar">{testi.avatar}</div>
-                  <div>
-                    <div className="testi-name">{testi.name}</div>
-                    <div className="testi-role">{testi.role}</div>
+          <div className="testimonial-slider fade-in">
+            <div className="testi-track">
+              {[
+                {
+                  quote: 'Partnering with Hired Billing Support gave us peace of mind. Our billing is cleaner, our staff works on patient care instead of paperwork, and we are now capturing more appointments than ever.',
+                  avatar: 'RE',
+                  name: 'Dr Ruth - Edwin DMD/MS',
+                  role: 'Diplomate of American Board of Periodontology'
+                },
+                {
+                  quote: 'Working with HBS has been a game-changer. The team is professional, responsive, and has streamlined our billing operations seamlessly.',
+                  avatar: 'HM',
+                  name: 'Herma Thompson PMHNP-BC',
+                  role: 'Nurse Practitioner - Psych/Mental Health'
+                },
+                {
+                  quote: 'HBS identified three payers underpaying our E&M claims for over a year. Recovered $40,000 in one quarter.',
+                  avatar: 'JW',
+                  name: 'James Whitfield MBA, CMPE',
+                  role: 'Certified Medical Practice Executive'
+                },
+                {
+                  quote: 'Prior auth denials dropped from 11% to under 3% in 60 days. HBS tracks every authorization before it expires.',
+                  avatar: 'RM',
+                  name: 'Dr. Rehan Malik MD, FACC',
+                  role: 'Interventional Cardiologist'
+                },
+                {
+                  quote: 'Partnering with Hired Billing Support gave us peace of mind. Our billing is cleaner, our staff works on patient care instead of paperwork, and we are now capturing more appointments than ever.',
+                  avatar: 'RE',
+                  name: 'Dr Ruth - Edwin DMD/MS',
+                  role: 'Diplomate of American Board of Periodontology'
+                },
+                {
+                  quote: 'Working with HBS has been a game-changer. The team is professional, responsive, and has streamlined our billing operations seamlessly.',
+                  avatar: 'HM',
+                  name: 'Herma Thompson PMHNP-BC',
+                  role: 'Nurse Practitioner - Psych/Mental Health'
+                },
+                {
+                  quote: 'HBS identified three payers underpaying our E&M claims for over a year. Recovered $40,000 in one quarter.',
+                  avatar: 'JW',
+                  name: 'James Whitfield MBA, CMPE',
+                  role: 'Certified Medical Practice Executive'
+                },
+                {
+                  quote: 'Prior auth denials dropped from 11% to under 3% in 60 days. HBS tracks every authorization before it expires.',
+                  avatar: 'RM',
+                  name: 'Dr. Rehan Malik MD, FACC',
+                  role: 'Interventional Cardiologist'
+                }
+              ].map((testi, idx) => (
+                <div key={idx} className="testi">
+                  <div className="testi-quote">{testi.quote}</div>
+                  <div className="testi-attr">
+                    <div className="testi-avatar">{testi.avatar}</div>
+                    <div>
+                      <div className="testi-name">{testi.name}</div>
+                      <div className="testi-role">{testi.role}</div>
+                    </div>
                   </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       </section>

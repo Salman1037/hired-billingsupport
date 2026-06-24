@@ -1,5 +1,6 @@
 // app/layout.tsx
 import type { Metadata } from 'next';
+import Script from 'next/script';
 import { Fraunces, Inter_Tight, JetBrains_Mono } from 'next/font/google';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
@@ -54,6 +55,7 @@ export default function RootLayout({
         </main>
         <Footer />
         <HBSChatbot />
+        <Script src="/scripts/testimonialsSlider.js" strategy="lazyOnload" />
       </body>
     </html>
   );

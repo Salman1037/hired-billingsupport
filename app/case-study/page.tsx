@@ -8,6 +8,7 @@ export default function CaseStudyPage() {
       id: 1,
       slug: 'dr-ruth-parkin-edwin',
       quote: "Partnering with Hired Billing Support gave us peace of mind. Our billing is cleaner, our staff works on patient care instead of paperwork, and we are now capturing more appointments than ever.",
+      avatar: 'RE',
       name: "Dr Ruth Parkin-Edwin",
       title: "DMD/MS",
       credential: "Diplomate of American Board of Periodontology",
@@ -17,6 +18,7 @@ export default function CaseStudyPage() {
       id: 2,
       slug: 'thompson-mental-health',
       quote: "Working with HBS has been a game-changer. The team is professional, responsive, and has streamlined our billing operations seamlessly.",
+      avatar: 'HM',
       name: "Herma Thompson",
       title: "PMHNP-BC",
       credential: "Nurse Practitioner - Psych/Mental Health",
@@ -26,6 +28,7 @@ export default function CaseStudyPage() {
       id: 3,
       slug: 'sheikh-internal-medicine',
       quote: "Remote staffing solution by HBS has freed the resources of the practice, enabling us to spend more time at the bedside and enhance the efficiency of the whole process.",
+      avatar: 'AS',
       name: "Dr Afreen Sheikh",
       title: "MD",
       credential: "Internal Medicine",
@@ -35,6 +38,7 @@ export default function CaseStudyPage() {
       id: 4,
       slug: 'genesis-internal-medicine',
       quote: "With the help of HBS their support and expertise we have achieved a lot more in practice.",
+      avatar: 'LH',
       name: "Dr. Layla Hassan",
       title: "MD",
       credential: "Genesis Internal Medicine",
@@ -232,7 +236,7 @@ export default function CaseStudyPage() {
         .testimonials-grid {
           display: grid;
           grid-template-columns: repeat(2, 1fr);
-          gap: 24px;
+          gap: 40px;
           max-width: var(--max);
           margin: 0 auto;
         }
@@ -245,11 +249,11 @@ export default function CaseStudyPage() {
 
         /* Testimonial Card (LIGHT ON DARK) */
         .testimonial-card {
-          background: var(--white);
+          background: var(--paper);
           color: var(--ink);
           border: 1px solid var(--paper-line);
           border-radius: var(--radius-lg);
-          padding: 32px;
+          padding: 48px;
           transition: transform 0.3s var(--ease), box-shadow 0.3s var(--ease);
           position: relative;
           overflow: hidden;
@@ -262,86 +266,75 @@ export default function CaseStudyPage() {
 
         .testimonial-quote {
           font-family: var(--serif);
-          font-size: clamp(18px, 1.4vw, 21px);
+          font-size: clamp(20px, 1.8vw, 24px);
           font-weight: 400;
-          line-height: 1.5;
+          line-height: 1.4;
           letter-spacing: -0.01em;
           color: var(--ink);
-          margin-bottom: 24px;
+          margin-bottom: 32px;
+          
           position: relative;
+          z-index: 1;
         }
 
         .testimonial-quote::before {
           content: '"';
           font-family: var(--serif);
-          font-size: 80px;
-          line-height: 1;
+          font-size: 120px;
+          line-height: 0.02;
           color: var(--signal);
           opacity: 0.6;
           position: absolute;
-          top: -10px;
-          left: -8px;
+         
         }
 
         .testimonial-author {
           display: flex;
-          flex-direction: column;
-          gap: 4px;
-          margin-bottom: 20px;
+          align-items: center;
+          gap: 14px;
+        }
+
+        .author-avatar {
+          width: 44px;
+          height: 44px;
+          border-radius: 50%;
+          background: var(--ink);
+          color: var(--paper);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-family: var(--serif);
+          font-size: 16px;
+          font-weight: 500;
+          flex-shrink: 0;
         }
 
         .author-name {
           font-family: var(--serif);
-          font-size: 18px;
-          font-weight: 500;
+          font-size: 14px;
+          font-weight: 600;
           letter-spacing: -0.01em;
           color: var(--ink);
+          margin: 0;
         }
 
         .author-title {
-          font-size: 14px;
+          font-size: 13px;
           color: var(--ink-mute);
+          margin-top: 2px;
+          margin: 0;
         }
 
         .author-credential {
           font-family: var(--mono);
-          font-size: 11px;
+          font-size: 12px;
           color: var(--ink-mute);
           letter-spacing: 0.05em;
+          display: none;
         }
 
         .read-more-btn {
-          display: inline-flex;
-          align-items: center;
-          gap: 6px;
-          margin-top: 12px;
-          padding: 8px 0;
-          background: none;
-          color: var(--signal);
-          font-family: var(--sans);
-          font-size: 14px;
-          font-weight: 500;
-          text-decoration: none;
-          cursor: pointer;
-          border: none;
-          transition: all 0.25s var(--ease);
-          white-space: nowrap;
-          align-self: auto;
-        }
-
-        .read-more-btn:hover {
-          gap: 10px;
-          color: var(--signal);
-          background: none;
-          border: none;
-        }
-
-        .read-more-btn .arrow {
-          transition: transform 0.25s var(--ease);
-        }
-
-        .read-more-btn:hover .arrow {
-          transform: translateX(2px);
+          display: none;
         }
 
         /* =========================================
@@ -462,6 +455,19 @@ export default function CaseStudyPage() {
           color: var(--signal);
           flex-shrink: 0;
         }
+
+        /* Hyperlink Effect */
+        .text-link {
+          color: var(--ink);
+          font-weight: bold;
+          cursor: pointer;
+          transition: color 0.3s var(--ease);
+          position: relative;
+        }
+
+        .text-link:hover {
+          color: var(--signal);
+        }
       `}</style>
 
       <div className="case-study-page">
@@ -484,8 +490,14 @@ export default function CaseStudyPage() {
               Success Stories That <em>Inspire</em>
             </h1>
             <p className="sub reveal reveal-3">
-              Discover how healthcare practices achieve excellence with HBS staffing and billing solutions.
-            </p>
+  Discover how healthcare practices achieve excellence with HBS{" "}
+  <span
+    onClick={() => window.location.href = '/'}
+    className="text-link"
+  >
+    Hiredbillingsupport
+  </span>.
+</p>
           </div>
         </section>
 
@@ -509,10 +521,11 @@ export default function CaseStudyPage() {
                   <p className="testimonial-quote">{testimonial.quote}</p>
 
                   <div className="testimonial-author">
-                    <span className="author-name">{testimonial.name}</span>
-                    <span className="author-title">{testimonial.title}</span>
-                    <span className="author-credential">{testimonial.credential}</span>
-                    <span className="author-credential">{testimonial.practice}</span>
+                    <div className="author-avatar">{testimonial.avatar}</div>
+                    <div>
+                      <div className="author-name">{testimonial.name}</div>
+                      <div className="author-title">{testimonial.title}</div>
+                    </div>
                   </div>
 
                   <button className="read-more-btn">

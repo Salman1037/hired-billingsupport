@@ -198,8 +198,8 @@ const HeroProviderCredential = ({ solution }: HeroProps) => {
               <>
                 <div className="eyebrow">{solution.hero.eyebrow}</div>
                 <h1 className="display" dangerouslySetInnerHTML={{ __html: solution.hero.title }} />
-                <p className="sub">{solution.hero.subtitle}</p>
-                <p className="lede">{solution.hero.description}</p>
+                <p className="sub reveal reveal-3" style={{ fontSize: "18px", lineHeight: "1.6", color: "var(--ink-mute)", marginTop: "24px" }}>{solution.hero.subtitle}</p>
+              <p className="lede reveal reveal-3" style={{ fontSize: "18px", lineHeight: "1.6", color: "var(--ink-mute)", marginTop: "16px" }}>{solution.hero.description}</p>
                 <div className="hero-actions">
                   <a href="#cta" className="btn btn-primary btn-lg">
                     Start credentialing review
