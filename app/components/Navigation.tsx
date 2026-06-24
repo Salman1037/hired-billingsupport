@@ -223,11 +223,14 @@ export default function Navigation() {
             <div className="dropdown-column">
               <div className="column-header">ABOUT</div>
               <Link href="/about" onClick={handleLinkClick}>About Us</Link>
+                <Link href="/article-28-facilities" onClick={handleLinkClick}>Article 28 Facilities</Link>
              
             </div>
             <div className="dropdown-column">
-              <div className="column-header">Guides</div>
-              <Link href="/article-28-facilities" onClick={handleLinkClick}>Article 28 Facilities</Link>
+              <div className="column-header">Consultation</div>
+              <Link href="/explore-partnership" onClick={handleLinkClick}>Explore Partnership</Link>
+              <Link href="/find-service" onClick={handleLinkClick}>Find Service</Link>
+            
              
             </div>
           </div>
