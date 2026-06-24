@@ -20,10 +20,12 @@ export default function enterprise() {
         <div className="eyebrow reveal reveal-1">For multi-location groups, medical chains &amp; large practices</div>
         <h1 className="display reveal reveal-2">Eleven locations. Eleven different ways of doing the same thing. <em>That's
             the <span className="ul">real</span> problem.</em></h1>
-        <p className="sub reveal reveal-3">Each office runs its own playbook. One location's AR is clean; another's is
+        <p className="sub reveal reveal-3" style={{ fontSize: "18px", lineHeight: "1.6", color: "var(--ink-mute)", marginTop: "24px" }}>
+          Each office runs its own playbook. One location's AR is clean; another's is
           buried. Your reports tell you the what — they can't tell you the why. And your payroll keeps growing while
           your standardization doesn't.</p>
-        <p className="lede reveal reveal-3">Hired Billing Support becomes your remote operations department — a
+        <p className="lede reveal reveal-3" style={{ fontSize: "18px", lineHeight: "1.6", color: "var(--ink-mute)", marginTop: "16px" }}>
+          Hired Billing Support becomes your remote operations department — a
           standardized, accountable layer that runs RCM, AR, prior auth, scheduling, and operations management across
           every site. One playbook. One scoreboard. One team you don't have to recruit.</p>
         <div className="hero-actions reveal reveal-4">

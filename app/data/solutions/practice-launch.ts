@@ -6,7 +6,7 @@ export const practiceLaunch: SolutionData = {
   description: 'Most practices open clinically ready but operationally uncertain. Hired Billing Support coordinates the full pre-launch infrastructure — credentialing, payer enrollment, billing system setup, front desk workflow, and post-launch support — so your practice opens on an operational foundation that supports billing from day one.',
   hero: {
     eyebrow: ' Practice Launch',
-    title: 'Your practice opens once. The billing foundation needs<em>to be right from day one.</em>',
+    title: 'Your practice opens once. The billing foundation needs to be right<em> from day one.</em>',
     subtitle: 'Credentialing, payer enrollment, EHR setup, and billing workflows take 90–120 days to establish properly. Practices that start late spend their first six months recovering instead of collecting.',
     description: 'HBS builds your billing and operations foundation before you see your first patient.',
     card: {
@@ -174,9 +174,9 @@ export const practiceLaunch: SolutionData = {
       title: 'A sequenced operational timeline. <em>A sequenced operational timeline.EM</em>',
       description: 'Every operational track runs on a different timeline. The ones with the longest lead times need to start first — and that means starting before you think you need to.',
       items: [
-        { num: 'Pre-Open<br>M-4', label: 'Entity & NPI', sublabel: 'Tax ID · NPPES' },
+        { num: ' M-5', label: 'Entity & NPI', sublabel: 'Tax ID · NPPES' },
         { num: 'M-4', label: 'Credentialing', sublabel: 'CAQH · Docs' },
-        { num: 'M-4', label: 'Payer Apps', sublabel: 'All payers submitted' },
+        { num: 'M-3', label: 'Payer Apps', sublabel: 'All payers submitted' },
         { num: 'M-2', label: 'Billing Setup', sublabel: 'EHR · Clearinghouse' },
         { num: 'M-2', label: 'Workflows', sublabel: 'Front desk · Intake' },
         { num: 'M-1', label: 'Readiness Check', sublabel: 'All tracks reviewed' },

@@ -6,7 +6,7 @@ export const qualityAssurance: SolutionData = {
   description: 'A claim gets submitted. A denial comes back weeks later. An audit finds a pattern. A payment is short by 20 percent. In each case, the problem existed long before it surfaced — and a quality layer would have caught it first. Hired Billing Support builds a systematic QA layer across your billing, coding, AR, and revenue cycle operations — catching errors early, standardizing processes, and monitoring performance so problems are found before they become revenue loss.',
   hero: {
     eyebrow: 'Billing Quality Assurance',
-    title: 'Consistent billing quality does <em>not happen by accident.</em>',
+    title: 'Consistent billing quality does not happen<em> by accident.</em>',
     subtitle: ' Without a structured QA process, billing errors accumulate quietly — claim by claim, week by week — until the financial impact becomes impossible to ignore.',
     description: 'HBS provides ongoing billing quality assurance that catches errors at the source before they reach the payer.',
     card: {

@@ -8,7 +8,7 @@ export const arManagement: SolutionData = {
 
   hero: {
     eyebrow: 'AR Management',
-    title: 'Your AR is aging. Every day it sits is .<em>revenue you may not recover</em>',
+    title: 'The money is in your AR.<em>The problem is nobody has time to go get it.</em>',
     subtitle: 'Unpaid claims do not resolve themselves. Without systematic follow-up at every aging bucket, payers deprioritize your accounts — and cash flow tightens while your team manages everything else.',
     description: 'HBS works your AR daily, follows up with every payer, and keeps collections moving on a schedule that does not depend on your team having extra hours.',
     card: {

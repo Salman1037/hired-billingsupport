@@ -19,10 +19,10 @@ export default function medical() {
       <div>
         <div className="eyebrow reveal reveal-1">For primary care, urgent care &amp; specialty practices</div>
         <h1 className="display reveal reveal-2">It's 9:47 PM and you're still in the EHR. <em><span className="ul">Again</span>.</em></h1>
-        <p className="sub reveal reveal-3">The clinic closed five hours ago. The kids are asleep. You're not catching up on
+        <p className="sub reveal reveal-3" style={{ fontSize: "18px", lineHeight: "1.6", color: "var(--ink-mute)", marginTop: "24px" }}>The clinic closed five hours ago. The kids are asleep. You're not catching up on
           charts because you love medicine. You're catching up because there was no other time today — and there won't
           be tomorrow either.</p>
-        <p className="lede reveal reveal-3">Hired Billing Support is the remote team that takes back the operational layer
+        <p className="lede reveal reveal-3 " style={{ fontSize: "18px", lineHeight: "1.6", color: "var(--ink-mute)", marginTop: "16px" }}>Hired Billing Support is the remote team that takes back the operational layer
           of your practice. RCM, prior auths, AR follow-up, charting support, message triage, insurance verification —
           all inside your EHR, working like your in-house team.</p>
         <div className="hero-actions reveal reveal-4">

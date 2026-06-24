@@ -6,7 +6,7 @@ export const oldAgingAr: SolutionData = {
   description: 'Your aging AR is not a write-off pile — it is revenue you earned that is waiting for systematic recovery. Hired Billing Support audits your backlog, assesses collectibility, prioritizes the highest-value targets, and works them down without overwhelming your team.',
   hero: {
     eyebrow: 'Old AR Recovery',
-    title: 'Before you write it off, find out how much <em>is still collectible.</em>',
+    title: 'Before you write it off, find out how much is <em> still collectible.</em>',
     subtitle: ' Old AR is not always dead AR. Most practices leave 15–40% of their aged accounts on the table — not because recovery is impossible, but because nobody has had time to work it systematically.',
     description: 'HBS audits your aging AR, identifies what is still recoverable, and pursues it with a structured recovery process.',
     card: {

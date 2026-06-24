@@ -134,7 +134,7 @@ const WhoWeServeLayout = ({ solution, slug }: WhoWeServeLayoutProps) => {
       letter-spacing: 0.18em;
       color: var(--ink-mute);
       display: inline-flex;
-      align-items: center;
+      align-items: left;
       gap: 10px;
     }
 
@@ -831,8 +831,8 @@ const WhoWeServeLayout = ({ solution, slug }: WhoWeServeLayoutProps) => {
 
     .wf-node-sub {
       font-family: var(--mono);
-      font-size: 9px;
-      color: var(--ink-mute);
+      font-size: 10px;
+      color: var(--ink);
       text-align: center;
       letter-spacing: 0.06em;
     }
@@ -963,10 +963,10 @@ const WhoWeServeLayout = ({ solution, slug }: WhoWeServeLayoutProps) => {
 
     .compare-header span {
       font-family: var(--mono);
-      font-size: 10px;
-      letter-spacing: 0.16em;
+      font-size: 12px;
+      letter-spacing: 0.12em;
       text-transform: uppercase;
-      color: rgba(250, 247, 242, 0.35);
+      color: var(--paper);
     }
 
     .compare-header span.hbs-col {
@@ -985,7 +985,7 @@ const WhoWeServeLayout = ({ solution, slug }: WhoWeServeLayoutProps) => {
     }
 
     .c-label {
-      color: rgba(250, 247, 242, 0.55);
+      color: var(--paper);
     }
 
     .c-hbs {
@@ -994,7 +994,7 @@ const WhoWeServeLayout = ({ solution, slug }: WhoWeServeLayoutProps) => {
     }
 
     .c-other {
-      color: rgba(250, 247, 242, 0.3);
+      color: var(--paper);
     }
 
     /* CTA Section */
@@ -1026,7 +1026,7 @@ const WhoWeServeLayout = ({ solution, slug }: WhoWeServeLayoutProps) => {
 
     .cta-title {
       font-family: var(--serif);
-      font-size: clamp(2.2rem, 4.5vw, 3.4rem);
+      font-size: clamp(2.2rem, 2.5vw, 3.4rem);
       font-weight: 400;
       letter-spacing: -0.025em;
       line-height: 1.06;
@@ -1528,7 +1528,7 @@ const WhoWeServeLayout = ({ solution, slug }: WhoWeServeLayoutProps) => {
             </div>
             <div className="compare-wrap fade-in">
               <div className="compare-header">
-                <span></span>
+                <span> Time Since Service</span>
                 <span className="hbs-col">With HBS</span>
                 <span>Without It</span>
               </div>

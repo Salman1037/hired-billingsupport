@@ -8,7 +8,7 @@ export const rcmManagement: SolutionData = {
 
   hero: {
     eyebrow: 'RCM Management',
-    title: 'Your RCM is only as strong as the team  <em>team <em>behind it.</em>',
+    title: 'Your RCM is only as strong as the team  <em> behind it.</em>',
     subtitle: 'Most practices have billing. Few have a revenue cycle that is actually managed — with consistent follow-up, denial control, and AR visibility across every payer and every claim.',
     description: 'HBS operates as your dedicated RCM team, inside your systems, on a daily cadence that keeps revenue moving.',
     card: {
@@ -151,7 +151,7 @@ export const rcmManagement: SolutionData = {
         'Communication with providers, coders, and front desk staff',
         'AR prioritization based on payer history, claim age, and dollar value'
       ],
-      pullQuote: 'Claims are not always denied because the care was wrong. Sometimes they are denied because one small administrative detail was missed before the visit even happened — and that is exactly what the human side of our team is built to prevent.'
+      pullQuote: '"Claims are not always denied because the care was wrong. Sometimes they are denied because one small administrative detail was missed before the visit even happened — and that is exactly what the human side of our team is built to prevent."'
     },
 
     results: {

@@ -9,7 +9,7 @@ export const complianceReporting: SolutionData = {
     "Hired Billing Support turns your billing, coding, AR, and denial activity into structured reporting and compliance monitoring — giving your leadership team the operational visibility to manage revenue cycle performance with confidence.",
   hero: {
     eyebrow: "Compliance & Reporting",
-    title: "Billing compliance is not a checklist. It is <em>an ongoing operational discipline.</em>",
+    title: "Billing compliance is not a checklist. It is an ongoing<em> operational discipline.</em>",
     subtitle:
       "Regulations change. Payer rules shift. Documentation standards evolve. Practices that manage compliance reactively are always one audit away from a problem they did not see coming.",
     description:

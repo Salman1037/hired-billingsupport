@@ -7,7 +7,7 @@ export const startupPractices: SolutionData = {
   
   hero: {
     eyebrow: 'Who We Serve · Startup Practices',
-    title: 'Your practice is ready to open. Is the<em>billing infrastructure ready too?</em>',
+    title: 'Your practice is ready to open. Is the <em>billing infrastructure ready too?</em>',
     subtitle: 'Most startup practices focus on clinical readiness and discover billing and credentialing gaps after the first week of seeing patients. HBS builds the revenue foundation before you need it.',
     description: '',
   },
@@ -242,10 +242,10 @@ export const startupPractices: SolutionData = {
       title: 'The right things started at the right time. <em>Not in the order that feels most urgent.</em>',
       description: 'Credentialing takes months. Billing setup takes weeks. Front desk workflows take days. Every track has a different timeline — and the ones with the longest lead time need to start first.',
       items: [
-        { num: 'M-4', label: 'Entity & NPI', sublabel: 'Tax ID · NPPES' },
-        { num: 'M-4', label: 'CAQH & Docs', sublabel: 'Provider file built' },
+        { num: 'M-6', label: 'Entity & NPI', sublabel: 'Tax ID · NPPES' },
+        { num: 'M-5', label: 'CAQH & Docs', sublabel: 'Provider file built' },
         { num: 'M-4', label: 'Payer Apps', sublabel: 'All submitted' },
-        { num: 'M-2', label: 'Billing Setup', sublabel: 'EHR · Clearinghouse' },
+        { num: 'M-3', label: 'Billing Setup', sublabel: 'EHR · Clearinghouse' },
         { num: 'M-2', label: 'Workflows', sublabel: 'SOPs documented' },
         { num: 'M-1', label: 'Readiness Check', sublabel: 'All tracks reviewed' },
         { num: 'Open', label: 'First Patients', sublabel: 'Claims submit Day 1' },

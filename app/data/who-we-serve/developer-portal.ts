@@ -232,7 +232,7 @@ export const developerPortal: SolutionData = {
         'Automation boundary assessment — where human judgment is irreplaceable',
         'Developer communication translating operational context into technical requirements',
       ],
-      pullQuote: 'The most useful thing an operational partner brings to a healthcare technology team is not the answer to a technical question. It is the operational context that makes the technical question the right one to ask.',
+      pullQuote: '"The most useful thing an operational partner brings to a healthcare technology team is not the answer to a technical question. It is the operational context that makes the technical question the right one to ask."',
     },
 
     results: {

@@ -7,7 +7,7 @@ export const virtualHealthcareSolutions: SolutionData = {
   
   hero: {
     eyebrow: 'Virtual Healthcare Solutions',
-    title: 'Healthcare-trained virtual support inside<em>your workflow, not beside it.</em>',
+    title: 'Healthcare trained virtual support inside <em>your workflow, not beside it.</em>',
     subtitle: 'A general virtual assistant is not the same as a healthcare-trained operations specialist. Your EHR, your payer portals, your prior auth queues — these require context that most VA services do not have.',
     description: 'HBS provides virtual support that works inside your clinical and administrative systems from day one.',
     card: {

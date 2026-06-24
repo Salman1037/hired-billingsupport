@@ -23,12 +23,12 @@ export default function dental() {
           You produced $180,000 last month. You collected $128,000.
           <em>That <span className="underline">gap</span> is the problem.</em>
         </h1>
-        <p className="sub reveal reveal-3">
+        <p className="sub reveal reveal-3" style={{ fontSize: "18px", lineHeight: "1.6", color: "var(--ink-mute)", marginTop: "24px" }}>
           Treatment is happening. Patients are saying yes. Production looks great on the report.
           But somewhere between the chair and the bank, your collections are leaking — and your front desk is too buried
           to chase it.
         </p>
-        <p className="lede reveal reveal-3">
+        <p className="lede reveal reveal-3" style={{ fontSize: "18px", lineHeight: "1.6", color: "var(--ink-mute)", marginTop: "16px" }}>
           Hired Billing Support is the remote dental operations team that closes that gap. Insurance verification,
           claims, AR follow-up, write-off recovery, front desk relief — all inside your PMS, working like your in-house
           team. So your office can focus on patients, not on chasing payers.

@@ -212,7 +212,7 @@ export default function Home() {
         Pick the layers you need. Run one service, or hand us the entire back office. Every engagement is shaped around your specialty, EHR, and growth stage.
       </p>
     </div>
-    <div className="services-grid fade-in">
+    <div className="services-grid home-services-grid fade-in">
       <div className="service-cell">
         <svg className="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M3 3v18h18" /><path d="M7 14l4-4 4 4 5-5" /></svg>
         <h4>Revenue Cycle Management</h4>

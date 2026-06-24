@@ -7,7 +7,7 @@ export const memberCentricCare: SolutionData = {
   
   hero: {
     eyebrow: 'Member-Centric Care',
-    title: 'Care coordination only works when the operations<em>behind it do too.</em>',
+    title: 'Care coordination only works when the operations <em>behind it do too.</em>',
     subtitle: 'Member-focused care models depend on referral tracking, authorization management, eligibility accuracy, and billing alignment across multiple care team touchpoints — any gap affects both care and revenue.',
     description: 'HBS supports the operational layer that keeps member-centric care models running without administrative breakdown.',
   },

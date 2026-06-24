@@ -225,7 +225,7 @@ export const payers: SolutionData = {
         'SLA escalation coordination with internal operations teams',
         'Leadership reporting with operational commentary and recommendations',
       ],
-      pullQuote: 'Scaling healthcare payer operations is not just about adding more people. It is about building a processing model where volume increases do not automatically mean SLA violations — where the capacity to process work adjusts as work arrives, with visibility that allows leadership to manage outcomes rather than just respond to them.',
+      pullQuote: '"Scaling healthcare payer operations is not just about adding more people. It is about building a processing model where volume increases do not automatically mean SLA violations — where the capacity to process work adjusts as work arrives, with visibility that allows leadership to manage outcomes rather than just respond to them."',
     },
 
     results: {

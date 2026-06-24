@@ -7,7 +7,7 @@ export const mediumLargeMedicalPractices: SolutionData = {
 
   hero: {
     eyebrow: 'Medical Groups',
-    title: 'More providers. More complexity. The same revenue<em>cycle pressure multiplied.</em>',
+    title: 'More providers. More complexity. The same revenue cycle<em> pressure multiplied.</em>',
     subtitle: 'Multi-provider groups deal with inconsistent billing across providers, credentialing timelines that never align, and AR management that no single staff member can track across every payer.',
     description: 'HBS standardizes revenue cycle operations across your group so every provider performs consistently.',
   },
@@ -148,7 +148,7 @@ export const mediumLargeMedicalPractices: SolutionData = {
         { num: 'Claims', label: 'Submission', sublabel: 'Same-day rule' },
         { num: 'AR', label: 'Follow-Up', sublabel: 'By provider · location' },
         { num: 'Denials', label: 'Root Cause', sublabel: 'Tracked group-wide' },
-        { num: 'Cred.', label: 'Tracking', sublabel: 'All providers' },
+        { num: 'Cred', label: 'Tracking', sublabel: 'All providers' },
         { num: 'Report', label: 'Leadership View', sublabel: 'Provider · location' },
       ],
     },

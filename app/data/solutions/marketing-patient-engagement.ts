@@ -6,7 +6,7 @@ export const marketingPatientEngagement: SolutionData = {
   description: 'Most practices invest in marketing that generates inquiries, then lose a portion of that investment in the follow-up gap. Hired Billing Support connects patient marketing with the operational follow-through that converts interest into appointments, appointments into visits, and visits into long-term patient relationships.',
   hero: {
     eyebrow: 'Patient Engagement',
-    title: 'Your schedule has gaps your front desk does<em>not have time to fill.</em>',
+    title: 'Your schedule has gaps your front desk does not<em> have time to fill.</em>',
     subtitle: 'Inquiry follow-up, appointment conversion, recall campaigns, and patient communication require consistency that a busy front desk rarely has capacity to maintain.',
     description: 'HBS manages patient engagement workflows so more inquiries convert, more appointments stick, and more patients return.',
     card: {

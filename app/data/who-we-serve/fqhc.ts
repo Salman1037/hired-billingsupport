@@ -7,7 +7,7 @@ export const fqhc: SolutionData = {
 
   hero: {
     eyebrow: 'FQHCs & Community Health Centers',
-    title: 'FQHC billing is different. Generic billing<em>support is not enough.</em>',
+    title: 'FQHC billing is different. Generic billing support<em> is not enough.</em>',
     subtitle: 'Prospective payment, Medicaid managed care, encounter-based billing, and sliding fee documentation are FQHC-specific requirements that standard billing vendors consistently apply incorrectly.',
     description: 'HBS provides FQHC-aware billing and operations support that understands the rules your funding depends on.',
   },

@@ -109,7 +109,7 @@ export const medicalBillingRcm: SolutionData = {
         'Write-off and adjustment judgment calls',
         'AR prioritization based on payer history and claim age'
       ],
-      pullQuote: 'Claims are not always denied because the care was wrong. Sometimes they are denied because one small administrative detail was missed before the visit even happened — and that is exactly what the human side of our team is built to prevent.'
+      pullQuote: '"Claims are not always denied because the care was wrong. Sometimes they are denied because one small administrative detail was missed before the visit even happened — and that is exactly what the human side of our team is built to prevent."'
     },
     results: {
       eyebrow: 'What changes',

@@ -6,7 +6,7 @@ export const obgyn: SolutionData = {
   description: "Hired Billing Support provides specialty-aware OBGYN billing — maternity workflow support, global billing management, eligibility verification, authorization tracking, denial management, and patient-friendly AR coordination for women's health practices.",
   hero: {
     eyebrow: 'OBGYN & Women\'s Health',
-    title: 'OBGYN billing has gaps that most billing teams do not catch .<em>until a claim denies.</em>',
+    title: 'OBGYN billing has gaps that most billing teams do not catch <em>until a claim denies.</em>',
     subtitle: 'Global maternity billing, mid-pregnancy insurance changes, GYN procedure authorizations, and parity compliance create OBGYN-specific billing complexity that generic workflows consistently miss.',
     description: "HBS provides women's health billing support that manages the specific rules your specialty runs on.",
   },

@@ -67,7 +67,7 @@ export default function SolutionLayout({ solution, slug }: SolutionLayoutProps) 
 
       {/* RCM LIFECYCLE TIMELINE */}
       {solution.sections?.lifecycle && (
-        <section className="block block--warm">
+        <section className="block ">
           <div className="container">
             <div className="eyebrow fade-in" style={{ marginBottom: 24 }}>{solution.sections.lifecycle.eyebrow}</div>
             <div className="rcm-timeline fade-in">
@@ -144,7 +144,7 @@ export default function SolutionLayout({ solution, slug }: SolutionLayoutProps) 
 
       {/* WORKFLOW DASHBOARD */}
       {solution.sections?.workflow && (
-        <section className="block block--warm">
+        <section className="block ">
           <div className="container">
             <div className="block-head fade-in">
               <div className="eyebrow">{solution.sections.workflow.eyebrow}</div>
@@ -297,7 +297,7 @@ export default function SolutionLayout({ solution, slug }: SolutionLayoutProps) 
 
       <div className="solution-compare-wrap fade-in">
         <div className="solution-compare-header">
-          <span></span>
+          <span> Time Since Service</span>
           <span className="solution-compare-hbs-col">
             Hired Billing Support
           </span>

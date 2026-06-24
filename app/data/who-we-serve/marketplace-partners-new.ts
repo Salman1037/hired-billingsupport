@@ -216,7 +216,7 @@ export const marketplacePartners: SolutionData = {
         'Partner reporting with operational commentary and recommendations',
         'Compliance-sensitive billing decisions and coding judgment',
       ],
-      pullQuote: 'The partners who scale healthcare client portfolios successfully are not the ones who do the operational work themselves. They are the ones who found an operations partner they trust enough to refer clients to without worrying about what happens after the introduction.',
+      pullQuote: '"The partners who scale healthcare client portfolios successfully are not the ones who do the operational work themselves. They are the ones who found an operations partner they trust enough to refer clients to without worrying about what happens after the introduction."',
     },
 
     results: {

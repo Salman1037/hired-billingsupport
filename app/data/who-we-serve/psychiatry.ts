@@ -6,7 +6,7 @@ export const psychiatry: SolutionData = {
   description: 'Hired Billing Support provides specialty-aware psychiatry and behavioral health billing — prior authorization support, eligibility verification, telehealth billing, session limit tracking, denial management, and AR follow-up.',
   hero: {
     eyebrow: 'Psychiatry & Behavioral Health',
-    title: 'Behavioral health billing has specific rules most  <em>billing vendors get wrong.</em>',
+    title: 'Behavioral health billing has specific rules   <em> most billing vendors get wrong.</em>',
     subtitle: ' Session limits, parity compliance, telehealth modifiers, prior authorization tracking — psychiatry and behavioral health billing requires specialty knowledge that a generic billing team rarely has.',
     description: 'HBS provides behavioral health billing support that understands how your payers actually process your claims.',
   },

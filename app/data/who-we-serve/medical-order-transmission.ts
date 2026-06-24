@@ -7,7 +7,7 @@ export const medicalOrderTransmission: SolutionData = {
 
   hero: {
     eyebrow: 'Labs & Imaging Centers',
-    title: 'A diagnostic service begins with an order.Every gap between that order and the<em> completed service is a revenue and access risk.</em>',
+    title: 'Every order gap is a revenue and <em> access risk.</em>',
     subtitle: 'Incomplete orders, missing authorizations, unverified eligibility — billing problems in labs and imaging almost always start at intake, not at the billing stage where they get discovered.',
     description: 'HBS manages the order-to-service workflow so every completed service has a clean billing handoff.',
   },
@@ -225,7 +225,7 @@ export const medicalOrderTransmission: SolutionData = {
         'Denial root cause tracing to intake or authorization workflow steps',
         'Management reporting with operational commentary and recommendations',
       ],
-      pullQuote: 'Every lab and imaging denial that arrives from billing can be traced to a step in intake or authorization where required information was missing, not followed up on, or not confirmed before the service proceeded. The billing team sees the problem last. The intake team created the opportunity to prevent it first.',
+      pullQuote: '"Every lab and imaging denial that arrives from billing can be traced to a step in intake or authorization where required information was missing, not followed up on, or not confirmed before the service proceeded. The billing team sees the problem last. The intake team created the opportunity to prevent it first."',
     },
 
     results: {
