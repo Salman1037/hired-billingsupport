@@ -254,14 +254,16 @@ export default function CaseStudyPage() {
           border: 1px solid var(--paper-line);
           border-radius: var(--radius-lg);
           padding: 48px;
-          transition: transform 0.3s var(--ease), box-shadow 0.3s var(--ease);
+          transition: transform 0.3s var(--ease), box-shadow 0.3s var(--ease), border-color 0.3s var(--ease);
           position: relative;
           overflow: hidden;
+          cursor: pointer;
         }
 
         .testimonial-card:hover {
           transform: translateY(-4px);
           box-shadow: 0 20px 40px -20px rgba(10, 22, 40, 0.1);
+          border-color: var(--signal);
         }
 
         .testimonial-quote {
@@ -468,6 +470,13 @@ export default function CaseStudyPage() {
         .text-link:hover {
           color: var(--signal);
         }
+
+        /* Link wrapper for testimonial cards */
+        .testimonial-link {
+          text-decoration: none;
+          color: inherit;
+          display: block;
+        }
       `}</style>
 
       <div className="case-study-page">
@@ -516,7 +525,7 @@ export default function CaseStudyPage() {
 
           <div className="testimonials-grid">
             {testimonials.map((testimonial, index) => (
-              <Link key={testimonial.id} href={`/case-study/${testimonial.slug}`}>
+              <Link key={testimonial.id} href={`/case-study/${testimonial.slug}`} className="testimonial-link">
                 <div className={`testimonial-card reveal reveal-${(index % 4) + 2}`}>
                   <p className="testimonial-quote">{testimonial.quote}</p>
 

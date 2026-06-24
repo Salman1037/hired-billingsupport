@@ -28,7 +28,7 @@ const caseStudies = [
     }
   },
   {
-    slug: 'herma-thompson',
+    slug: 'thompson-mental-health',
     id: 2,
     quote: "Working with HBS has been a game-changer. The team is professional, responsive, and has streamlined our billing operations seamlessly.",
     name: "Herma Thompson",
@@ -50,7 +50,7 @@ const caseStudies = [
     }
   },
   {
-    slug: 'dr-afreen-sheikh',
+    slug: 'sheikh-internal-medicine',
     id: 3,
     quote: "Remote staffing solution by HBS has freed the resources of the practice, enabling us to spend more time at the bedside and enhance the efficiency of the whole process.",
     name: "Dr Afreen Sheikh",
@@ -72,7 +72,7 @@ const caseStudies = [
     }
   },
   {
-    slug: 'dr-layla-hassan',
+    slug: 'genesis-internal-medicine',
     id: 4,
     quote: "With the help of HBS their support and expertise we have achieved a lot more in practice.",
     name: "Dr. Layla Hassan",
