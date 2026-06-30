@@ -15,8 +15,8 @@ export default function enterprise() {
         <p className="lede reveal reveal-3" style={{ fontSize: "18px", lineHeight: "1.6", color: "var(--ink-mute)", marginTop: "16px" }}>
           Hired Billing Support is the backend processing engine for healthcare operations at scale. Embedded in your systems, accountable to your SLAs, elastic enough to double when your volume does.</p>
         <div className="hero-actions reveal reveal-4">
-          <a href="#cta" className="btn btn-primary">Book a capacity-planning call <svg className="arrow" width={14} height={14} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2}><path d="M5 12h14M13 5l7 7-7 7" /></svg></a>
-          <a href="#cta" className="btn btn-text">Request a scalability assessment →</a>
+          <a href="/contact" className="btn btn-primary">Contact Us  <svg className="arrow" width={14} height={14} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2}><path d="M5 12h14M13 5l7 7-7 7" /></svg></a>
+          {/* <a href="#cta" className="btn btn-text">Request a scalability assessment →</a> */}
         </div>
       </div>
       <div className="reveal reveal-4" style={{animationDelay: '.55s'}}>

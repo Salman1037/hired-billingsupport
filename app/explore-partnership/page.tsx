@@ -232,11 +232,13 @@ export default function ExplorePartnershipPage() {
         .ai-col--human .ai-item-dot{background:var(--ink)}
         .ai-item p{font-size:13px;color:var(--ink-mute);line-height:1.6}
 
-        .outcome-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;margin-top:48px}
+        .outcome-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px;margin-top:48px}
         .outcome-card{padding:28px;background:var(--white);border:1px solid var(--paper-line);border-radius:var(--radius-lg)}
         .outcome-card-num{font-family:var(--serif);font-size:2.4rem;font-weight:400;color:var(--signal);line-height:1;margin-bottom:8px}
         .outcome-card h4{font-size:14px;font-weight:600;color:var(--ink);margin-bottom:6px}
         .outcome-card p{font-size:13px;color:var(--ink-mute);line-height:1.65}
+        @media(max-width:1024px){.outcome-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+        @media(max-width:720px){.outcome-grid{grid-template-columns:1fr}}
 
         .pull-quote{font-family:var(--serif);font-size:clamp(1.1rem,2.2vw,1.45rem);font-style:italic;color:var(--ink);line-height:1.65;padding:28px 32px;border-left:3px solid var(--signal);background:var(--signal-pale);border-radius:0 var(--radius) var(--radius) 0;margin:40px 0;max-width:860px}
 
@@ -302,7 +304,7 @@ export default function ExplorePartnershipPage() {
                     </div>
                     <div className="consultation-hero-inner">
                         <div className="consultation-hero-content">
-                            <div className="consultation-hero-badge reveal reveal-1">Consultation · Explore Partnership</div>
+                            <div className="eyebrow">Consultation · Explore Partnership</div>
                             <h1 className="consultation-hero-title reveal reveal-2">
                                 Before you commit to a service model,<br />
                                 <em>understand whether it actually fits your organization.</em>

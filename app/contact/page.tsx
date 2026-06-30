@@ -632,22 +632,22 @@ export default function ContactPage() {
                 <div className="form-grid-2">
                   <div className="form-group">
                     <label>Full Name<em>*</em></label>
-                    <input type="text" name="name" placeholder="Dr. Jane Smith" value={formData.name} onChange={handleChange} />
-                  </div>
-                  <div className="form-group">
-                    <label>Email Address<em>*</em></label>
-                    <input type="email" name="email" placeholder="jane@clinic.com" value={formData.email} onChange={handleChange} />
-                  </div>
+                  <input type="text" name="name" placeholder="Full Name" value={formData.name} onChange={handleChange} />
                 </div>
+                <div className="form-group">
+                  <label>Email Address<em>*</em></label>
+                  <input type="email" name="email" placeholder="Email Address" value={formData.email} onChange={handleChange} />
+                </div>
+              </div>
 
                 <div className="form-grid-2">
                   <div className="form-group">
                     <label>Phone Number</label>
-                    <input type="tel" name="phone" placeholder="+1 (555) 000-0000" value={formData.phone} onChange={handleChange} />
+                    <input type="tel" name="phone" placeholder="Phone Number" value={formData.phone} onChange={handleChange} />
                   </div>
                   <div className="form-group">
                     <label>Practice / Company</label>
-                    <input type="text" name="company" placeholder="Sunrise Medical Group" value={formData.company} onChange={handleChange} />
+                    <input type="text" name="company" placeholder="Service of Interest" value={formData.company} onChange={handleChange} />
                   </div>
                 </div>
 
@@ -655,9 +655,7 @@ export default function ContactPage() {
                   <label>How can we help?<em>*</em></label>
                   <textarea
                     name="message"
-                    placeholder="Tell us about your current billing challenges, practice size, or the services you're interested in…"
-                    value={formData.message}
-                    onChange={handleChange}
+                    placeholder="Message"
                   />
                 </div>
 
@@ -695,7 +693,7 @@ export default function ContactPage() {
                 </div>
                 <div className="info-text">
                   <strong>Phone</strong>
-                  <a href="tel:+18005551234">+1 (800) 555-1234</a>
+                  <a href="tel:+13213211740">+1 (321) 321-1740</a>
                 </div>
               </div>
 
@@ -708,20 +706,7 @@ export default function ContactPage() {
                 </div>
                 <div className="info-text">
                   <strong>Email</strong>
-                  <a href="mailto:support@hiredbillingsupport.com">support@hiredbillingsupport.com</a>
-                </div>
-              </div>
-
-              <div className="info-row">
-                <div className="info-icon">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
-                    <circle cx="12" cy="10" r="3" />
-                  </svg>
-                </div>
-                <div className="info-text">
-                  <strong>Office Address</strong>
-                  <span>1234 Healthcare Blvd, Suite 500<br />New York, NY 10001</span>
+                  <a href="mailto:hello@hiredbillingsupport.com">hello@hiredbillingsupport.com</a>
                 </div>
               </div>
 
@@ -750,11 +735,11 @@ export default function ContactPage() {
               <div className="card-mono-label">— Business Hours</div>
               <div className="hours-row">
                 <span className="day">Monday – Friday</span>
-                <span className="time">8:00 AM – 6:00 PM EST</span>
+                <span className="time">9:00 AM – 5:00 PM EST</span>
               </div>
               <div className="hours-row">
                 <span className="day">Saturday</span>
-                <span className="time">9:00 AM – 2:00 PM EST</span>
+                <span className="time closed">Closed</span>
               </div>
               <div className="hours-row">
                 <span className="day">Sunday</span>

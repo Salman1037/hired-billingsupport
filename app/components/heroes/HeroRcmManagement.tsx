@@ -49,9 +49,9 @@ export default function HeroRcmManagement({ solution }: HeroProps) {
               </h1>
               <p className="sub reveal reveal-3" style={{ fontSize: "18px", lineHeight: "1.6", color: "var(--ink-mute)", marginTop: "24px" }}>{solution.hero.subtitle}</p>
               <p className="lede reveal reveal-3" style={{ fontSize: "18px", lineHeight: "1.6", color: "var(--ink-mute)", marginTop: "16px" }}>{solution.hero.description}</p>
-              <div className="hero-actions reveal reveal-4" style={{ marginTop: "32px" }}>
-                <a href="#cta" className="btn btn-primary btn-lg">
-                  Review my revenue cycle
+                <div className="hero-actions reveal reveal-4" style={{ marginTop: "32px" }}>
+                <a href="/contact" className="btn btn-primary btn-lg">
+                  Contact us
                   <svg
                     className="arrow"
                     width="14"
@@ -64,8 +64,8 @@ export default function HeroRcmManagement({ solution }: HeroProps) {
                     <path d="M5 12h14M13 5l7 7-7 7" />
                   </svg>
                 </a>
-                <a href="#pain" className="btn btn-ghost btn-lg">
-                  See where revenue leaks
+                <a href="#services" className="btn btn-ghost btn-lg">
+                  Services
                 </a>
               </div>
             </>

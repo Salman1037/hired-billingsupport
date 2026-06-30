@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useEffect } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import { SolutionData } from '@/app/data/solutionTypes';
 import HeroStartupPractices from '@/app/components/heroes/HeroStartupPractices';
 import HeroSmallMedicalPractices from '@/app/components/heroes/HeroSmallMedicalPractices';
@@ -45,8 +45,40 @@ const heroComponentMap: { [key: string]: React.FC<any> } = {
 };
 
 const WhoWeServeLayout = ({ solution, slug }: WhoWeServeLayoutProps) => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    service: '',
+    message: '',
+  });
+  const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+
+  const serviceOptions = useMemo(
+    () => solution.sections?.services?.items?.map((item) => item.title) ?? [],
+    [solution.sections]
+  );
+
+  const handleFormChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
+  ) => {
+    const { name, value } = e.target;
+    setFormData((current) => ({ ...current, [name]: value }));
+  };
+
+  const handleFormSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setLoading(true);
+    await new Promise((resolve) => setTimeout(resolve, 900));
+    setLoading(false);
+    setSubmitted(true);
+  };
+
+  const isFormValid =
+    formData.name && formData.email && formData.phone && formData.service && formData.message;
+
   useEffect(() => {
-    // Fade-in scroll reveal
     const io = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -76,7 +108,10 @@ const WhoWeServeLayout = ({ solution, slug }: WhoWeServeLayoutProps) => {
       (el as HTMLElement).style.setProperty('--reveal-delay', `${index * 80}ms`);
     });
 
-    return () => window.removeEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      io.disconnect();
+    };
   }, []);
 
   const styles = `
@@ -689,6 +724,97 @@ const WhoWeServeLayout = ({ solution, slug }: WhoWeServeLayoutProps) => {
       line-height: 1.65;
     }
 
+    .marketplace-form {
+      background: rgba(255, 255, 255, 0.95);
+      border: 1px solid var(--paper-line);
+      border-radius: 16px;
+      padding: 38px;
+      max-width: 980px;
+      margin: 0 auto;
+      box-shadow: 0 24px 80px rgba(10, 22, 40, 0.08);
+    }
+
+    .marketplace-form form {
+      display: grid;
+      gap: 22px;
+    }
+
+    .marketplace-form label {
+      display: block;
+      font-size: 13px;
+      color: var(--ink-soft);
+      line-height: 1.4;
+      font-weight: 600;
+    }
+
+    .field-row {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .field-full {
+      grid-column: 1 / -1;
+    }
+
+    .marketplace-form input,
+    .marketplace-form select,
+    .marketplace-form textarea {
+      width: 100%;
+      margin-top: 8px;
+      padding: 14px 16px;
+      border: 1px solid var(--paper-line);
+      border-radius: 12px;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: var(--sans);
+      font-size: 15px;
+      line-height: 1.4;
+      outline: none;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .marketplace-form input:focus,
+    .marketplace-form select:focus,
+    .marketplace-form textarea:focus {
+      border-color: var(--signal);
+      box-shadow: 0 0 0 4px rgba(0, 200, 150, 0.12);
+    }
+
+    .marketplace-form textarea {
+      min-height: 160px;
+      resize: vertical;
+    }
+
+    .marketplace-form .form-success {
+      text-align: center;
+    }
+
+    .marketplace-form .form-success h3 {
+      font-family: var(--serif);
+      font-size: 1.9rem;
+      margin-bottom: 14px;
+      color: var(--ink);
+    }
+
+    .marketplace-form .form-success p {
+      color: var(--ink-soft);
+      font-size: 15px;
+      line-height: 1.7;
+    }
+
+    @media (max-width: 860px) {
+      .field-row {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .marketplace-form {
+        padding: 28px;
+      }
+    }
+
     /* Process timeline */
     .process-timeline {
       display: flex;
@@ -1253,7 +1379,7 @@ const WhoWeServeLayout = ({ solution, slug }: WhoWeServeLayoutProps) => {
 
       {/* Services Section */}
       {solution.sections?.services && (
-        <section className="who-section">
+        <section className="who-section" id="services">
           <div className="container">
             <div className="section-header fade-in">
               <div className="eyebrow">{solution.sections.services.eyebrow}</div>
@@ -1539,6 +1665,94 @@ const WhoWeServeLayout = ({ solution, slug }: WhoWeServeLayoutProps) => {
                   <span className="c-other">{row.other}</span>
                 </div>
               ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {slug === 'hbs-marketing' && (
+        <section className="who-section who-section--ink-soft" id="marketplace-form">
+          <div className="container">
+            <div className="section-header fade-in">
+              <div className="eyebrow">Connect with our marketplace execution team</div>
+              <h2 className="section-title">Share your needs and we’ll match the right partnership operations support.</h2>
+              <p className="section-subtitle">
+                Fill out the form below and one of our marketplace partner specialists will follow up with a tailored next step.
+              </p>
+            </div>
+            <div className="marketplace-form fade-in">
+              {submitted ? (
+                <div className="form-success">
+                  <h3>Thanks for reaching out.</h3>
+                  <p>We’ve received your request and will contact you shortly.</p>
+                </div>
+              ) : (
+                <form onSubmit={handleFormSubmit}>
+                  <div className="field-row">
+                    <label>
+                      Full Name *
+                      <input
+                        type="text"
+                        name="name"
+                        value={formData.name}
+                        onChange={handleFormChange}
+                        required
+                      />
+                    </label>
+                    <label>
+                      Email Address *
+                      <input
+                        type="email"
+                        name="email"
+                        value={formData.email}
+                        onChange={handleFormChange}
+                        required
+                      />
+                    </label>
+                  </div>
+                  <div className="field-row">
+                    <label>
+                      Phone Number *
+                      <input
+                        type="tel"
+                        name="phone"
+                        value={formData.phone}
+                        onChange={handleFormChange}
+                        required
+                      />
+                    </label>
+                    <label>
+                      Service of Interest *
+                      <select
+                        name="service"
+                        value={formData.service}
+                        onChange={handleFormChange}
+                        required
+                      >
+                        <option value="">Select a service</option>
+                        {serviceOptions.map((option) => (
+                          <option key={option} value={option}>
+                            {option}
+                          </option>
+                        ))}
+                      </select>
+                    </label>
+                  </div>
+                  <label className="field-full">
+                    Message *
+                    <textarea
+                      name="message"
+                      rows={6}
+                      value={formData.message}
+                      onChange={handleFormChange}
+                      required
+                    />
+                  </label>
+                  <button type="submit" className="btn btn-primary btn-lg" disabled={!isFormValid || loading}>
+                    {loading ? 'Sending...' : 'Send Request'}
+                  </button>
+                </form>
+              )}
             </div>
           </div>
         </section>

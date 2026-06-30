@@ -122,7 +122,7 @@ export default function SolutionLayout({ solution, slug }: SolutionLayoutProps) 
 
       {/* SERVICES */}
       {solution.sections?.services && (
-        <section className="block">
+        <section className="block" id="services">
           <div className="container">
             <div className="block-head fade-in">
               <div className="eyebrow">{solution.sections.services.eyebrow}</div>

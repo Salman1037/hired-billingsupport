@@ -29,10 +29,10 @@ export default function enterprise() {
           standardized, accountable layer that runs RCM, AR, prior auth, scheduling, and operations management across
           every site. One playbook. One scoreboard. One team you don't have to recruit.</p>
         <div className="hero-actions reveal reveal-4">
-          <a href="#cta" className="btn btn-primary">Book an enterprise discovery call <svg className="arrow" width={14} height={14} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2}>
+          <a href="/contact" className="btn btn-primary">Contact Us <svg className="arrow" width={14} height={14} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2}>
               <path d="M5 12h14M13 5l7 7-7 7" />
             </svg></a>
-          <a href="#cta" className="btn btn-text">Request a multi-location ops assessment →</a>
+          {/* <a href="#cta" className="btn btn-text">Request a multi-location ops assessment →</a> */}
         </div>
       </div>
       {/* Command center card */}

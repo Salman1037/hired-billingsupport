@@ -10,10 +10,12 @@ export default function Navigation() {
   const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  // Close dropdowns on route change
+  // Close dropdowns and mobile menu on route change
   useEffect(() => {
     setActiveDropdown(null);
+    setMobileMenuOpen(false);
   }, [pathname]);
 
   // Handle scroll effect (client-side only)
@@ -52,6 +54,16 @@ export default function Navigation() {
     setActiveDropdown(null);
   };
 
+  const toggleMobileMenu = () => {
+    setMobileMenuOpen((current) => !current);
+    setActiveDropdown(null);
+  };
+
+  const closeMobileMenu = () => {
+    setMobileMenuOpen(false);
+    setActiveDropdown(null);
+  };
+
   // Close dropdowns when clicking outside
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -76,12 +88,7 @@ export default function Navigation() {
           </svg>
           <span>+1 321 321-1740</span>
         </a>
-      <a 
-  href="https://mail.google.com/mail/?view=cm&to=hello@hiredbillingsupport.com" 
-  target="_blank" 
-  rel="noopener noreferrer" 
-  className="contact-item"
->
+        <a href="/contact" rel="noopener noreferrer" className="contact-item">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
             <rect x="2" y="4" width="20" height="16" rx="2"></rect>
             <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
@@ -96,7 +103,20 @@ export default function Navigation() {
           <img src="/logo.png" alt="Hired Billing Support" style={{ height: '40px', width: 'auto' }} />
         </Link>
 
-        {/* Hire Talent Dropdown */}
+        <button
+          type="button"
+          className={`mobile-menu-toggle${mobileMenuOpen ? ' open' : ''}`}
+          aria-label={mobileMenuOpen ? 'Close navigation menu' : 'Open navigation menu'}
+          aria-expanded={mobileMenuOpen}
+          onClick={toggleMobileMenu}
+        >
+          <span />
+          <span />
+          <span />
+        </button>
+
+        <div className={`nav-items${mobileMenuOpen ? ' open' : ''}`}> 
+          {/* Hire Talent Dropdown */}
         <div className={`nav-dropdown${activeDropdown === 'hire' ? ' active' : ''}`} onMouseEnter={() => handleMouseEnter('hire')} onMouseLeave={handleMouseLeaveDropdown}>
           <button className="dropdown-toggle" onClick={() => toggleDropdown('hire')}>
             Hire Talent <span className="chevron">▼</span>
@@ -223,28 +243,27 @@ export default function Navigation() {
             <div className="dropdown-column">
               <div className="column-header">ABOUT</div>
               <Link href="/about" onClick={handleLinkClick}>About Us</Link>
-                <Link href="/article-28-facilities" onClick={handleLinkClick}>Article 28 Facilities</Link>
-             
+              <Link href="/article-28-facilities" onClick={handleLinkClick}>Article 28 Facilities</Link>
             </div>
             <div className="dropdown-column">
               <div className="column-header">Consultation</div>
               <Link href="/explore-partnership" onClick={handleLinkClick}>Explore Partnership</Link>
               <Link href="/find-service" onClick={handleLinkClick}>Find Service</Link>
-            
-             
             </div>
           </div>
         </div>
-
-        <div className="nav-cta">
-          <Link href="/contact" className="btn btn-primary">
-            Consultation
-            <svg className="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-              <path d="M5 12h14M13 5l7 7-7 7" />
-            </svg>
-          </Link>
+        <div className="nav-menu-footer">
+          <div className="nav-cta">
+            <Link href="/contact" className="btn btn-primary" onClick={closeMobileMenu}>
+              Consultation
+              <svg className="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <path d="M5 12h14M13 5l7 7-7 7" />
+              </svg>
+            </Link>
+          </div>
         </div>
       </div>
-    </nav>
+    </div>
+  </nav>
   );
 }

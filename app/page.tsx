@@ -35,10 +35,10 @@ export default function Home() {
           Hired Billing Support is the remote team behind growing practices — RCM specialists, billers, AR experts, and virtual medical assistants embedded into your workflow. So you can stop firefighting and start practicing.
         </p>
         <div className="hero-actions reveal reveal-4">
-          <a href="#cta" className="btn btn-primary">Book a discovery call
+          <a href="/CostROIcalculator" className="btn btn-primary">COST & ROI CALCULATOR
             <svg className="arrow" width={14} height={14} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2}><path d="M5 12h14M13 5l7 7-7 7" /></svg>
           </a>
-          <a href="#services" className="btn btn-text">See what we do →</a>
+          <a href="#services" className="btn btn-text">CONTACT →</a>
         </div>
         <div className="hero-meta reveal reveal-5">
           <div className="hero-meta-item">

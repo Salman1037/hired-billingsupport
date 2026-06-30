@@ -34,12 +34,12 @@ export default function dental() {
           team. So your office can focus on patients, not on chasing payers.
         </p>
         <div className="hero-actions reveal reveal-4">
-          <a href="#cta" className="btn btn-primary">Book a discovery call
+          <a href="/contact" className="btn btn-primary">Contact Us 
             <svg className="arrow" width={14} height={14} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2}>
               <path d="M5 12h14M13 5l7 7-7 7" />
             </svg>
           </a>
-          <a href="#audit" className="btn btn-text">Get a free production-to-collection audit →</a>
+          {/* <a href="#audit" className="btn btn-text">Get a free production-to-collection audit →</a> */}
         </div>
       </div>
       {/* Side card: production vs collection */}
