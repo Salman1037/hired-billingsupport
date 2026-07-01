@@ -483,7 +483,7 @@ nav.top.scrolled {
     padding: 100px var(--gutter) 100px;
     min-height: 100vh;
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     justify-content: flex-start;
     overflow: hidden;
 }
