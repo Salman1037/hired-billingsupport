@@ -647,6 +647,7 @@ nav.top.scrolled {
     gap: 16px;
     flex-wrap: wrap;
     align-items: center;
+    margin-top: 32px;
 }
 
 .hero-meta {
