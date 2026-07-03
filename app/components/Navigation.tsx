@@ -228,7 +228,7 @@ export default function Navigation() {
             </div>
             <div className="dropdown-column">
               <div className="column-header">Blog</div>
-              <Link href="#" onClick={handleLinkClick}>Blog</Link>
+              <Link href="/blog" onClick={handleLinkClick}>Blog</Link>
               
             </div>
           </div>
