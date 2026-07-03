@@ -483,8 +483,8 @@ nav.top.scrolled {
     padding: 100px var(--gutter) 100px;
     min-height: 100vh;
     display: flex;
-    flex-direction: column;
-    overflow: visible;
+    align-items: flex-start;
+    overflow: hidden;
 }
 
 .hero-bg {
@@ -518,23 +518,7 @@ nav.top.scrolled {
     display: grid;
     grid-template-columns: 1.15fr 0.85fr;
     gap: 80px;
-    align-items: stretch;
-    flex: 1 0 auto;
-}
-
-.hero-inner > div {
-    display: flex;
-    flex-direction: column;
-    min-height: 0;
-}
-
-.hero-inner > div:first-child {
-    justify-content: space-between;
-}
-
-.hero-inner > div:last-child {
-    justify-content: center;
-    align-items: center;
+    align-items: flex-start;
 }
 
 @media (max-width: 1000px) {
