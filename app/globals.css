@@ -518,13 +518,14 @@ nav.top.scrolled {
     display: grid;
     grid-template-columns: 1.15fr 0.85fr;
     gap: 80px;
-    align-items: center;
+    align-items: flex-start;
 }
 
 @media (max-width: 1000px) {
     .hero-inner {
         grid-template-columns: 1fr;
         gap: 60px;
+        align-items: flex-start;
     }
 
     .hero {
@@ -647,7 +648,6 @@ nav.top.scrolled {
     gap: 16px;
     flex-wrap: wrap;
     align-items: center;
-    margin-top: 32px;
 }
 
 .hero-meta {
