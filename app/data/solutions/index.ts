@@ -1,61 +1,49 @@
-// app/data/solutions/index.ts
-
 import { SolutionData } from '../solutionTypes';
+import { analyticsReporting } from './analytics-reporting';
 import { arDenialFixation } from './ar-denial-fixation';
 import { arManagement } from './ar-management';
 import { complianceReporting } from './compliance-reporting';
+import { marketingPatientEngagement } from './marketing-patient-engagement';
 import { medicalAuditing } from './medical-auditing';
-import { medicalCoding } from './medical-coding';
-import { qualityAssurance } from './quality-assurance';
-import { rcmManagement } from './rcm-management';
 import { medicalBillingRcm } from './medical-billing-rcm';
+import { medicalCoding } from './medical-coding';
 import { oldAgingAr } from './old-aging-ar';
-import { providerCredential } from './provider-credential';
+import { operationsManagement } from './operations-management';
 import { payerInsurerEnrollment } from './payer-insurer-enrollment';
 import { practiceLaunch } from './practice-launch';
-import { operationsManagement } from './operations-management';
-import { marketingPatientEngagement } from './marketing-patient-engagement';
+import { providerCredential } from './provider-credential';
+import { qualityAssurance } from './quality-assurance';
+import { rcmManagement } from './rcm-management';
 import { virtualHealthcareSolutions } from './virtual-healthcare-solutions';
-import { analyticsReporting } from './analytics-reporting';
 
-// Import other solutions here as you create them
-// import { rcmManagement } from './rcm-management';
-// import { medicalBillingRcm } from './medical-billing-rcm';
-// etc.
+export const siteBaseUrl = 'https://www.hiredbillingsupport.com';
+
+export function getSolutionUrl(slug: string): string {
+  return `${siteBaseUrl}/solutions/${slug}`;
+}
 
 export const allSolutions: Record<string, SolutionData> = {
+  'analytics-reporting': analyticsReporting,
   'ar-denial-fixation': arDenialFixation,
   'ar-management': arManagement,
   'compliance-reporting': complianceReporting,
+  'marketing-patient-engagement': marketingPatientEngagement,
   'medical-auditing': medicalAuditing,
-  'medical-coding': medicalCoding,
-  'quality-assurance': qualityAssurance,
-  'rcm-management': rcmManagement,
   'medical-billing-rcm': medicalBillingRcm,
+  'medical-coding': medicalCoding,
   'old-aging-ar': oldAgingAr,
-  'provider-credential': providerCredential,
+  'operations-management': operationsManagement,
   'payer-insurer-enrollment': payerInsurerEnrollment,
   'practice-launch': practiceLaunch,
-  'operations-management': operationsManagement,
-  'marketing-patient-engagement': marketingPatientEngagement,
+  'provider-credential': providerCredential,
+  'quality-assurance': qualityAssurance,
+  'rcm-management': rcmManagement,
   'virtual-healthcare-solutions': virtualHealthcareSolutions,
-  'analytics-reporting': analyticsReporting,
-  // Add other solutions as you create them
-  // 'rcm-management': rcmManagement,
-  // 'medical-billing-rcm': medicalBillingRcm,
-  // 'old-aging-ar': oldAgingAr,
-  // 'medical-coding': medicalCoding,
-  // 'medical-auditing': medicalAuditing,
-  // 'compliance-reporting': complianceReporting,
-  // 'quality-assurance': qualityAssurance,
-  // 'provider-credential': providerCredential,
-  // 'payer-insurer-enrollment': payerInsurerEnrollment,
-  // 'practice-launch': practiceLaunch,
-  // 'operations-management': operationsManagement,
-  // 'marketing-patient-engagement': marketingPatientEngagement,
-  // 'virtual-healthcare-solutions': virtualHealthcareSolutions,
-  // 'analytics-reporting': analyticsReporting,
 };
+
+export const solutions = Object.values(allSolutions);
+export const solutionPages = Object.keys(allSolutions);
+export const solutionsData = solutions;
 
 export function getSolution(slug: string): SolutionData | null {
   return allSolutions[slug] || null;
@@ -64,3 +52,5 @@ export function getSolution(slug: string): SolutionData | null {
 export function getSolutionSlugs(): string[] {
   return Object.keys(allSolutions);
 }
+
+export default allSolutions;

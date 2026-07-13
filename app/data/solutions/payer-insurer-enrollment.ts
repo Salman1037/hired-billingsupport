@@ -1,9 +1,9 @@
 import { SolutionData } from '../solutionTypes';
 
 export const payerInsurerEnrollment: SolutionData = {
-  title: 'Payer & Insurer Enrollment',
+  title: 'Payer Enrollment Services for Providers | HBS',
   subtitle: 'Manage payer and insurer enrollment from application to active billing status',
-  description: 'A provider who cannot bill a payer cannot serve that payer\'s patients. Enrollment is access. Hired Billing Support manages the full payer enrollment process — from commercial applications and Medicare/Medicaid enrollment through follow-up, portal management, EFT/ERA setup, and status tracking.',
+  description: 'Expand payer access with enrollment support, application tracking, payer follow-up, EFT/ERA setup, and approval visibility.',
   hero: {
     eyebrow: 'Payer Enrollment',
     title: 'If you are not enrolled, you cannot get paid no matter<em> how well you bill.</em>',

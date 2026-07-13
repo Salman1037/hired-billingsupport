@@ -1,9 +1,9 @@
 import { SolutionData } from '../solutionTypes';
 
 export const practiceLaunch: SolutionData = {
-  title: 'Practice Launch Support',
+  title: 'Medical Practice Launch Support | HBS',
   subtitle: 'Operational infrastructure coordinated before your practice opens — credentialing, payer enrollment, billing setup, intake workflow, and RCM launch planning so the backend is ready when patient volume arrives.',
-  description: 'Most practices open clinically ready but operationally uncertain. Hired Billing Support coordinates the full pre-launch infrastructure — credentialing, payer enrollment, billing system setup, front desk workflow, and post-launch support — so your practice opens on an operational foundation that supports billing from day one.',
+  description: 'Launch with a stronger backend through credentialing, payer enrollment, billing setup, workflows, intake, and RCM readiness.',
   hero: {
     eyebrow: ' Practice Launch',
     title: 'Your practice opens once. The billing foundation needs to be right<em> from day one.</em>',

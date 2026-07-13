@@ -2,9 +2,9 @@
 import { SolutionData } from '../solutionTypes';
 
 export const arManagement: SolutionData = {
-  title: 'AR Management & Cash Flow Optimization',
+  title: 'AR Management for Healthcare Practices | HBS',
   subtitle: 'For medical practices & specialty clinics',
-  description: 'Hired Billing Support manages your accounts receivable as an active, assigned team — following up on every unpaid claim, tracking payer status, identifying underpayments, and converting outstanding receivables into predictable cash flow.',
+  description: 'Turn unpaid claims into cleaner cash flow with payer follow-up, AR tracking, underpayment review, and revenue visibility.',
 
   hero: {
     eyebrow: 'AR Management',

@@ -1,91 +1,151 @@
 /**
  * Testimonials Slider Module
- * Handles infinite continuous loop of testimonials carousel
+ * Handles the continuous loop of the testimonial carousel.
  */
 
 class TestimonialsSlider {
   constructor() {
-    this.track = document.querySelector('.testi-track');
-    this.cards = document.querySelectorAll('.testi');
+    this.track = null;
+    this.cards = [];
     this.currentIndex = 0;
     this.autoRotateInterval = null;
-    this.autoRotateDelay = 3000; // 3 seconds
-    this.originalCardCount = 4; // Number of original testimonials before duplication
+    this.autoRotateDelay = 4000;
+    this.originalCardCount = 4;
+    this.isInitialized = false;
+    this.resizeObserver = null;
 
-    if (this.track && this.cards.length > 0) {
-      this.init();
-    }
+    this.init();
   }
 
   init() {
-    // Start auto-rotation immediately
-    this.startAutoRotate();
-    
-    // Handle window resize
-    window.addEventListener('resize', () => this.updateSlider());
-    
+    if (this.isInitialized) return;
+
+    this.track = document.querySelector('.testi-track');
+    this.cards = Array.from(document.querySelectorAll('.testi'));
+
+    if (!this.track || this.cards.length === 0) {
+      return;
+    }
+
+    this.isInitialized = true;
+    this.currentIndex = 0;
+    this.track.style.transition = 'none';
+    this.track.style.willChange = 'transform';
+
+    this.bindEvents();
     this.updateSlider();
+
+    window.requestAnimationFrame(() => {
+      this.updateSlider();
+      this.startAutoRotate();
+    });
+
+    window.setTimeout(() => this.updateSlider(), 150);
+  }
+
+  bindEvents() {
+    window.addEventListener('resize', () => this.updateSlider());
+    window.addEventListener('load', () => this.updateSlider());
+
+    if (typeof ResizeObserver !== 'undefined' && this.track) {
+      this.resizeObserver = new ResizeObserver(() => this.updateSlider());
+      this.resizeObserver.observe(this.track);
+    }
+
+    document.addEventListener('visibilitychange', () => {
+      if (document.hidden) {
+        this.stopAutoRotate();
+      } else {
+        this.startAutoRotate();
+      }
+    });
+  }
+
+  getCardWidth() {
+    if (!this.track || this.cards.length === 0) return 0;
+
+    const firstCard = this.cards[0];
+    const trackStyle = window.getComputedStyle(this.track);
+    const gapValue = parseFloat(trackStyle.columnGap || trackStyle.gap || '40') || 40;
+
+    return firstCard.getBoundingClientRect().width + gapValue;
   }
 
   updateSlider() {
-    const cardWidth = this.cards[0].offsetWidth + 40; // 40px gap
+    if (!this.track || this.cards.length === 0) return;
+
+    const cardWidth = this.getCardWidth();
+    if (!cardWidth) return;
+
     this.track.style.transform = `translateX(-${this.currentIndex * cardWidth}px)`;
   }
 
   nextSlide() {
+    if (!this.track || this.cards.length === 0) return;
+
     this.currentIndex++;
-    const cardWidth = this.cards[0].offsetWidth + 40;
-    
-    // When reaching the end of original set, reset to beginning seamlessly
-    if (this.currentIndex >= this.originalCardCount) {
-      // Apply transition for smooth movement
-      this.track.style.transition = 'transform 0.8s cubic-bezier(0.22, 0.61, 0.36, 1)';
-      this.updateSlider();
-      
-      // After reaching the duplicate section, reset without animation
-      setTimeout(() => {
+    const cardWidth = this.getCardWidth();
+
+    if (!cardWidth) return;
+
+    const shouldReset = this.currentIndex >= this.originalCardCount;
+
+    this.track.style.transition = 'transform 0.8s cubic-bezier(0.22, 0.61, 0.36, 1)';
+    this.updateSlider();
+
+    if (shouldReset) {
+      window.setTimeout(() => {
         this.track.style.transition = 'none';
         this.currentIndex = 0;
         this.updateSlider();
-      }, 800); // Match the transition duration
-    } else {
-      this.track.style.transition = 'transform 0.8s cubic-bezier(0.22, 0.61, 0.36, 1)';
-      this.updateSlider();
+      }, 800);
     }
   }
 
   startAutoRotate() {
     if (this.autoRotateInterval) return;
-    
-    this.autoRotateInterval = setInterval(() => {
+
+    this.autoRotateInterval = window.setInterval(() => {
       this.nextSlide();
     }, this.autoRotateDelay);
   }
 
   stopAutoRotate() {
     if (this.autoRotateInterval) {
-      clearInterval(this.autoRotateInterval);
+      window.clearInterval(this.autoRotateInterval);
       this.autoRotateInterval = null;
     }
   }
 
   destroy() {
     this.stopAutoRotate();
+    if (this.resizeObserver) {
+      this.resizeObserver.disconnect();
+    }
   }
 }
 
-// Initialize slider when DOM is ready
-if (typeof document !== 'undefined') {
+let sliderInstance = null;
+
+function initializeTestimonialsSlider() {
+  if (sliderInstance || typeof window === 'undefined' || typeof document === 'undefined') {
+    return;
+  }
+
+  const start = () => {
+    if (sliderInstance) return;
+    sliderInstance = new TestimonialsSlider();
+  };
+
   if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', () => {
-      new TestimonialsSlider();
-    });
+    document.addEventListener('DOMContentLoaded', start, { once: true });
   } else {
-    new TestimonialsSlider();
+    window.requestAnimationFrame(start);
   }
 }
 
-// Export for use in other modules
+initializeTestimonialsSlider();
+
 if (typeof module !== 'undefined' && module.exports) {
   module.exports = TestimonialsSlider;
 }

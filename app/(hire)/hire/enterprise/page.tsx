@@ -1,5 +1,10 @@
 import Link from 'next/link';
 
+export const metadata = {
+  title: 'Enterprise Billing Staffing | Hired Billing Support',
+  description: 'Support multi-location and enterprise billing teams with experienced specialists in AR, operations, and compliance.',
+};
+
 export default function enterprise() {
   return (
 <section>
@@ -256,7 +261,7 @@ export default function enterprise() {
         <h2 className="display">We become a department <em>of your organization.</em></h2>
       </div>
       <div className="steps-5 fade-in">
-        <div className="step featured">
+        <div className="step ">
           <span className="num">— 01</span>
           <h4>Embedded ops leadership.</h4>
           <p>A dedicated ops lead from our side, reporting to your COO or VP of Operations. Weekly sync. Monthly review.

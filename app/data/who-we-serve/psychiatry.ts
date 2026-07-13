@@ -1,9 +1,9 @@
 import { SolutionData } from '../solutionTypes';
 
 export const psychiatry: SolutionData = {
-  title: 'Psychiatry Billing Services',
+  title: 'Psychiatry Billing Services | HBS',
   subtitle: 'Specialty-aware behavioral health billing with session limit tracking, telehealth support, and parity compliance',
-  description: 'Hired Billing Support provides specialty-aware psychiatry and behavioral health billing — prior authorization support, eligibility verification, telehealth billing, session limit tracking, denial management, and AR follow-up.',
+  description: 'Support behavioral health revenue with eligibility, session limits, telehealth billing, denials, AR follow-up, and RCM workflows.',
   hero: {
     eyebrow: 'Psychiatry & Behavioral Health',
     title: 'Behavioral health billing has specific rules   <em> most billing vendors get wrong.</em>',

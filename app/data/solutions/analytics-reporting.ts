@@ -1,9 +1,9 @@
 import { SolutionData } from '../solutionTypes';
 
 export const analyticsReporting: SolutionData = {
-  title: 'Healthcare Analytics & Reporting',
+  title: 'Healthcare Analytics & Reporting Services | HBS',
   subtitle: 'Turn your healthcare operations data into structured reporting and analytics that give leadership the visibility to make better decisions.',
-  description: 'Hired Billing Support turns your billing, AR, denial, operational, and patient engagement data into structured healthcare analytics and reporting — giving leadership the visibility to make better decisions, control revenue, and manage operations with confidence.',
+  description: 'Turn RCM, AR, denial, payer, and workflow data into clear dashboards, KPI tracking, and decisions your team can use.',
   
   hero: {
     eyebrow: 'Analytics & Reporting',

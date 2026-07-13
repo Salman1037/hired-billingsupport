@@ -1,9 +1,9 @@
 import { SolutionData } from '../solutionTypes';
 
 export const virtualHealthcareSolutions: SolutionData = {
-  title: 'Virtual Healthcare Solutions',
+  title: 'Virtual Healthcare Support Services | HBS',
   subtitle: 'Virtual care operations support that works like an extension of your in-house staff.',
-  description: 'Hired Billing Support provides virtual healthcare operations support — telehealth coordination, virtual medical assistants, remote scheduling, eligibility verification, EHR task management, and care coordination inside your existing workflow.',
+  description: 'Build remote healthcare support for telehealth, intake, scheduling, eligibility, EHR tasks, patient follow-up, and care workflows.',
   
   hero: {
     eyebrow: 'Virtual Healthcare Solutions',

@@ -1,9 +1,9 @@
 import { SolutionData } from '../solutionTypes';
 
 export const oldAgingAr: SolutionData = {
-  title: 'Old & Aging AR Recovery',
+  title: 'Old AR Recovery for Healthcare Practices | HBS',
   subtitle: 'Recover revenue sitting in 60, 90, 120, and 180+ day accounts receivable',
-  description: 'Your aging AR is not a write-off pile — it is revenue you earned that is waiting for systematic recovery. Hired Billing Support audits your backlog, assesses collectibility, prioritizes the highest-value targets, and works them down without overwhelming your team.',
+  description: 'Recover collectible old AR with aging claim review, payer follow-up, appeal support, and focused revenue recovery workflows.',
   hero: {
     eyebrow: 'Old AR Recovery',
     title: 'Before you write it off, find out how much is <em> still collectible.</em>',

@@ -2,9 +2,9 @@
 import { SolutionData } from '../solutionTypes';
 
 export const arDenialFixation: SolutionData = {
-  title: 'Denial Management & Fixation Services',
+  title: 'Denial Management Services for Medical Claims | HBS',
   subtitle: 'For medical practices & specialty clinics',
-  description: 'Hired Billing Support reviews every denial, corrects the claim, builds the appeal, and tracks the root cause — so the same denial stops coming back month after month. Embedded denial management for healthcare practices.',
+  description: 'Fix claim denials at the root with payer follow-up, appeals, correction workflows, and denial pattern tracking.',
 
   hero: {
     eyebrow: 'Denial Management',

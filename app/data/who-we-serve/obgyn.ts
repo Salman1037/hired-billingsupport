@@ -1,9 +1,9 @@
 import { SolutionData } from '../solutionTypes';
 
 export const obgyn: SolutionData = {
-  title: 'OBGYN Billing Services',
+  title: 'OBGYN Billing Services for Practices | HBS',
   subtitle: "Women's health billing with global period management, eligibility monitoring during pregnancy, and patient-sensitive billing communication",
-  description: "Hired Billing Support provides specialty-aware OBGYN billing — maternity workflow support, global billing management, eligibility verification, authorization tracking, denial management, and patient-friendly AR coordination for women's health practices.",
+  description: "Support women’s health revenue with maternity billing, eligibility checks, global billing workflows, denials, and AR follow-up.",
   hero: {
     eyebrow: 'OBGYN & Women\'s Health',
     title: 'OBGYN billing has gaps that most billing teams do not catch <em>until a claim denies.</em>',

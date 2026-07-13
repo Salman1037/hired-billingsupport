@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export type BlogArticle = {
   slug: string;
   title: string;
@@ -730,3 +731,18 @@ export function getAdjacentArticles(currentSlug: string) {
     next: blogArticles[index + 1] ?? null,
   };
 }
+=======
+﻿export type { BlogArticle } from '@/types/blog';
+export { blogArticles } from '@/data/blogs';
+export {
+  getAdjacentArticles,
+  getAllArticles,
+  getArticleBySlug,
+  getCategories,
+  getFeaturedArticle,
+  getLatestArticles,
+  getPopularArticles,
+  getRelatedArticles,
+  getTags,
+} from '@/lib/blog';
+>>>>>>> ceab0e2 (all have done)

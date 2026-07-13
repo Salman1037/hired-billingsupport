@@ -1,9 +1,9 @@
 import { SolutionData } from '@/app/data/solutionTypes';
 
 export const startupPractices: SolutionData = {
-  title: 'Startup Medical Practice Support',
+  title: 'Startup Medical Practice Support | HBS',
   subtitle: 'Build the operational foundation before patient pressure makes every delay expensive.',
-  description: 'Hired Billing Support helps startup medical practices build the operational foundation they need — credentialing, payer enrollment, billing setup, intake workflow, and RCM launch planning before patient volume begins.',
+  description: 'Build your practice foundation with credentialing, payer enrollment, billing setup, launch workflows, and RCM readiness.',
   
   hero: {
     eyebrow: 'Who We Serve · Startup Practices',

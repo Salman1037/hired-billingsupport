@@ -3,10 +3,10 @@
 import { SolutionData } from '../solutionTypes';
 
 export const medicalCoding: SolutionData = {
-  title: 'Medical Coding',
+  title: 'Medical Coding Services for Healthcare | HBS',
   subtitle: 'A clean claim starts with accurate coding. Yours may be leaving the door before anyone has checked.',
   description:
-    'Coding errors do not announce themselves. They show up as denials, underpayments, and compliance risk — weeks after the visit, long after the clinical moment that created them.',
+    'Strengthen claim accuracy with ICD-10, CPT, HCPCS, documentation review, and coding support that reduces avoidable denials.',
   hero: {
     eyebrow: 'Medical Coding',
     title: 'A wrong code does not just get denied.<em> It gets underpaid  or flagged.</em>',

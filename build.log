@@ -1,0 +1,111 @@
+
+> demo-nextjs@0.1.0 build
+> next build
+
+   ▲ Next.js 15.3.5
+   - Experiments (use with caution):
+     · cpus: 1
+     · staticGenerationRetryCount: 1
+     · staticGenerationMaxConcurrency: 1
+     · staticGenerationMinPagesPerWorker: 1000
+
+   Creating an optimized production build ...
+Failed to compile.
+
+app/layout.tsx
+An error occurred in `next/font`.
+
+Error: Cannot find module '@tailwindcss/postcss'
+Require stack:
+- /home/hiredbi1/nodevenv/hbs-next-app/20/lib/node_modules/next/dist/build/webpack/config/blocks/css/plugins.js
+- /home/hiredbi1/nodevenv/hbs-next-app/20/lib/node_modules/next/dist/build/webpack/config/blocks/css/index.js
+- /home/hiredbi1/nodevenv/hbs-next-app/20/lib/node_modules/next/dist/build/webpack/config/index.js
+- /home/hiredbi1/nodevenv/hbs-next-app/20/lib/node_modules/next/dist/build/webpack-config.js
+- /home/hiredbi1/nodevenv/hbs-next-app/20/lib/node_modules/next/dist/build/webpack-build/impl.js
+- /home/hiredbi1/nodevenv/hbs-next-app/20/lib/node_modules/next/dist/compiled/jest-worker/processChild.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1207:15)
+    at /home/hiredbi1/nodevenv/hbs-next-app/20/lib/node_modules/next/dist/server/require-hook.js:55:36
+    at Function.resolve (node:internal/modules/helpers:193:19)
+    at loadPlugin (/home/hiredbi1/nodevenv/hbs-next-app/20/lib/node_modules/next/dist/build/webpack/config/blocks/css/plugins.js:53:32)
+    at /home/hiredbi1/nodevenv/hbs-next-app/20/lib/node_modules/next/dist/build/webpack/config/blocks/css/plugins.js:185:56
+    at Array.map (<anonymous>)
+    at getPostCssPlugins (/home/hiredbi1/nodevenv/hbs-next-app/20/lib/node_modules/next/dist/build/webpack/config/blocks/css/plugins.js:185:47)
+    at async /home/hiredbi1/nodevenv/hbs-next-app/20/lib/node_modules/next/dist/build/webpack/config/blocks/css/index.js:125:36
+    at async /home/hiredbi1/nodevenv/hbs-next-app/20/lib/node_modules/next/dist/build/webpack/loaders/next-font-loader/index.js:94:33
+    at async Span.traceAsyncFn (/home/hiredbi1/nodevenv/hbs-next-app/20/lib/node_modules/next/dist/trace/trace.js:157:20)
+
+app/layout.tsx
+An error occurred in `next/font`.
+
+Error: Cannot find module '@tailwindcss/postcss'
+Require stack:
+- /home/hiredbi1/nodevenv/hbs-next-app/20/lib/node_modules/next/dist/build/webpack/config/blocks/css/plugins.js
+- /home/hiredbi1/nodevenv/hbs-next-app/20/lib/node_modules/next/dist/build/webpack/config/blocks/css/index.js
+- /home/hiredbi1/nodevenv/hbs-next-app/20/lib/node_modules/next/dist/build/webpack/config/index.js
+- /home/hiredbi1/nodevenv/hbs-next-app/20/lib/node_modules/next/dist/build/webpack-config.js
+- /home/hiredbi1/nodevenv/hbs-next-app/20/lib/node_modules/next/dist/build/webpack-build/impl.js
+- /home/hiredbi1/nodevenv/hbs-next-app/20/lib/node_modules/next/dist/compiled/jest-worker/processChild.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1207:15)
+    at /home/hiredbi1/nodevenv/hbs-next-app/20/lib/node_modules/next/dist/server/require-hook.js:55:36
+    at Function.resolve (node:internal/modules/helpers:193:19)
+    at loadPlugin (/home/hiredbi1/nodevenv/hbs-next-app/20/lib/node_modules/next/dist/build/webpack/config/blocks/css/plugins.js:53:32)
+    at /home/hiredbi1/nodevenv/hbs-next-app/20/lib/node_modules/next/dist/build/webpack/config/blocks/css/plugins.js:185:56
+    at Array.map (<anonymous>)
+    at getPostCssPlugins (/home/hiredbi1/nodevenv/hbs-next-app/20/lib/node_modules/next/dist/build/webpack/config/blocks/css/plugins.js:185:47)
+    at async /home/hiredbi1/nodevenv/hbs-next-app/20/lib/node_modules/next/dist/build/webpack/config/blocks/css/index.js:125:36
+    at async /home/hiredbi1/nodevenv/hbs-next-app/20/lib/node_modules/next/dist/build/webpack/loaders/next-font-loader/index.js:94:33
+    at async Span.traceAsyncFn (/home/hiredbi1/nodevenv/hbs-next-app/20/lib/node_modules/next/dist/trace/trace.js:157:20)
+
+app/layout.tsx
+An error occurred in `next/font`.
+
+Error: Cannot find module '@tailwindcss/postcss'
+Require stack:
+- /home/hiredbi1/nodevenv/hbs-next-app/20/lib/node_modules/next/dist/build/webpack/config/blocks/css/plugins.js
+- /home/hiredbi1/nodevenv/hbs-next-app/20/lib/node_modules/next/dist/build/webpack/config/blocks/css/index.js
+- /home/hiredbi1/nodevenv/hbs-next-app/20/lib/node_modules/next/dist/build/webpack/config/index.js
+- /home/hiredbi1/nodevenv/hbs-next-app/20/lib/node_modules/next/dist/build/webpack-config.js
+- /home/hiredbi1/nodevenv/hbs-next-app/20/lib/node_modules/next/dist/build/webpack-build/impl.js
+- /home/hiredbi1/nodevenv/hbs-next-app/20/lib/node_modules/next/dist/compiled/jest-worker/processChild.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1207:15)
+    at /home/hiredbi1/nodevenv/hbs-next-app/20/lib/node_modules/next/dist/server/require-hook.js:55:36
+    at Function.resolve (node:internal/modules/helpers:193:19)
+    at loadPlugin (/home/hiredbi1/nodevenv/hbs-next-app/20/lib/node_modules/next/dist/build/webpack/config/blocks/css/plugins.js:53:32)
+    at /home/hiredbi1/nodevenv/hbs-next-app/20/lib/node_modules/next/dist/build/webpack/config/blocks/css/plugins.js:185:56
+    at Array.map (<anonymous>)
+    at getPostCssPlugins (/home/hiredbi1/nodevenv/hbs-next-app/20/lib/node_modules/next/dist/build/webpack/config/blocks/css/plugins.js:185:47)
+    at async /home/hiredbi1/nodevenv/hbs-next-app/20/lib/node_modules/next/dist/build/webpack/config/blocks/css/index.js:125:36
+    at async /home/hiredbi1/nodevenv/hbs-next-app/20/lib/node_modules/next/dist/build/webpack/loaders/next-font-loader/index.js:94:33
+    at async Span.traceAsyncFn (/home/hiredbi1/nodevenv/hbs-next-app/20/lib/node_modules/next/dist/trace/trace.js:157:20)
+
+./app/CostROIcalculator/calculator.module.css
+Error: Cannot find module '@tailwindcss/postcss'
+Require stack:
+- /home/hiredbi1/nodevenv/hbs-next-app/20/lib/node_modules/next/dist/build/webpack/config/blocks/css/plugins.js
+- /home/hiredbi1/nodevenv/hbs-next-app/20/lib/node_modules/next/dist/build/webpack/config/blocks/css/index.js
+- /home/hiredbi1/nodevenv/hbs-next-app/20/lib/node_modules/next/dist/build/webpack/config/index.js
+- /home/hiredbi1/nodevenv/hbs-next-app/20/lib/node_modules/next/dist/build/webpack-config.js
+- /home/hiredbi1/nodevenv/hbs-next-app/20/lib/node_modules/next/dist/build/webpack-build/impl.js
+- /home/hiredbi1/nodevenv/hbs-next-app/20/lib/node_modules/next/dist/compiled/jest-worker/processChild.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1207:15)
+    at /home/hiredbi1/nodevenv/hbs-next-app/20/lib/node_modules/next/dist/server/require-hook.js:55:36
+    at Function.resolve (node:internal/modules/helpers:193:19)
+    at loadPlugin (/home/hiredbi1/nodevenv/hbs-next-app/20/lib/node_modules/next/dist/build/webpack/config/blocks/css/plugins.js:53:32)
+    at /home/hiredbi1/nodevenv/hbs-next-app/20/lib/node_modules/next/dist/build/webpack/config/blocks/css/plugins.js:185:56
+    at Array.map (<anonymous>)
+    at getPostCssPlugins (/home/hiredbi1/nodevenv/hbs-next-app/20/lib/node_modules/next/dist/build/webpack/config/blocks/css/plugins.js:185:47)
+    at async /home/hiredbi1/nodevenv/hbs-next-app/20/lib/node_modules/next/dist/build/webpack/config/blocks/css/index.js:125:36
+    at async /home/hiredbi1/nodevenv/hbs-next-app/20/lib/node_modules/next/dist/build/webpack/loaders/next-font-loader/index.js:94:33
+    at async Span.traceAsyncFn (/home/hiredbi1/nodevenv/hbs-next-app/20/lib/node_modules/next/dist/trace/trace.js:157:20)
+
+Import trace for requested module:
+./app/CostROIcalculator/calculator.module.css
+./app/CostROIcalculator/page.tsx
+
+./app/(solutions)/solutions/[slug]/page.tsx
+Module not found: Can't resolve '@/app/data/solutions'
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+> Build failed because of webpack errors

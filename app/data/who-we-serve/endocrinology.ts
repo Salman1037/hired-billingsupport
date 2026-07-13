@@ -1,9 +1,9 @@
 import { SolutionData } from '../solutionTypes';
 
 export const endocrinology: SolutionData = {
-  title: 'Endocrinology Billing Services',
+  title: 'Endocrinology Billing Services | HBS',
   subtitle: "Chronic care billing that tracks the full ongoing patient care relationship",
-  description: "Hired Billing Support provides specialty-aware endocrinology billing — medication and device authorization management, lab claim billing coordination, recurring eligibility verification, denial management, AR follow-up, and patient recall support for diabetes, thyroid, and metabolic care practices.",
+  description: 'Support chronic care revenue with eligibility, medication authorization, lab workflow tracking, denials, and AR follow-up.',
   hero: {
     eyebrow: 'Endocrinology & Chronic Care',
     title: 'Chronic disease billing requires the same consistency  <em>as chronic disease management.</em>',

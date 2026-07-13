@@ -1,9 +1,9 @@
 import { SolutionData } from '@/app/data/solutionTypes';
 
 export const payers: SolutionData = {
-  title: 'Healthcare Payer Operations Support',
+  title: 'Healthcare Payer Operations Support | HBS',
   subtitle: 'Scalable backend operations support for healthcare payers and health plans.',
-  description: 'Hired Billing Support provides scalable backend operations support for healthcare payers and health plans — claims queue management, authorization support, provider inquiry handling, enrollment processing, and operational throughput without proportional headcount increases.',
+  description: 'Scale payer backend processing with queue support, documentation tracking, provider communication, reporting, and workflow help.',
 
   hero: {
     eyebrow: 'Healthcare Payers',

@@ -1,4 +1,5 @@
-import { getSolution, getSolutionSlugs } from '@/app/data/who-we-serve';
+import type { Metadata } from 'next';
+import { getSolution, getSolutionSlugs, getWhoWeServeUrl } from '@/app/data/who-we-serve';
 import WhoWeServeLayout from '@/app/layouts/WhoWeServeLayout';
 
 interface PageProps {
@@ -9,7 +10,7 @@ export async function generateStaticParams() {
   return getSolutionSlugs().map((slug) => ({ slug }));
 }
 
-export async function generateMetadata({ params }: PageProps) {
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { slug } = await params;
   const solution = getSolution(slug);
 
@@ -20,9 +21,35 @@ export async function generateMetadata({ params }: PageProps) {
     };
   }
 
+  const canonicalUrl = getWhoWeServeUrl(slug);
+
   return {
     title: solution.title,
     description: solution.description,
+    alternates: {
+      canonical: canonicalUrl,
+    },
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        'max-image-preview': 'large',
+        'max-snippet': -1,
+      },
+    },
+    openGraph: {
+      title: solution.title,
+      description: solution.description,
+      url: canonicalUrl,
+      type: 'website',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: solution.title,
+      description: solution.description,
+    },
   };
 }
 

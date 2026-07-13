@@ -1,9 +1,9 @@
 import { SolutionData } from '@/app/data/solutionTypes';
 
 export const medicalOrderTransmission: SolutionData = {
-  title: 'Labs & Imaging Center Operations Support',
+  title: 'Medical Order Transmission Support | HBS',
   subtitle: 'Medical order intake, authorization, eligibility, and workflow management for diagnostic services.',
-  description: 'Hired Billing Support helps labs and imaging centers manage medical order transmission, referral intake, eligibility verification, prior authorization, scheduling coordination, provider communication, billing handoffs, and order workflow control.',
+  description: 'Control lab and imaging order workflows with referral intake, authorization tracking, scheduling support, and billing handoffs.',
 
   hero: {
     eyebrow: 'Labs & Imaging Centers',

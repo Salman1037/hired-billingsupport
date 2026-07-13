@@ -208,7 +208,7 @@ export default function PrivacyPolicyPage() {
             <p className="policy-text">
               Hired Billing Support ("HBS," "we," "our," or "us") provides healthcare operations support services to medical practices,
               healthcare organizations, and other healthcare industry stakeholders across the United States. We operate the website
-              located at <a href="https://www.hiredbillingsupport.com" style={{ color: 'var(--signal-deep)' }}>https://www.hiredbillingsupport.com</a> (the "Website").
+              located at <a href="https://hiredbillingsupport.com" style={{ color: 'var(--signal-deep)' }}>https://hiredbillingsupport.com</a> (the "Website").
             </p>
             <p className="policy-text">
               We respect the privacy of individuals who visit our Website or submit information to us through our inquiry forms,

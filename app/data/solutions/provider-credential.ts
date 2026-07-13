@@ -1,9 +1,9 @@
 import { SolutionData } from '../solutionTypes';
 
 export const providerCredential: SolutionData = {
-  title: 'Provider Credentialing',
+  title: 'Provider Credentialing Services | HBS',
   subtitle: 'Manage provider credentialing from document collection to payer activation',
-  description: 'Every day a provider is not credentialed is a day your practice is not getting paid for their work. Hired Billing Support manages the full credentialing workflow — from collecting provider documents and setting up CAQH to submitting payer applications, following up on status, and maintaining credentialing files so providers stay billing-ready.',
+  description: 'Get providers billing-ready with credentialing support, CAQH updates, document tracking, payer follow-up, and status visibility.',
   hero: {
     eyebrow: 'Provider Credentialing',
     title: 'Every day a provider is not credentialed is a day, <em>you are not getting paid.</em>',

@@ -7,24 +7,46 @@ export default function ContactPage() {
     name: '',
     email: '',
     phone: '',
-    company: '',
+    practiceName: '',
+    companyName: '',
     message: '',
   });
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState('');
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+    setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+    if (error) setError('');
   };
 
-  const handleSubmit = async (e: React.MouseEvent<HTMLButtonElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setLoading(true);
-    await new Promise((r) => setTimeout(r, 1200));
-    setLoading(false);
-    setSubmitted(true);
+    setError('');
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      });
+
+      const result = await response.json();
+
+      if (!response.ok || !result?.success) {
+        throw new Error(result?.error || 'Unable to send your message.');
+      }
+
+      setFormData({ name: '', email: '', phone: '', practiceName: '', companyName: '', message: '' });
+      setSubmitted(true);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'Unable to send your message.');
+    } finally {
+      setLoading(false);
+    }
   };
 
   const isValid = formData.name && formData.email && formData.message;
@@ -343,6 +365,11 @@ export default function ContactPage() {
           color: var(--ink-mute);
           letter-spacing: 0.08em;
         }
+        .form-error {
+          color: var(--danger);
+          font-size: 13px;
+          margin-top: 8px;
+        }
 
         /* Spinner */
         .spinner {
@@ -632,50 +659,60 @@ export default function ContactPage() {
                 <div className="form-grid-2">
                   <div className="form-group">
                     <label>Full Name<em>*</em></label>
-                  <input type="text" name="name" placeholder="Full Name" value={formData.name} onChange={handleChange} />
+                    <input type="text" name="name" placeholder="e.g. HBS" value={formData.name} onChange={handleChange} />
+                  </div>
+                  <div className="form-group">
+                    <label>Email Address<em>*</em></label>
+                    <input type="email" name="email" placeholder="e.g. hello@hiredbillingsupport.com" value={formData.email} onChange={handleChange} />
+                  </div>
                 </div>
-                <div className="form-group">
-                  <label>Email Address<em>*</em></label>
-                  <input type="email" name="email" placeholder="Email Address" value={formData.email} onChange={handleChange} />
-                </div>
-              </div>
 
                 <div className="form-grid-2">
                   <div className="form-group">
-                    <label>Phone Number</label>
-                    <input type="tel" name="phone" placeholder="Phone Number" value={formData.phone} onChange={handleChange} />
+                    <label>Phone Number<em>*</em></label>
+                    <input type="tel" name="phone" placeholder="e.g. +1 (321) 321-1740" value={formData.phone} onChange={handleChange} />
                   </div>
                   <div className="form-group">
-                    <label>Practice / Company</label>
-                    <input type="text" name="company" placeholder="Service of Interest" value={formData.company} onChange={handleChange} />
+                    <label>I'm Interested In <em>*</em></label>
+                    <input type="text" name="practiceName" placeholder="e.g.  Medicine/Dental/Enterprise/Mso" value={formData.practiceName} onChange={handleChange} />
                   </div>
+                </div>
+
+                <div className="form-group">
+                  <label>Company Name</label>
+                  <input type="text" name="companyName" placeholder="e.g. Hire Billing Support" value={formData.companyName} onChange={handleChange} />
                 </div>
 
                 <div className="form-group">
                   <label>How can we help?<em>*</em></label>
                   <textarea
                     name="message"
-                    placeholder="Message"
+                    placeholder=" Type your message here"
+                    value={formData.message}
+                    onChange={handleChange}
                   />
                 </div>
 
-                <div className="form-actions">
-                  <button className="btn btn-primary btn-lg" onClick={handleSubmit} disabled={loading || !isValid}>
-                    {loading ? (
-                      <>
-                        <div className="spinner" /> Sending…
-                      </>
-                    ) : (
-                      <>
-                        Send Message
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                          <path d="M5 12h14M13 5l7 7-7 7" />
-                        </svg>
-                      </>
-                    )}
-                  </button>
-                  <span className="form-note">— Response within 24 hrs</span>
-                </div>
+                <form onSubmit={handleSubmit}>
+                  <div className="form-actions">
+                    <button className="btn btn-primary btn-lg" type="submit" disabled={loading || !isValid}>
+                      {loading ? (
+                        <>
+                          <div className="spinner" /> Sending…
+                        </>
+                      ) : (
+                        <>
+                          Send Message
+                          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                            <path d="M5 12h14M13 5l7 7-7 7" />
+                          </svg>
+                        </>
+                      )}
+                    </button>
+                    <span className="form-note">— Response within 24 hrs</span>
+                  </div>
+                  {error ? <div className="form-error">{error}</div> : null}
+                </form>
               </>
             )}
           </div>

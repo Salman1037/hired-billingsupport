@@ -3,10 +3,10 @@
 import { SolutionData } from '../solutionTypes';
 
 export const medicalAuditing: SolutionData = {
-  title: 'Medical Auditing',
+  title: 'Medical Billing Audit Services | HBS',
   subtitle: 'Your billing is performing well enough that nobody is looking closely. That is exactly when you need someone to look closely.',
   description:
-    'Hired Billing Support conducts structured medical billing and coding audits — identifying revenue leakage, documentation risk, coding errors, and compliance exposure — and delivering findings your leadership team can actually act on.',
+    'Find revenue leakage, coding gaps, documentation risks, and denial patterns before they become costly payer problems.',
   hero: {
     eyebrow: 'Medical Auditing',
     title: 'The billing problems you cannot see are the ones <em> that cost the most.</em>',

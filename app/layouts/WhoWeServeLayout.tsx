@@ -1808,7 +1808,7 @@ const WhoWeServeLayout = ({ solution, slug }: WhoWeServeLayoutProps) => {
                   <path d="M5 12h14M13 5l7 7-7 7" />
                 </svg>
               </a>
-              <a href="#" className="btn btn-ghost btn-lg" style={{ color: 'var(--paper)', borderColor: 'rgba(250,247,242,.25)' }}>
+              <a href="#" className="btn btn-ghost btn-lg" >
                 Talk to our startup team
               </a>
             </div>

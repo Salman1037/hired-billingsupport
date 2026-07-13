@@ -169,7 +169,7 @@ const HeroVirtualHealthcareSolutions = ({ solution }: HeroProps) => {
                 <h1 className="display" dangerouslySetInnerHTML={{ __html: solution.hero.title }} />
                  <p className="sub reveal reveal-3" style={{ fontSize: "18px", lineHeight: "1.6", color: "var(--ink-mute)", marginTop: "24px" }}>{solution.hero.subtitle}</p>
               <p className="lede reveal reveal-3" style={{ fontSize: "18px", lineHeight: "1.6", color: "var(--ink-mute)", marginTop: "16px" }}>{solution.hero.description}</p>
-                     <div className="hero-actions reveal reveal-4" style={{ marginTop: "32px" }}>
+                     <div className="hero-actions reveal reveal-4" >
                 <a href="/contact" className="btn btn-primary btn-lg">
                   Contact us
                   <svg
@@ -230,7 +230,7 @@ const HeroVirtualHealthcareSolutions = ({ solution }: HeroProps) => {
               <span className="journey-tag jtag-pending">Queued</span>
             </div>
             
-            <div className="dash-divider"></div>
+            {/* <div className="dash-divider"></div> */}
             
             <div className="dash-stats">
               <div className="dash-stat">

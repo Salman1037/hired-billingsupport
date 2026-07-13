@@ -1,5 +1,10 @@
 import Link from 'next/link';
 
+export const metadata = {
+  title: 'Medical Staffing Services | Hired Billing Support',
+  description: 'Find medical staffing support for assistants, scribes, reception, and patient coordination roles.',
+};
+
 export default function medical() {
   return (
  <section>

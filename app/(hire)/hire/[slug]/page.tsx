@@ -5,39 +5,60 @@ interface PageProps {
   params: Promise<{ slug: string }>;
 }
 
+const hirePages: Record<string, {
+  title: string;
+  subtitle: string;
+  description: string;
+  roles: string[];
+}> = {
+  'medical': {
+    title: 'Medical Staffing',
+    subtitle: 'Clinical Assistants, Scribes, Reception',
+    description: 'Find experienced medical staffing support for clinical assistants, scribes, reception, and patient coordination roles.',
+    roles: ['Medical Assistants', 'Clinical Scribes', 'Front Desk Specialists', 'Patient Coordinators'],
+  },
+  'dental': {
+    title: 'Dental Staffing',
+    subtitle: 'Assistants & Coordinators',
+    description: 'Hire trained dental support professionals for assistants, hygiene coordination, front office, and operations roles.',
+    roles: ['Dental Assistants', 'Hygiene Coordinators', 'Front Desk', 'Office Managers'],
+  },
+  'enterprise': {
+    title: 'Enterprise & Billing',
+    subtitle: 'Billing Specialists & Operations',
+    description: 'Support enterprise billing and revenue operations with experienced specialists in AR, billing, compliance, and management.',
+    roles: ['Billing Specialists', 'AR Specialists', 'Operations Managers', 'Compliance Officers'],
+  },
+  'mso': {
+    title: 'MSO & Payer Partners',
+    subtitle: 'Staffing for Medical Groups',
+    description: 'Scale healthcare operations with staffing support for MSOs, payer partnerships, and medical group back-office teams.',
+    roles: ['RCM Specialists', 'Claims Processors', 'Eligibility Specialists', 'Prior Auth Teams'],
+  },
+};
+
+export async function generateMetadata({ params }: PageProps) {
+  const { slug } = await params;
+  const page = hirePages[slug] || {
+    title: 'Staffing Not Found',
+    subtitle: '',
+    description: 'The requested staffing page could not be found.',
+    roles: [],
+  };
+
+  return {
+    title: `${page.title} | Hired Billing Support`,
+    description: page.description,
+  };
+}
+
 export default async function HirePage({ params }: PageProps) {
   const { slug } = await params;
-
-  const hirePages: Record<string, {
-    title: string;
-    subtitle: string;
-    roles: string[];
-  }> = {
-    'medical': {
-      title: 'Medical Staffing',
-      subtitle: 'Clinical Assistants, Scribes, Reception',
-      roles: ['Medical Assistants', 'Clinical Scribes', 'Front Desk Specialists', 'Patient Coordinators'],
-    },
-    'dental': {
-      title: 'Dental Staffing',
-      subtitle: 'Assistants & Coordinators',
-      roles: ['Dental Assistants', 'Hygiene Coordinators', 'Front Desk', 'Office Managers'],
-    },
-    'enterprise': {
-      title: 'Enterprise & Billing',
-      subtitle: 'Billing Specialists & Operations',
-      roles: ['Billing Specialists', 'AR Specialists', 'Operations Managers', 'Compliance Officers'],
-    },
-    'mso': {
-      title: 'MSO & Payer Partners',
-      subtitle: 'Staffing for Medical Groups',
-      roles: ['RCM Specialists', 'Claims Processors', 'Eligibility Specialists', 'Prior Auth Teams'],
-    },
-  };
 
   const page = hirePages[slug] || {
     title: 'Staffing Not Found',
     subtitle: '',
+    description: 'The requested staffing page could not be found.',
     roles: [],
   };
 

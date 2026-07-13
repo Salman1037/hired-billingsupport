@@ -17,6 +17,12 @@ import { endocrinology } from './endocrinology';
 import { neurology } from './neurology';
 
 
+export const siteBaseUrl = 'https://www.hiredbillingsupport.com';
+
+export function getWhoWeServeUrl(slug: string): string {
+  return `${siteBaseUrl}/who-we-serve/${slug}`;
+}
+
 export const allWhoWeServe: Record<string, SolutionData> = {
   'start-ups': startupPractices,
   'small-medical-practices': smallMedicalPractices,

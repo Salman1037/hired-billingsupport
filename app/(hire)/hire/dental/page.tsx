@@ -1,5 +1,10 @@
 import Link from 'next/link';
 
+export const metadata = {
+  title: 'Dental Staffing Services | Hired Billing Support',
+  description: 'Explore dental staffing support for assistants, coordinators, front office teams, and practice operations.',
+};
+
 export default function dental() {
   return (
  <section>

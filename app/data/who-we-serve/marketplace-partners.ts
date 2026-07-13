@@ -1,9 +1,9 @@
 import { SolutionData } from '../solutionTypes';
 
 export const marketplacePartners: SolutionData = {
-  title: 'Marketplace Partners',
+  title: 'Healthcare Marketplace Partner Support | HBS',
   subtitle: 'Partnership execution support for healthcare marketplaces and platforms',
-  description: 'Hired Billing Support acts as the operational engine behind your healthcare partnerships — delivering billing, RCM, credentialing, payer enrollment, coding, compliance, AR management, and practice operations support to your clients while protecting your brand and the relationship you built.',
+  description: 'Help healthcare partners deliver billing, RCM, credentialing, AR, denials, coding, and operations support after the client says yes.',
   hero: {
     eyebrow: 'Marketplace Partners',
     title: 'You create the opportunity. We deliver  <em>the operations.</em>',

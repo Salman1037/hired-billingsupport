@@ -1,9 +1,9 @@
 import { SolutionData } from '@/app/data/solutionTypes';
 
 export const fqhc: SolutionData = {
-  title: 'FQHC Billing & Operations Support',
+  title: 'FQHC Billing & Operations Support | HBS',
   subtitle: 'Specialized billing and revenue cycle support for Federally Qualified Health Centers.',
-  description: 'Hired Billing Support helps Federally Qualified Health Centers strengthen billing, AR, eligibility, credentialing, reporting, and operational workflows — supporting the mission-driven work of community health with reliable revenue cycle infrastructure.',
+  description: 'Support community health operations with FQHC billing, AR, denials, eligibility, credentialing, reporting, and workflow help.',
 
   hero: {
     eyebrow: 'FQHCs & Community Health Centers',

@@ -1,9 +1,9 @@
 import { SolutionData } from '../solutionTypes';
 
 export const marketingPatientEngagement: SolutionData = {
-  title: 'Marketing & Patient Engagement',
+  title: 'Healthcare Marketing & Patient Engagement | HBS',
   subtitle: 'Converts patient inquiry into appointments, appointments into visits, and visits into long-term relationships by connecting marketing efforts with operational follow-through.',
-  description: 'Most practices invest in marketing that generates inquiries, then lose a portion of that investment in the follow-up gap. Hired Billing Support connects patient marketing with the operational follow-through that converts interest into appointments, appointments into visits, and visits into long-term patient relationships.',
+  description: 'Connect growth with operations through patient follow-up, inquiry handling, recall workflows, reviews, and engagement support.',
   hero: {
     eyebrow: 'Patient Engagement',
     title: 'Your schedule has gaps your front desk does not<em> have time to fill.</em>',

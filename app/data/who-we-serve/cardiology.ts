@@ -1,9 +1,9 @@
 import { SolutionData } from '../solutionTypes';
 
 export const cardiology: SolutionData = {
-  title: 'Cardiology Billing Services',
+  title: 'Cardiology Billing & RCM Services | HBS',
   subtitle: 'High-complexity diagnostic and procedure billing with authorization control, medical necessity documentation review, and aggressive payer follow-up',
-  description: 'Hired Billing Support provides specialty-aware cardiology billing — diagnostic authorization support, procedure coding accuracy, medical necessity documentation, high-volume claim management, denial management, and AR follow-up for cardiology practices.',
+  description: 'Manage cardiology billing complexity with authorization support, diagnostic claim tracking, denial resolution, and AR control.',
   hero: {
     eyebrow: 'Cardiology Billing',
     title: 'Cardiology billing is complex. Your revenue <em>should not suffer for it</em>',

@@ -5,6 +5,45 @@ import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import { useRouter, usePathname } from 'next/navigation';
 
+type TrustBadgesSectionProps = {
+  onClick: () => void;
+};
+
+function TrustBadgesSection({ onClick }: TrustBadgesSectionProps) {
+  return (
+    <div className="dropdown-trust-badges" aria-label="Trust badges">
+      <button
+        type="button"
+        className="dropdown-trust-badge"
+        aria-label="HIPAA Compliant"
+        onClick={onClick}
+      >
+        <span className="dropdown-trust-badge-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
+            <path d="M12 3 5 6v5c0 4.2 2.7 7.8 7 10 4.3-2.2 7-5.8 7-10V6l-7-3Z" />
+            <path d="m9.5 12 1.7 1.7 3.3-3.4" />
+          </svg>
+        </span>
+        <span className="dropdown-trust-badge-label">HIPAA Compliant</span>
+      </button>
+      <button
+        type="button"
+        className="dropdown-trust-badge"
+        aria-label="SOC 2 Certified"
+        onClick={onClick}
+      >
+        <span className="dropdown-trust-badge-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
+            <path d="M12 3 5 6v5c0 4.2 2.7 7.8 7 10 4.3-2.2 7-5.8 7-10V6l-7-3Z" />
+            <path d="m9 12 2 2 4-4" />
+          </svg>
+        </span>
+        <span className="dropdown-trust-badge-label">SOC 2 Certified</span>
+      </button>
+    </div>
+  );
+}
+
 export default function Navigation() {
   const router = useRouter();
   const pathname = usePathname();
@@ -138,6 +177,7 @@ export default function Navigation() {
               <div className="column-header">MSO / Payer Partners</div>
               <Link href="/hire/mso" onClick={handleLinkClick}>MSO / Payer Partners</Link>
             </div>
+            <TrustBadgesSection onClick={handleLinkClick} />
           </div>
         </div>
 
@@ -175,6 +215,7 @@ export default function Navigation() {
               <Link href="/solutions/virtual-healthcare-solutions" onClick={handleLinkClick}>Virtual Healthcare Solutions</Link>
               <Link href="/solutions/analytics-reporting" onClick={handleLinkClick}>Analytics & Reporting</Link>
             </div>
+            <TrustBadgesSection onClick={handleLinkClick} />
           </div>
         </div>
 
@@ -211,6 +252,7 @@ export default function Navigation() {
               <Link href="/who-we-serve/hbs-marketing" onClick={handleLinkClick}>Marketing Partners</Link>
               <Link href="/who-we-serve/developer-portal" onClick={handleLinkClick}>Developer</Link>
             </div>
+            <TrustBadgesSection onClick={handleLinkClick} />
           </div>
         </div>
 
@@ -231,6 +273,7 @@ export default function Navigation() {
               <Link href="/blog" onClick={handleLinkClick}>Blog</Link>
               
             </div>
+            <TrustBadgesSection onClick={handleLinkClick} />
           </div>
         </div>
 
@@ -250,6 +293,7 @@ export default function Navigation() {
               <Link href="/explore-partnership" onClick={handleLinkClick}>Explore Partnership</Link>
               <Link href="/find-service" onClick={handleLinkClick}>Find Service</Link>
             </div>
+            <TrustBadgesSection onClick={handleLinkClick} />
           </div>
         </div>
         <div className="nav-menu-footer">

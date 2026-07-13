@@ -1,9 +1,9 @@
 import { SolutionData } from '../solutionTypes';
 
 export const neurology: SolutionData = {
-  title: 'Neurology Billing Services',
+  title: 'Neurology Billing & RCM Services | HBS',
   subtitle: 'Specialty-aware billing for complex neurological care',
-  description: "Hired Billing Support provides specialty-aware neurology billing — treatment authorization management, documentation-aligned claim workflows, diagnostic and infusion billing, denial management, complex claim follow-up, and AR management for neurology and neurological specialty practices.",
+  description: 'Support complex neurology billing with authorization tracking, documentation-aware claims, denial management, and AR follow-up.',
   hero: {
     eyebrow: ' Neurology Billing',
     title: 'Neurology billing is complex enough without a billing  team<em> that does not understand it.</em>',

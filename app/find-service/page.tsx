@@ -452,73 +452,73 @@ export default function FindServicesPage() {
                 {
                   problem: "Claims are delayed, submission is inconsistent, or billing workflow feels unstable",
                   service: "Medical Billing & RCM",
-                link: "solutions/medical-billing-rcm",
+                link: "/solutions/medical-billing-rcm",
                   desc: "End-to-end revenue cycle management — charge entry, claim submission, payer follow-up, payment posting, and billing workflow stabilization."
                 },
                 {
                   problem: "Unpaid claims building in the AR, aged accounts accumulating, cash flow tightening",
                   service: "AR Management & Cash Flow",
-                link: "solutions/ar-management",
+                link: "/solutions/ar-management",
                   desc: "Systematic AR follow-up — every aging bucket assigned, every claim worked on schedule, and cash flow improvement through organized payer communication."
                 },
                 {
                   problem: "The same denial reasons appearing month after month without resolution",
                   service: "AR Denial & Fixation",
-                link: "solutions/ar-denial-fixation",
+                link: "/solutions/ar-denial-fixation",
                   desc: "Root cause denial analysis — patterns identified, upstream workflow corrections made, and appeal rates tracked so denial rates decline over time."
                 },
                 {
                   problem: "Old claims sitting uncollected — AR from 90, 120, or 180+ days ago that nobody has worked",
                   service: "Old & Aging AR Recovery",
-                link: "solutions/old-aging-ar",
+                link: "/solutions/old-aging-ar",
                   desc: "Targeted recovery of aged AR — collectibility assessment, prioritized recovery efforts, and revenue recaptured from accounts that have been overlooked."
                 },
                 {
                   problem: "Coding or documentation problems creating denials, underpayments, or compliance risk",
                   service: "Medical Coding Support",
-                link: "solutions/medical-coding",
+                link: "/solutions/medical-coding",
                   desc: "ICD-10, CPT, and modifier accuracy reviewed before claim submission — coding errors caught at the source rather than discovered through denials."
                 },
                 {
                   problem: "Concerns about billing accuracy, audit risk, documentation gaps, or coding pattern compliance",
                   service: "Medical Auditing",
-                link: "solutions/medical-audit",
+                link: "/solutions/medical-audit",
                   desc: "Billing and coding audit — documentation reviewed against billed codes, compliance gaps identified, and corrective recommendations provided."
                 },
                 {
                   problem: "Provider credentialing is delaying billing, recredentialing deadlines being missed, or documents scattered",
                   service: "Provider Credentialing",
-                link: "solutions/provider-credential",
+                link: "/solutions/provider-credential",
                   desc: "Full credentialing workflow — document collection, CAQH, payer applications, status tracking, and recredentialing management so providers stay billing-active."
                 },
                 {
                   problem: "Payer network gaps limiting patient access or a new provider who cannot bill certain plans",
                   service: "Payer & Insurer Enrollment",
-                link: "solutions/payer-insurer-enrollment",
+                link: "/solutions/payer-insurer-enrollment",
                   desc: "Payer enrollment from application to approval — commercial, Medicare, Medicaid, and EFT/ERA setup so providers access the payer networks their patients use."
                 },
                 {
                   problem: "Opening a new practice and the backend operational infrastructure is not ready",
                   service: "Practice Launch Support",
-                link: "solutions/practice-launch",
+                link: "/solutions/practice-launch",
                   desc: "Full launch coordination — credentialing, payer enrollment, billing setup, intake workflow, and RCM structure built before the first patient visit."
                 },
                 {
                   problem: "Daily workflow feels disorganized — tasks falling behind, staff overloaded, operations not scaling with growth",
                   service: "Operations Management",
-                link: "solutions/operations-management",
+                link: "/solutions/operations-management",
                   desc: "Daily administrative workflow support — prior auth, eligibility, scheduling coordination, SOP implementation, and operational reporting for growing practices."
                 },
                 {
                   problem: "Reports exist but leadership cannot see where revenue is leaking or what the data actually means",
                   service: "Analytics & Reporting",
-                link: "solutions/analytics-reporting",
+                link: "/solutions/analytics-reporting",
                   desc: "Operational analytics with plain-language commentary — KPI tracking, denial trend analysis, AR aging visibility, and reporting that produces decisions, not just data."
                 },
                 {
                   problem: "Patient inquiries not converting, appointment follow-up inconsistent, or retention weaker than it should be",
                   service: "Marketing & Patient Engagement",
-                  link: "solutions/marketing-patient-engagement",
+                  link: "/solutions/marketing-patient-engagement",
                   desc: "Patient engagement workflow — inquiry follow-up, appointment conversion, recall campaigns, review management, and patient communication coordination."
                 }
               ].map((item, index) => (

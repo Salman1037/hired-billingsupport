@@ -1,9 +1,9 @@
 import { SolutionData } from '../solutionTypes';
 
 export const qualityAssurance: SolutionData = {
-  title: 'Quality Assurance',
+  title: 'Medical Billing Quality Assurance | HBS',
   subtitle: 'Mistakes in billing are not discovered when they are made. They are discovered when they cost you something.',
-  description: 'A claim gets submitted. A denial comes back weeks later. An audit finds a pattern. A payment is short by 20 percent. In each case, the problem existed long before it surfaced — and a quality layer would have caught it first. Hired Billing Support builds a systematic QA layer across your billing, coding, AR, and revenue cycle operations — catching errors early, standardizing processes, and monitoring performance so problems are found before they become revenue loss.',
+  description: 'Add a stronger QA layer across billing, coding, AR, and denials to catch errors early and protect revenue consistency.',
   hero: {
     eyebrow: 'Billing Quality Assurance',
     title: 'Consistent billing quality does not happen<em> by accident.</em>',

@@ -1,5 +1,10 @@
 import Link from 'next/link';
 
+export const metadata = {
+  title: 'MSO and Payer Partner Staffing | Hired Billing Support',
+  description: 'Scale healthcare operations with staffing support tailored for MSOs, payer partners, and medical groups.',
+};
+
 export default function enterprise() {
   return (
 <div>

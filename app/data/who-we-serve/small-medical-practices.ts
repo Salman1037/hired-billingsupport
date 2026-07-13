@@ -1,9 +1,9 @@
 import { SolutionData } from '@/app/data/solutionTypes';
 
 export const smallMedicalPractices: SolutionData = {
-  title: 'Small Medical Practice Support',
+  title: 'Small Medical Practice Billing Support | HBS',
   subtitle: 'Give your small team the operational depth of a larger organization.',
-  description: 'Hired Billing Support gives small medical practices the operational depth of a larger team — billing, AR follow-up, prior authorizations, coding support, and credentialing maintenance — without adding in-house payroll.',
+  description: 'Relieve overloaded teams with billing, AR, denials, credentialing, authorizations, and admin support built for small practices.',
 
   hero: {
     eyebrow: 'Small Medical Practices',

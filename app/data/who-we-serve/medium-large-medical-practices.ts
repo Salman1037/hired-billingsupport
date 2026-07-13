@@ -1,9 +1,9 @@
 import { SolutionData } from '@/app/data/solutionTypes';
 
 export const mediumLargeMedicalPractices: SolutionData = {
-  title: 'Medical Group Billing & RCM Services',
+  title: 'Medical Group RCM & Operations Support | HBS',
   subtitle: 'Standardize billing, AR, credentialing, and operations across all providers and locations.',
-  description: 'Hired Billing Support helps medium to large medical groups standardize billing, AR, credentialing tracking, reporting, and operational workflows so leadership can see what is happening across the organization and manage it — not just react to it.',
+  description: 'Standardize billing, AR, denials, credentialing, reporting, and workflows across providers, teams, and locations.',
 
   hero: {
     eyebrow: 'Medical Groups',

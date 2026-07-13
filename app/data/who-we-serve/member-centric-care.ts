@@ -1,9 +1,9 @@
 import { SolutionData } from '@/app/data/solutionTypes';
 
 export const memberCentricCare: SolutionData = {
-  title: 'Member experience is built in the front office.',
+  title: 'Member-Centric Care Operations Support | HBS',
   subtitle: 'It is sustained or broken in the backend.',
-  description: 'Care coordination, member engagement, and value-based care outcomes depend on the reliability of every administrative workflow behind the clinical interaction.',
+  description: 'Improve member care workflows with eligibility, outreach, referrals, documentation, reporting, and backend coordination support.',
   
   hero: {
     eyebrow: 'Member-Centric Care',

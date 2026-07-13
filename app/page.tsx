@@ -1,8 +1,139 @@
 // app/page.tsx
-import Link from 'next/link';
+'use client';
 
+import Link from 'next/link';
+import { useEffect, useRef, useState } from 'react';
+
+const testimonials = [
+  {
+    quote: 'Partnering with Hired Billing Support gave us peace of mind. Our billing is cleaner, our staff works on patient care instead of paperwork, and we are now capturing more appointments than ever.',
+    avatar: 'RE',
+    name: 'Dr Ruth - Edwin DMD/MS',
+    role: 'Diplomate of American Board of Periodontology',
+  },
+  {
+    quote: 'Working with HBS has been a game-changer. The team is professional, responsive, and has streamlined our billing operations seamlessly.',
+    avatar: 'HM',
+    name: 'Herma Thompson PMHNP-BC',
+    role: 'Nurse Practitioner - Psych/Mental Health',
+  },
+  {
+    quote: 'HBS identified three payers underpaying our E&M claims for over a year. Recovered $40,000 in one quarter.',
+    avatar: 'JW',
+    name: 'James Whitfield MBA, CMPE',
+    role: 'Certified Medical Practice Executive',
+  },
+  {
+    quote: 'Prior auth denials dropped from 11% to under 3% in 60 days. HBS tracks every authorization before it expires.',
+    avatar: 'RM',
+    name: 'Dr. Rehan Malik MD, FACC',
+    role: 'Interventional Cardiologist',
+  },
+  {
+    quote: 'Partnering with Hired Billing Support gave us peace of mind. Our billing is cleaner, our staff works on patient care instead of paperwork, and we are now capturing more appointments than ever.',
+    avatar: 'RE',
+    name: 'Dr Ruth - Edwin DMD/MS',
+    role: 'Diplomate of American Board of Periodontology',
+  },
+  {
+    quote: 'Working with HBS has been a game-changer. The team is professional, responsive, and has streamlined our billing operations seamlessly.',
+    avatar: 'HM',
+    name: 'Herma Thompson PMHNP-BC',
+    role: 'Nurse Practitioner - Psych/Mental Health',
+  },
+  {
+    quote: 'HBS identified three payers underpaying our E&M claims for over a year. Recovered $40,000 in one quarter.',
+    avatar: 'JW',
+    name: 'James Whitfield MBA, CMPE',
+    role: 'Certified Medical Practice Executive',
+  },
+  {
+    quote: 'Prior auth denials dropped from 11% to under 3% in 60 days. HBS tracks every authorization before it expires.',
+    avatar: 'RM',
+    name: 'Dr. Rehan Malik MD, FACC',
+    role: 'Interventional Cardiologist',
+  },
+];
 
 export default function Home() {
+  const trackRef = useRef<HTMLDivElement>(null);
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  useEffect(() => {
+    const track = trackRef.current;
+    if (!track) return;
+
+    const cards = Array.from(track.children) as HTMLElement[];
+    if (cards.length === 0) return;
+
+    let visibleSlides = 1;
+    let cardWidth = 0;
+
+    const updateTransform = () => {
+      const firstCard = cards[0];
+      const trackStyle = window.getComputedStyle(track);
+      const gapValue = Number.parseFloat(trackStyle.columnGap || trackStyle.gap || '40') || 40;
+      const cardWidthNoGap = firstCard.getBoundingClientRect().width;
+      const containerWidth = track.parentElement?.getBoundingClientRect().width || track.getBoundingClientRect().width;
+
+      visibleSlides = Math.max(1, Math.floor((containerWidth + gapValue) / (cardWidthNoGap + gapValue)));
+      const maxIndex = Math.max(0, testimonials.length - visibleSlides);
+      const index = Math.min(activeIndex, maxIndex);
+
+      if (index !== activeIndex) {
+        setActiveIndex(index);
+      }
+
+      track.style.transition = 'transform 0.8s cubic-bezier(0.22, 0.61, 0.36, 1)';
+      track.style.transform = `translateX(-${index * (cardWidthNoGap + gapValue)}px)`;
+    };
+
+    const normalizeIndex = (index: number) => {
+      const maxIndex = Math.max(0, testimonials.length - visibleSlides);
+      return index > maxIndex ? 0 : index;
+    };
+
+    const handleResize = () => {
+      window.requestAnimationFrame(updateTransform);
+    };
+
+    const handleVisibility = () => {
+      if (document.hidden) return;
+      window.requestAnimationFrame(updateTransform);
+    };
+
+    const resizeObserver = typeof ResizeObserver !== 'undefined'
+      ? new ResizeObserver(handleResize)
+      : null;
+
+    if (resizeObserver) {
+      resizeObserver.observe(track);
+    }
+
+    window.addEventListener('resize', handleResize);
+    window.addEventListener('load', handleResize);
+    document.addEventListener('visibilitychange', handleVisibility);
+
+    const intervalId = window.setInterval(() => {
+      setActiveIndex((current) => {
+        const nextIndex = current + 1;
+        const maxIndex = Math.max(0, testimonials.length - visibleSlides);
+        return nextIndex > maxIndex ? 0 : nextIndex;
+      });
+    }, 5000);
+
+    window.requestAnimationFrame(updateTransform);
+    window.setTimeout(updateTransform, 150);
+
+    return () => {
+      window.clearInterval(intervalId);
+      window.removeEventListener('resize', handleResize);
+      window.removeEventListener('load', handleResize);
+      document.removeEventListener('visibilitychange', handleVisibility);
+      resizeObserver?.disconnect();
+    };
+  }, [activeIndex]);
+
   return (
     <main>
       {/* HERO */}
@@ -38,7 +169,7 @@ export default function Home() {
           <a href="/CostROIcalculator" className="btn btn-primary">COST & ROI CALCULATOR
             <svg className="arrow" width={14} height={14} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2}><path d="M5 12h14M13 5l7 7-7 7" /></svg>
           </a>
-          <a href="#services" className="btn btn-text">CONTACT →</a>
+          <a href="/contact" className="btn btn-text">CONTACT →</a>
         </div>
         <div className="hero-meta reveal reveal-5">
           <div className="hero-meta-item">
@@ -213,60 +344,60 @@ export default function Home() {
       </p>
     </div>
     <div className="services-grid home-services-grid fade-in">
-      <div className="service-cell">
+      <Link href="/solutions/rcm-management" className="service-cell">
         <svg className="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M3 3v18h18" /><path d="M7 14l4-4 4 4 5-5" /></svg>
         <h4>Revenue Cycle Management</h4>
         <p>End-to-end ownership of your collections — coding, claim submission, AR follow-up, denials, payment posting, patient billing. One team, one accountable scorecard.</p>
-        <a href="#" className="arrow-link">Explore RCM <span className="arrow">→</span></a>
-      </div>
-      <div className="service-cell">
+        <span className="arrow-link">Explore RCM <span className="arrow">→</span></span>
+      </Link>
+      <Link href="/solutions/ar-management" className="service-cell">
         <svg className="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><circle cx={12} cy={12} r={9} /><path d="M12 7v5l3 3" /></svg>
         <h4>AR Recovery &amp; Follow-Up</h4>
         <p>We hunt aging claims — 30, 60, 90, 120+ days. Payer calls, status checks, resubmissions, appeals. Most clients see AR days drop below 30 within 90 days.</p>
-        <a href="#" className="arrow-link">AR services <span className="arrow">→</span></a>
-      </div>
-      <div className="service-cell">
+        <span className="arrow-link">AR services <span className="arrow">→</span></span>
+      </Link>
+      <Link href="/solutions/medical-billing-rcm" className="service-cell">
         <svg className="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M9 11l3 3 7-7" /><path d="M20 12v6a2 2 0 01-2 2H6a2 2 0 01-2-2V6a2 2 0 012-2h9" /></svg>
         <h4>Medical Billing</h4>
         <p>Specialty-trained coders and billers. CPT, ICD-10, HCPCS, modifier accuracy. Clean-claim submission as a discipline, not an afterthought.</p>
-        <a href="#" className="arrow-link">Billing services <span className="arrow">→</span></a>
-      </div>
-      <div className="service-cell">
+        <span className="arrow-link">Billing services <span className="arrow">→</span></span>
+      </Link>
+      <Link href="/solutions/provider-credential" className="service-cell">
         <svg className="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z" /></svg>
         <h4>Prior Authorization</h4>
         <p>Pre-cert submission, payer follow-up, peer-to-peer prep. We shorten time-to-approval and stop the auth bottleneck from holding up patient care.</p>
-        <a href="#" className="arrow-link">Prior auth <span className="arrow">→</span></a>
-      </div>
-      <div className="service-cell">
+        <span className="arrow-link">Prior auth <span className="arrow">→</span></span>
+      </Link>
+      <Link href="/solutions/payer-insurer-enrollment" className="service-cell">
         <svg className="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><rect x={3} y={4} width={18} height={16} rx={2} /><path d="M16 2v4M8 2v4M3 10h18" /></svg>
         <h4>Insurance Verification</h4>
         <p>Real-time eligibility and benefits checks before the patient walks in. Co-pays, deductibles, coverage limits — clarified, documented, in the chart.</p>
-        <a href="#" className="arrow-link">Verification <span className="arrow">→</span></a>
-      </div>
-      <div className="service-cell">
+        <span className="arrow-link">Verification <span className="arrow">→</span></span>
+      </Link>
+      <Link href="/hire/medical" className="service-cell">
         <svg className="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M20 7l-8 8-4-4" /><path d="M14 3h7v7" /><path d="M21 14v5a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h5" /></svg>
         <h4>Virtual Medical Assistants</h4>
         <p>Charting support, message triage, refill management, referrals, lab follow-up. A clinical extension of the provider — quiet, accurate, always there.</p>
-        <a href="#" className="arrow-link">Virtual MAs <span className="arrow">→</span></a>
-      </div>
-      <div className="service-cell">
+        <span className="arrow-link">Virtual MAs <span className="arrow">→</span></span>
+      </Link>
+      <Link href="/hire/dental" className="service-cell">
         <svg className="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.13.96.37 1.9.72 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0122 16.92z" /></svg>
         <h4>Front Desk Support</h4>
         <p>Phones answered. Patients greeted (virtually). Schedules managed. We absorb the noise so your in-clinic team can focus on the patient in front of them.</p>
-        <a href="#" className="arrow-link">Front desk <span className="arrow">→</span></a>
-      </div>
-      <div className="service-cell">
+        <span className="arrow-link">Front desk <span className="arrow">→</span></span>
+      </Link>
+      <Link href="/solutions/operations-management" className="service-cell">
         <svg className="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><rect x={3} y={4} width={18} height={18} rx={2} /><path d="M3 10h18M8 2v4M16 2v4M8 14h2M14 14h2M8 18h2M14 18h2" /></svg>
         <h4>Scheduling &amp; Coordination</h4>
         <p>Appointment scheduling, reminders, recall, no-show recovery. We protect the calendar — the single most expensive asset in your practice.</p>
-        <a href="#" className="arrow-link">Scheduling <span className="arrow">→</span></a>
-      </div>
-      <div className="service-cell">
+        <span className="arrow-link">Scheduling <span className="arrow">→</span></span>
+      </Link>
+      <Link href="/solutions/operations-management" className="service-cell">
         <svg className="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" /><circle cx={9} cy={7} r={4} /><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75" /></svg>
         <h4>Healthcare Operations Mgmt</h4>
         <p>For larger practices: an operations lead embedded in your team. Workflows, dashboards, KPIs, vendor management. The COO-layer you don't have yet.</p>
-        <a href="#" className="arrow-link">Operations <span className="arrow">→</span></a>
-      </div>
+        <span className="arrow-link">Operations <span className="arrow">→</span></span>
+      </Link>
     </div>
   </div>
 </section>
@@ -409,63 +540,14 @@ export default function Home() {
       {/* TESTIMONIALS SECTION */}
       <section className="block">
         <div className="container">
-          <div className="block-head fade-in" style={{ textAlign: 'center', marginLeft: 'auto', marginRight: 'auto' }}>
+          <div className="block-head fade-in" >
             <div className="eyebrow">In their own words</div>
             <h2 className="display">From physicians who got their <em>evenings back.</em></h2>
           </div>
           <div className="testimonial-slider fade-in">
-            <div className="testi-track">
-              {[
-                {
-                  quote: 'Partnering with Hired Billing Support gave us peace of mind. Our billing is cleaner, our staff works on patient care instead of paperwork, and we are now capturing more appointments than ever.',
-                  avatar: 'RE',
-                  name: 'Dr Ruth - Edwin DMD/MS',
-                  role: 'Diplomate of American Board of Periodontology'
-                },
-                {
-                  quote: 'Working with HBS has been a game-changer. The team is professional, responsive, and has streamlined our billing operations seamlessly.',
-                  avatar: 'HM',
-                  name: 'Herma Thompson PMHNP-BC',
-                  role: 'Nurse Practitioner - Psych/Mental Health'
-                },
-                {
-                  quote: 'HBS identified three payers underpaying our E&M claims for over a year. Recovered $40,000 in one quarter.',
-                  avatar: 'JW',
-                  name: 'James Whitfield MBA, CMPE',
-                  role: 'Certified Medical Practice Executive'
-                },
-                {
-                  quote: 'Prior auth denials dropped from 11% to under 3% in 60 days. HBS tracks every authorization before it expires.',
-                  avatar: 'RM',
-                  name: 'Dr. Rehan Malik MD, FACC',
-                  role: 'Interventional Cardiologist'
-                },
-                {
-                  quote: 'Partnering with Hired Billing Support gave us peace of mind. Our billing is cleaner, our staff works on patient care instead of paperwork, and we are now capturing more appointments than ever.',
-                  avatar: 'RE',
-                  name: 'Dr Ruth - Edwin DMD/MS',
-                  role: 'Diplomate of American Board of Periodontology'
-                },
-                {
-                  quote: 'Working with HBS has been a game-changer. The team is professional, responsive, and has streamlined our billing operations seamlessly.',
-                  avatar: 'HM',
-                  name: 'Herma Thompson PMHNP-BC',
-                  role: 'Nurse Practitioner - Psych/Mental Health'
-                },
-                {
-                  quote: 'HBS identified three payers underpaying our E&M claims for over a year. Recovered $40,000 in one quarter.',
-                  avatar: 'JW',
-                  name: 'James Whitfield MBA, CMPE',
-                  role: 'Certified Medical Practice Executive'
-                },
-                {
-                  quote: 'Prior auth denials dropped from 11% to under 3% in 60 days. HBS tracks every authorization before it expires.',
-                  avatar: 'RM',
-                  name: 'Dr. Rehan Malik MD, FACC',
-                  role: 'Interventional Cardiologist'
-                }
-              ].map((testi, idx) => (
-                <div key={idx} className="testi">
+            <div className="testi-track" ref={trackRef}>
+              {testimonials.map((testi, idx) => (
+                <div key={`${testi.name}-${idx}`} className="testi">
                   <div className="testi-quote">{testi.quote}</div>
                   <div className="testi-attr">
                     <div className="testi-avatar">{testi.avatar}</div>
@@ -475,6 +557,25 @@ export default function Home() {
                     </div>
                   </div>
                 </div>
+              ))}
+            </div>
+            <div className="testimonial-dots" style={{ display: 'flex', justifyContent: 'center', gap: '10px', marginTop: '24px' }}>
+              {testimonials.map((_, idx) => (
+                <button
+                  key={idx}
+                  type="button"
+                  aria-label={`Go to testimonial ${idx + 1}`}
+                  onClick={() => setActiveIndex(idx)}
+                  style={{
+                    width: '10px',
+                    height: '10px',
+                    borderRadius: '999px',
+                    border: '0',
+                    background: idx === activeIndex ? 'var(--signal)' : 'rgba(10, 22, 40, 0.2)',
+                    cursor: 'pointer',
+                    padding: 0,
+                  }}
+                />
               ))}
             </div>
           </div>
@@ -491,7 +592,7 @@ export default function Home() {
               <p style={{ fontSize: '17px', lineHeight: '1.65', color: 'var(--ink-mute)', marginTop: '24px', maxWidth: '560px' }}>
                 We operate to HIPAA standards across our entire stack — workstations, networks, communications, and access controls. Every team member is BAA-bound, background-checked, and trained on PHI handling before they touch your data.
               </p>
-              <a href="#" className="btn btn-ghost" style={{ marginTop: '32px' }}>Read the security overview →</a>
+              <Link href="/contact" className="btn btn-ghost" style={{ marginTop: '32px' }}>Read the security overview →</Link>
             </div>
             <div className="compliance-badges">
               {[
@@ -591,13 +692,13 @@ export default function Home() {
           <h2 className="display">More patient care. <em>Less administrative burden.</em></h2>
           <p>Book a 30-minute discovery call. We'll audit your current operations and show you exactly where time and revenue are leaking — no pitch, no obligation.</p>
           <div className="actions">
-            <a href="#" className="btn btn-light">
+            <Link href="/contact" className="btn btn-light">
               Book a discovery call
               <svg className="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                 <path d="M5 12h14M13 5l7 7-7 7" />
               </svg>
-            </a>
-            <a href="#" className="btn btn-ghost" style={{ color: 'var(--paper)', borderColor: 'rgba(250,247,242,0.3)' }}>Request an RCM audit</a>
+            </Link>
+            <Link href="/contact" className="btn btn-ghost" style={{ color: 'var(--paper)', borderColor: 'rgba(250,247,242,0.3)' }}>Request an RCM audit</Link>
           </div>
         </div>
       </section>

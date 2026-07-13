@@ -1,9 +1,9 @@
 import { SolutionData } from '../solutionTypes';
 
 export const orthopedic: SolutionData = {
-  title: 'Orthopedic Billing Services',
+  title: 'Orthopedic Billing & RCM Services | HBS',
   subtitle: 'High-precision surgical billing with authorization control, procedure-level coding review, and high-value AR protection',
-  description: 'Hired Billing Support provides specialty-aware orthopedic billing — prior authorization control, surgical claim management, procedure coding accuracy, high-value AR protection, and denial management for orthopedic and musculoskeletal practices.',
+  description: 'Protect high-value orthopedic revenue with authorization tracking, surgical billing support, denial management, and AR follow-up.',
   hero: {
     eyebrow: 'Orthopedic Billing',
     title: ' One missing authorization can turn a $15,000 claim  <em>into a $0 payment.</em>',

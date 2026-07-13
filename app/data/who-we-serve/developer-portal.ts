@@ -1,9 +1,9 @@
 import { SolutionData } from '../solutionTypes';
 
 export const developerPortal: SolutionData = {
-  title: 'Developer Partners',
+  title: 'Healthcare Developer Partner Support | HBS',
   subtitle: 'Healthcare workflow integration and operational context for healthcare software teams',
-  description: 'Hired Billing Support partners with healthcare software developers, EHR vendors, billing platforms, and healthtech teams to bridge the gap between technical systems and real-world practice operations — providing workflow intelligence, implementation support, and operational context that makes healthcare products work in practice.',
+  description: 'Bridge healthtech and real practice workflows with RCM process mapping, EHR workflow insight, automation support, and QA feedback.',
   hero: {
     eyebrow: 'Developers Partners  ',
     title: 'Healthcare software works in demos. It has to work in <em>the actual billing workflow too.</em>',

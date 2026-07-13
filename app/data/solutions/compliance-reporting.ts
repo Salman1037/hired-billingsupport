@@ -3,10 +3,10 @@
 import { SolutionData } from '../solutionTypes';
 
 export const complianceReporting: SolutionData = {
-  title: "Compliance & Reporting",
+  title: "Healthcare Compliance Reporting Services | HBS",
   subtitle: "Your billing generates data every day. Your leadership team deserves to understand what it means.",
   description:
-    "Hired Billing Support turns your billing, coding, AR, and denial activity into structured reporting and compliance monitoring — giving your leadership team the operational visibility to manage revenue cycle performance with confidence.",
+    "Turn billing, coding, AR, and denial activity into clear compliance reporting, KPI visibility, and operational insight.",
   hero: {
     eyebrow: "Compliance & Reporting",
     title: "Billing compliance is not a checklist. It is an ongoing<em> operational discipline.</em>",

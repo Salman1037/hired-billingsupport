@@ -1,9 +1,9 @@
 import { SolutionData } from '../solutionTypes';
 
 export const operationsManagement: SolutionData = {
-  title: 'Healthcare Operations Management',
+  title: 'Healthcare Operations Management | HBS',
   subtitle: 'Embedded remote operations team managing daily workflows, task queues, billing coordination, SOP implementation, and operational reporting so your practice runs consistently as it grows.',
-  description: 'Most growing practices are busy but not well-organized. Staff are working hard but tasks fall behind, workflows depend on individual habits, and leadership cannot see what is happening until problems surface. Hired Billing Support becomes your embedded operations department — managing daily workflows, coordinating billing operations, documenting SOPs, and providing leadership visibility so the practice scales without operational chaos.',
+  description: 'Support daily practice workflows with remote operations help for scheduling, tasks, EHR queues, reporting, and admin control.',
   hero: {
     eyebrow: ' Operations Management',
     title: 'Your team is not failing. They are doing<em>too many jobs at once.</em>',

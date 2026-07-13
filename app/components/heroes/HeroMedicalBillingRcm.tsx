@@ -44,7 +44,7 @@ export default function HeroMedicalBillingRcm({ solution }: HeroProps) {
               <h1 className="display reveal reveal-2" style={{ fontSize: "clamp(38px, 5vw, 64px)", marginTop: "20px" }} dangerouslySetInnerHTML={{ __html: solution.hero.title }} />
                <p className="sub reveal reveal-3" style={{ fontSize: "18px", lineHeight: "1.6", color: "var(--ink-mute)", marginTop: "24px" }}>{solution.hero.subtitle}</p>
               <p className="lede reveal reveal-3" style={{ fontSize: "18px", lineHeight: "1.6", color: "var(--ink-mute)", marginTop: "16px" }}>{solution.hero.description}</p>
-               <div className="hero-actions reveal reveal-4" style={{ marginTop: "32px" }}>
+               <div className="hero-actions reveal reveal-4" >
                 <a href="/contact" className="btn btn-primary btn-lg">
                   Contact us
                   <svg

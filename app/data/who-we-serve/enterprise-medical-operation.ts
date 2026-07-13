@@ -1,9 +1,9 @@
 import { SolutionData } from '@/app/data/solutionTypes';
 
 export const enterpriseMedicaloperation: SolutionData = {
-  title: 'Enterprise Healthcare Operations Support',
+  title: 'Enterprise Healthcare Operations Support | HBS',
   subtitle: 'Scalable backend operations support for enterprise healthcare organizations and health systems.',
-  description: 'Hired Billing Support supports enterprise healthcare organizations and health systems as a scalable backend operations partner — RCM, AR, credentialing, denial management, compliance, and reporting infrastructure at enterprise scale.',
+  description: 'Scale backend healthcare operations with RCM, AR, denials, credentialing, QA, reporting, and workflow visibility.',
 
   hero: {
     eyebrow: 'Enterprise Healthcare Operations',

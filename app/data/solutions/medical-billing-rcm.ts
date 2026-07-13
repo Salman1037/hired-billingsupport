@@ -2,9 +2,9 @@
 import { SolutionData } from '../solutionTypes';
 
 export const medicalBillingRcm: SolutionData = {
-  title: 'Medical Billing & RCM Services',
+  title: 'Medical Billing & RCM Services | HBS',
   subtitle: 'For medical practices & specialty clinics',
-  description: 'You are seeing patients. Charges are being entered. Claims are going out. And yet the money in the bank never quite matches the work you did this month. That gap is not accidental — and it is not unfixable.',
+  description: 'Reduce claim delays, denials, and AR pressure with embedded medical billing and RCM support built around your workflow.',
 
   hero: {
     eyebrow: 'For medical practices & specialty clinics',
