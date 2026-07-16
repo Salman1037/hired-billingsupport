@@ -4,39 +4,45 @@ import { getSolutionSlugs as getWhoWeServeSlugs, getWhoWeServeUrl } from './data
 
 const baseUrl = 'https://www.hiredbillingsupport.com';
 
-const staticRoutes = [
-  { path: '/', changeFrequency: 'weekly' as const, priority: 1.0 },
-  { path: '/about', changeFrequency: 'monthly' as const, priority: 0.9 },
-  { path: '/contact', changeFrequency: 'monthly' as const, priority: 0.9 },
-  { path: '/find-service', changeFrequency: 'monthly' as const, priority: 0.9 },
-  { path: '/explore-partnership', changeFrequency: 'monthly' as const, priority: 0.9 },
-  { path: '/privacy-policy', changeFrequency: 'yearly' as const, priority: 0.6 },
-  { path: '/article-28-facilities', changeFrequency: 'monthly' as const, priority: 0.8 },
-  { path: '/case-study', changeFrequency: 'weekly' as const, priority: 0.8 },
-  { path: '/CostROIcalculator', changeFrequency: 'monthly' as const, priority: 0.8 },
+type SitemapRoute = {
+  url: string;
+  changeFrequency: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never';
+  priority: number;
+};
+
+const staticRoutes: SitemapRoute[] = [
+  { url: `${baseUrl}/`, changeFrequency: 'weekly' as const, priority: 1.0 },
+  { url: `${baseUrl}/about`, changeFrequency: 'monthly' as const, priority: 0.9 },
+  { url: `${baseUrl}/contact`, changeFrequency: 'monthly' as const, priority: 0.9 },
+  { url: `${baseUrl}/find-service`, changeFrequency: 'monthly' as const, priority: 0.9 },
+  { url: `${baseUrl}/explore-partnership`, changeFrequency: 'monthly' as const, priority: 0.9 },
+  { url: `${baseUrl}/privacy-policy`, changeFrequency: 'yearly' as const, priority: 0.6 },
+  { url: `${baseUrl}/article-28-facilities`, changeFrequency: 'monthly' as const, priority: 0.8 },
+  { url: `${baseUrl}/case-study`, changeFrequency: 'weekly' as const, priority: 0.8 },
+  { url: `${baseUrl}/CostROIcalculator`, changeFrequency: 'monthly' as const, priority: 0.8 },
 ];
 
-const solutionRoutes = getSolutionSlugs().map((slug) => ({
+const solutionRoutes: SitemapRoute[] = getSolutionSlugs().map((slug) => ({
   url: getSolutionUrl(slug),
   changeFrequency: 'weekly' as const,
   priority: 0.9,
 }));
 
-const audienceRoutes = getWhoWeServeSlugs().map((slug) => ({
+const audienceRoutes: SitemapRoute[] = getWhoWeServeSlugs().map((slug) => ({
   url: getWhoWeServeUrl(slug),
   changeFrequency: 'weekly' as const,
   priority: 0.9,
 }));
 
-const hireRoutes = ['medical', 'dental', 'enterprise', 'mso'].map((slug) => ({
-  path: `/hire/${slug}`,
+const hireRoutes: SitemapRoute[] = ['medical', 'dental', 'enterprise', 'mso'].map((slug) => ({
+  url: `${baseUrl}/hire/${slug}`,
   changeFrequency: 'monthly' as const,
   priority: 0.8,
 }));
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return [...staticRoutes, ...solutionRoutes, ...audienceRoutes, ...hireRoutes].map((route) => ({
-    url: route.url ?? `${baseUrl}${route.path}`,
+    url: route.url,
     lastModified: new Date(),
     changeFrequency: route.changeFrequency,
     priority: route.priority,

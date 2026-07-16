@@ -36,7 +36,7 @@ export default function CaseStudyPage() {
     },
     {
       id: 4,
-      slug: 'genesis-internal-medicine',
+      slug: 'dr-layla-hassan',
       quote: "With the help of HBS their support and expertise we have achieved a lot more in practice.",
       avatar: 'LH',
       name: "Dr. Layla Hassan",

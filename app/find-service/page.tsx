@@ -482,7 +482,7 @@ export default function FindServicesPage() {
                 {
                   problem: "Concerns about billing accuracy, audit risk, documentation gaps, or coding pattern compliance",
                   service: "Medical Auditing",
-                link: "/solutions/medical-audit",
+                link: "/solutions/medical-auditing",
                   desc: "Billing and coding audit — documentation reviewed against billed codes, compliance gaps identified, and corrective recommendations provided."
                 },
                 {
@@ -758,13 +758,13 @@ export default function FindServicesPage() {
             A 30-minute operational review. You describe the symptoms. We trace them upstream and identify the service that addresses the root cause. You leave with a specific recommendation and a clear first step — not a sales proposal with five options and a price sheet.
           </p>
           <div className="cta-actions">
-            <a href="#" className="btn btn-light btn-lg">
+            <a href="/contact" className="btn btn-light btn-lg">
               Find the right service
               <svg className="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                 <path d="M5 12h14M13 5l7 7-7 7" />
               </svg>
             </a>
-            <a href="#" className="btn btn-ghost btn-lg" style={{ color: 'var(--paper)', borderColor: 'rgba(250,247,242,.25)' }}>
+            <a href="/contact" className="btn btn-ghost btn-lg" style={{ color: 'var(--paper)', borderColor: 'rgba(250,247,242,.25)' }}>
               Start with a workflow review
             </a>
           </div>

@@ -360,7 +360,7 @@ export default function SolutionLayout({ solution, slug }: SolutionLayoutProps) 
               {solution.sections.finalCta.buttons.map((btn, index) => (
                 <a
                   key={index}
-                  href="#"
+                  href="/contact"
                   className={`btn btn-${btn.variant} btn-lg`}
                   style={btn.variant === 'ghost' ? { color: 'var(--paper)', borderColor: 'rgba(250,247,242,.25)' } : {}}
                 >

@@ -1,8 +1,12 @@
 'use client';
 
-import { useRouter } from 'next/navigation';
+import { redirect } from 'next/navigation';
 import Link from 'next/link';
 import { use } from 'react';
+
+const redirectSlugs: Record<string, string> = {
+  'genesis-internal-medicine': 'dr-layla-hassan',
+};
 
 const caseStudies = [
   {
@@ -72,7 +76,7 @@ const caseStudies = [
     }
   },
   {
-    slug: 'genesis-internal-medicine',
+    slug: 'dr-layla-hassan',
     id: 4,
     quote: "With the help of HBS their support and expertise we have achieved a lot more in practice.",
     name: "Dr. Layla Hassan",
@@ -97,8 +101,13 @@ const caseStudies = [
 
 export default function CaseStudyDetailPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = use(params);
-  const study = caseStudies.find(s => s.slug === slug);
-  const router = useRouter();
+  const canonicalSlug = redirectSlugs[slug] ?? slug;
+
+  if (canonicalSlug !== slug) {
+    redirect(`/case-study/${canonicalSlug}`);
+  }
+
+  const study = caseStudies.find((s) => s.slug === canonicalSlug);
 
   if (!study) {
     return (

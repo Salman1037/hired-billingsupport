@@ -1,5 +1,9 @@
 import type { ReactNode } from 'react';
 
+const redirectSlugs: Record<string, string> = {
+  'genesis-internal-medicine': 'dr-layla-hassan',
+};
+
 const caseStudyMeta = [
   {
     slug: 'dr-ruth-parkin-edwin',
@@ -17,7 +21,7 @@ const caseStudyMeta = [
     description: 'Learn how Hired Billing Support helped an internal medicine practice reduce operational strain and improve revenue flow.',
   },
   {
-    slug: 'genesis-internal-medicine',
+    slug: 'dr-layla-hassan',
     title: 'Genesis Internal Medicine Case Study | Hired Billing Support',
     description: 'Read how Hired Billing Support helped a growing internal medicine practice scale operations without adding administrative overhead.',
   },
@@ -25,7 +29,8 @@ const caseStudyMeta = [
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
-  const study = caseStudyMeta.find((item) => item.slug === slug);
+  const canonicalSlug = redirectSlugs[slug] ?? slug;
+  const study = caseStudyMeta.find((item) => item.slug === canonicalSlug);
 
   if (!study) {
     return {

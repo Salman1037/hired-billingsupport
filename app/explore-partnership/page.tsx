@@ -646,13 +646,13 @@ export default function ExplorePartnershipPage() {
                     <h2 className="cta-title">The consultation is free. <em>The right model is priceless.</em></h2>
                     <p className="cta-text">We start with a 30-45 minute operational context conversation — no intake form, no pre-packaged pitch. You describe your organization, your current operational pressure, and what you are trying to accomplish. We tell you what the right partnership model would look like and whether HBS is the right partner to deliver it.</p>
                     <div className="cta-actions">
-                        <a href="#" className="btn btn-light btn-lg">
+                        <a href="/contact" className="btn btn-light btn-lg">
                             Explore a partnership
                             <svg className="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                                 <path d="M5 12h14M13 5l7 7-7 7" />
                             </svg>
                         </a>
-                        <a href="#" className="btn btn-ghost btn-lg" style={{ color: 'var(--paper)', borderColor: 'rgba(250,247,242,.25)' }}>Discuss your operating model</a>
+                        <a href="/contact" className="btn btn-ghost btn-lg" style={{ color: 'var(--paper)', borderColor: 'rgba(250,247,242,.25)' }}>Discuss your operating model</a>
                     </div>
                     <div className="trust-line">No commitment required · No sales pressure · Honest fit assessment · HIPAA · BAA available</div>
                 </div>

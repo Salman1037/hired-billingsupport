@@ -1772,7 +1772,7 @@ const WhoWeServeLayout = ({ solution, slug }: WhoWeServeLayoutProps) => {
               {solution.sections.finalCta.buttons.map((button, index) => (
                 <a
                   key={index}
-                  href="#"
+                  href="/contact"
                   className={`btn btn-${button.variant} btn-lg`}
                   style={button.variant === 'ghost' ? { color: 'var(--paper)', borderColor: 'rgba(250,247,242,.25)' } : {}}
                 >
@@ -1802,13 +1802,13 @@ const WhoWeServeLayout = ({ solution, slug }: WhoWeServeLayoutProps) => {
               required.
             </p>
             <div className="cta-actions">
-              <a href="#" className="btn btn-light btn-lg">
+              <a href="/contact" className="btn btn-light btn-lg">
                 Build my practice foundation
                 <svg className="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <path d="M5 12h14M13 5l7 7-7 7" />
                 </svg>
               </a>
-              <a href="#" className="btn btn-ghost btn-lg" >
+              <a href="/contact" className="btn btn-ghost btn-lg" >
                 Talk to our startup team
               </a>
             </div>
